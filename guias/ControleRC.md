@@ -24,7 +24,7 @@ Se tiver dado certo o led do receptor do radio ficara verde
 ## Outros comentários
 
 Provavelmente o buzzer vai fazer algum barulinho e voce vai querer descobrir o que deve fazer para enfim seu dorne voar.
-Para entender os barulinhos do seu drone confira: [Link dos sons do Buzzer](https://ardupilot.org/copter/docs/common-sounds-pixhawkpx4.html)
+Para entender os barulinhos do seu drone confira: [Link dos sons do Buzzer](https://docs.px4.io/master/en/getting_started/tunes.html)
 
 ## Referências
 
