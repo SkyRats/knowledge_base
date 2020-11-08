@@ -23,6 +23,181 @@ Mais uma explicação ou informaçes de uso sobre o comando ou codigo
   
 ## Linux
 
+### Básico
+
+* Mostrar o caminho atual
+```bash
+pwd
+```
+
+* Listar os arquivos no diretório atual
+```bash
+ls
+```
+
+* Mudar de diretório
+```bash
+cd <caminho do diretório>
+```
+
+* Mostar o conteúdo de um arquivo
+```bash
+cat <arquivo>
+```
+
+* Abrir um arquivo em um editor de texto
+```bash
+nano <nome do arquivo>
+```
+
+### Manipulando arquivos e diretórios
+
+* Criar arquivo em branco
+```bash
+touch <arquivo>
+```
+
+* Copiar arquivos
+```bash
+cp <arquivo opiado> <diretório de destino>
+```
+
+* Mover arquivos
+```bash
+mv <arquivo> <destino>
+```
+
+* Renomear arquivos
+```bash
+mv <nome atual do arquivo> <novo nome>
+```
+
+* Deletar arquivos
+```bash
+rm <arquivo>
+```
+
+* Criar diretório
+```bash
+mkdir <nome do diretório>
+```
+
+* Deletar diretórios vazios
+```bash
+rmdir <diretório>
+```
+
+* Deletar diretórios com arquivos
+```bash
+rm -r <diretório>
+```
+
+* Modificar as permissões de um arquivo
+
+Todo arquivo pode possuir 8 tipos de permissões diferentes:
+0 - Sem permissão
+1 - Permissão para executar
+2 - Permissão para escrever
+3 - Permissão para escrever e executar
+4 - Permissão para ler
+5 - Permissão para ler e executar
+6 - Permissão para ler e escrever
+7 - Permissão para ler, escrever e executar
+
+Essa permissão pode ser dada para interagir com 3 tipos de usuários:
+O dono - representa o usuário dono do arquivo no computador.
+Grupos - Grupos de mais de um usuário.
+Todos - Todos os usuários naquele computador.
+
+Para alterar as permissões de um arquivo, é necessário utilizar o comando chmod seguido de um número de 3 algarimso, onde o primeiro representa as permissões para o usuário dono do arquivo, o segundo, do grupo de usuários e o terceiro, de todos os usuários e, por último, o nome do arquivo que queremos alterar as permissões. Por exemplo, se quisermos dar permissão para o arquivo 'EP 1' ler, escrever e executar arquivos do usuário dono do arquivo, ler e escrever arquivos do grupo de usuários e de todos os usuários, nós devemos fazer o seguinte:
+```bash
+chmod 766 'EP 1'
+```
+
+### Manipulando o sistema
+
+* Executar como Super Usuário
+```bash
+sudo <comando a ser executado>
+```
+
+* Procurar o caminho para um arquivo
+```bash
+locate <nome do arquivo>
+```
+
+* Exibir os processos em execução
+```bash
+ps
+```
+
+* Parar um processo
+```bash
+kill <ID do processo>
+```
+
+### Manipulando pacotes (Apenas para distribuições baseadas no Debian)
+
+* Instalando pacotes
+```bash
+apt-get install <nome do pacote.
+```
+
+* Removendo pacotes
+```bash
+apt-get remove <nome do pacote>
+```
+
+* Removendo pacote e seus arquivos de configuração
+```bash
+apt-get purge <nome do pacote>
+```
+
+* Atualizando pacotes
+```bash
+apt-get -u upgrade
+```
+
+* Removendo pacotes que não serão mais utilizados
+```bash
+apt-get clean
+apt-get autoclean
+```
+
+* Adicionando novos repositórios de pacotes
+Utilize o comando
+```bash
+sudo nano /etc/apt/sources.list
+```
+Com o editor de texto Nano escreva, no final do arquivo, o nome do repositório que deseja adicionar.
+
+* Atualizando o índice de respositórios
+```bash
+apt-get update
+```
+
+### Comandos úteis (e legais)
+
+* Comparar a diferença entre dois códigos linha por linha
+```bash
+diff <código 1> <código 2>
+```
+
+* Procurar expressões dentro de arquivos
+```bash
+grep <expressão> <arquivo>
+```
+
+* Mostrar o manual de um comando
+```bash
+man <comando>
+```
+
+* YES
+```bash
+yes
+```
+
 ---
 
 ## Firmware
