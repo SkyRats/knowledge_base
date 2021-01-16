@@ -48,6 +48,7 @@ Para criar um workspace na pasta `~/catkin_ws`:
 
 ```bash
 # Cria a pasta
+cd
 mkdir -p ~/catkin_ws/src
 
 # Inicializa o workspace
@@ -78,6 +79,7 @@ rm ./install_geographiclib_datasets.sh
 ### 3.3. Firmware PX4
 
 ```bash
+cd
 mkdir ~/src
 cd ~/src
 
