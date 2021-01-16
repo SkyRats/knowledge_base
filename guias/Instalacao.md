@@ -37,6 +37,7 @@ sudo apt update
 sudo apt install ros-melodic-desktop-full -y
 
 # Variáveis de ambiente
+source /opt/ros/melodic/setup.bash
 echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 
 # Instala outras dependencias
