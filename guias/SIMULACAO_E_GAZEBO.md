@@ -93,3 +93,75 @@ Eles podem ser configurados direto no gazebo, adicionando coisas no painel de si
 Pelo arquivo .world, da para fazer e adicionar todas as configurações do mundo, adicionando models, mudar posição, rotação, escala dos mesmos, adicionar plugins de mundo e configurar a GUI, sendo essa infinitamente customizável ( Vou explicar mais para frente ), como por exemplo, adicionar interfaces com botões, labels, etc, 100% customizáveis, que podem fazer qualquer coisa dentro do gazebo, customizar configurações de iluminação, câmera e céu, entre outros.
 
 Temos vários exemplos de .worlds no nosso repositório simulation, além disso, todas as configurações para o .world tem aqui: [http://sdformat.org/spec?ver=1.7&elem=world](http://sdformat.org/spec?ver=1.7&elem=world)
+
+## Adicionar Meshs de Outros Programas
+
+### Quais os arquivos?
+
+No gazebo, p/ usar meshs externas, os principais tipos de arquivos suportados pelo sdf arquivos .dae, .obj, .stl. Com observação de que o .obj e o .stl não suporta materiais/texturas, o .dae é melhor não ser usado para transportar texturas pois ele dá problemas com sombras fixas nesse transporte de arquivos; em relação a desempenho/qualidade, o .dae é o mais "leve", enquanto o .stl é mais "pesado", porém ambos são bem otimizados; como comparação o .stl é superior na maioria dos casos.
+
+Em relação as texturas, os tipos de arquivos citado acima não suportam/não suportam bem. O recomendado é usar scripts de materiais. O seguinte link explica muito bem como fazer: [http://gazebosim.org/tutorials?tut=color_model](http://gazebosim.org/tutorials?tut=color_model)
+
+### Como adicionar a mesh?
+
+Primeiro cria uma pasta para o model, exemplo: `mkdir model; cd model` , depois crie os arquivos de config, sdf, e outra pasta para guardar a mesh: `mkdir meshes; touch model.config model.sdf` 
+
+Nisso, você coloca a mesh dentro da pasta, configura seus arquivos .sdf e .config. P/ adicionar a mesh no .sdf, só usar um "include" dentro da parte da configuração do link, como exemplo:
+
+```xml
+<geometry>
+       <mesh>
+            <uri>model://model/meshes/mesh.stl</uri>
+      </mesh>
+</geometry>
+```
+
+Lembre-se que deve-se colocar o link para a mesh na colision box e no visual.
+
+# Programação no Gazebo e Plugins
+
+Tudo que vimos até agora é uma pequena parte do que da para fazer com o gazebo, com plugins, ele fica 100% configurável e ajustável p/ qualquer simulação.
+
+Por ser infinitamente longo, vou ensinar o jeito de como buscar e começar a fazer alguma programação/plugin em cima do gazebo e explicar alguns códigos.
+
+### Como funciona?
+
+Os plugins do gazebo são em C++ OO e se dividem em 3 tipos principais, os de model, de world ou de GUI.
+
+Os de model são, como o nome já diz, inicializados em models, por exemplo, dentro do .sdf:
+
+```xml
+				<include>
+            <plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'>
+                <robotNamespace/>
+                <linkName>base_link</linkName>
+                <xyzOffset>0 0 0</xyzOffset>
+                <windForceMean>10</windForceMean>
+                <windForceMax>50</windForceMax>
+                <windForceVariance>0</windForceVariance>
+                <windDirectionMean>0 1 0</windDirectionMean>
+                <windDirectionVariance>0</windDirectionVariance>
+            </plugin>
+            <uri>model://model</uri>
+        </include>
+```
+
+Esse é um exemplo de como adicionar um plugin com parâmetros dentro do sdf, no caso o plugin do vento.
+
+Além disso, os plugins de model possuem duas formas de rodar, uma única no Load do model, e outra no OnUpdate(Como se fosse um while(1)... obs: não façam while(1) pfv).
+
+Como exemplo temos o método load do plugin "GetDropZonePositions"
+
+```cpp
+public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
+        {
+            ignition::math::Pose3d dz_clean_pose = _parent->WorldPose();
+            ignition::math::Vector3<double> dzc_p = dz_clean_pose.Pos();
+            double CP_V[3] = {dzc_p.X(), dzc_p.Y(), dzc_p.Z() };
+            gzmsg << "Dropzone pose:"<< "\n\tX = " << CP_V[0] << "\n\tY = " << CP_V[1] << "\n\tZ = " << CP_V[2] << std::endl;
+        }
+```
+
+essa função load recebe dois atributos, no caso, o _parent que é o próprio model dentro do mundo, e o _sdf que é o sdf do model que foi inserido no mundo. No caso, a função dessa função .-. é de dar no início do model a posição dele no mapa, pois ele foi inserido de forma aleatória usando o modo population do .world.
+
+Primeiro, ele cria um objeto de Pose3d, que representa a posição do objeto no mundo, e atribui a ele a posição do mundo usando o método WorldPose() do model _parent, depois disso, ele cria um vector3, que é um objeto com informações sobre posição em x,y,z e nele atribui o vector3d de dentro do pose 3d usando o método Pos(), e nisso ele coloca um vetor de 3 posições cada uma das posições e depois printa elas com gzmsg, p aparecer destacado no terminal como mensagem do gazebo.
