@@ -165,3 +165,17 @@ public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
 essa função load recebe dois atributos, no caso, o _parent que é o próprio model dentro do mundo, e o _sdf que é o sdf do model que foi inserido no mundo. No caso, a função dessa função .-. é de dar no início do model a posição dele no mapa, pois ele foi inserido de forma aleatória usando o modo population do .world.
 
 Primeiro, ele cria um objeto de Pose3d, que representa a posição do objeto no mundo, e atribui a ele a posição do mundo usando o método WorldPose() do model _parent, depois disso, ele cria um vector3, que é um objeto com informações sobre posição em x,y,z e nele atribui o vector3d de dentro do pose 3d usando o método Pos(), e nisso ele coloca um vetor de 3 posições cada uma das posições e depois printa elas com gzmsg, p aparecer destacado no terminal como mensagem do gazebo.
+
+# A Corda
+
+## Funcionamento
+
+O pacote criado pela Skyrats possui um script capaz de criar um model que simula uma corda no Gazebo. A ideia principal é utiliza-la para missões que envolvam o carregamento de objetos, como a Outdoor e Swarm.
+
+Como o Gazebo só é capaz de simular corpos rígidos, que não é o caso de uma corda, algumas adaptações precisaram ser feitas. A corda foi criada por meio da união de vários links, no formato de cilindro, empilhados um acima do outro. Para uni-los, foi utilizado um joint do tipo ball, que permite rotação em todos os eixos. Assim, a corda é formada por um conjunto de corpos rígidos unidos para dar a impressão de que atuam como uma corda.
+
+Portanto, o realismo da simulação é diretamente proporcional a quantidade de links. Quanto mais links o modelo tiver para um mesmo tamanho, maior será a semelhança com uma corda real. Entretanto, um número muito alto de links pode afetar o FPS e o real time factor, deixando a simulação lenta, o que, em alguns casos, chega a ser inutilizável. Baseado em testes empíricos, 10 a 20 links para uma corda de um metro costuma ser o ideal para conciliar a performance e o desempenho.
+
+## Como utilizar
+
+Para utilizar o script, basta entrar no diretório scripts do pacote de simulação e executar Corda.py. O programa irá pedir que você insira a quantidade de links desejados e o tamanho de cada link. Dessa forma, é possível controlar o tamanho final da corda realizando uma conta simples: número de links vezes tamanho do link. Após digitar essas entradas, o model da corda estará na pasta models do pacote de simulação, onde é possível utilizar diretamente no Gazebo utilizando a aba insert caso você tenha feito setup.bash.
