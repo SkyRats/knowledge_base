@@ -273,7 +273,7 @@ using namespace gazebo;
 //1
 GZ_REGISTER_GUI_PLUGIN(GUIExampleSpawnWidget)
 
-GUIExampleSpawnWidget::GUIExampleSpawnWidget()
+GUIExampleSpawnWidget::GUIExampleSpawnWidget()//1.1
   : GUIPlugin()
 {
   gzmsg << "Hello world" << std::endl;
@@ -422,6 +422,8 @@ O código ta dividido em 13 partes para facilitar a explicação:
 
 `//1` → É registrado o plugin como plugin de interface(obs: isso pode ser declarado no começo ou no final, embora na maioria dos plugins seja no final)
 
+`//1.1` → Nos plugins de GUI, não existe método "Load", o método para plugins GUI, com o mesmo funcionamento é o construtor.
+
 `//2` → Define o estilo do "fundo" da interface adicionada ao gazebo, no caso foi utilizado o padrão RGB, mas existem outros, tudo isso pode ser visto na documentação do QWidgets.
 
 `//3` → Cria um layout do QWidget em formato de caixa para guardar a interface
@@ -445,3 +447,211 @@ O código ta dividido em 13 partes para facilitar a explicação:
 `//12` → Aqui ele cria os nodes e publishers que serão usados nos códigos dos métodos de cada botão, essa parte vou explicar com bastante detalhes mais para a frente.
 
 `//13` → Aqui, por final ele cria os métodos de cada botão adicionado. Em cada método, que foi declarado no .h e associado a cada botão no passo 6 é descrito o código que rodará de acordo com o esquema de pressão do botão, no caso dos "clicked()", cada código desse rodará uma vez a cada vez que o botão for pressionado.
+
+## Msgs do Gazebo
+
+Além de tudo isso que já explicamos, outro jeito de modificar/criar coisas para simulação no gazebo é através das msgs, sistema parecido com o ROS, onde cada pequena parte do gazebo se comunica com outras através dela, por exemplo temos os botões do nosso plugin Skyzebo 1.0, onde todos os botões criam publishers, e estes enviam mensagens para outras coisas, como por exemplo ligar a fumaça, que cria uma msg do tipo "Fog", modifica ela para ter as características da fumaça, depois é criado uma variável do tipo scene, onde modificamos nela apenas a parte "Fog", onde é incluída a configuração feita, e após isso a mensagem é publicada para que chegue no tópico "~/scene" e assim modifique ele aplicando fumaça no mundo. O código do método desse botão é esse, onde tem informações explicadas em comentários:
+
+```cpp
+void GUIExampleSpawnWidget::SmokeButton()
+{
+  msgs::Scene smk_msg;
+  msgs::Fog* fog = new msgs::Fog; //Criar as msgs necessárias
+  this->smoke_status =! smoke_status; //Inverter o estado passado da fumaça, para funcionar como um "toggle"
+  smk_msg.set_name("smoke_toggle"); //Da o nome da msg da smoke
+  if (smoke_status == 0){
+    smk_msg.clear_fog(); // Se o estado da fumaça for 0 ele limpa a fog, além de inicializar ela bem longe do objeto que possui visão, como camera do drono ou nossa visão
+
+    fog->set_start(10000.0);
+    fog->set_density(0.0);
+    fog->set_end(30000.0);
+
+    smk_msg.set_allocated_fog(fog); // Coloca a msg modificada dentro da msg da scene
+  }
+  if (smoke_status == 1){ //Aqui, ele ativa a fumaça, além de deixar seu ínicio bem próximo do objeto com visão.
+    fog->set_start(0.1);
+    fog->set_density(300.0);
+    fog->set_end(10.0);
+
+    smk_msg.set_allocated_fog(fog); // Coloca a msg modificada dentro da msg da scene
+  }
+
+this->smoke_pub->Publish(smk_msg); // publica a mensagem 
+  gzmsg << "Smoke status: " << smoke_status << std::endl;
+  gzmsg << "A_Fog status: " << smk_msg.has_fog() << std::endl; //printa as informações no terminal
+}
+```
+
+Mas para que a msg seja publicada, também é necessário criar o publisher e associar o node do gazebo a ele. Nesse mesmo publisher, da fumaça, o publisher é criado assim:
+
+Primeiro, dentro da definição da classe, você declara o node e cria o publisher:
+
+```cpp
+transport::NodePtr node; // Define o node onde vai ser associado o gazebo nele
+
+transport::PublisherPtr smoke_pub; // Define o publisher do botão de toggle da fumaça
+```
+
+Agora, dentro do método "Load", que é o que roda no início da simulação, ou para plugins de GUI, no construtor dele:
+
+```cpp
+this->node = transport::NodePtr(new transport::Node()); // Coloca um node dentro da varíavel node criada
+this->node->Init(); // O método "Init" inicia o node
+
+this->smoke_pub = this->node->Advertise<msgs::Scene>("~/scene"); // Declara a criação do publisher, colocando nele o tipo de msg e também o tópico
+```
+
+Todo o sistema de msgs pode ser visualizado como "mapa mental" no site da api do gazebo: [http://osrf-distributions.s3.amazonaws.com/gazebo/api/1.3.1/dir_856da1f3c0f82036884d2d586cbc0904.html](http://osrf-distributions.s3.amazonaws.com/gazebo/api/1.3.1/dir_856da1f3c0f82036884d2d586cbc0904.html)
+
+Além disso, se precisar criar uma msg nova, a explicação está aqui: [http://gazebosim.org/tutorials?tut=custom_messages&cat=transport](http://gazebosim.org/tutorials?tut=custom_messages&cat=transport)
+
+### Msgs: Comunicação entre Plugins/Scripts
+
+Além de usar as mgs para comunicação com o sistema do gazebo diretamente, podemos usar elas para comunicação entre plugins, funciona no mesmo esquema, a diferença é que publicaremos em um tópico para outro plugin dar subscribe e callback nele. Vou explicar com exemplos agora, pois com a noção dada acima já é necessário para entender o funcionamento:
+
+Como exemplo vou usar a comunicação do "rope_attach", plugin utilizado para conectar as cordas de uma certa carga nos drones.
+
+Primeiramente, assim como no exemplo anterior é declarado o node e o publisher dentro da declaração da classe ( Obs: O node só precisa ser criado em uma vez por plugin. ):
+
+```cpp
+transport::NodePtr node;
+
+transport::PublisherPtr attach_pub;
+```
+
+E são iniciados ao iniciar do gazebo:
+
+```cpp
+this->node = transport::NodePtr(new transport::Node());
+this->node->Init();
+
+this->attach_pub = this->node->Advertise<msgs::Int>("~/rope_attach");
+```
+
+O código do botão, para publicar a mensagem para esse tópico "~/rope_attach" será bem simples, pois ele não tem função de toggle, pois a caixa é presa apenas uma vez e não é solta após isso, pois os drones pousam com ela, logo, esse botão vai mandar uma mensagem do tipo "int" com o valor booleano de sinal ( 1 ):
+
+```cpp
+void GUIExampleSpawnWidget::AttachButton()
+{
+  gzmsg << "Rope attached message sent..." << std::endl; // Printa no terminal a frase
+  msgs::Int attach_msg; // Cria uma msg do tipo int
+  attach_msg.set_data(1); // Associa em seu valor usando o método set_data o número inteiro "1", que tem como sentido ser um "true" booleano, apenas para enviar alguma coisa para o callback
+  this->attach_pub->Publish(attach_msg); // Publica a mensagem
+}
+```
+
+Certo, a mensagem foi publicada, agora o outro plugin, script, ou o que for, precisa recebe-la. Então, precisaremos criar um node, um subscriber e um callback. O node e o subscriber tem a função de estar la para receber a mensagem, e o subscriber inicia o método de callback sempre que recebe uma mensagem, enviando o objeto de msg recebido como parâmetro para ele.
+
+Primeiro, precisamos definir as coisas na classe(obs: isso tudo pode ser feito direto, sem .h e sem declarações, mas isso vale apenas para os métodos), assim, criaremos o subscriber, o node e o namespace(Serve para declarações do node handle, verá mais para a frente):
+
+```cpp
+private:   
+        transport::SubscriberPtr attach_sub; //Define o subscriber
+        transport::NodePtr node_handle_; // Define o node_handle_
+        std::string namespace_; // Cria o namespace
+
+public:
+        namespace_(kDefaultNamespace){} // Método do namespace
+        void AttachCallback(ConstIntPtr &msg); // Define o método do callback
+```
+
+Agora, com tudo criado, iremos para os métodos começar a fazer tudo funcionar, primeiramente iremos no método que roda ao início do funcionamento do gazebo, onde iremos receberemos o namespace(Caso existente), 
+
+```cpp
+void attach_rope::Load(physics::WorldPtr _parent, sdf::ElementPtr _sdf)
+    {
+        this->world = _parent;
+
+        if (_sdf->HasElement("robotNamespace")) //Aqui, ele observa se no sdf possui algum namespace, se tiver, ele assosia tal namespace à nossa varíavel
+            namespace_ = _sdf->GetElement("robotNamespace")->Get<std::string>();
+        else
+            gzerr << "[attach_rope] Please specify a robotNamespace.\n"; //Desnecessário
+
+        node_handle_ = transport::NodePtr(new transport::Node()); //Cria o node
+        node_handle_->Init(namespace_); // Associa o namespace, vazio ou não ao node
+
+        attach_sub = node_handle_->Subscribe("~/rope_attach", &attach_rope::AttachCallback, this); //**1** -> Explicado abaixo
+        gzmsg << "aaaaabriuuuu aqui krai: " << std::endl; // Print de informações para debug... hehe
+    }
+```
+
+`//**1**` → Aqui é inicializado o subscriber, tomem bastante cuidado, porque isso aqui da MUITO erro, e erros nada a ver... A partir do node handle, pegaremos um subscriber nele, e associaremos nele o tópico que ele vai receber, passaremos o método de callback como parâmetro, e também passaremos a instância do plugin também com o "this".
+
+Certo, após isso temos o subscriber inicializado temos que fazer alguma coisa com a mensagem recebida, no caso, o callback faz isso, ele é um método que é chamado pelo subscriber toda vez que alguma mensagem é recebida, e essa mensagem é passada para esse calback, como exemplo temos o callback desse mesmo plugin, que vou explicar em comentários porque ele é bem longo...:
+
+```cpp
+void attach_rope::AttachCallback(ConstIntPtr &msg){
+        
+        physics::JointPtr joint_1;
+        physics::JointPtr joint_2; // Criar variáveis de joint, que serão as que ligarão as cordas nos drones
+
+        ignition::math::Vector3d  z_axis = ignition::math::Vector3d(0,0,1);
+        ignition::math::Vector3d  null_axis = ignition::math::Vector3d(0,0,0);
+        ignition::math::Vector4d  null_axis4D = ignition::math::Vector4d(1,0,0,0); // Cria algumas varíaveis em vectors, de 3 e 4 dimensões
+        
+        physics::ModelPtr corda_0 = this->world->ModelByName("swarm_box::swarm_box::Corda_0")
+        physics::ModelPtr iris_0 = this->world->ModelByName("iris_0");
+        physics::ModelPtr iris_1 =  this->world->ModelByName("iris_1");
+        physics::ModelPtr corda_1 = this->world->ModelByName("swarm_box::swarm_box::Corda");
+        physics::ModelPtr POSREF = this->world->ModelByName("POS_REF");
+        physics::ModelPtr NEGREF = this->world->ModelByName("NEG_REF");
+        physics::ModelPtr NULLREF = this->world->ModelByName("NULL_REF");
+        physics::ModelPtr FARREF = this->world->ModelByName("FAR_REF");
+        physics::ModelPtr spawn1 = this->world->ModelByName("spawn1");
+        physics::ModelPtr spawn2 = this->world->ModelByName("spawn2"); // Retorna os models necessários presentes no mundo
+
+        bool f = false;
+        bool t = true;
+        try{//Aqui o chão de sustentação é removido para que não tenha conflito das colisions box das muitas joints da corda com o prórpio chão
+        spawn1->SetWorldPose(FARREF->WorldPose());
+        spawn2->SetWorldPose(FARREF->WorldPose()); //Elas são removidas sem dar um "delete" (é possível fazer isso sim! mas da mais problema) mas sim mandando elas para longe... kkkk
+        gzmsg << " \tDeleting ground..." << std::endl; 
+        } catch(std::runtime_error *e) {
+            gzmsg << "GROUND REMOVE FAILED" << std::endl;
+        } //Usando o esquema de try catch porque da muito erro isso de remover models mandando eles para longe.
+
+        gzmsg << "\tAttaching rope..." << std::endl;
+        joint_1 = this->world->Physics()->CreateJoint("ball", corda_0); // Cria a joint na corda de tipo ball, que tem rotação 360º
+        joint_1->Load(corda_0->GetLink("link_10"), iris_0->GetLink("base_link"), NULLREF->WorldPose()); // Carrega a joint na sua posição e no iris
+        joint_1->Attach(corda_0->GetLink("link_10"), iris_0->GetLink("base_link")); // Conecta ela no iris
+        joint_1->Init(); // Inicia a joint 
+
+        joint_2 = this->world->Physics()->CreateJoint("ball", corda_1); // Cria a joint na corda de tipo ball, que tem rotação 360º
+        joint_2->Load(corda_1->GetLink("link_10"), iris_1->GetLink("base_link"), NULLREF->WorldPose()); // Carrega a joint na sua posição e no iris
+        joint_2->Attach(corda_1->GetLink("link_10") ,iris_1->GetLink("base_link"));  // Conecta ela no iris
+        joint_2->Init(); // Inicia a joint 
+
+        spawn1->SetWorldPose(NULLREF->WorldPose());
+        spawn2->SetWorldPose(NULLREF->WorldPose()); // Manda as bases do spawn pra mais longe ainda... Não lembro por que fiz isso... Mas suave, se ta aí tem motivo KKKKKK
+    }
+```
+
+No caso, nesse plugin a msg não foi utilizada, pois o único objetivo era ligar uma única vez a joint caso o botão fosse apertado, porém vou dar outro exemplo, dessa vez da msg sendo utilizada, o plugin que receberá a msg será o do vento, que tem um "toggle", que funciona recebendo ou 1 ou 0 de uma varíavel int, tudo isso a partir de mais um botão na interface. O código do callback é:
+
+```cpp
+void GazeboWindPlugin::WindToggleCallback(ConstIntPtr &msg)
+{
+  this->wind_status = msg->data(); // Atribui o núemro recebido no status do vento, que é uma varíavel do objeto do plugin
+  gzmsg << "Wind toggle" << std::endl; // Mensagem no terminal
+}
+```
+
+O callback é bem curto, pois ele só altera o valor de uma variável, que é utilizada dentro do método OnUpdate.
+
+O plugin do vento funciona assim: Ele pega o model em que ele está "instalado" e aplica uma força nele, assim se a variávek "wind_status" tiver valor 0, ele não mandará força nenhuma, caso contrário irá mandar a força do vento. O código é um pouquinho longo, vou colocar apenas algumas linhas dele, porém ele está dentro do pacote simulation → [https://github.com/SkyRats/simulation/blob/master/plugins/gazebo_wind_plugin.cpp](https://github.com/SkyRats/simulation/blob/master/plugins/gazebo_wind_plugin.cpp)
+
+```cpp
+void GazeboWindPlugin::OnUpdate(const common::UpdateInfo& _info) {
+  
+  if(this->wind_status == false)
+    return;
+.
+.
+. 
+Continua...
+```
+
+## Dicas para programar pro gazebo:
+
+- Improvisa mesmo, coloca umas caixas no mundo p/ dar getPose, colocar umas joint nada a vê, enche de botão, coloca os plugins p conversar, etc.. .etc...
+- Sempre que for fazer algum código pro gazebo, todas as informações são bem abertas e bem legíveis de cada classe de cada método e variável do gazebo. A dica é olhar no gazebo API, lá tem TUDO, TUDO MESMO, e tudo bem explicadinho de cada método... Então sempre que precisar ver as coisas de uma classe procure: "<nome da classe> class reference gazebo, primeiro link e só vai... Ou pode entrar no site do Gazebo API: [https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html](https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html)
