@@ -85,13 +85,19 @@ cd ~/src
 
 # Clona o firmware
 git clone https://github.com/Skyrats/Firmware.git --recursive
+# SE DER O ERRO (*****SÓ SE DER O ERRO*****):
+          server certificate failed
+ # Dar o comando p consertá-lo:
+          git config --global http.sslverify false
+
+
 
 # Executa o ubuntu.sh (demora pra caramba)
 cd ~/src/Firmware/Tools/setup
 ./ubuntu.sh
 ```
 
-Isso apenas baixa o Firmware e instala suas dependências. Se você quiser usá-lo em um drone ou em uma simulação, você vai precisar compilar. Isso demora bastante, então eu recomendo fazer logo o que você for usar.
+Isso apenas baixa o Firmware e instala suas dependências. Se você quiser usá-lo em um drone ou em uma simulação, você vai precisar compilar. Isso demora bastante, então eu recomendo fazer logo o que você for usar. 
 
 <a id="compilar"></a>
 
