@@ -81,7 +81,71 @@ Portanto, o realismo da simulação é diretamente proporcional a quantidade de 
 Para utilizar o script, basta entrar no diretório scripts do pacote de simulação e executar Corda.py. O programa irá pedir que você insira a quantidade de links desejados e o tamanho de cada link. Dessa forma, é possível controlar o tamanho final da corda realizando uma conta simples: número de links vezes tamanho do link. Após digitar essas entradas, o model da corda estará na pasta models do pacote de simulação, onde é possível utilizar diretamente no Gazebo utilizando a aba insert caso você tenha feito setup.bash.
 
 ### Explicacao do Script
-(...)
+
+O script funciona de uma forma muito simples. Nele, existem duas funções: uma para criar um link e outra para colocar uma joint entre dois links. A primeira, quando chamada, irá escrever no arquivo SDF que será criado todos os atributos necessários (posição, massa, momento de inércia e a geometria da caixa de colisão e do visual) para criar o SDF de um link cilíndrico. 
+
+```python
+def buildLink(i,tamanho):
+    f.write("   <link name=\"link_" + str(i + 1) + "\">\n")
+    f.write("    <pose>0 0 " + str(i * tamanho) + "</pose>\n")
+    f.write("    <inertial>\n")
+    f.write("    <mass>" + str(1 * tamanho) + "</mass>\n")
+    f.write("    </inertial>\n")
+    f.write("    <collision name=\"" + str(i + 1) + "\">\n")
+    f.write("      <pose>0 0 0</pose>\n")
+    f.write("      <geometry>\n")
+    f.write("       <cylinder>\n")
+    f.write("        <radius>0.012</radius>\n")
+    f.write("        <length>" + str(tamanho) + "</length>\n")
+    f.write("       </cylinder>\n")
+    f.write("      </geometry>\n")
+    f.write("     </collision>\n")
+    f.write("     <visual name=\"" + str(i + 1) + "\">\n")
+    f.write("      <pose>0 0 0</pose>\n")
+    f.write("      <geometry>\n")
+    f.write("       <cylinder>\n")
+    f.write("        <radius>0.012</radius>\n")
+    f.write("        <length>" + str(tamanho) + "</length>\n")
+    f.write("       </cylinder>\n")
+    f.write("      </geometry>\n")
+    f.write("     </visual>\n")
+    f.write("   </link>\n")
+```
+
+A segunda função é responsável por criar uma joint do tipo ball e colocá-la na posição correta entre dois links.
+
+```python
+def buildJoint (i, tamanho):
+    f.write("   <joint name=\"joint " + str(i) + "\" type=\"ball\">\n")
+    f.write("    <parent>link_"+ str(i + 1) + "</parent>\n")
+    f.write("    <child>link_" + str(i) + "</child>\n")
+    f.write("    <pose>0 0 " + str(0.5 * tamanho) + "</pose>\n")
+    f.write("    <physics>\n")
+    f.write("    </physics>\n")
+    f.write("   </joint>\n")
+```
+
+Por fim, o resto do script é responsável por abrir e fechar o arquivo, pedir que o usuário insira o tamanho e a quantidade de links, criar o cabeçalho do SDF e chamar as funções buildLink e buildJoint quantas vezes for necessário.
+
+```python
+tamanho = float(input("Por favor, insira o tamanho de cada link: "))
+quantidade = int(input("Por favor, insira a quantidade de links: "))
+f = open("../../models/Rope/model.sdf", "w")
+f.write("<?xml version=\"1.0\"?>")
+f.write("<sdf version=\"1.5\">\n")
+f.write(" <model name=\"Corda\">\n")
+f.write("  <self_collide>true</self_collide>\n")
+for i in range(quantidade):
+    if i == 0:
+        buildLink(i, tamanho)
+    else:
+        buildLink(i, tamanho)
+        buildJoint(i, tamanho)
+
+f.write("</model>\n")
+f.write("</sdf>\n")
+f.close()
+```
 
 ### Como funciona o arquivo model?
 
