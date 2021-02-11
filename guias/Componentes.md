@@ -32,4 +32,4 @@ Qualquer dúvida e/ou problema pode colocar uma issue! :)
 
 
 ### Pasta geral
-    [Clique aqui para ir até a pasta geral com todos os componentes](https://drive.google.com/drive/u/1/folders/1VT_8Q2C2Exzw-Ggui360wtI149Le2P57)
+ - [Clique aqui para ir até a pasta geral com todos os componentes](https://drive.google.com/drive/u/1/folders/1VT_8Q2C2Exzw-Ggui360wtI149Le2P57)
