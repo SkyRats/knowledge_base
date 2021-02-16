@@ -15,7 +15,6 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 
 ### Middleware
 - [Básicos de firmware e calibração](guias/Calibraçao e Firmaware.md)
-- [](guias/)
 
 ### Software
 - [Guia do Gazebo](guias/SIMULACAO_E_GAZEBO.md)
