@@ -8,6 +8,8 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 - [Pre-Flight Check](guias/preflightcheck.md)
 
 ### Mecânica
+- []()
+- []()
 
 ### Hardware
 - []()
