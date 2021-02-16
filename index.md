@@ -11,7 +11,7 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 ### Hardware
 - [Componentes que utilizamos](guias/Componentes.md)
 - [Nossos drones](guias/Drones.md)
-- [Controle Futaba T14SG](guias/controleRC.md)
+- [Controle Futaba T14SG](guias/ControleRC.md)
 
 ### Middleware
 - [Básicos de firmware e calibração](guias/Calibraçao e Firmaware.md)
