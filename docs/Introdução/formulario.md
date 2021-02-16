@@ -1,25 +1,4 @@
 # Fórmulário
-
-
-<!-- Template -->
-<!-- 
-# Titulo principal
-Explicar aqui bem resumido o que é esse "titulo"
-se tiver algum comando bem básico
-## Subtitulo
-
-### Topico
-Escrever aqui uma explicação ou um comentário bem resumido sobre o comando/topico
-```Linguagem do comando/código
-comando [args...] comando comando
-codigo codigo codigo codigo
-codigo codigo codigo codigo
-codigo codigo codigo codigo
-```
-Mais uma explicação ou informaçes de uso sobre o comando ou codigo
-
-[Explicações mais avançadas sobre o <Colocar nome do TOPICO>](https://github.com/SkyRats/knowledge_base/blob/main/guias/README.md)
--->
   
 ## Linux
 
@@ -206,9 +185,6 @@ yes
 
 ## Simulação/Gazebo
 
-
-## Comandos básicos
-
 ### Iniciar gazebo
 O comando abaixo abre o gazebo
 ```bash
@@ -244,122 +220,122 @@ Esses são os mais comuns. Se você digitar só o início do comando (tipo `rost
 **Topics**
 
 ```bash
-# Lista todos os tópicos ativos
+* Lista todos os tópicos ativos
 rostopic list
 
-# Informações sobre um tópico
+* Informações sobre um tópico
 rostopic info [tópico]
 
-# Vê o que tá sendo publicado no tópico
+* Vê o que tá sendo publicado no tópico
 rostopic echo [tópico]
 
-# Vê a frequência com que estão publicando no tópico
+* Vê a frequência com que estão publicando no tópico
 rostopic hz [tópico]
 
-# Publica no tópico
+* Publica no tópico
 rostopic pub [tópico] [tipo de mensagem] [args...]
 ```
 
-**Messages**
+### Messages
 
 ```bash
-# Lista todas os tipos de mensagem (são muitos kkk)
+* Lista todas os tipos de mensagem (são muitos kkk)
 rosmsg list
 
-# Informações sobre um tipo de mensagem
+* Informações sobre um tipo de mensagem
 rosmsg show [mensagem]
 ```
 
-**Services**
+### Services
 
 ```bash
-# Lista todos os serviços
+* Lista todos os serviços
 rosservice list
 
-# Informações sobre um serviço
+* Informações sobre um serviço
 rosservice info [serviço]
 
-# Chama um serviço
+* Chama um serviço
 rosservice call [serviço] [args...]
 ```
 
-**Nodes**
+### Nodes
 ```bash
-# Lista todos os nodes
+* Lista todos os nodes
 rosnode list
 
-# Informações sobre um node
+* Informações sobre um node
 rosnode info [node]
 ```
 
-**Params**
+### Params
 
 ```bash
-# Lista todos os parâmetros
+* Lista todos os parâmetros
 rosparam list
 
-# Lê um parâmetro
+* Lê um parâmetro
 rosparam get [param]
 
-# Escreve em um parâmetro
+* Escreve em um parâmetro
 rosparam set [param] [valor]
 ```
 
-**Execução**
+### Execução
 
 ```bash
-# Inicia o ROS
+* Inicia o ROS
 roscore
 
-# Executa um node
+* Executa um node
 rosrun [package] [node]
 
-# Executa um launchfile (não requer roscore)
+* Executa um launchfile (não requer roscore)
 roslaunch [package] [arquivo .launch] [argumento:=valor ...]
 ```
 
-**ROS Bags**
+### ROS Bags
 
 ```bash
-# Grava os tópicos 1, 2 e 3
+* Grava os tópicos 1, 2 e 3
 rosbag record [topico1] [topico2] [topico3] e 3
 
-# Grava todos os tópicos
+* Grava todos os tópicos
 rosbag record -a
 
-# Executa um rosbag
+* Executa um rosbag
 rosbag play [nome_da_rosbag].bag
 ```
 
-**Outros**
+### Outros
 
 ```bash
-# Acha um package e dá cd pra ele
+* Acha um package e dá cd pra ele
 roscd [package]
 
-# Grafo dos tópicos
+* Grafo dos tópicos
 rqt_graph
 
-# RViz (visualização de mensagens)
+* RViz (visualização de mensagens)
 rviz
 ```
 
-**Catkin**
+### Catkin
 
 ```bash
-# Cria o workspace (deve ser executado DENTRO DA PASTA SRC DO WORKSPACE)
+* Cria o workspace (deve ser executado DENTRO DA PASTA SRC DO WORKSPACE)
 catkin_init_workspace
 
-# Compila o workspace
+* Compila o workspace
 catkin build
 
-# Limpa o workspace (não apaga os packages)
+* Limpa o workspace (não apaga os packages)
 catkin clean
 
-# Deinicializa o workspace
+* Deinicializa o workspace
 catkin clean --deinit
 
-# Cria um package (execute dentro da src)
+* Cria um package (execute dentro da src)
 catkin_create_pkg [nome no package] [dependencias...]
 ```
 

@@ -12,7 +12,7 @@ Instalação dos seguintes programas:
 
 ---
 
-## 2. Materiais necessários
+## 2. Requisitos
 
 Computador com Ubuntu 18.04
 

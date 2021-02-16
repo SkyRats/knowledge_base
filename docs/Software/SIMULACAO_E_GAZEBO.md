@@ -1,5 +1,3 @@
-# Gazebo/Simulation Guide
-
 # Gazebo
 
 É um simulador que usamos aqui na Skyrats para simular as missões que vamos realizar com o drone na vida real.
@@ -66,7 +64,7 @@ No painel a esquerda, na aba insert, você pode fazer algumas coisas, como coloc
 
 No model editor, na barra superior, assim como na imagem acima, você pode criar "joints", elas são ligações entre models, ou entre links de algum model, (links são "models de models", ou melhor, partes de um model que teem representação própria, no drone por exemplo, tem o link do frame, dos rotores e pás, do LiDar, etc..). Essas ligações podem ser de vários tipos, cada um com sua característica, por exemplo, a joint ball é uma ligação com rotação livre em 6 eixos (x, y, z, roll, pitch, yaw), tem a revolute joint, que permite rotação em um eixo, o qual você seleciona o eixo no qual vai ser o livre, entre outros...
 
-### Corda no Gazebo
+## Corda no Gazebo
 
 ### Funcionamento
 
@@ -147,7 +145,7 @@ f.write("</sdf>\n")
 f.close()
 ```
 
-### Como funciona o arquivo model?
+## Como funciona o arquivo model?
 
 Ele, basicamente precisa de dois arquivos, um sendo `.config`, e outro `.sdf`ou `.urdf`. Todos funcionando na linguagem XML.
 
@@ -165,7 +163,7 @@ Todas as coisas do objeto estão nesse arquivo, por exemplo, a mesh, plugins, or
 
 Como é muito grande as coisas, temos muitos exemplos no nosso repositório simulation e outras infos sobre o .sdf e seus atributos aqui: [http://sdformat.org/spec?ver=1.7&elem=model](http://sdformat.org/spec?ver=1.7&elem=model)
 
-### Worlds
+## Worlds
 
 Eles são os mundos no gazebo, ou seja, são meio que uma junção de models com suas posições e configurações.
 
@@ -199,7 +197,7 @@ Nisso, você coloca a mesh dentro da pasta, configura seus arquivos .sdf e .conf
 
 Lembre-se que deve-se colocar o link para a mesh na colision box e no visual.
 
-# Programação no Gazebo e Plugins
+## Programação no Gazebo e Plugins
 
 Tudo que vimos até agora é uma pequena parte do que da para fazer com o gazebo, com plugins, ele fica 100% configurável e ajustável p/ qualquer simulação.
 
