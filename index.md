@@ -5,7 +5,7 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 # Índice
 
 ### Básicos
-- [Pre-Flight Check](https://github.com/SkyRats/knowledge_base/blob/gh-pages/guias/preflightcheck.md)
+- [Pre-Flight Check](guias/preflightcheck.md)
 
 ### Mecânica
 
