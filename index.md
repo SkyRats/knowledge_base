@@ -4,7 +4,7 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 
 ### Básicos
 - [Pre-Flight Check](guias/preflightcheck.md)
-- [Instalações iniciais](guias/Instalacao.md)
+- [Instalações básicas](guias/Instalacao.md)
 
 ### Mecânica
 - Em construção...
