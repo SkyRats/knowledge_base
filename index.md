@@ -7,15 +7,14 @@ Nós somos uma equipe de drones autônomos brasileira, e aqui estará documentad
 - [Instalações iniciais](guias/Instalacao.md)
 
 ### Mecânica
-- [](guias/)
-
+- Em construção...
 ### Hardware
 - [Componentes que utilizamos](guias/Componentes.md)
 - [Nossos drones](guias/Drones.md)
 - [Controle Futaba T14SG](guias/controleRC.md)
 
 ### Middleware
-- [Básicos de firmware e calibração](guias/"Calibraçao e Firmaware.md")
+- [Básicos de firmware e calibração](guias/Calibraçao e Firmaware.md)
 - [](guias/)
 
 ### Software
