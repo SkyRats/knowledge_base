@@ -1,5 +1,8 @@
 theme: jekyll-theme-slate
 
+title: Skyrats Knowledge Base
+description: Aqui está o conhecimento da equipe Skyrats!
+
 defaults:
   # _docs
   - scope:
