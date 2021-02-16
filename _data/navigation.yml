@@ -27,3 +27,6 @@ docs:
     children:
       - title: "Guia do Gazebo"
         url:  guias/SIMULACAO_E_GAZEBO.md
+
+sidebar:
+  nav: "docs"
