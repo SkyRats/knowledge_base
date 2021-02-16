@@ -1,0 +1,29 @@
+site_name: Knowledge Base - Skyrats
+site_url: https://skyrats.github.io/knowledge_base/
+site_author: Skyrats
+repo_url: https://github.com/SkyRats/knowledge_base
+nav:
+  - Home: index.md
+  - About: about.md
+  - 'Introdução':
+    - 'Instalações': 'Introdução/Instalacao.md'
+    - 'Protocolo de Segurança': 'Introdução/preflightcheck.md'
+    - 'Formulário': 'Introdução/formulario.md'
+  - 'Hardware':
+    - 'Componentes': 'Hardware/Componentes.md'
+    - 'Drones': 'Hardware/Drones.md'
+    - 'Controle': 'Hardware/ControleRC.md'
+  - 'Middleware':
+    - 'Calibração e Firmware': 'Middleware/Calibraçao e Firmaware.md'
+  - 'Software':
+    - 'Gazebo': 'Software/SIMULACAO_E_GAZEBO.md'
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - bash
+    - c
+    - cpp
+    - xml
+    - matlab
+    - python

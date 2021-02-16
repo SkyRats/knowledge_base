@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Software/SIMULACAO_E_GAZEBO/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Gazebo - Knowledge Base - Skyrats</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Gazebo";
+    var mkdocs_page_input_path = "Software/SIMULACAO_E_GAZEBO.md";
+    var mkdocs_page_url = "/knowledge_base/Software/SIMULACAO_E_GAZEBO/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introdução</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/formulario/">Formulário</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Componentes/">Componentes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Drones/">Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ControleRC/">Controle</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Middleware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Gazebo</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Software &raquo;</li>
+        
+      
+    
+    <li>Gazebo</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/master/docs/Software/SIMULACAO_E_GAZEBO.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="gazebosimulation-guide">Gazebo/Simulation Guide</h1>
+<h1 id="gazebo">Gazebo</h1>
+<p>É um simulador que usamos aqui na Skyrats para simular as missões que vamos realizar com o drone na vida real.</p>
+<h2 id="basicos">Básicos</h2>
+<p>Para instalar ele, as instruções no seguinte guia já fazem isso: <a href="https://github.com/SkyRats/knowledge_base/blob/main/guias/Instalacao.md">https://github.com/SkyRats/knowledge_base/blob/main/guias/Instalacao.md</a>; se precisar de mais informações sobre sua instalação: <a href="http://gazebosim.org/tutorials?tut=install_ubuntu">http://gazebosim.org/tutorials?tut=install_ubuntu</a>.</p>
+<p>O comando abaixo abre o gazebo</p>
+<p><code>gazebo &lt;opções de inicialização&gt;</code></p>
+<p>Mas também da para abrí-lo com mais condições. Pode abrir diretamente um mundo usando o mesmo comando colocando o caminho para o <code>.world</code>, ou colocando o nome do arquivo estando na pasta world. Por exemplo: <code>gazebo exemplo.world</code> Mais uma explicação ou informaçes de uso sobre o comando ou codigo</p>
+<p>Também pode iniciar o gazebo fazendo a simulação da PX4. Estando na raiz do Firmware dê o comando:</p>
+<p><code>make px4_sitl gazebo</code></p>
+<p>E também pode inciar o Gazebo junto com o ROS usando o roslaunch, e é bom por que da para abrir rosnodes, packages e outras funções do ros junto.</p>
+<p><code>roslaunch gazebo_ros &lt;exemplo.launch&gt;</code></p>
+<p>No roslaunch pode colocar vários argumentos de incialização, <a href="http://gazebosim.org/tutorials/?tut=ros_roslaunch">clique aqui para ver</a></p>
+<p><a href="http://gazebosim.org/tutorials?tut=quick_start">Tutorial de inicialização do gazeb</a>o</p>
+<h2 id="os-arquivos">Os arquivos</h2>
+<h3 id="models">Models</h3>
+<p>São os modelos que aparecem no mundo, por exemplo: caixas, paredes, cenários, dummies e até o próprio drone.</p>
+<p>Dentro do gazebo, nós temos dois jeitos para criar models e um para edição, sendo eles:</p>
+<p>Na barra cima do painel de simulação:</p>
+<p><img alt="imgs/Untitled.png" src="../imgs/Untitled.png" /></p>
+<p>Esses 3 botões podem criar um cubo, uma bola e um cilindro, todos com propriedades de inércia e colisão.</p>
+<p>Indo em Edit→Building Editor</p>
+<p><img alt="imgs/Untitled%201.png" src="../imgs/Untitled%201.png" /></p>
+<p>Nessa parte você criar casas e outras construções urbanas ou relacionadas, pois facilita bastante.</p>
+<p>Para usar:</p>
+<p>Para fazer as paredes, janelas, portas e escadas, você primeiramente seleciona o tipo, cor e textura no painel da esquerda, e "desenha" em vista superior na malha branca superior a construção a ser feita. Pode também ver que tudo é dividido em "levels", esses são os andares das construções.</p>
+<p>Model Editor:</p>
+<p>Tem dois caminhos, o primeiro, a partir de nenhum objeto é: Edit→Model editor, o outro você pode modificar um model existente, selecione ele, no display de simulação ou no painel esquerdo, depois clique com botão direito → Edit Model.</p>
+<p>Ambos vão abrir o painel do model editor.</p>
+<p>Nesse painel, seu objeto selecionado a ser editado fica em laranja, o resto branco(ambos transparentes).</p>
+<p>No painel a esquerda, na aba insert, você pode fazer algumas coisas, como colocar mais objetos, sendo as "simple shapes", ou "custom shapes"(para outros models feitos fora do gazebo, vou explicar depois), na aba model, você pode deixar o objeto static, que deixa ele fixado no mundo(isso não afeta a caixa de colisão, ele apenas não consegue se mover), pode adicionar plugins, e visualizar links e joints, e dar auto-disable.</p>
+<h3 id="joints">Joints:</h3>
+<p><img alt="imgs/Untitled%202.png" src="../imgs/Untitled%202.png" /></p>
+<p>No model editor, na barra superior, assim como na imagem acima, você pode criar "joints", elas são ligações entre models, ou entre links de algum model, (links são "models de models", ou melhor, partes de um model que teem representação própria, no drone por exemplo, tem o link do frame, dos rotores e pás, do LiDar, etc..). Essas ligações podem ser de vários tipos, cada um com sua característica, por exemplo, a joint ball é uma ligação com rotação livre em 6 eixos (x, y, z, roll, pitch, yaw), tem a revolute joint, que permite rotação em um eixo, o qual você seleciona o eixo no qual vai ser o livre, entre outros...</p>
+<h3 id="corda-no-gazebo">Corda no Gazebo</h3>
+<h3 id="funcionamento">Funcionamento</h3>
+<p>O pacote criado pela Skyrats possui um script capaz de criar um model que simula uma corda no Gazebo. A ideia principal é utiliza-la para missões que envolvam o carregamento de objetos, como a Outdoor e Swarm.</p>
+<p>Como o Gazebo só é capaz de simular corpos rígidos, que não é o caso de uma corda, algumas adaptações precisaram ser feitas. A corda foi criada por meio da união de vários links, no formato de cilindro, empilhados um acima do outro. Para uni-los, foi utilizado um joint do tipo ball, que permite rotação em todos os eixos. Assim, a corda é formada por um conjunto de corpos rígidos unidos para dar a impressão de que atuam como uma corda.</p>
+<p>Portanto, o realismo da simulação é diretamente proporcional a quantidade de links. Quanto mais links o modelo tiver para um mesmo tamanho, maior será a semelhança com uma corda real. Entretanto, um número muito alto de links pode afetar o FPS e o real time factor, deixando a simulação lenta, o que, em alguns casos, chega a ser inutilizável. Baseado em testes empíricos, 10 a 20 links para uma corda de um metro costuma ser o ideal para conciliar a performance e o desempenho.</p>
+<h3 id="como-utilizar">Como utilizar</h3>
+<p>Para utilizar o script, basta entrar no diretório scripts do pacote de simulação e executar Corda.py. O programa irá pedir que você insira a quantidade de links desejados e o tamanho de cada link. Dessa forma, é possível controlar o tamanho final da corda realizando uma conta simples: número de links vezes tamanho do link. Após digitar essas entradas, o model da corda estará na pasta models do pacote de simulação, onde é possível utilizar diretamente no Gazebo utilizando a aba insert caso você tenha feito setup.bash.</p>
+<h3 id="explicacao-do-script">Explicacao do Script</h3>
+<p>O script funciona de uma forma muito simples. Nele, existem duas funções: uma para criar um link e outra para colocar uma joint entre dois links. A primeira, quando chamada, irá escrever no arquivo SDF que será criado todos os atributos necessários (posição, massa, momento de inércia e a geometria da caixa de colisão e do visual) para criar o SDF de um link cilíndrico. </p>
+<pre><code class="language-python">def buildLink(i,tamanho):
+    f.write(&quot;   &lt;link name=\&quot;link_&quot; + str(i + 1) + &quot;\&quot;&gt;\n&quot;)
+    f.write(&quot;    &lt;pose&gt;0 0 &quot; + str(i * tamanho) + &quot;&lt;/pose&gt;\n&quot;)
+    f.write(&quot;    &lt;inertial&gt;\n&quot;)
+    f.write(&quot;    &lt;mass&gt;&quot; + str(1 * tamanho) + &quot;&lt;/mass&gt;\n&quot;)
+    f.write(&quot;    &lt;/inertial&gt;\n&quot;)
+    f.write(&quot;    &lt;collision name=\&quot;&quot; + str(i + 1) + &quot;\&quot;&gt;\n&quot;)
+    f.write(&quot;      &lt;pose&gt;0 0 0&lt;/pose&gt;\n&quot;)
+    f.write(&quot;      &lt;geometry&gt;\n&quot;)
+    f.write(&quot;       &lt;cylinder&gt;\n&quot;)
+    f.write(&quot;        &lt;radius&gt;0.012&lt;/radius&gt;\n&quot;)
+    f.write(&quot;        &lt;length&gt;&quot; + str(tamanho) + &quot;&lt;/length&gt;\n&quot;)
+    f.write(&quot;       &lt;/cylinder&gt;\n&quot;)
+    f.write(&quot;      &lt;/geometry&gt;\n&quot;)
+    f.write(&quot;     &lt;/collision&gt;\n&quot;)
+    f.write(&quot;     &lt;visual name=\&quot;&quot; + str(i + 1) + &quot;\&quot;&gt;\n&quot;)
+    f.write(&quot;      &lt;pose&gt;0 0 0&lt;/pose&gt;\n&quot;)
+    f.write(&quot;      &lt;geometry&gt;\n&quot;)
+    f.write(&quot;       &lt;cylinder&gt;\n&quot;)
+    f.write(&quot;        &lt;radius&gt;0.012&lt;/radius&gt;\n&quot;)
+    f.write(&quot;        &lt;length&gt;&quot; + str(tamanho) + &quot;&lt;/length&gt;\n&quot;)
+    f.write(&quot;       &lt;/cylinder&gt;\n&quot;)
+    f.write(&quot;      &lt;/geometry&gt;\n&quot;)
+    f.write(&quot;     &lt;/visual&gt;\n&quot;)
+    f.write(&quot;   &lt;/link&gt;\n&quot;)
+</code></pre>
+<p>A segunda função é responsável por criar uma joint do tipo ball e colocá-la na posição correta entre dois links.</p>
+<pre><code class="language-python">def buildJoint (i, tamanho):
+    f.write(&quot;   &lt;joint name=\&quot;joint &quot; + str(i) + &quot;\&quot; type=\&quot;ball\&quot;&gt;\n&quot;)
+    f.write(&quot;    &lt;parent&gt;link_&quot;+ str(i + 1) + &quot;&lt;/parent&gt;\n&quot;)
+    f.write(&quot;    &lt;child&gt;link_&quot; + str(i) + &quot;&lt;/child&gt;\n&quot;)
+    f.write(&quot;    &lt;pose&gt;0 0 &quot; + str(0.5 * tamanho) + &quot;&lt;/pose&gt;\n&quot;)
+    f.write(&quot;    &lt;physics&gt;\n&quot;)
+    f.write(&quot;    &lt;/physics&gt;\n&quot;)
+    f.write(&quot;   &lt;/joint&gt;\n&quot;)
+</code></pre>
+<p>Por fim, o resto do script é responsável por abrir e fechar o arquivo, pedir que o usuário insira o tamanho e a quantidade de links, criar o cabeçalho do SDF e chamar as funções buildLink e buildJoint quantas vezes for necessário.</p>
+<pre><code class="language-python">tamanho = float(input(&quot;Por favor, insira o tamanho de cada link: &quot;))
+quantidade = int(input(&quot;Por favor, insira a quantidade de links: &quot;))
+f = open(&quot;../../models/Rope/model.sdf&quot;, &quot;w&quot;)
+f.write(&quot;&lt;?xml version=\&quot;1.0\&quot;?&gt;&quot;)
+f.write(&quot;&lt;sdf version=\&quot;1.5\&quot;&gt;\n&quot;)
+f.write(&quot; &lt;model name=\&quot;Corda\&quot;&gt;\n&quot;)
+f.write(&quot;  &lt;self_collide&gt;true&lt;/self_collide&gt;\n&quot;)
+for i in range(quantidade):
+    if i == 0:
+        buildLink(i, tamanho)
+    else:
+        buildLink(i, tamanho)
+        buildJoint(i, tamanho)
+
+f.write(&quot;&lt;/model&gt;\n&quot;)
+f.write(&quot;&lt;/sdf&gt;\n&quot;)
+f.close()
+</code></pre>
+<h3 id="como-funciona-o-arquivo-model">Como funciona o arquivo model?</h3>
+<p>Ele, basicamente precisa de dois arquivos, um sendo <code>.config</code>, e outro <code>.sdf</code>ou <code>.urdf</code>. Todos funcionando na linguagem XML.</p>
+<p>O .config tem esse estilo:</p>
+<p><a href="https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.config">https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.config</a></p>
+<p>Onde é declarado o nome do model, versão do model, a versão do sdf(1.6), configurações do autor e descrições do objeto.</p>
+<p>O .sdf tem esse estilo:</p>
+<p><a href="https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.sdf">https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.sdf</a></p>
+<p>Todas as coisas do objeto estão nesse arquivo, por exemplo, a mesh, plugins, orientações, add de links, add de outros models, joints, materials, e todo o resto possível.</p>
+<p>Como é muito grande as coisas, temos muitos exemplos no nosso repositório simulation e outras infos sobre o .sdf e seus atributos aqui: <a href="http://sdformat.org/spec?ver=1.7&amp;elem=model">http://sdformat.org/spec?ver=1.7&amp;elem=model</a></p>
+<h3 id="worlds">Worlds</h3>
+<p>Eles são os mundos no gazebo, ou seja, são meio que uma junção de models com suas posições e configurações.</p>
+<p>Eles podem ser configurados direto no gazebo, adicionando coisas no painel de simulação, sendo pelo painel esquerdo, adicionando modelos na parte "insert", e na aba world visualizar as configurações existentes do mundo, nas aba de cima, pode mudar a configuração de posição, rotação e escala manualmente dos models, adicionar fontes de luz e mexer a camera.</p>
+<p>Pelo arquivo .world, da para fazer e adicionar todas as configurações do mundo, adicionando models, mudar posição, rotação, escala dos mesmos, adicionar plugins de mundo e configurar a GUI, sendo essa infinitamente customizável ( Vou explicar mais para frente ), como por exemplo, adicionar interfaces com botões, labels, etc, 100% customizáveis, que podem fazer qualquer coisa dentro do gazebo, customizar configurações de iluminação, câmera e céu, entre outros.</p>
+<p>Temos vários exemplos de .worlds no nosso repositório simulation, além disso, todas as configurações para o .world tem aqui: <a href="http://sdformat.org/spec?ver=1.7&amp;elem=world">http://sdformat.org/spec?ver=1.7&amp;elem=world</a></p>
+<h2 id="adicionar-meshs-de-outros-programas">Adicionar Meshs de Outros Programas</h2>
+<h3 id="quais-os-arquivos">Quais os arquivos?</h3>
+<p>No gazebo, p/ usar meshs externas, os principais tipos de arquivos suportados pelo sdf arquivos .dae, .obj, .stl. Com observação de que o .obj e o .stl não suporta materiais/texturas, o .dae é melhor não ser usado para transportar texturas pois ele dá problemas com sombras fixas nesse transporte de arquivos; em relação a desempenho/qualidade, o .dae é o mais "leve", enquanto o .stl é mais "pesado", porém ambos são bem otimizados; como comparação o .stl é superior na maioria dos casos.</p>
+<p>Em relação as texturas, os tipos de arquivos citado acima não suportam/não suportam bem. O recomendado é usar scripts de materiais. O seguinte link explica muito bem como fazer: <a href="http://gazebosim.org/tutorials?tut=color_model">http://gazebosim.org/tutorials?tut=color_model</a></p>
+<h3 id="como-adicionar-a-mesh">Como adicionar a mesh?</h3>
+<p>Primeiro cria uma pasta para o model, exemplo: <code>mkdir model; cd model</code> , depois crie os arquivos de config, sdf, e outra pasta para guardar a mesh: <code>mkdir meshes; touch model.config model.sdf</code> </p>
+<p>Nisso, você coloca a mesh dentro da pasta, configura seus arquivos .sdf e .config. P/ adicionar a mesh no .sdf, só usar um "include" dentro da parte da configuração do link, como exemplo:</p>
+<pre><code class="language-xml">&lt;geometry&gt;
+       &lt;mesh&gt;
+            &lt;uri&gt;model://model/meshes/mesh.stl&lt;/uri&gt;
+      &lt;/mesh&gt;
+&lt;/geometry&gt;
+</code></pre>
+<p>Lembre-se que deve-se colocar o link para a mesh na colision box e no visual.</p>
+<h1 id="programacao-no-gazebo-e-plugins">Programação no Gazebo e Plugins</h1>
+<p>Tudo que vimos até agora é uma pequena parte do que da para fazer com o gazebo, com plugins, ele fica 100% configurável e ajustável p/ qualquer simulação.</p>
+<p>Por ser infinitamente longo, vou ensinar o jeito de como buscar e começar a fazer alguma programação/plugin em cima do gazebo e explicar alguns códigos.</p>
+<h3 id="como-funciona">Como funciona?</h3>
+<p>Os plugins do gazebo são em C++ OO e se dividem em 3 tipos principais, os de model, de world ou de GUI.</p>
+<p>Os de model são, como o nome já diz, inicializados em models, por exemplo, dentro do .sdf:</p>
+<pre><code class="language-xml">                &lt;include&gt;
+            &lt;plugin name = 'wind_gazebo' filename = 'libgazebo_wind_plugin.so'&gt;
+                &lt;robotNamespace/&gt;
+                &lt;linkName&gt;base_link&lt;/linkName&gt;
+                &lt;xyzOffset&gt;0 0 0&lt;/xyzOffset&gt;
+                &lt;windForceMean&gt;10&lt;/windForceMean&gt;
+                &lt;windForceMax&gt;50&lt;/windForceMax&gt;
+                &lt;windForceVariance&gt;0&lt;/windForceVariance&gt;
+                &lt;windDirectionMean&gt;0 1 0&lt;/windDirectionMean&gt;
+                &lt;windDirectionVariance&gt;0&lt;/windDirectionVariance&gt;
+            &lt;/plugin&gt;
+            &lt;uri&gt;model://model&lt;/uri&gt;
+        &lt;/include&gt;
+</code></pre>
+<p>Esse é um exemplo de como adicionar um plugin com parâmetros dentro do sdf, no caso o plugin do vento.</p>
+<h3 id="como-declarar-os-tipos">Como declarar os tipos?</h3>
+<p>Para indicar qual o tipo de plugin, coloque no código o seguinte comando, sendo para modelo, gui ou world. Coloque ele depois de tudo ou antes de tudo,(em cima ou embaixo dos métodos, nunca dentro de nenhum).</p>
+<pre><code class="language-cpp">GZ_REGISTER_GUI_PLUGIN(NomeDaClasse)
+GZ_REGISTER_MODEL_PLUGIN(NomeDaClasse)
+GZ_REGISTER_WORLD_PLUGIN(NomeDaClasse)
+</code></pre>
+<p>Além disso, os plugins de model possuem duas formas de rodar, uma única no Load do model, e outra no OnUpdate(Como se fosse um while(1)... obs: não façam while(1) pfv).</p>
+<p>Como exemplo temos o método load do plugin "GetDropZonePositions"</p>
+<pre><code class="language-cpp">public: void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
+        {
+            ignition::math::Pose3d dz_clean_pose = _parent-&gt;WorldPose();
+            ignition::math::Vector3&lt;double&gt; dzc_p = dz_clean_pose.Pos();
+            double CP_V[3] = {dzc_p.X(), dzc_p.Y(), dzc_p.Z() };
+            gzmsg &lt;&lt; &quot;Dropzone pose:&quot;&lt;&lt; &quot;\n\tX = &quot; &lt;&lt; CP_V[0] &lt;&lt; &quot;\n\tY = &quot; &lt;&lt; CP_V[1] &lt;&lt; &quot;\n\tZ = &quot; &lt;&lt; CP_V[2] &lt;&lt; std::endl;
+        }
+</code></pre>
+<p>essa função load recebe dois atributos, no caso, o _parent que é o próprio model dentro do mundo, e o _sdf que é o sdf do model que foi inserido no mundo. No caso, a função dessa função .-. é de dar no início do model a posição dele no mapa, pois ele foi inserido de forma aleatória usando o modo population do .world.</p>
+<p>Primeiro, ele cria um objeto de Pose3d, que representa a posição do objeto no mundo, e atribui a ele a posição do mundo usando o método WorldPose() do model _parent, depois disso, ele cria um vector3, que é um objeto com informações sobre posição em x,y,z e nele atribui o vector3d de dentro do pose 3d usando o método Pos(), e nisso ele coloca um vetor de 3 posições cada uma das posições e depois printa elas com gzmsg, p aparecer destacado no terminal como mensagem do gazebo.</p>
+<p>E como exemplo do método OnUpdate temos o do plugin dos Dynamic Obstacles:</p>
+<pre><code class="language-cpp">public: void OnUpdate()
+        {
+                        //1
+            if (!this-&gt;toggle_status)
+            {
+                this-&gt;model-&gt;SetLinearVel(ignition::math::Vector3d(0, 0, 0));
+                this-&gt;model-&gt;SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+                return;
+            }
+                        //2
+            double v;
+            ignition::math::Vector3&lt;double&gt; curr_pos = this-&gt;link-&gt;WorldCoGPose().Pos();         
+            double x_direction = (curr_pos - this-&gt;point_0).Dot(this-&gt;direction);
+            //3
+            if (this-&gt;goal_point == 1)
+            {
+                if (x_direction &lt;= this-&gt;distance)
+                {
+                    v = this-&gt;vel;
+                }
+                else
+                {
+                    v = -this-&gt;vel;
+                    this-&gt;goal_point = 0;
+                }
+            }
+                        //4
+            else
+            {
+                if (x_direction &gt;= 0) {
+                    v = -this-&gt;vel;
+                }
+                else
+                {
+                    v = this-&gt;vel;
+                    this-&gt;goal_point = 1;
+                }
+            }
+                        //5
+            this-&gt;model-&gt;SetLinearVel(v*this-&gt;direction);
+            this-&gt;model-&gt;SetAngularVel(ignition::math::Vector3d(0, 0, 0));
+        }
+</code></pre>
+<p>A função está dividida em 5 partes, com os respectivos comentários. Como explicado anteriormente, a função OnUpdate roda a cada atualização do mundo(alguns milissegundos, tudo depende do Real Time Factor), parecido com a ideia do "void loop()" do arduino; começando pela parte  da função  <code>//1</code>; com o toggle_status, ele verifica se a movimentação dos obstáculos foi ativada pelo  usuário(veremos isso mais p frente em plugins de interface); se ela estiver desativada ele desliga a velocidade dos objetos, linear e angular, e retorna a função. No <code>//2</code> , ele declara uma variável double v, que mais para a frente vai receber valores de velocidade, depois ele cria uma variável do tipo Vector3 em double, que é como se fosse um vetor cartesiano, com 3 dimensões, porém em formato de objeto ao invés de variável, e esse Vector3, com nome curr_pos, recebe a posição do objeto naquele instante, usando o método do método do link "WorldCoGPose().Pos()" para retornar a posição cartesiana do mesmo em Vector3, e em outra variável double, a x_direction, recebe o produto escalar(.Dot()) entre a direção entre o ponto inicial e final do ciclo(aparece em outras partes do código) e a posição atual dele, para assim saber o sentido que ele está percorrendo na trajetória. Em <code>//3</code> , entra no loop assumido que o objeto está se movendo em direção ao ponto 1 da trajetória, e nisso ele verifica se o x_direction, que é o produto escalar entre o vetor posição do objeto e da direção, sendo ele maior que a distância se o x_direction coincidir com a sua chegada no ponto 1, se for verdadeiro, ele assume a velocidade positiva ao V, caso contrário, ele assume velocidade negativa e coloca como ponto de destino o ponto 0, assim, no <code>//4</code> , estando em direção do ponto 0(ponto de início), ele verifica se o x_direction é maior/igual a zero, se for, ele ainda está em direção ao ponto 0, assumindo velocidade negativa, caso contrário ele assume velocidade positiva e toma como direção o ponto 1. E no <code>//5</code> , ele coloca no objeto as velocidades, no caso sendo a angular como 0 fixa, para ele não ter movimentação angular.</p>
+<p>Os plugins de mundo, tem como maior finalidade modificar o mundo em um instante inicial, pois ele só tem a condição de ser realizado com o método "Load", tem como o exemplo o método do "Attach Rope" (<a href="https://github.com/SkyRats/simulation/blob/master/plugins/attach_rope.cc">https://github.com/SkyRats/simulation/blob/master/plugins/attach_rope.cc</a>)</p>
+<h3 id="obs">OBS::</h3>
+<p>Por mais que os plugins tem os métodos Load ou OnUpdate, que permitem que ele rode uma ou mais vezes, ou em Loop, temos o sistema de msgs, que abre mais infinitas opções... falarei mais para a frente</p>
+<h3 id="plugins-de-gui">Plugins de GUI</h3>
+<p>Esses plugins permitem que nós possamos criar uma nova interface para o gazebo, não só com botões, mas com displays, barras de inserções, e infinitas possiblidades.</p>
+<p><img alt="imgs/Untitled%203.png" src="../imgs/Untitled%203.png" /></p>
+<p>Como exemplo nós temos do plugin feito em 2020 para facilitar e controlar as simulações, vou explicar resumidamente o código:</p>
+<p>(Obs: vou mostrar o .cpp, mas vale muito a pena ir olhando o .h do código, vai ajudar muito no entendimento)</p>
+<pre><code class="language-cpp">#include &lt;sstream&gt;
+#include &lt;gazebo/msgs/msgs.hh&gt;
+#include &quot;simulation/skyrats_interface.hh&quot;
+#include &lt;ignition/msgs.hh&gt;
+#include &quot;simulation/common.h&quot;
+#include &lt;fstream&gt;
+#include &lt;math.h&gt;
+
+using namespace gazebo;
+
+//1
+GZ_REGISTER_GUI_PLUGIN(GUIExampleSpawnWidget)
+
+GUIExampleSpawnWidget::GUIExampleSpawnWidget()//1.1
+  : GUIPlugin()
+{
+  gzmsg &lt;&lt; &quot;Hello world&quot; &lt;&lt; std::endl;
+  this-&gt;counter = 0;
+  this-&gt;wind_status = false;
+  this-&gt;smoke_status = false;
+
+  //2
+  this-&gt;setStyleSheet(
+      &quot;QFrame { background-color : rgba(95, 139, 250, 255); color : blue; }&quot;);
+
+  //3
+  QHBoxLayout *mainLayout = new QHBoxLayout;
+
+  //4
+  QFrame *mainFrame = new QFrame();
+
+  //5
+  QVBoxLayout *frameLayout = new QVBoxLayout();
+
+  //6
+  QPushButton *WindButton = new QPushButton(tr(&quot;ON/OFF WIND&quot;));
+  connect(WindButton, SIGNAL(clicked()), this, SLOT(WindButton()));
+
+  QPushButton *SmokeButton = new QPushButton(tr(&quot;ON/OFF SMOKE&quot;));
+  connect(SmokeButton, SIGNAL(clicked()), this, SLOT(SmokeButton()));
+
+  QPushButton *ObstacleButton = new QPushButton(tr(&quot;ON/OFF OBSTACLE&quot;));
+  connect(ObstacleButton, SIGNAL(clicked()), this, SLOT(ObstacleButton()));
+
+  QPushButton *AttachButton = new QPushButton(tr(&quot;Rope Attach&quot;));
+  connect(AttachButton, SIGNAL(clicked()), this, SLOT(AttachButton()));
+
+    //7
+  QLabel *Skyrats_txt = new QLabel((&quot;Skyrats Simulator v1.0&quot;));
+
+  //8
+  frameLayout-&gt;addWidget(Skyrats_txt);
+
+  frameLayout-&gt;addWidget(WindButton);
+
+  frameLayout-&gt;addWidget(SmokeButton);
+
+  frameLayout-&gt;addWidget(ObstacleButton);
+
+  QLabel *indoor_txt = new QLabel((&quot;Indoor Simulation&quot;));
+
+  frameLayout-&gt;addWidget(indoor_txt);
+
+  frameLayout-&gt;addWidget(AttachButton);
+
+  QLabel *outdoor_txt = new QLabel((&quot;Outdoor Simulation&quot;));
+
+  frameLayout-&gt;addWidget(outdoor_txt);
+
+  //9
+  mainFrame-&gt;setLayout(frameLayout);
+
+  //10
+  mainLayout-&gt;addWidget(mainFrame);
+
+  //11
+  frameLayout-&gt;setContentsMargins(0, 0, 0, 0);
+  mainLayout-&gt;setContentsMargins(0, 0, 0, 0);
+
+  this-&gt;setLayout(mainLayout);
+
+
+  this-&gt;move(10, 10);
+  this-&gt;resize(160, 235);
+
+  //12
+  this-&gt;node = transport::NodePtr(new transport::Node());
+  this-&gt;node-&gt;Init();
+  this-&gt;factoryPub = this-&gt;node-&gt;Advertise&lt;msgs::Factory&gt;(&quot;~/factory&quot;);  
+
+  this-&gt;wind_toggle_pub = this-&gt;node-&gt;Advertise&lt;msgs::Int&gt;(&quot;~/wind_toggle&quot;);
+
+  this-&gt;smoke_pub = this-&gt;node-&gt;Advertise&lt;msgs::Scene&gt;(&quot;~/scene&quot;);
+
+  this-&gt;obstacle_toggle_pub = this-&gt;node-&gt;Advertise&lt;msgs::Int&gt;(&quot;~/obstacle_toggle&quot;);
+
+  this-&gt;attach_pub = this-&gt;node-&gt;Advertise&lt;msgs::Int&gt;(&quot;~/rope_attach&quot;);
+}
+
+/////////////////////////////////////////////////
+GUIExampleSpawnWidget::~GUIExampleSpawnWidget(){
+}
+//13
+void GUIExampleSpawnWidget::WindButton()
+{
+  msgs::Int msg;
+  this-&gt;wind_status = !this-&gt;wind_status;
+  msg.set_data(this-&gt;wind_status);
+  this-&gt;wind_toggle_pub-&gt;Publish(msg);
+  gzmsg &lt;&lt; &quot;Wind status: &quot; &lt;&lt; wind_status &lt;&lt; std::endl;
+}
+
+void GUIExampleSpawnWidget::SmokeButton()
+{
+  msgs::Scene smk_msg;
+  msgs::Fog* fog = new msgs::Fog;
+  this-&gt;smoke_status =! smoke_status;
+  smk_msg.set_name(&quot;smoke_toggle&quot;);
+  if (smoke_status == 0){
+    smk_msg.clear_fog();
+
+    fog-&gt;set_start(10000.0);
+    fog-&gt;set_density(0.0);
+    fog-&gt;set_end(30000.0);
+
+    smk_msg.set_allocated_fog(fog);
+  }
+  if (smoke_status == 1){
+    fog-&gt;set_start(0.1);
+    fog-&gt;set_density(300.0);
+    fog-&gt;set_end(10.0);
+
+    smk_msg.set_allocated_fog(fog);
+  }
+
+  this-&gt;smoke_pub-&gt;Publish(smk_msg);
+  gzmsg &lt;&lt; &quot;Smoke status: &quot; &lt;&lt; smoke_status &lt;&lt; std::endl;
+  gzmsg &lt;&lt; &quot;A_Fog status: &quot; &lt;&lt; smk_msg.has_fog() &lt;&lt; std::endl;
+}
+
+void GUIExampleSpawnWidget::ObstacleButton()
+{
+  msgs::Int obstacle_msg;
+  this-&gt;obstacle_status = !this-&gt;obstacle_status;
+  obstacle_msg.set_data(this-&gt;obstacle_status);
+  this-&gt;obstacle_toggle_pub-&gt;Publish(obstacle_msg);
+  gzmsg &lt;&lt; &quot;Obstacle status: &quot; &lt;&lt; obstacle_status &lt;&lt; std::endl;
+}
+
+void GUIExampleSpawnWidget::AttachButton()
+{
+  gzmsg &lt;&lt; &quot;Rope attached message sent...&quot; &lt;&lt; std::endl;
+  msgs::Int attach_msg;
+  attach_msg.set_data(1);
+  this-&gt;attach_pub-&gt;Publish(attach_msg);
+}
+</code></pre>
+<p>O código ta dividido em 13 partes para facilitar a explicação:</p>
+<p><code>//1</code> → É registrado o plugin como plugin de interface(obs: isso pode ser declarado no começo ou no final, embora na maioria dos plugins seja no final)</p>
+<p><code>//1.1</code> → Nos plugins de GUI, não existe método "Load", o método para plugins GUI, com o mesmo funcionamento é o construtor.</p>
+<p><code>//2</code> → Define o estilo do "fundo" da interface adicionada ao gazebo, no caso foi utilizado o padrão RGB, mas existem outros, tudo isso pode ser visto na documentação do QWidgets.</p>
+<p><code>//3</code> → Cria um layout do QWidget em formato de caixa para guardar a interface</p>
+<p><code>//4</code> → Cria o frame principal(Obs: o frame é a área toda ocupada pela interface, e o layout é onde ficarão os itens da interface).</p>
+<p><code>//5</code> → Cria uma layout para o frame.</p>
+<p><code>//6</code> → Aqui ele cria os botões da interface, criando um ponteiro para eles e chamando um construtor, enviando uma string, sendo essa string a que aparecerá em cima do botão em sua implementação, aleḿ disso na próxima linha ele liga o botão ao seu método, declarando seu tipo de funcionamento, como no exemplo, o cliked(), que funciona como um botão de pressão, que ele realiza uma única vez o código ao ser precionado, necessitando ser pressionado denovo para uma nova execução do código.</p>
+<p><code>//7</code> → Cria uma Label com uma string, sendo a Label alguma string/texto colocada no layout da interface.</p>
+<p><code>//8</code> → Ele adiciona todos os objetos criados no layout do frame, usando o método addWidget(). Obs: Os objetos são colocados na ordem que são escritos no código, sendo de cima para baixo, como se fosse uma fila.</p>
+<p><code>//9</code> → Aqui ele coloca o layout principal do frame como sendo o layout criado anteriormente em que foi adicionado todos os widgets.</p>
+<p><code>//10</code> → Adiciona o outro layout criado como um widget do frame.</p>
+<p><code>//11</code> → Configura a margem dos dois layouts criados e adicionados, no caso setando as duas como 0 em todas as dimensões.</p>
+<p><code>//12</code> → Aqui ele cria os nodes e publishers que serão usados nos códigos dos métodos de cada botão, essa parte vou explicar com bastante detalhes mais para a frente.</p>
+<p><code>//13</code> → Aqui, por final ele cria os métodos de cada botão adicionado. Em cada método, que foi declarado no .h e associado a cada botão no passo 6 é descrito o código que rodará de acordo com o esquema de pressão do botão, no caso dos "clicked()", cada código desse rodará uma vez a cada vez que o botão for pressionado.</p>
+<h2 id="msgs-do-gazebo">Msgs do Gazebo</h2>
+<p>Além de tudo isso que já explicamos, outro jeito de modificar/criar coisas para simulação no gazebo é através das msgs, sistema parecido com o ROS, onde cada pequena parte do gazebo se comunica com outras através dela, por exemplo temos os botões do nosso plugin Skyzebo 1.0, onde todos os botões criam publishers, e estes enviam mensagens para outras coisas, como por exemplo ligar a fumaça, que cria uma msg do tipo "Fog", modifica ela para ter as características da fumaça, depois é criado uma variável do tipo scene, onde modificamos nela apenas a parte "Fog", onde é incluída a configuração feita, e após isso a mensagem é publicada para que chegue no tópico "~/scene" e assim modifique ele aplicando fumaça no mundo. O código do método desse botão é esse, onde tem informações explicadas em comentários:</p>
+<pre><code class="language-cpp">void GUIExampleSpawnWidget::SmokeButton()
+{
+  msgs::Scene smk_msg;
+  msgs::Fog* fog = new msgs::Fog; //Criar as msgs necessárias
+  this-&gt;smoke_status =! smoke_status; //Inverter o estado passado da fumaça, para funcionar como um &quot;toggle&quot;
+  smk_msg.set_name(&quot;smoke_toggle&quot;); //Da o nome da msg da smoke
+  if (smoke_status == 0){
+    smk_msg.clear_fog(); // Se o estado da fumaça for 0 ele limpa a fog, além de inicializar ela bem longe do objeto que possui visão, como camera do drono ou nossa visão
+
+    fog-&gt;set_start(10000.0);
+    fog-&gt;set_density(0.0);
+    fog-&gt;set_end(30000.0);
+
+    smk_msg.set_allocated_fog(fog); // Coloca a msg modificada dentro da msg da scene
+  }
+  if (smoke_status == 1){ //Aqui, ele ativa a fumaça, além de deixar seu ínicio bem próximo do objeto com visão.
+    fog-&gt;set_start(0.1);
+    fog-&gt;set_density(300.0);
+    fog-&gt;set_end(10.0);
+
+    smk_msg.set_allocated_fog(fog); // Coloca a msg modificada dentro da msg da scene
+  }
+
+this-&gt;smoke_pub-&gt;Publish(smk_msg); // publica a mensagem 
+  gzmsg &lt;&lt; &quot;Smoke status: &quot; &lt;&lt; smoke_status &lt;&lt; std::endl;
+  gzmsg &lt;&lt; &quot;A_Fog status: &quot; &lt;&lt; smk_msg.has_fog() &lt;&lt; std::endl; //printa as informações no terminal
+}
+</code></pre>
+<p>Mas para que a msg seja publicada, também é necessário criar o publisher e associar o node do gazebo a ele. Nesse mesmo publisher, da fumaça, o publisher é criado assim:</p>
+<p>Primeiro, dentro da definição da classe, você declara o node e cria o publisher:</p>
+<pre><code class="language-cpp">transport::NodePtr node; // Define o node onde vai ser associado o gazebo nele
+
+transport::PublisherPtr smoke_pub; // Define o publisher do botão de toggle da fumaça
+</code></pre>
+<p>Agora, dentro do método "Load", que é o que roda no início da simulação, ou para plugins de GUI, no construtor dele:</p>
+<pre><code class="language-cpp">this-&gt;node = transport::NodePtr(new transport::Node()); // Coloca um node dentro da varíavel node criada
+this-&gt;node-&gt;Init(); // O método &quot;Init&quot; inicia o node
+
+this-&gt;smoke_pub = this-&gt;node-&gt;Advertise&lt;msgs::Scene&gt;(&quot;~/scene&quot;); // Declara a criação do publisher, colocando nele o tipo de msg e também o tópico
+</code></pre>
+<p>Todo o sistema de msgs pode ser visualizado como "mapa mental" no site da api do gazebo: <a href="http://osrf-distributions.s3.amazonaws.com/gazebo/api/1.3.1/dir_856da1f3c0f82036884d2d586cbc0904.html">http://osrf-distributions.s3.amazonaws.com/gazebo/api/1.3.1/dir_856da1f3c0f82036884d2d586cbc0904.html</a></p>
+<p>Além disso, se precisar criar uma msg nova, a explicação está aqui: <a href="http://gazebosim.org/tutorials?tut=custom_messages&amp;cat=transport">http://gazebosim.org/tutorials?tut=custom_messages&amp;cat=transport</a></p>
+<h3 id="msgs-comunicacao-entre-pluginsscripts">Msgs: Comunicação entre Plugins/Scripts</h3>
+<p>Além de usar as mgs para comunicação com o sistema do gazebo diretamente, podemos usar elas para comunicação entre plugins, funciona no mesmo esquema, a diferença é que publicaremos em um tópico para outro plugin dar subscribe e callback nele. Vou explicar com exemplos agora, pois com a noção dada acima já é necessário para entender o funcionamento:</p>
+<p>Como exemplo vou usar a comunicação do "rope_attach", plugin utilizado para conectar as cordas de uma certa carga nos drones.</p>
+<p>Primeiramente, assim como no exemplo anterior é declarado o node e o publisher dentro da declaração da classe ( Obs: O node só precisa ser criado em uma vez por plugin. ):</p>
+<pre><code class="language-cpp">transport::NodePtr node;
+
+transport::PublisherPtr attach_pub;
+</code></pre>
+<p>E são iniciados ao iniciar do gazebo:</p>
+<pre><code class="language-cpp">this-&gt;node = transport::NodePtr(new transport::Node());
+this-&gt;node-&gt;Init();
+
+this-&gt;attach_pub = this-&gt;node-&gt;Advertise&lt;msgs::Int&gt;(&quot;~/rope_attach&quot;);
+</code></pre>
+<p>O código do botão, para publicar a mensagem para esse tópico "~/rope_attach" será bem simples, pois ele não tem função de toggle, pois a caixa é presa apenas uma vez e não é solta após isso, pois os drones pousam com ela, logo, esse botão vai mandar uma mensagem do tipo "int" com o valor booleano de sinal ( 1 ):</p>
+<pre><code class="language-cpp">void GUIExampleSpawnWidget::AttachButton()
+{
+  gzmsg &lt;&lt; &quot;Rope attached message sent...&quot; &lt;&lt; std::endl; // Printa no terminal a frase
+  msgs::Int attach_msg; // Cria uma msg do tipo int
+  attach_msg.set_data(1); // Associa em seu valor usando o método set_data o número inteiro &quot;1&quot;, que tem como sentido ser um &quot;true&quot; booleano, apenas para enviar alguma coisa para o callback
+  this-&gt;attach_pub-&gt;Publish(attach_msg); // Publica a mensagem
+}
+</code></pre>
+<p>Certo, a mensagem foi publicada, agora o outro plugin, script, ou o que for, precisa recebe-la. Então, precisaremos criar um node, um subscriber e um callback. O node e o subscriber tem a função de estar la para receber a mensagem, e o subscriber inicia o método de callback sempre que recebe uma mensagem, enviando o objeto de msg recebido como parâmetro para ele.</p>
+<p>Primeiro, precisamos definir as coisas na classe(obs: isso tudo pode ser feito direto, sem .h e sem declarações, mas isso vale apenas para os métodos), assim, criaremos o subscriber, o node e o namespace(Serve para declarações do node handle, verá mais para a frente):</p>
+<pre><code class="language-cpp">private:   
+        transport::SubscriberPtr attach_sub; //Define o subscriber
+        transport::NodePtr node_handle_; // Define o node_handle_
+        std::string namespace_; // Cria o namespace
+
+public:
+        namespace_(kDefaultNamespace){} // Método do namespace
+        void AttachCallback(ConstIntPtr &amp;msg); // Define o método do callback
+</code></pre>
+<p>Agora, com tudo criado, iremos para os métodos começar a fazer tudo funcionar, primeiramente iremos no método que roda ao início do funcionamento do gazebo, onde iremos receberemos o namespace(Caso existente), </p>
+<pre><code class="language-cpp">void attach_rope::Load(physics::WorldPtr _parent, sdf::ElementPtr _sdf)
+    {
+        this-&gt;world = _parent;
+
+        if (_sdf-&gt;HasElement(&quot;robotNamespace&quot;)) //Aqui, ele observa se no sdf possui algum namespace, se tiver, ele assosia tal namespace à nossa varíavel
+            namespace_ = _sdf-&gt;GetElement(&quot;robotNamespace&quot;)-&gt;Get&lt;std::string&gt;();
+        else
+            gzerr &lt;&lt; &quot;[attach_rope] Please specify a robotNamespace.\n&quot;; //Desnecessário
+
+        node_handle_ = transport::NodePtr(new transport::Node()); //Cria o node
+        node_handle_-&gt;Init(namespace_); // Associa o namespace, vazio ou não ao node
+
+        attach_sub = node_handle_-&gt;Subscribe(&quot;~/rope_attach&quot;, &amp;attach_rope::AttachCallback, this); //**1** -&gt; Explicado abaixo
+        gzmsg &lt;&lt; &quot;aaaaabriuuuu aqui krai: &quot; &lt;&lt; std::endl; // Print de informações para debug... hehe
+    }
+</code></pre>
+<p><code>//**1**</code> → Aqui é inicializado o subscriber, tomem bastante cuidado, porque isso aqui da MUITO erro, e erros nada a ver... A partir do node handle, pegaremos um subscriber nele, e associaremos nele o tópico que ele vai receber, passaremos o método de callback como parâmetro, e também passaremos a instância do plugin também com o "this".</p>
+<p>Certo, após isso temos o subscriber inicializado temos que fazer alguma coisa com a mensagem recebida, no caso, o callback faz isso, ele é um método que é chamado pelo subscriber toda vez que alguma mensagem é recebida, e essa mensagem é passada para esse calback, como exemplo temos o callback desse mesmo plugin, que vou explicar em comentários porque ele é bem longo...:</p>
+<pre><code class="language-cpp">void attach_rope::AttachCallback(ConstIntPtr &amp;msg){
+
+        physics::JointPtr joint_1;
+        physics::JointPtr joint_2; // Criar variáveis de joint, que serão as que ligarão as cordas nos drones
+
+        ignition::math::Vector3d  z_axis = ignition::math::Vector3d(0,0,1);
+        ignition::math::Vector3d  null_axis = ignition::math::Vector3d(0,0,0);
+        ignition::math::Vector4d  null_axis4D = ignition::math::Vector4d(1,0,0,0); // Cria algumas varíaveis em vectors, de 3 e 4 dimensões
+
+        physics::ModelPtr corda_0 = this-&gt;world-&gt;ModelByName(&quot;swarm_box::swarm_box::Corda_0&quot;)
+        physics::ModelPtr iris_0 = this-&gt;world-&gt;ModelByName(&quot;iris_0&quot;);
+        physics::ModelPtr iris_1 =  this-&gt;world-&gt;ModelByName(&quot;iris_1&quot;);
+        physics::ModelPtr corda_1 = this-&gt;world-&gt;ModelByName(&quot;swarm_box::swarm_box::Corda&quot;);
+        physics::ModelPtr POSREF = this-&gt;world-&gt;ModelByName(&quot;POS_REF&quot;);
+        physics::ModelPtr NEGREF = this-&gt;world-&gt;ModelByName(&quot;NEG_REF&quot;);
+        physics::ModelPtr NULLREF = this-&gt;world-&gt;ModelByName(&quot;NULL_REF&quot;);
+        physics::ModelPtr FARREF = this-&gt;world-&gt;ModelByName(&quot;FAR_REF&quot;);
+        physics::ModelPtr spawn1 = this-&gt;world-&gt;ModelByName(&quot;spawn1&quot;);
+        physics::ModelPtr spawn2 = this-&gt;world-&gt;ModelByName(&quot;spawn2&quot;); // Retorna os models necessários presentes no mundo
+
+        bool f = false;
+        bool t = true;
+        try{//Aqui o chão de sustentação é removido para que não tenha conflito das colisions box das muitas joints da corda com o prórpio chão
+        spawn1-&gt;SetWorldPose(FARREF-&gt;WorldPose());
+        spawn2-&gt;SetWorldPose(FARREF-&gt;WorldPose()); //Elas são removidas sem dar um &quot;delete&quot; (é possível fazer isso sim! mas da mais problema) mas sim mandando elas para longe... kkkk
+        gzmsg &lt;&lt; &quot; \tDeleting ground...&quot; &lt;&lt; std::endl; 
+        } catch(std::runtime_error *e) {
+            gzmsg &lt;&lt; &quot;GROUND REMOVE FAILED&quot; &lt;&lt; std::endl;
+        } //Usando o esquema de try catch porque da muito erro isso de remover models mandando eles para longe.
+
+        gzmsg &lt;&lt; &quot;\tAttaching rope...&quot; &lt;&lt; std::endl;
+        joint_1 = this-&gt;world-&gt;Physics()-&gt;CreateJoint(&quot;ball&quot;, corda_0); // Cria a joint na corda de tipo ball, que tem rotação 360º
+        joint_1-&gt;Load(corda_0-&gt;GetLink(&quot;link_10&quot;), iris_0-&gt;GetLink(&quot;base_link&quot;), NULLREF-&gt;WorldPose()); // Carrega a joint na sua posição e no iris
+        joint_1-&gt;Attach(corda_0-&gt;GetLink(&quot;link_10&quot;), iris_0-&gt;GetLink(&quot;base_link&quot;)); // Conecta ela no iris
+        joint_1-&gt;Init(); // Inicia a joint 
+
+        joint_2 = this-&gt;world-&gt;Physics()-&gt;CreateJoint(&quot;ball&quot;, corda_1); // Cria a joint na corda de tipo ball, que tem rotação 360º
+        joint_2-&gt;Load(corda_1-&gt;GetLink(&quot;link_10&quot;), iris_1-&gt;GetLink(&quot;base_link&quot;), NULLREF-&gt;WorldPose()); // Carrega a joint na sua posição e no iris
+        joint_2-&gt;Attach(corda_1-&gt;GetLink(&quot;link_10&quot;) ,iris_1-&gt;GetLink(&quot;base_link&quot;));  // Conecta ela no iris
+        joint_2-&gt;Init(); // Inicia a joint 
+
+        spawn1-&gt;SetWorldPose(NULLREF-&gt;WorldPose());
+        spawn2-&gt;SetWorldPose(NULLREF-&gt;WorldPose()); // Manda as bases do spawn pra mais longe ainda... Não lembro por que fiz isso... Mas suave, se ta aí tem motivo KKKKKK
+    }
+</code></pre>
+<p>No caso, nesse plugin a msg não foi utilizada, pois o único objetivo era ligar uma única vez a joint caso o botão fosse apertado, porém vou dar outro exemplo, dessa vez da msg sendo utilizada, o plugin que receberá a msg será o do vento, que tem um "toggle", que funciona recebendo ou 1 ou 0 de uma varíavel int, tudo isso a partir de mais um botão na interface. O código do callback é:</p>
+<pre><code class="language-cpp">void GazeboWindPlugin::WindToggleCallback(ConstIntPtr &amp;msg)
+{
+  this-&gt;wind_status = msg-&gt;data(); // Atribui o núemro recebido no status do vento, que é uma varíavel do objeto do plugin
+  gzmsg &lt;&lt; &quot;Wind toggle&quot; &lt;&lt; std::endl; // Mensagem no terminal
+}
+</code></pre>
+<p>O callback é bem curto, pois ele só altera o valor de uma variável, que é utilizada dentro do método OnUpdate.</p>
+<p>O plugin do vento funciona assim: Ele pega o model em que ele está "instalado" e aplica uma força nele, assim se a variávek "wind_status" tiver valor 0, ele não mandará força nenhuma, caso contrário irá mandar a força do vento. O código é um pouquinho longo, vou colocar apenas algumas linhas dele, porém ele está dentro do pacote simulation → <a href="https://github.com/SkyRats/simulation/blob/master/plugins/gazebo_wind_plugin.cpp">https://github.com/SkyRats/simulation/blob/master/plugins/gazebo_wind_plugin.cpp</a></p>
+<pre><code class="language-cpp">void GazeboWindPlugin::OnUpdate(const common::UpdateInfo&amp; _info) {
+
+  if(this-&gt;wind_status == false)
+    return;
+.
+.
+. 
+Continua...
+</code></pre>
+<h2 id="dicas-para-programar-pro-gazebo">Dicas para programar pro gazebo:</h2>
+<ul>
+<li>Improvisa mesmo, coloca umas caixas no mundo p/ dar getPose, colocar umas joint nada a vê, enche de botão, coloca os plugins p conversar, etc.. .etc...</li>
+<li>Sempre que for fazer algum código pro gazebo, todas as informações são bem abertas e bem legíveis de cada classe de cada método e variável do gazebo. A dica é olhar no gazebo API, lá tem TUDO, TUDO MESMO, e tudo bem explicadinho de cada método... Então sempre que precisar ver as coisas de uma classe procure: "<nome da classe> class reference gazebo, primeiro link e só vai... Ou pode entrar no site do Gazebo API: <a href="https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html">https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" class="btn btn-neutral" title="Calibração e Firmware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

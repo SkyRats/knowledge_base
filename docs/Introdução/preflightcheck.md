@@ -1,7 +1,7 @@
 # Pre-flight Checklist
 Essas são as instruções para se realizar obrigatoriamente antes de cada vôo, para garantir segurança do operador, das pessoas pŕoximas, e garantir a integridade do drone.
 ***
-### São elas:
+### Instruções:
 1.  Verificar se a tensão da bateria esta cheia (4.2v/celula) em todas as celulas 
 2.  Fixar bateria e hélices de acordo com a orientação ( Obs: Para as hélices, são dois tipos e cada par estará diametralmente opostos )
 3.  Pegar o drone
