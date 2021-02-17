@@ -3,7 +3,7 @@ Clique em cada um e você vai ser redirecionado para um docs com as informaçõe
 
 Qualquer dúvida e/ou problema pode colocar uma issue! :)
 
-### Componentes:
+### Componentes
 
 - [Ultrasonic Sensor SU04](https://docs.google.com/document/d/1r2EBtHNH5q7TlMSgCx0nFLz1PI_f66KII1Q-Y5BMHHk/edit#heading=h.xo24vi6sx12f)
 - [UBEC Henge 6V 6A](https://docs.google.com/document/d/1vMipljO3n4VIpAzeKYKENsX2RKWwZi8nPf7g7owbOo8/edit)
