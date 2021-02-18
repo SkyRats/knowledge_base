@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Software/Convencoes-de-Codigo/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Convenções de Código - Knowledge Base - Skyrats</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Conven\u00e7\u00f5es de C\u00f3digo";
+    var mkdocs_page_input_path = "Software/Convencoes-de-Codigo.md";
+    var mkdocs_page_url = "/knowledge_base/Software/Convencoes-de-Codigo/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introdução</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/formulario/">Formulário</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Componentes/">Componentes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Drones/">Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ControleRC/">Controle</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Middleware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../SIMULACAO_E_GAZEBO/">Gazebo</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Convenções de Código</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#principios-gerais">Princípios gerais</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios">Comentários</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura">Nomenclatura</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inclusividade">Inclusividade</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python">Python</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout_1">Layout</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#indentacao">Indentação</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios_1">Comentários</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#docstrings">Docstrings</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_1">Nomenclatura</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#c">C++</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout_2">Layout</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#geral">Geral</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#condicionais">Condicionais</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops">Loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ponteiros">Ponteiros</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#espaco-em-branco">Espaço em branco</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios_2">Comentários</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#classes_1">Classes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes_1">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variaveis">Variáveis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementacao">Implementação</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_2">Nomenclatura</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arquivos">Arquivos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variaveis_1">Variáveis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constantes">Constantes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes_2">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#namespaces">namespaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#macros-define">Macros (#define)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#especificidades-da-linguagem">Especificidades da Linguagem</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#headers-arquivos-h">Headers (arquivos .h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#namespaces_1">namespaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#misc">Misc</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ros">ROS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout_3">Layout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios_3">Comentários</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_3">Nomenclatura</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referencias">Referências</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Software &raquo;</li>
+        
+      
+    
+    <li>Convenções de Código</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Software/Convencoes-de-Codigo.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="convencoes-de-codigo">Convenções de Código</h1>
+<hr />
+<h2 id="principios-gerais">Princípios gerais</h2>
+<h3 id="layout">Layout</h3>
+<h3 id="comentarios">Comentários</h3>
+<p>Do Google C++ Style Guide:</p>
+<blockquote>
+<p>Comments are absolutely vital to keeping our code readable. The following rules describe what you should comment and where. But remember: while comments are very important, the best code is self-documenting.</p>
+</blockquote>
+<h3 id="nomenclatura">Nomenclatura</h3>
+<p>Do Google C++ Style Guide:</p>
+<blockquote>
+<p>Optimize for readability using names that would be clear even to people on a different team.
+Use names that describe the purpose or intent of the object. Do not worry about saving horizontal space as it is far more important to make your code immediately understandable by a new reader. Minimize the use of abbreviations that would likely be unknown to someone outside your project (especially acronyms and initialisms).</p>
+</blockquote>
+<h3 id="inclusividade">Inclusividade</h3>
+<p>Do Google C++ Style Guide:</p>
+<blockquote>
+<p>In all code, including naming and comments, use inclusive language and avoid terms that other programmers might find disrespectful or offensive (such as "master" and "slave", "blacklist" and "whitelist", or "redline"), even if the terms also have an ostensibly neutral meaning. Similarly, use gender-neutral language unless you're referring to a specific person (and using their pronouns). For example, use "they"/"them"/"their" for people of unspecified gender (even when singular), and "it"/"its" for software, computers, and other things that aren't people.</p>
+</blockquote>
+<hr />
+<h2 id="python">Python</h2>
+<h3 id="layout_1">Layout</h3>
+<h4 id="indentacao">Indentação</h4>
+<h3 id="comentarios_1">Comentários</h3>
+<h4 id="docstrings">Docstrings</h4>
+<ul>
+<li>Docstring é uma string que deve ser posicionada no inicio de um modulo, classe, metodo ou função. Essa string se torna o atributo <code>__doc__</code> desse objeto.</li>
+<li>Sempre use <code>"""aspas triplas"""</code> ao fazer uma docstring, como no exemplo:</li>
+</ul>
+<pre><code class="language-python">def funcao(a, b):
+    &quot;&quot;&quot;Utilize essa funcao para fazer X coisa.&quot;&quot;&quot;
+    ...
+</code></pre>
+<ul>
+<li>Se a função for complexa e necessite de uma docstring de mais de uma linha, faça como o exemplo:</li>
+</ul>
+<pre><code class="language-python">def funcaoComplexa(a=0.0, b=0.0):
+    &quot;&quot;&quot;Essa funcao faz X coisas.
+
+    Keyword arguments:
+    a -- pequena descrição sobre a (default 0.0)
+    b -- pequena descrição sobre b (default 0.0)
+    &quot;&quot;&quot;
+    ...
+</code></pre>
+<h3 id="nomenclatura_1">Nomenclatura</h3>
+<hr />
+<h2 id="c">C++</h2>
+<h3 id="layout_2">Layout</h3>
+<h4 id="geral">Geral</h4>
+<ul>
+<li>Linhas devem ter no máximo 80 caracteres, exceto<ul>
+<li>Em conteúdo que não deve ser separado (e.g. URLs)</li>
+<li><code>#include</code></li>
+</ul>
+</li>
+<li>Identação de 2 espaços</li>
+<li>Valores para <code>return</code> → só use parênteses caso houver quebra de linha</li>
+<li><code>namespace</code> → não se deve identar</li>
+</ul>
+<h4 id="funcoes">Funções</h4>
+<ul>
+<li>
+<p>Definição de funções</p>
+<ul>
+<li>
+<p>Tente definir em uma única linha</p>
+<ul>
+<li>Se lista de argumentos passar de 80 caracteres, quebre a linha desta forma:</li>
+</ul>
+<p><code>c++
+ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
+                                             Type par_name3) {
+  DoSomething();
+  ...
+}</code></p>
+<ul>
+<li>Se nem mesmo o primeiro argumento couber na definição, faça:</li>
+</ul>
+<p><code>c++
+ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
+    Type par_name1,  // 4 space indent
+    Type par_name2,
+    Type par_name3) {
+  DoSomething();  // 2 space indent
+  ...
+}</code></p>
+</li>
+<li>
+<p>Não há espaço entre parênteses e o nome da função</p>
+</li>
+<li>A abertura de chaves é na mesma linha da declaração da função</li>
+<li>O fechamento de chaves é na mesma linha da abertura ou em uma linha própria</li>
+</ul>
+</li>
+<li>
+<p>Chamar funções</p>
+<ul>
+<li>Seguem as mesmas regras de quebra de linha que definições de funções</li>
+<li>Caso um argumento seja uma expressão muito complexa, considere dar um nome a ele, ou adicioná-lo sozinho numa linha</li>
+</ul>
+<p>```c++
+// Dando um nome ao argumento
+int my_heuristic = scores[x] * y + bases[x];
+bool result = DoSomething(my_heuristic, x, y, z);</p>
+<p>// Separando o argumento em uma linha a parte
+bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
+                          x, y, z);
+```</p>
+<ul>
+<li>Essas regras podem ser quebradas se o posicionamento espacial dos argumentos auxiliar na legibilidade (e.g quando trabalhando com matrizes)</li>
+</ul>
+</li>
+</ul>
+<h4 id="condicionais">Condicionais</h4>
+<ul>
+<li>Coloque um espaço entre o <code>if</code> e os parênteses</li>
+<li>Chaves devem ser abertas na mesma linha da declaração, e fechadas em uma continuação (e.g. <code>if (...){ } else {</code>) ou em uma linha separada</li>
+<li>Caso a condicional seja um único <code>if</code>, pode-se omitir as chaves</li>
+</ul>
+<h4 id="loops">Loops</h4>
+<ul>
+<li>Chaves são opcionais caso o loop tenha só uma declaração</li>
+<li>Loops vazios devem abrir e fechar chaves vazias ou ter uma declaração <code>continue</code> dentro deles para mostrar que estão vazios</li>
+</ul>
+<pre><code class="language-c++">    while (condition) {
+      // Repete o teste ate que retorne falso.
+    }
+    for (int i = 0; i &lt; kSomeNumber; ++i) {}  // Bom
+    while (condition) continue;  // Bom - ainda indica que nao ha logica
+
+    while (condition);  // Ruim - parece parte de um do/while
+</code></pre>
+<h4 id="ponteiros">Ponteiros</h4>
+<ul>
+<li>Referências a ponteiros devem seguir o padrão:</li>
+</ul>
+<pre><code class="language-c++">x = *p;
+p = &amp;x;
+x = r.y;
+x = r-&gt;y;
+</code></pre>
+<ul>
+<li>Quando juntos de definições de tipo, pode haver espaço antes, depois ou ele pode ser emitido; deve-se ser consistente dentro do mesmo arquivo</li>
+</ul>
+<pre><code class="language-c++">// Espaco antes
+char *c;
+const std::string &amp;str;
+int *GetPointer();
+std::vector&lt;char *&gt;
+
+// Espaco depois
+char* c;
+const std::string&amp; str;
+int* GetPointer();
+
+// Espaco omitido
+std::vector&lt;char*&gt;
+</code></pre>
+<h4 id="classes">Classes</h4>
+<ul>
+<li>Seções de <code>public</code>, <code>protected</code> e <code>private</code> são identadas com relação à definição da classe e devem ser precedidas por uma linha em branco (exceto a primeira instância)</li>
+<li>Construtores devem ter lista de parâmetros seguindo as regras de quebra de linha de funções descritas acima</li>
+</ul>
+<p>Exemplo:</p>
+<pre><code class="language-c++">class MyClass : public OtherClass {
+ public:      
+  MyClass();
+  explicit MyClass(int var);
+  ~MyClass() {}
+
+  void SomeFunction();
+  void SomeFunctionThatDoesNothing() {
+  }
+
+  void set_some_var(int var) { some_var_ = var; }
+  int some_var() const { return some_var_; }
+
+ private:
+  bool SomeInternalFunction();
+
+  int some_var_;
+  int some_other_var_;
+};
+
+// Quando tudo cabe em uma linha
+MyClass::MyClass(int var) : some_var_(var) {
+  DoSomething();
+}
+
+// Se a lista de atributos nao estiver toda na mesma linha,
+// voce deve quebrar antes dos dois-pontos e identar 4 espacos:
+MyClass::MyClass(int var)
+    : some_var_(var), some_other_var_(var + 1) {
+  DoSomething();
+}
+
+// Quando a lista tem muitas linhas, coloque cada atributo
+// em uma linha e os alinhe:
+MyClass::MyClass(int var)
+    : some_var_(var),             // identacao de 4 espacos
+      some_other_var_(var + 1) {  // alinhado
+  DoSomething();
+}
+</code></pre>
+<h4 id="espaco-em-branco">Espaço em branco</h4>
+<ul>
+<li>Horizontal → depende da localização, mas NUNCA no final de uma linha<ul>
+<li>Seja consistente: se houver de um lado de parênteses, coloque no outro também</li>
+<li>Operadores matemáticos unários tem espaço para a variável</li>
+<li>Operadores binários devem ter espaço, mas é permitido remover de fatores</li>
+<li>Parênteses não devem ter espaço interno</li>
+</ul>
+</li>
+<li>
+<p>Vertical → minimize sempre que possível</p>
+<ul>
+<li>
+<p>Não é uma regra, mas uma recomendação</p>
+</li>
+<li>
+<p>Linhas em branco são como quebras de parágrafo - elas separam blocos coesos de código</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="comentarios_2">Comentários</h3>
+<h4 id="classes_1">Classes</h4>
+<ul>
+<li>Todas as classes ou structs não óbvias devem ter comentários que descrevem o que elas fazem e como usá-las</li>
+<li>Com separação suficiente entre <code>.cc</code> e <code>.h</code>, comentários de implementação devem ir no <code>.cc</code> e de uso, no <code>.h</code></li>
+</ul>
+<h4 id="funcoes_1">Funções</h4>
+<ul>
+<li>Devem ter comentários começando com verbos cujo sujeito implícito é "esta função"</li>
+<li>Não descrevem como ela faz o que faz</li>
+<li>Devem descrever como a função interage com o mundo externo, descrevendo por exemplo:<ul>
+<li>Entradas e saídas</li>
+<li>Alocação de memória (só se o usuário precisar desalocar)</li>
+<li>Se algum dos argumentos pode ser <code>NULL</code> ou não</li>
+</ul>
+</li>
+<li>Comentários dentro da função devem ser usados com parcimônia para descrever peculiaridades de implementação (e.g. por que o primeiro caso é diference do caso geral em um loop)</li>
+</ul>
+<h4 id="variaveis">Variáveis</h4>
+<ul>
+<li>
+<p>Atributos de classe</p>
+<ul>
+<li>Só se o tipo e nome da variável não a descreverem o suficiente</li>
+<li>Descreva valores padrão, como no exemplo:</li>
+</ul>
+<p><code>cpp
+private:
+ // Usado para conferir acesso a tabela. **-1 significa
+ // que não sabemos ainda quantas entradas a tabela tem.**
+ int num_total_entries_;</code></p>
+</li>
+<li>
+<p>Variáveis globais</p>
+<ul>
+<li>Todas precisam de um comentário explicando o que são, como são usadas e, caso não esteja claro, porque precisam ser globais</li>
+</ul>
+<p><code>cpp
+// O numero de vezes que passamos por essse teste.
+const int kNumTestCases = 6;</code></p>
+</li>
+</ul>
+<h4 id="implementacao">Implementação</h4>
+<ul>
+<li>Blocos de código complicados devem ter comentários explicatórios antes do código em si</li>
+<li>
+<p>Linhas confusas dever ter comentários no final da linha, separados por um <code>Tab</code> do código</p>
+</li>
+<li>
+<p>Argumentos de funções</p>
+<ul>
+<li>Só quando não forem óbvios pelos nomes ou pela descrição da função</li>
+<li>Se o argumento for uma constante, deixe isso explícito no nome dela</li>
+<li>Caso a função receba muitos argumentos, considere criar uma struct ou classe para contê-los. Por exemplo:</li>
+</ul>
+<p><code>cpp
+ProductOptions options;
+options.set_precision_decimals(7);
+options.set_use_cache(ProductOptions::kDontUseCache);
+const DecimalNumber product =
+    CalculateProduct(values, options, /*completion_callback=*/nullptr);</code></p>
+<ul>
+<li>Em último caso, explique os argumentos com comentários</li>
+</ul>
+</li>
+</ul>
+<h3 id="nomenclatura_2">Nomenclatura</h3>
+<h4 id="arquivos">Arquivos</h4>
+<ul>
+<li>Letras todas minúsculas, com <code>_</code> (preferencialmente) ou <code>-</code> separando palavras</li>
+<li>Arquivos em C++ deveriam terminar com <code>.cc</code> e headers com <code>.h</code></li>
+</ul>
+<pre><code class="language-bash">my_useful_class.cc # Preferível
+my-useful-class.cc
+</code></pre>
+<ul>
+<li>
+<p>Classes e Tipos de variáveis personalizados</p>
+<ul>
+<li>Todas as palavras começam com letra maiúscula, sem separação entre elas</li>
+</ul>
+<p><code>cpp
+class UrlTable { ... }
+struct UrlTableProperties { ... }</code></p>
+</li>
+</ul>
+<h4 id="variaveis_1">Variáveis</h4>
+<ul>
+<li>Geral: Todas minúsculas, com <code>_</code> entre palavras</li>
+<li>Atributos de classe: mesmo que Geral, mas com <code>_</code> a mais no final</li>
+</ul>
+<pre><code class="language-cpp">// Nome de uma variável qualquer
+std::string table_name;
+
+class TableInfo {
+  ...
+ private:
+  std::string table_name_;  // OK - underscore no final.
+  static Pool&lt;TableInfo&gt;* pool_;  // OK.
+};
+</code></pre>
+<h4 id="constantes">Constantes</h4>
+<ul>
+<li>Começam com <code>k</code>; palavras subsequentes começam com letra maiúscula</li>
+</ul>
+<pre><code class="language-cpp">const int kDaysInAWeek = 7;
+</code></pre>
+<h4 id="funcoes_2">Funções</h4>
+<ul>
+<li>Todas as palavras começam com maiúscula</li>
+<li>Se for função de acesso ou modificador (i.e. getter ou setter), é nomeado como uma variável</li>
+</ul>
+<pre><code class="language-cpp">OpenFile()
+
+// Getter e setter
+int count()
+void set_count(int count)
+</code></pre>
+<h4 id="namespaces"><code>namespaces</code></h4>
+<ul>
+<li>Tudo minúsculo, com <code>_</code> separando palavras</li>
+<li>Deve ser o nome do projeto contido no <code>namespace</code></li>
+</ul>
+<h4 id="macros-define">Macros (<code>#define</code>)</h4>
+<ul>
+<li>Tudo maiúsculo, com <code>_</code> separando</li>
+</ul>
+<h3 id="especificidades-da-linguagem">Especificidades da Linguagem</h3>
+<h4 id="headers-arquivos-h">Headers (arquivos <code>.h</code>)</h4>
+<ul>
+<li>Todo código que não seja extremamente curto ou um teste unitário deve ter um <code>.h</code></li>
+<li>Todo <code>.h</code> deve ter um "header guard" para impedir inclusão múltipla:</li>
+</ul>
+<pre><code class="language-cpp">// No arquivo foo/src/bar/baz.h
+#ifndef FOO_BAR_BAZ_H_
+#define FOO_BAR_BAZ_H_
+
+...
+
+#endif  // FOO_BAR_BAZ_H_
+</code></pre>
+<ul>
+<li>Não declare funções antes de defini-las - use o <code>.h</code></li>
+<li>
+<p>Não declare funções do tipo <code>static</code> em um arquivo <code>.h</code></p>
+</li>
+<li>
+<p>Ordem de inclusão do <code>#include</code></p>
+<ol>
+<li>Headers relacionados</li>
+<li>Headers de C</li>
+<li>Headers de C++</li>
+<li>Headers de bibliotecas padrão</li>
+<li>Headers de outras bibliotecas</li>
+<li>Headers definidos no seu projeto</li>
+<li>Cada grupo deve ser separado por uma linha em branco</li>
+</ol>
+</li>
+</ul>
+<h4 id="namespaces_1"><code>namespaces</code></h4>
+<blockquote>
+<p>Namespaces subdivide the global scope into distinct, named scopes, and so are useful for preventing name collisions in the global scope.</p>
+</blockquote>
+<ul>
+<li>O final de <code>namespace</code>s grandes deve ser comentado</li>
+<li>Não declare nada dentro do <code>namespace std</code></li>
+<li>NÃO use a diretiva <code>using</code> (e.g. <code>using namespace foo</code>), porque ela polui o <code>namespace</code></li>
+</ul>
+<h4 id="misc">Misc</h4>
+<ul>
+<li>Dê valor a variáveis no momento em que elas forem declaradas</li>
+<li>Prefira não declarar variáveis globais estáticas - elas podem causar bugs difíceis de encontrar depois</li>
+<li><code>structs</code> só devem ser usados para armazenamento de objetos passivos, senão devem ser usadas classes</li>
+<li>Em geral, é preferível compor classes (ter um objeto de uma classe como atributo de outra) a usar <code>inheritance</code><ul>
+<li>Só faça uma subclasse de uma superclasse se o objeto da subclasse for "um tipo de" objeto da superclasse (e.g. Skyrats é "um tipo de" Grupo de Extensão)</li>
+</ul>
+</li>
+<li>Para representar o valor <code>NULL</code>, use <code>nullptr</code> para ponteiros e <code>'\0'</code> para char</li>
+</ul>
+<hr />
+<h2 id="ros">ROS</h2>
+<h3 id="layout_3">Layout</h3>
+<h3 id="comentarios_3">Comentários</h3>
+<h3 id="nomenclatura_3">Nomenclatura</h3>
+<hr />
+<h2 id="referencias">Referências</h2>
+<p><a href="https://google.github.io/styleguide/cppguide.html#Naming">Google C++ Style Guide</a></p>
+<p><a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 -- Style Guide for Python Code</a></p>
+<p><a href="https://www.python.org/dev/peps/pep-0257/">PEP 257 -- Docstring Conventions</a></p>
+<p><a href="http://wiki.ros.org/StyleGuide">ROS Style Guide</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../SIMULACAO_E_GAZEBO/" class="btn btn-neutral" title="Gazebo"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../SIMULACAO_E_GAZEBO/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

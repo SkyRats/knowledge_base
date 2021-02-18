@@ -1,43 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://skyrats.github.io/knowledge_base/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/about/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Introdu%C3%A7%C3%A3o/Instalacao/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Introdu%C3%A7%C3%A3o/preflightcheck/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Introdu%C3%A7%C3%A3o/formulario/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/Componentes/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/Drones/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/ControleRC/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Middleware/Calibra%C3%A7ao%20e%20Firmaware/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://skyrats.github.io/knowledge_base/Software/SIMULACAO_E_GAZEBO/</loc>
-     <lastmod>2021-02-17</lastmod>
+     <lastmod>2021-02-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://skyrats.github.io/knowledge_base/Software/Convencoes-de-Codigo/</loc>
+     <lastmod>2021-02-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
