@@ -1,13 +1,10 @@
 # Convenções de Código
 
-
-## Motivação
-
 Em geral, times de desenvolvedores passam mais tempo lendo e mantendo código já escrito (incluindo durante debugging) do que escrevendo código novo. Assim, é necessário que código seja de fácil compreensão tanto para a pessoa que o desenvolveu inicialmente, mas não se lembra de todos os detalhes, quanto para outros membros do time que nunca trabalharam no projeto.
 
 Nesse contexto, convenções de programação servem como uma fundação para que todos consigam entender e escrever com facilidade código que outras pessoas entendam. Elas economizam tempo de revisão, permitindo que o programador entenda mais rapidamente a estrutura de um programa pouco familiar. Além disso, facilitam que outros grupos integrem código de diversos times e adaptem-no com facilidade.
 
-
+<br>
 
 ## Princípios gerais
 
@@ -38,7 +35,6 @@ Programas são em geral complexos, realizando diversas tarefas para chegar ao re
 É necessário ressaltar que **nenhum objeto deve depender da implementação de outro**. 
 
 Por exemplo, uma classe `DrawCircle` depende do fato da classe `LocateCircle` ter atributos `center_x_` e `center_y_`. Posteriormente, a classe `LocateCircle` passa a armazenar o centro em coordenadas polares. Com isso, `DrawCircle` vai parar de funcionar e vai precisar ser modificada também. Nesse exemplo, seria mais adequado existir uma função `GetCircleCenter` em `LocateCircle`, criando uma camada de abstração entre as implementações das classes.
-
 
 
 ### Comentários
@@ -98,7 +94,7 @@ Do Google C++ Style Guide:
 
 > In all code, including naming and comments, use inclusive language and avoid terms that other programmers might find disrespectful or offensive (such as "master" and "slave", "blacklist" and "whitelist", or "redline"), even if the terms also have an ostensibly neutral meaning. Similarly, use gender-neutral language unless you're referring to a specific person (and using their pronouns). For example, use "they"/"them"/"their" for people of unspecified gender (even when singular), and "it"/"its" for software, computers, and other things that aren't people.
 
----
+<br>
 
 ## Python
 
@@ -137,33 +133,33 @@ foo = long_function_name(
 
 - Fechamento de parênteses/chaves/colchetes em estruturas de mais de uma linha podem se alinhar com o conteúdo ou com o primeiro caractere da linha da estrutura
 
-	```python
-	# Alinhamento com o conteúdo
-	my_list = [
-	    1, 2, 3,
-	    4, 5, 6,
-	    ]
-	
-	# Alinhamento com o primeiro caractere
-	my_list = [
-	    1, 2, 3,
-	    4, 5, 6,
+```python
+# Alinhamento com o conteúdo
+my_list = [
+	1, 2, 3,
+	4, 5, 6,
 	]
-	```
+
+# Alinhamento com o primeiro caractere
+my_list = [
+	1, 2, 3,
+	4, 5, 6,
+]
+```
 
 - É preferível encapsular estruturas de várias linhas entre parênteses
 
 - Linhas devem ser quebradas antes de operadores binários
 
-	```python
-	# Errado
-	income = (gross_wages +
-	          taxable_interest)
-	
-	# Correto
-	income = (gross_wages
-	          + taxable_interest)
-	```
+```python
+# Errado
+income = (gross_wages +
+			taxable_interest)
+
+# Correto
+income = (gross_wages
+			+ taxable_interest)
+```
 
 #### Espaço em branco
 
@@ -176,45 +172,45 @@ foo = long_function_name(
 	- Separação de conjuntos de funções
 	- Indicação de seções lógicas
 
-- Evite:
+Evite:
 
-	- Dentro de parênteses/chaves/colchetes
+- Dentro de parênteses/chaves/colchetes
 
-	- Entre uma vírgula final e o fechamento de parênteses
+- Entre uma vírgula final e o fechamento de parênteses
 
-		```python
-		# Correto
+```python
+# Correto
+foo = (0,) 
 		foo = (0,) 
-		```
+foo = (0,) 
+```
 
-	- Imediatamente antes de um sinal de pontuação
+- Imediatamente antes de um sinal de pontuação
 
-	- Imediatamente antes de abrir parênteses ao chamar uma função
+- Imediatamente antes de abrir parênteses ao chamar uma função
 
-		```python
-		# Correto
-		spam(1)
-		```
+```python
+# Correto
+spam(1)
+```
 
-	- Mais de dois espaços ao redor de um operador de atribuição para alinhá-lo com outros
+- Mais de dois espaços ao redor de um operador de atribuição para alinhá-lo com outros
 
-	- Espaços no final da linha
+- Espaços no final da linha
 
-	- Colocar espaço entre o `=` e o argumento de uma função
+- Colocar espaço entre o `=` e o argumento de uma função
 
-		```python
-		# Correto
-		def complex(real, imag=0.0):
-		    return magic(r=real, i=imag)
-		
-		# Errado
-		def complex(real, imag = 0.0):
-		    return magic(r = real, i = imag)
-		```
+```python
+# Correto
+def complex(real, imag=0.0):
+	return magic(r=real, i=imag)
+
+# Errado
+def complex(real, imag = 0.0):
+	return magic(r = real, i = imag)
+```
 	
-- Faça:
-
-	- Deixe um espaço entre variáveis e operadores binários
+- Deixe um espaço entre variáveis e operadores binários
 
 #### `import`
 
@@ -222,11 +218,11 @@ foo = long_function_name(
 
 - Mas se forem vários importados do mesmo local, podem ficar na mesma linha
 
-	```python
-	import os
-	import sys
-	from subprocess import Popen, PIPE
-	```
+```python
+import os
+import sys
+from subprocess import Popen, PIPE
+```
 
 - Sempre vem no topo do arquivo
 
@@ -240,11 +236,11 @@ foo = long_function_name(
 
 	- Exceto quando nomes de pacotes forem excessivamente grandes
 
-	```python
-	import mypkg.sibling
-	from mypkg import sibling
-	from mypkg.sibling import example
-	```
+```python
+import mypkg.sibling
+from mypkg import sibling
+from mypkg.sibling import example
+```
 
 - "Wildcard" `import`s (como `from mavbase.MAV import *`) devem ser evitados
 
@@ -312,32 +308,36 @@ foo = long_function_name(
 
 - Não devem estar junto ao fechamento de parênteses/chaves/colchetes
 
-	```python
-	# Correto
-	FILES = ('setup.cfg',)
-	# Errado
-	FILES = 'setup.cfg',
-	
-	# Correto
-	FILES = [
-	    'setup.cfg',
-	    'tox.ini',
-	    ]
-	initialize(FILES,
-	           error=True,
-	           )
-	```
+```python
+# Correto
+FILES = ('setup.cfg',)
+# Errado
+FILES = 'setup.cfg',
+
+# Correto
+FILES = [
+	'setup.cfg',
+	'tox.ini',
+	]
+initialize(FILES,
+			error=True,
+			)
+```
 
 #### Underscore
 
 - Existem quatro jeitos de usar underscore em nomes de Python:
 
-	```python
+```python
+um_no_final_  # Usado para nao conflitar com nomes reservados 
 	um_no_final_  # Usado para nao conflitar com nomes reservados 
+um_no_final_  # Usado para nao conflitar com nomes reservados 
+_um_no_inicio  # Indica que a variavel e de uso interno, mas ela ainda pode ser acessada por outros arquivos facilmente 
 	_um_no_inicio  # Indica que a variavel e de uso interno, mas ela ainda pode ser acessada por outros arquivos facilmente 
-	__dois_no_inicio  # Quando for atributo de classe, invoca "name mangling" (ver Especificades da Linguagem)
-	__dois_no_inicio_e_fim__  # "Nomes magicos; NAO invente novos, so use os ja existentes"
-	```
+_um_no_inicio  # Indica que a variavel e de uso interno, mas ela ainda pode ser acessada por outros arquivos facilmente 
+__dois_no_inicio  # Quando for atributo de classe, invoca "name mangling" (ver Especificades da Linguagem)
+__dois_no_inicio_e_fim__  # "Nomes magicos; NAO invente novos, so use os ja existentes"
+```
 
 #### Name mangling
 
@@ -382,33 +382,31 @@ def complex_function(a=0.0, b=0.0):
 
 -  Seja consistente com `return`: ou todos os `return`s devolvem expressões, ou nenhum devolve
 
-	```python
-	# Correto
-	def foo(x):
-	    if x >= 0:
-	        return math.sqrt(x)
-	    else:
-	        return None
-	    
-	# Errado
-	def foo(x):
-	    if x >= 0:
-	        return math.sqrt(x)
-	```
+```python
+# Correto
+def foo(x):
+	if x >= 0:
+		return math.sqrt(x)
+	else:
+		return None
+	
+# Errado
+def foo(x):
+	if x >= 0:
+		return math.sqrt(x)
+```
 
 - Para sequências (`strings`, `lists`, `tuples`), use o fato de que sequências vazias são `False`
 
-	```python
-	# Correto
-	if not seq
-	
-	# Errado
-	if len(seq)
-	```
+```python
+# Correto
+if not seq
 
-	
+# Errado
+if len(seq)
+```
 
----
+<br>
 
 ## C++
 
@@ -426,49 +424,49 @@ def complex_function(a=0.0, b=0.0):
 
 #### Funções
 
-- Definição de funções
-    - Tente definir em uma única linha
-        - Se lista de argumentos passar de 80 caracteres, quebre a linha desta forma:
+Definição de funções
+- Tente definir em uma única linha
+	- Se lista de argumentos passar de 80 caracteres, quebre a linha desta forma:
 
-        ```c++
-        ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
-                                                     Type par_name3) {
-          DoSomething();
-          ...
-        }
-        ```
+```c++
+ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
+												Type par_name3) {
+	DoSomething();
+	...
+}
+```
 
-        - Se nem mesmo o primeiro argumento couber na definição, faça:
+- Se nem mesmo o primeiro argumento couber na definição, faça:
 
-        ```c++
-        ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
-            Type par_name1,  // 2 indentações
-            Type par_name2,
-            Type par_name3) {
-          DoSomething();  // 1 indentação
-          ...
-        }
-        ```
+```c++
+ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
+	Type par_name1,  // 2 indentações
+	Type par_name2,
+	Type par_name3) {
+	DoSomething();  // 1 indentação
+	...
+}
+```
 
-    - Não há espaço entre parênteses e o nome da função
-    - A abertura de chaves é na mesma linha da declaração da função
-    - O fechamento de chaves é na mesma linha da abertura ou em uma linha própria
+- Não há espaço entre parênteses e o nome da função
+- A abertura de chaves é na mesma linha da declaração da função
+- O fechamento de chaves é na mesma linha da abertura ou em uma linha própria
     
 - Chamar funções
     - Seguem as mesmas regras de quebra de linha que definições de funções
     - Caso um argumento seja uma expressão muito complexa, considere dar um nome a ele, ou adicioná-lo sozinho numa linha
 
-    ```c++
-    // Dando um nome ao argumento
-    int my_heuristic = scores[x] * y + bases[x];
-    bool result = DoSomething(my_heuristic, x, y, z);
+- Essas regras podem ser quebradas se o posicionamento espacial dos argumentos auxiliar na legibilidade (e.g quando trabalhando com matrizes)
 
-    // Separando o argumento em uma linha a parte
-    bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
-                              x, y, z);
-    ```
+```c++
+// Dando um nome ao argumento
+int my_heuristic = scores[x] * y + bases[x];
+bool result = DoSomething(my_heuristic, x, y, z);
 
-    - Essas regras podem ser quebradas se o posicionamento espacial dos argumentos auxiliar na legibilidade (e.g quando trabalhando com matrizes)
+// Separando o argumento em uma linha a parte
+bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
+							x, y, z);
+```
 
 #### Condicionais
 
@@ -571,7 +569,7 @@ MyClass::MyClass(int var)
 
 #### Espaço em branco
 
-- Horizontal → depende da localização, mas NUNCA no final de uma linha
+- Horizontal → depende da localização, mas **NUNCA** no final de uma linha
     - Seja consistente: se houver de um lado de parênteses, coloque no outro também
     - Operadores matemáticos unários tem espaço para a variável
     - Operadores binários devem ter espaço, mas é permitido remover de fatores
@@ -606,20 +604,20 @@ MyClass::MyClass(int var)
     - Só se o tipo e nome da variável não a descreverem o suficiente
     - Descreva valores padrão, como no exemplo:
 
-    ```c++
-    private:
-     // Usado para conferir acesso a tabela. -1 significa
-     // que não sabemos ainda quantas entradas a tabela tem.
-     int num_total_entries_;
-    ```
+```c++
+private:
+	// Usado para conferir acesso a tabela. -1 significa
+	// que não sabemos ainda quantas entradas a tabela tem.
+	int num_total_entries_;
+```
 
 - Variáveis globais
     - Todas precisam de um comentário explicando o que são, como são usadas e, caso não esteja claro, porque precisam ser globais
 
-    ```c++
-    // O numero de vezes que passamos por essse teste.
-    const int kNumTestCases = 6;
-    ```
+```c++
+// O numero de vezes que passamos por essse teste.
+const int kNumTestCases = 6;
+```
 
 #### Implementação
 
@@ -631,15 +629,15 @@ MyClass::MyClass(int var)
     - Se o argumento for uma constante, deixe isso explícito no nome dela
     - Caso a função receba muitos argumentos, considere criar uma struct ou classe para contê-los. Por exemplo:
 
-    ```c++
-    ProductOptions options;
-    options.set_precision_decimals(7);
-    options.set_use_cache(ProductOptions::kDontUseCache);
-    const DecimalNumber product =
-        CalculateProduct(values, options, /*completion_callback=*/nullptr);
-    ```
+```c++
+ProductOptions options;
+options.set_precision_decimals(7);
+options.set_use_cache(ProductOptions::kDontUseCache);
+const DecimalNumber product =
+	CalculateProduct(values, options, /*completion_callback=*/nullptr);
+```
 
-    - Em último caso, explique os argumentos com comentários
+- Em último caso, explique os argumentos com comentários
     
 
 
@@ -761,7 +759,7 @@ void set_count(int count)
 	-  Só faça uma subclasse de uma superclasse se o objeto da subclasse for "um tipo de" objeto da superclasse (e.g. Skyrats é "um tipo de" Grupo de Extensão)
 -  Para representar o valor `NULL`, use `nullptr` para ponteiros e `'\0'` para char
 
----
+<br>
 
 ## ROS
 
@@ -789,9 +787,7 @@ void set_count(int count)
 - Para funções, use `ROS_DEPRECATED`
 - Para classes, use `ROS_DEPRECATED` no construtor da classe
 
-
-
----
+<br>
 
 ## Referências
 
