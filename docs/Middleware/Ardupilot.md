@@ -23,4 +23,4 @@ pip install future
 
 #Fazer o upload da última config de Firmware compilada
 ./waf --targets bin/<nome_do_arquivo> --upload
-
+```

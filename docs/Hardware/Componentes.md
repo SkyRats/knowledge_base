@@ -1,10 +1,10 @@
-**Guia dos Componentes**
+# Guia dos Componentes
 
 Clique em cada um e você vai ser redirecionado para um docs com as informações até agora obtidas para instalação, uso, erros e links...
 
 Qualquer dúvida e/ou problema pode colocar uma issue! :)
 
-### Componentes
+## Componentes
 
 - [Ultrasonic Sensor SU04](https://docs.google.com/document/d/1r2EBtHNH5q7TlMSgCx0nFLz1PI_f66KII1Q-Y5BMHHk/edit#heading=h.xo24vi6sx12f)
 - [UBEC Henge 6V 6A](https://docs.google.com/document/d/1vMipljO3n4VIpAzeKYKENsX2RKWwZi8nPf7g7owbOo8/edit)
@@ -32,5 +32,5 @@ Qualquer dúvida e/ou problema pode colocar uma issue! :)
 
 
 
-### Pasta geral
+## Pasta geral
  - [Clique aqui para ir até a pasta geral com todos os componentes](https://drive.google.com/drive/u/1/folders/1VT_8Q2C2Exzw-Ggui360wtI149Le2P57)
