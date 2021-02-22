@@ -5,8 +5,9 @@ Caso não tenha ele baixado ainda, realize as instruções do guia de instalaç�
 ## Compilar
 
 ```bash
-#Instala dependências necessárias do python:
-.~/src/ardupilot/Tools/environment_install/install-prereqs-ubuntu.sh -y
+#Instala dependências necessárias do firmware:
+. ~/src/ardupilot/Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
 
 #Instala dependências necessárias do python:
 pip install future
@@ -19,4 +20,7 @@ pip install future
 
 #Escolher tipo de veículo
 ./waf copter
+
+#Fazer o upload da última config de Firmware compilada
+./waf --targets bin/<nome_do_arquivo> --upload
 
