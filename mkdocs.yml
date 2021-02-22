@@ -17,6 +17,7 @@ nav:
     - 'Controle': 'Hardware/ControleRC.md'
   - 'Middleware':
     - 'Calibração e Firmware': 'Middleware/Calibraçao e Firmaware.md'
+    - 'Ardupilot': 'Middleware/Ardupilot.md'
   - 'Software':
     - 'Gazebo': 'Software/SIMULACAO_E_GAZEBO.md'
     - 'Convenções de Código': 'Software/Convencoes-de-Codigo.md'
