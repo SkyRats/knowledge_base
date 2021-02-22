@@ -65,38 +65,6 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalações</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#1-objetivo">1. Objetivo</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#2-materiais-necessarios">2. Materiais necessários</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#3-passo-a-passo">3. Passo a passo</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#31-ros-e-gazebo">3.1. ROS e Gazebo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#32-mavros">3.2. MAVROS</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#33-firmware-px4">3.3. Firmware PX4</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#34-qgroundcontrol">3.4. QGroundControl</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#4-verificando-a-instalacao">4. Verificando a instalação</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#41-ros">4.1. ROS</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#42-mavros">4.2. MAVROS</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#43-gazebo">4.3. Gazebo</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#44-firmware-px4">4.4. Firmware PX4</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#45-qgroundcontrol">4.5. QGroundControl</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#5-referencias">5. Referências</a>
-    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../preflightcheck/">Protocolo de Segurança</a>
@@ -117,10 +85,18 @@
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Software</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
                     </li>
                 </ul>
       </div>
@@ -151,7 +127,7 @@
     <li>Instalações</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/master/docs/Introdução/Instalacao.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Introdução/Instalacao.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -162,7 +138,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="instalacao">Instalação</h1>
+                <p><strong>Instalação</strong></p>
 <h2 id="1-objetivo">1. Objetivo</h2>
 <p>Instalação dos seguintes programas:</p>
 <ul>
@@ -173,7 +149,7 @@
 <li>QGroundControl</li>
 </ul>
 <hr />
-<h2 id="2-materiais-necessarios">2. Materiais necessários</h2>
+<h2 id="2-requisitos">2. Requisitos</h2>
 <p>Computador com Ubuntu 18.04</p>
 <hr />
 <h2 id="3-passo-a-passo">3. Passo a passo</h2>
@@ -251,6 +227,13 @@ make px4_sitl gazebo
 
 # Pixhawk 4
 make px4_fmu-v5_default
+</code></pre>
+<h3 id="33-firmware-ardupilot">3.3. Firmware ARDUPILOT</h3>
+<pre><code class="language-bash">cd ~/src
+
+# Clona o firmware
+git clone https://github.com/SkyRats/ardupilot.git --recursive
+
 </code></pre>
 <h3 id="34-qgroundcontrol">3.4. QGroundControl</h3>
 <pre><code class="language-bash">sudo usermod -a -G dialout $USER

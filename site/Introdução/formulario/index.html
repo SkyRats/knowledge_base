@@ -69,6 +69,16 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Formulário</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basico">Básico</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manipulando-arquivos-e-diretorios">Manipulando arquivos e diretórios</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manipulando-o-sistema">Manipulando o sistema</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#manipulando-pacotes-apenas-para-distribuicoes-baseadas-no-debian">Manipulando pacotes (Apenas para distribuições baseadas no Debian)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comandos-uteis-e-legais">Comandos úteis (e legais)</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -85,10 +95,18 @@
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Software</span></p>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
                     </li>
                 </ul>
       </div>
@@ -119,7 +137,7 @@
     <li>Formulário</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/master/docs/Introdução/formulario.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Introdução/formulario.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -130,32 +148,13 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="formulario">Fórmulário</h1>
-<!-- Template -->
-<p>&lt;!-- </p>
-<h1 id="titulo-principal">Titulo principal</h1>
-<p>Explicar aqui bem resumido o que é esse "titulo"
-se tiver algum comando bem básico</p>
-<h2 id="subtitulo">Subtitulo</h2>
-<h3 id="topico">Topico</h3>
-<p>Escrever aqui uma explicação ou um comentário bem resumido sobre o comando/topico
-```Linguagem do comando/código
-comando [args...] comando comando
-codigo codigo codigo codigo
-codigo codigo codigo codigo
-codigo codigo codigo codigo</p>
-<pre><code>Mais uma explicação ou informaçes de uso sobre o comando ou codigo
-
-[Explicações mais avançadas sobre o &lt;Colocar nome do TOPICO&gt;](https://github.com/SkyRats/knowledge_base/blob/main/guias/README.md)
---&gt;
-
-## Linux
-
-### Básico
-
-* Mostrar o caminho atual
-```bash
-pwd
+                <p><strong>Fórmulário</strong></p>
+<h2 id="linux">Linux</h2>
+<h3 id="basico">Básico</h3>
+<ul>
+<li>Mostrar o caminho atual</li>
+</ul>
+<pre><code class="language-bash">pwd
 </code></pre>
 <ul>
 <li>Listar os arquivos no diretório atual</li>
@@ -322,7 +321,6 @@ Utilize o comando</li>
 <h2 id="firmware">Firmware</h2>
 <hr />
 <h2 id="simulacaogazebo">Simulação/Gazebo</h2>
-<h2 id="comandos-basicos">Comandos básicos</h2>
 <h3 id="iniciar-gazebo">Iniciar gazebo</h3>
 <p>O comando abaixo abre o gazebo</p>
 <pre><code class="language-bash">gazebo &lt;opções de inicialização&gt; 
@@ -345,99 +343,99 @@ Estando na raiz do Firmware dê o comando:</p>
 <h3 id="terminal">Terminal</h3>
 <p>Esses são os mais comuns. Se você digitar só o início do comando (tipo <code>rostopic</code>) ele deve te dar a lista de todos. Colocar <code>-h</code> no final pede ajuda sobre a sintaxe.</p>
 <p><strong>Topics</strong></p>
-<pre><code class="language-bash"># Lista todos os tópicos ativos
+<pre><code class="language-bash">* Lista todos os tópicos ativos
 rostopic list
 
-# Informações sobre um tópico
+* Informações sobre um tópico
 rostopic info [tópico]
 
-# Vê o que tá sendo publicado no tópico
+* Vê o que tá sendo publicado no tópico
 rostopic echo [tópico]
 
-# Vê a frequência com que estão publicando no tópico
+* Vê a frequência com que estão publicando no tópico
 rostopic hz [tópico]
 
-# Publica no tópico
+* Publica no tópico
 rostopic pub [tópico] [tipo de mensagem] [args...]
 </code></pre>
-<p><strong>Messages</strong></p>
-<pre><code class="language-bash"># Lista todas os tipos de mensagem (são muitos kkk)
+<h3 id="messages">Messages</h3>
+<pre><code class="language-bash">* Lista todas os tipos de mensagem (são muitos kkk)
 rosmsg list
 
-# Informações sobre um tipo de mensagem
+* Informações sobre um tipo de mensagem
 rosmsg show [mensagem]
 </code></pre>
-<p><strong>Services</strong></p>
-<pre><code class="language-bash"># Lista todos os serviços
+<h3 id="services">Services</h3>
+<pre><code class="language-bash">* Lista todos os serviços
 rosservice list
 
-# Informações sobre um serviço
+* Informações sobre um serviço
 rosservice info [serviço]
 
-# Chama um serviço
+* Chama um serviço
 rosservice call [serviço] [args...]
 </code></pre>
-<p><strong>Nodes</strong></p>
-<pre><code class="language-bash"># Lista todos os nodes
+<h3 id="nodes">Nodes</h3>
+<pre><code class="language-bash">* Lista todos os nodes
 rosnode list
 
-# Informações sobre um node
+* Informações sobre um node
 rosnode info [node]
 </code></pre>
-<p><strong>Params</strong></p>
-<pre><code class="language-bash"># Lista todos os parâmetros
+<h3 id="params">Params</h3>
+<pre><code class="language-bash">* Lista todos os parâmetros
 rosparam list
 
-# Lê um parâmetro
+* Lê um parâmetro
 rosparam get [param]
 
-# Escreve em um parâmetro
+* Escreve em um parâmetro
 rosparam set [param] [valor]
 </code></pre>
-<p><strong>Execução</strong></p>
-<pre><code class="language-bash"># Inicia o ROS
+<h3 id="execucao">Execução</h3>
+<pre><code class="language-bash">* Inicia o ROS
 roscore
 
-# Executa um node
+* Executa um node
 rosrun [package] [node]
 
-# Executa um launchfile (não requer roscore)
+* Executa um launchfile (não requer roscore)
 roslaunch [package] [arquivo .launch] [argumento:=valor ...]
 </code></pre>
-<p><strong>ROS Bags</strong></p>
-<pre><code class="language-bash"># Grava os tópicos 1, 2 e 3
+<h3 id="ros-bags">ROS Bags</h3>
+<pre><code class="language-bash">* Grava os tópicos 1, 2 e 3
 rosbag record [topico1] [topico2] [topico3] e 3
 
-# Grava todos os tópicos
+* Grava todos os tópicos
 rosbag record -a
 
-# Executa um rosbag
+* Executa um rosbag
 rosbag play [nome_da_rosbag].bag
 </code></pre>
-<p><strong>Outros</strong></p>
-<pre><code class="language-bash"># Acha um package e dá cd pra ele
+<h3 id="outros">Outros</h3>
+<pre><code class="language-bash">* Acha um package e dá cd pra ele
 roscd [package]
 
-# Grafo dos tópicos
+* Grafo dos tópicos
 rqt_graph
 
-# RViz (visualização de mensagens)
+* RViz (visualização de mensagens)
 rviz
 </code></pre>
-<p><strong>Catkin</strong></p>
-<pre><code class="language-bash"># Cria o workspace (deve ser executado DENTRO DA PASTA SRC DO WORKSPACE)
+<h3 id="catkin">Catkin</h3>
+<pre><code class="language-bash">* Cria o workspace (deve ser executado DENTRO DA PASTA SRC DO WORKSPACE)
 catkin_init_workspace
 
-# Compila o workspace
+* Compila o workspace
 catkin build
 
-# Limpa o workspace (não apaga os packages)
+* Limpa o workspace (não apaga os packages)
 catkin clean
 
-# Deinicializa o workspace
+* Deinicializa o workspace
 catkin clean --deinit
 
-# Cria um package (execute dentro da src)
+* Cria um package (execute dentro da src)
 catkin_create_pkg [nome no package] [dependencias...]
 </code></pre>
 <h3 id="python">Python</h3>

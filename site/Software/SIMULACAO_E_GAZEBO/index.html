@@ -83,12 +83,72 @@
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Software</span></p>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Gazebo</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basicos">Básicos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#os-arquivos">Os arquivos</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#models">Models</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#joints">Joints:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#corda-no-gazebo">Corda no Gazebo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#funcionamento">Funcionamento</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#como-utilizar">Como utilizar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#explicacao-do-script">Explicacao do Script</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#como-funciona-o-arquivo-model">Como funciona o arquivo model?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#worlds">Worlds</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#adicionar-meshs-de-outros-programas">Adicionar Meshs de Outros Programas</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quais-os-arquivos">Quais os arquivos?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#como-adicionar-a-mesh">Como adicionar a mesh?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programacao-no-gazebo-e-plugins">Programação no Gazebo e Plugins</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#como-funciona">Como funciona?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#como-declarar-os-tipos">Como declarar os tipos?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#obs">OBS::</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plugins-de-gui">Plugins de GUI</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#msgs-do-gazebo">Msgs do Gazebo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#msgs-comunicacao-entre-pluginsscripts">Msgs: Comunicação entre Plugins/Scripts</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dicas-para-programar-pro-gazebo">Dicas para programar pro gazebo:</a>
+    </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
                     </li>
                 </ul>
       </div>
@@ -119,7 +179,7 @@
     <li>Gazebo</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/master/docs/Software/SIMULACAO_E_GAZEBO.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Software/SIMULACAO_E_GAZEBO.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -130,8 +190,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="gazebosimulation-guide">Gazebo/Simulation Guide</h1>
-<h1 id="gazebo">Gazebo</h1>
+                <h1 id="gazebo">Gazebo</h1>
 <p>É um simulador que usamos aqui na Skyrats para simular as missões que vamos realizar com o drone na vida real.</p>
 <h2 id="basicos">Básicos</h2>
 <p>Para instalar ele, as instruções no seguinte guia já fazem isso: <a href="https://github.com/SkyRats/knowledge_base/blob/main/guias/Instalacao.md">https://github.com/SkyRats/knowledge_base/blob/main/guias/Instalacao.md</a>; se precisar de mais informações sobre sua instalação: <a href="http://gazebosim.org/tutorials?tut=install_ubuntu">http://gazebosim.org/tutorials?tut=install_ubuntu</a>.</p>
@@ -164,7 +223,7 @@
 <h3 id="joints">Joints:</h3>
 <p><img alt="imgs/Untitled%202.png" src="../imgs/Untitled%202.png" /></p>
 <p>No model editor, na barra superior, assim como na imagem acima, você pode criar "joints", elas são ligações entre models, ou entre links de algum model, (links são "models de models", ou melhor, partes de um model que teem representação própria, no drone por exemplo, tem o link do frame, dos rotores e pás, do LiDar, etc..). Essas ligações podem ser de vários tipos, cada um com sua característica, por exemplo, a joint ball é uma ligação com rotação livre em 6 eixos (x, y, z, roll, pitch, yaw), tem a revolute joint, que permite rotação em um eixo, o qual você seleciona o eixo no qual vai ser o livre, entre outros...</p>
-<h3 id="corda-no-gazebo">Corda no Gazebo</h3>
+<h2 id="corda-no-gazebo">Corda no Gazebo</h2>
 <h3 id="funcionamento">Funcionamento</h3>
 <p>O pacote criado pela Skyrats possui um script capaz de criar um model que simula uma corda no Gazebo. A ideia principal é utiliza-la para missões que envolvam o carregamento de objetos, como a Outdoor e Swarm.</p>
 <p>Como o Gazebo só é capaz de simular corpos rígidos, que não é o caso de uma corda, algumas adaptações precisaram ser feitas. A corda foi criada por meio da união de vários links, no formato de cilindro, empilhados um acima do outro. Para uni-los, foi utilizado um joint do tipo ball, que permite rotação em todos os eixos. Assim, a corda é formada por um conjunto de corpos rígidos unidos para dar a impressão de que atuam como uma corda.</p>
@@ -228,7 +287,7 @@ f.write(&quot;&lt;/model&gt;\n&quot;)
 f.write(&quot;&lt;/sdf&gt;\n&quot;)
 f.close()
 </code></pre>
-<h3 id="como-funciona-o-arquivo-model">Como funciona o arquivo model?</h3>
+<h2 id="como-funciona-o-arquivo-model">Como funciona o arquivo model?</h2>
 <p>Ele, basicamente precisa de dois arquivos, um sendo <code>.config</code>, e outro <code>.sdf</code>ou <code>.urdf</code>. Todos funcionando na linguagem XML.</p>
 <p>O .config tem esse estilo:</p>
 <p><a href="https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.config">https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.config</a></p>
@@ -237,7 +296,7 @@ f.close()
 <p><a href="https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.sdf">https://github.com/SkyRats/simulation/blob/master/models/drone_indoor/model.sdf</a></p>
 <p>Todas as coisas do objeto estão nesse arquivo, por exemplo, a mesh, plugins, orientações, add de links, add de outros models, joints, materials, e todo o resto possível.</p>
 <p>Como é muito grande as coisas, temos muitos exemplos no nosso repositório simulation e outras infos sobre o .sdf e seus atributos aqui: <a href="http://sdformat.org/spec?ver=1.7&amp;elem=model">http://sdformat.org/spec?ver=1.7&amp;elem=model</a></p>
-<h3 id="worlds">Worlds</h3>
+<h2 id="worlds">Worlds</h2>
 <p>Eles são os mundos no gazebo, ou seja, são meio que uma junção de models com suas posições e configurações.</p>
 <p>Eles podem ser configurados direto no gazebo, adicionando coisas no painel de simulação, sendo pelo painel esquerdo, adicionando modelos na parte "insert", e na aba world visualizar as configurações existentes do mundo, nas aba de cima, pode mudar a configuração de posição, rotação e escala manualmente dos models, adicionar fontes de luz e mexer a camera.</p>
 <p>Pelo arquivo .world, da para fazer e adicionar todas as configurações do mundo, adicionando models, mudar posição, rotação, escala dos mesmos, adicionar plugins de mundo e configurar a GUI, sendo essa infinitamente customizável ( Vou explicar mais para frente ), como por exemplo, adicionar interfaces com botões, labels, etc, 100% customizáveis, que podem fazer qualquer coisa dentro do gazebo, customizar configurações de iluminação, câmera e céu, entre outros.</p>
@@ -256,7 +315,7 @@ f.close()
 &lt;/geometry&gt;
 </code></pre>
 <p>Lembre-se que deve-se colocar o link para a mesh na colision box e no visual.</p>
-<h1 id="programacao-no-gazebo-e-plugins">Programação no Gazebo e Plugins</h1>
+<h2 id="programacao-no-gazebo-e-plugins">Programação no Gazebo e Plugins</h2>
 <p>Tudo que vimos até agora é uma pequena parte do que da para fazer com o gazebo, com plugins, ele fica 100% configurável e ajustável p/ qualquer simulação.</p>
 <p>Por ser infinitamente longo, vou ensinar o jeito de como buscar e começar a fazer alguma programação/plugin em cima do gazebo e explicar alguns códigos.</p>
 <h3 id="como-funciona">Como funciona?</h3>
@@ -692,8 +751,10 @@ Continua...
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
+        <a href="../Convencoes-de-Codigo/" class="btn btn-neutral float-right" title="Convenções de Código">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-        <a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" class="btn btn-neutral" title="Calibração e Firmware"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+        <a href="../../Middleware/Ardupilot/" class="btn btn-neutral" title="Ardupilot"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -721,8 +782,10 @@ Continua...
           <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../Middleware/Ardupilot/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
+      
+        <span style="margin-left: 15px"><a href="../Convencoes-de-Codigo/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

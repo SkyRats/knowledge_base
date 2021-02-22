@@ -1,4 +1,5 @@
-# Guia dos Componentes
+**Guia dos Componentes**
+
 Clique em cada um e você vai ser redirecionado para um docs com as informações até agora obtidas para instalação, uso, erros e links...
 
 Qualquer dúvida e/ou problema pode colocar uma issue! :)
