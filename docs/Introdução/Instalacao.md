@@ -112,6 +112,16 @@ make px4_sitl gazebo
 make px4_fmu-v5_default
 ```
 
+### 3.3. Firmware ARDUPILOT
+
+```bash
+cd ~/src
+
+# Clona o firmware
+git clone https://github.com/SkyRats/ardupilot.git --recursive
+
+```
+
 
 ### 3.4. QGroundControl
 
