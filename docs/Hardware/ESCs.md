@@ -1,8 +1,3 @@
-# Guia de escolha de ESCs
-
-Feito?: No
-O que fazer agora?: Pesquisar
-
 # Como escolher um ESC?
 
 ## Individual ou 4 em 1?
