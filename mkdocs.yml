@@ -15,6 +15,7 @@ nav:
     - 'Componentes': 'Hardware/Componentes.md'
     - 'Drones': 'Hardware/Drones.md'
     - 'Controle': 'Hardware/ControleRC.md'
+    - 'Guia de Escolha de ESCs': 'Hardware/ESCs.md'
   - 'Middleware':
     - 'Calibração e Firmware': 'Middleware/Calibraçao e Firmaware.md'
     - 'Ardupilot': 'Middleware/Ardupilot.md'
