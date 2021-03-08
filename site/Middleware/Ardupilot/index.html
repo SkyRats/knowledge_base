@@ -78,6 +78,8 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ControleRC/">Controle</a>
                     </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ESCs/">Guia de Escolha de ESCs</a>
+                    </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Middleware</span></p>
                 <ul class="current">
@@ -144,20 +146,25 @@
 <p>Usamos como firmware secundário, quando é necessária alguma função ou especificação que não existe na PX4, como por exemplo, usar a porta CAM, como UAVCAM para usar informações de GPS.
 Caso não tenha ele baixado ainda, realize as instruções do guia de instalações.</p>
 <h2 id="compilar">Compilar</h2>
-<p>```bash</p>
-<h1 id="instala-dependencias-necessarias-do-firmware">Instala dependências necessárias do firmware:</h1>
-<p>. ~/src/ardupilot/Tools/environment_install/install-prereqs-ubuntu.sh -y
-. ~/.profile</p>
-<h1 id="instala-dependencias-necessarias-do-python">Instala dependências necessárias do python:</h1>
-<p>pip install future</p>
-<h1 id="lista-todas-as-placas-nas-quais-o-ardupilot-pode-ser-compilado">Lista todas as placas nas quais o ardupilot pode ser compilado</h1>
-<p>./waf list_boards</p>
-<h1 id="escolher-a-controladora-de-voo">Escolher a controladora de vôo</h1>
-<p>./waf configure --board Pixhawk4</p>
-<h1 id="escolher-tipo-de-veiculo">Escolher tipo de veículo</h1>
-<p>./waf copter</p>
-<h1 id="fazer-o-upload-da-ultima-config-de-firmware-compilada">Fazer o upload da última config de Firmware compilada</h1>
-<p>./waf --targets bin/<nome_do_arquivo> --upload</p>
+<pre><code class="language-bash">#Instala dependências necessárias do firmware:
+. ~/src/ardupilot/Tools/environment_install/install-prereqs-ubuntu.sh -y
+. ~/.profile
+
+#Instala dependências necessárias do python:
+pip install future
+
+#Lista todas as placas nas quais o ardupilot pode ser compilado
+./waf list_boards
+
+#Escolher a controladora de vôo
+./waf configure --board Pixhawk4
+
+#Escolher tipo de veículo
+./waf copter
+
+#Fazer o upload da última config de Firmware compilada
+./waf --targets bin/&lt;nome_do_arquivo&gt; --upload
+</code></pre>
               
             </div>
           </div>
