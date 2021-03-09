@@ -113,7 +113,82 @@ private:
 ```
     
 ### 3.4 Revisão de Ponteiros ("->" ou "."?, e NULL)
-https://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself
+O ponteiro é uma variável que guarda um endereço de memória. Por exemplo, um ponteiro para o "int valor", será algo parecido com 09x6453.
+Para declarar um ponteiro, é so colocar um "*", desse jeito:
+```cpp
+int *x;
+cout << x << endl;
+
+Saída:
+>>> ./Ponteiro.exe
+>>> 05x3257
+>>>
+```
+E se quisermos pegar o endereço de uma variável ja existente? Usa o "&", desse jeito:
+```cpp
+int x = 10;
+cout << &x << " - " << x << endl;
+
+Saída:
+>>> ./Ponteiro2.exe
+>>> 01x7652 - 10
+>>>
+```
+Mas e agora, e se quisermos ir até a variável tendo o endereço dela? Usaremos também o "*", desse jeito:
+```cpp
+int x = 10;
+int* y = &x;
+cout << x << " - " << *y << endl;
+
+Saída:
+>>> ./Ponteiro3.exe
+>>> 10 - 10
+>>>
+```
+Certo, sabendo disso podemos agora falar como isso tudo de ponteiros interfere em objetos.
+Um objeto não deixa de ser uma variável, ele só possui um nível de abstração a mais. Logo, podemos criar variáveis para guardar objetos e pegar seus endereços guardando em ponteiros, porém, temos que tomar um certo cuidado, pois ao mesmo tempo que existe coisas para facilitar, de começo pode confundir um pouco.
+Quando vamos criar uma variável para guardar um objeto, fazemos igual em um INT, por exemplo: "Carro celtinha;", desse jeito eu criei uma variável do tipo carro com o nome celtinha. Mas tem uma coisa, objetos funcionam igual variáveis, certo? SIM!, então saindo de algum escopo ele também deixa de existir? SIM!, mas temos como resolver isso, que é atravéz dos ponteiros! Pois se usarmos continuamente o endereço na qual o objeto está ele não vai deixar de existir, e assim podemos trabalhar de uma forma mais ampla com ele, podemos fazer assim: "Carro* celtinha;", e nesse ponteiro celtinha, vamos guardar o ponteiro que aponta para o objeto, MAS PRESTE ATENÇÃO!!!, devemos tomar MUITO cuidado em como vamo chamar os métodos e atributos. Assim, se temos apenas um objeto("Carro celtinha;), chamamos os métodos e atributos usando ".", por exemplo:
+
+```cpp
+Carro celtinha = Carro(); //Esse método é um construtor, não se preocupe com ele agora, vamos explicar mais para a frente, apenas saiba que estamos colocando um objeto do tipo Carro na variável
+celtinha.buzinar(); // Esse método retorna no terminal a buzina
+cout << "Ano do carro: " << celtinha.ano << endl; // Aqui ele chama o atributo que guarda o ano do carro
+
+Saída:
+>>> ./PonteiroCeltinha.exe
+>>> Biiii Biiiiiii
+>>> Ano do carro: 2006
+>>>
+```
+Mas agora, se vamos guardar um objeto numa variável de ponteiro, teremos que chamar os métodos e atributos desreferenciando o ponteiro, assim: "(*celtinha).buzinar();". Mas em C++ existe uma coisa que facilita muito mais do que ficar desreferenciando o ponteiro toda hora, que é so usar uma setinha("->"), assim, podemos chamar o método desse jeito: "celtinha->buzinar();".
+```cpp
+Carro celtinha = Carro();
+Carro *ponteiroCeltinha = &celtinha;
+
+(*ponteiroCeltinha).buzinar();
+ponteiroCeltinha->buzinar();
+
+cout << "Ano do carro: " << (*ponteiroCeltinha).ano << endl;
+cout << "Ano do carro: " << ponteiroCeltinha->ano << endl;
+
+Saída:
+>>> ./PonteiroCeltinha.exe
+>>> Biiii Biiiiiii
+>>> Biiii Biiiiiii
+>>> Ano do carro: 2006
+>>> Ano do carro: 2006
+>>>
+```
+E mais uma última coisa! E se quisermos guardar um "nada" dentro de um ponteiro, como fazemos? Usamos "NULL"!!!
+```cpp
+Carro *ponteiroCeltinha = NULL;
+ponteiroCeltinha->buzinar();
+Saída:
+>>> ./PonteiroCeltinha.exe
+>>> Runtime Error :C
+>>>
+```
+
 ## 4.0 Encapsulamento
 ### 4.1 Private
 Os atributos e métodos "encapsulados" dentro do "private", só podem ser acessados dentro de métodos da própria classe, nem mesmo de classes filhas, coisas que veremos mais para a frente.
@@ -265,6 +340,22 @@ Saída:
 ```
 
 ## 7.0 Vetor de Objetos
+Em C++, como podemos criar vetores de variáveis simples, como INTs, FLOATs... e PONTEIROS! Podemos criar um vetor de objetos também, guardando em cada posição do vetor um ponteiro para esse objeto, e podemos fazer isso de duas formas, estáticamente ou dinamicamente:
+```cpp
+Construcao* predios[tamanho]; //Estática
+predios[2] = PredioAzul;
+if(predios[2] == PredioAzul) cout << "Primeiro deu certo!" << endl;
+
+Construção** predios2 = new Construcao*[tamanho];
+predios2[2] = PredioAzul;
+if(predios[2] == PredioAzul) cout << "Segundo deu certo!" << endl;
+
+>>> ./Predios.exe
+>>> Primeiro deu certo!
+>>> Segundo deu certo!
+>>> 
+```
+Obs: Para destruir vetores dinâmicos, já que ele não deixa de ser um tipo de objeto, você usa o "delete[] nomeDoVetor;".
 
 ## 8.0 Herança e Polimorfismo
 
