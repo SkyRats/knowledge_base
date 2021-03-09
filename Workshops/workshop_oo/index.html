@@ -103,7 +103,7 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Programação Orientada a Objetos em C++</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#10-paradigmas-de-programacao-felipe">1.0 Paradigmas de Programação (Felipe)</a>
+    <li class="toctree-l2"><a class="reference internal" href="#10-paradigmas-de-programacao">1.0 Paradigmas de Programação</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#20-basicos-de-c">2.0 Básicos de C++</a>
         <ul>
@@ -140,8 +140,6 @@
     <li class="toctree-l3"><a class="reference internal" href="#45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</a>
     </li>
         </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#50-getters-e-setters">5.0 Getters e Setters</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#60-construtor-e-destrutor">6.0 Construtor e Destrutor</a>
         <ul>
@@ -215,182 +213,310 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="workshop-de-programacao-orientada-a-objetos-na-linguagem-c">Workshop de Programação Orientada a Objetos na linguagem C++</h1>
+                <h1 id="workshop-de-programacao-orientada-a-objetos">Workshop de Programação Orientada a Objetos</h1>
 <p>SOMOS O FELIPE E O BENTO E ESTAMOS DE REC NA MATERIA QUE VAMOS DAR PARA VOCES!
 https://github.com/SkyRats/workshops/tree/object_oriented_prog_cpp</p>
 <p>TEMOS QUE FALAR UM POUCO DE COMO CRIAR UMA MAIN EU ACHO.</p>
-<h2 id="10-paradigmas-de-programacao-felipe">1.0 Paradigmas de Programação (Felipe)</h2>
-<p>Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês estão/irão aprender em MAC2166 é o paradigama imperativo, onde você manda um "passo a passo" e "linha a linha", para o programa rodar.
-O que vamos aprender é o paradigma de orientação a objetos, onde vai surgir a ideia de classes e objetos, que vão ser um nível de abstração a mais, por exemplo, ao invés de você criar uma varíavel inteira com o nome "int Valor_Combustível_Carro_1 = 90;", você pode escrever com OO: "carro[1]-&gt;setCombustivel(90);"... Viu? Mais fácil!</p>
-<h2 id="20-basicos-de-c">2.0 Básicos de C++</h2>
-<pre><code>Depois do workshop de introdução a programação vocês já devem estar brabos em C e python hehe então aqui temos umas novidades da linguagem C++ (que é o C com MAIS MAIS coisas).
+<h2 id="10-paradigmas-de-programacao">1.0 Paradigmas de Programação</h2>
+<p>Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês viram no workshop de introdução era o paradigama imperativo, onde você manda um "passo a passo" para o programa rodar.</p>
+<p>O que vamos aprender é o paradigma de orientação a objetos, onde vai surgir a ideia de classes e objetos, que vão ser um nível de abstração a mais!</p>
+<p>Por exemplo, ao invés de você criar uma varíavel inteira com o nome </p>
+<pre><code class="language-cpp">int Valor_Combustível_Carro_1 = 90;
 </code></pre>
+<p>Você pode criar um objeto carro e indicar seu combustivel.</p>
+<pre><code class="language-cpp">carro[1]-&gt;setCombustivel(90);
+</code></pre>
+<p>... Viu? Mais fácil!</p>
+<h2 id="20-basicos-de-c">2.0 Básicos de C++</h2>
+<p>Depois do workshop de introdução a programação vocês já devem estar brabos em C e python hehe então aqui temos umas novidades da linguagem C++ (que é o C com MAIS MAIS coisas).</p>
 <h3 id="21-cin-e-cout">2.1 CIN e COUT</h3>
-<pre><code>Essas são as funções de impressão e leitura do C++! 
-Em C para usar os famosos printf e scanf era necessário dar o famoso #include &lt;stdio.h&gt;, agora aqui em C++ para usar o cin (C in) e cout (C out), de #include &lt;iostream&gt;.
-A cin substitui o scanf, com ela podemos pegar dados do nosso teclado e atribui-los a uma variável.
-A cout substitui o printf, com ela podemos imprimir coisas no monitor.
-Mas pera ai, se o C++ é um complemento do C, eu ainda posso usar o printf e scanf?? Sim!! 
-Você pode continuar usando, mas os desenvolvedores criaram essas novas funções para serem mais intuitvas, pois nelas o fluxo que o dado percorre é mostrado com o "&lt;&lt;".
-Obs: o "endl" (end line) pula uma linha, assim como o "\n".
-Exemplo:
- ```cpp
-    #include &lt;iostream&gt;
-    using namespace std;
+<p>Essas são as funções de impressão e leitura do C++! </p>
+<p>Em C para usar os famosos printf e scanf era necessário dar o famoso #include <stdio.h>, agora aqui em C++ para usar o cin (C in) e cout (C out), de #include <iostream>.</p>
+<p>A cin substitui o scanf, com ela podemos pegar dados do nosso teclado e atribui-los a uma variável.</p>
+<p>A cout substitui o printf, com ela podemos imprimir coisas no monitor.</p>
+<p>Mas pera ai, se o C++ é um complemento do C, eu ainda posso usar o printf e scanf?? </p>
+<p>Sim!! Você pode continuar usando, mas os desenvolvedores criaram essas novas funções para serem mais intuitvas, pois nelas o fluxo que o dado percorre é mostrado com o "&lt;&lt;".</p>
+<ul>
+<li>Obs: o "endl" (end line) pula uma linha, assim como o "\n".</li>
+</ul>
+<p>Exemplo:</p>
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+using namespace std;
 
-    int main(){
-        int minhaIdade;
-        cin &gt;&gt; minhaIdade;
-        cout &lt;&lt; "Minha idade é " &lt;&lt; minhaIdade &lt;&lt; endl;
+int main(){
+    int minhaIdade;
+    cin &gt;&gt; minhaIdade;
+    cout &lt;&lt; &quot;Tenho&quot; &lt;&lt; minhaIdade &lt;&lt; &quot; anos!&quot; &lt;&lt; endl;
+}
 
-        cout &lt;&lt; frase &lt;&lt; endl;
-    }
-```
+&gt;&gt;&gt; ./SkyratsIostream.exe
+&gt;&gt;&gt; Tenho 19 anos!
+&gt;&gt;&gt; 
 </code></pre>
 <h3 id="22-string">2.2 String</h3>
-<pre><code>Existe uma biblioteca chamada &lt;string.h&gt;, com ela você para representar palavras, frases e outras coisas, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:
-```cpp
-    #include &lt;string&gt;
+<p>Existe uma biblioteca chamada <string.h>, com ela você para representar palavras, frases e outras coisas, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:</p>
+<pre><code class="language-cpp">#include &lt;string&gt;
+using namespace std;
 
-    using namespace std;
+int main(){
+    string frase = &quot;A skyrats é a melhor equipe da POLI!&quot;
+    cout &lt;&lt; frase &lt;&lt; endl;
+}
 
-    int main(){
-        string frase = "A skyrats é a melhor equipe da POLI!"
-        cout &lt;&lt; frase &lt;&lt; endl;
-    }
-```
 Vai ter como saída isso:
 &gt;&gt;&gt; ./SkyratsString.exe
 &gt;&gt;&gt; A skyrats é a melhor equipe da POLI!
+&gt;&gt;&gt;
 </code></pre>
 <ul>
 <li>Obs: Para usar o "cin e cout" e as "strings" é necessaário além da inclusão das respectivas bibliotecas o uso do namespaece "std" que será explicado mais pra frente do porquê.</li>
 </ul>
 <h2 id="30-conceitos-basicos-de-oo">3.0 Conceitos Básicos de OO</h2>
-<pre><code>A programação orientada a objeto veio para abstrair a realidade! Nela transformamos conceitos da vida real em classes e métodos, visando simplificar a implementação de algumas coisas. 
-Pra você que ta criando o código o trampo ainda é grande, mas quem for usar ele vai te agradecer bastante.
-</code></pre>
+<p>A programação orientada a objeto veio para abstrair a realidade! Nela transformamos conceitos da vida real em classes e métodos, visando simplificar a implementação de algumas coisas. </p>
+<p>Pra você que ta criando o código o trampo ainda é grande, mas quem for usar ele vai te agradecer bastante.</p>
 <h3 id="31-classe">3.1 Classe</h3>
-<pre><code>A classe vai ser um molde com diversas caracteristicas. Por exemplo, podemos criar a classe pizza que terá um atributo que indica o seu sabor e outro que indica a quantidade de fatias que ela tem.
-</code></pre>
+<p>A classe vai ser um molde com diversas caracteristicas.
+Por exemplo, podemos criar a classe pizza que terá um atributo que indica o seu sabor e outro que indica a quantidade de fatias que ela tem.</p>
 <h3 id="32-objetos">3.2 Objetos</h3>
-<pre><code>O objeto é a instância da classe, ou seja, se usarmos o molde(classe) da pizza, podemos criar diversas pizzas(objeto) e todas elas terão um sabor(atributo) e uma quantidade de fatias(atributo).
-</code></pre>
+<p>O objeto é a instância da classe, ou seja, se usarmos o molde(classe) da pizza, podemos criar diversas pizzas(objeto) e todas elas terão um sabor(atributo) e uma quantidade de fatias(atributo).</p>
 <h3 id="33-atributos">3.3 Atributos</h3>
-<pre><code>São as propriedades e estados de uma classe.
-</code></pre>
+<p>São as propriedades e estados de uma classe.</p>
 <h3 id="34-metodos">3.4 Métodos</h3>
-<pre><code>São a implementação dos serviços disponibilizados pelos objetos.
-Podemos criar para a classe pizza o metódo "retirar_fatia()", agora podemos diminuir o numero de fatias que ela tem por meio de um método!
-</code></pre>
-<p>```cpp
-  #include <string>
-  using namespace std;</p>
-<p>class Pizza{//Classe
-    public:
-        void retirar_fatia();//Método</p>
-<pre><code>private:
+<p>São a implementação dos serviços disponibilizados pelos objetos.
+Podemos criar para a classe pizza o metódo "retirar_fatia()", agora podemos diminuir o numero de fatias que ela tem por meio de um método! </p>
+<pre><code class="language-cpp">#include &lt;string&gt;
+using namespace std;
+
+class Pizza{//Classe
+public:
+    void retirar_fatia();//Método
+
+private:
     string sabor;//Atributo
     int fatias;//Atributo
-</code></pre>
-<p>};</p>
-<p>int main(){
+};
+
+  int main(){
       Pizza *pizza1;//Criação de um objeto Pizza
   }
-    ```</p>
+</code></pre>
 <h3 id="34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</h3>
-<p>https://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself</p>
+<p>O ponteiro é uma variável que guarda um endereço de memória. Por exemplo, um ponteiro para o "int valor", será algo parecido com 09x6453.
+Para declarar um ponteiro, é so colocar um "*", desse jeito:</p>
+<pre><code class="language-cpp">int *x;
+cout &lt;&lt; x &lt;&lt; endl;
+
+Saída:
+&gt;&gt;&gt; ./Ponteiro.exe
+&gt;&gt;&gt; 05x3257
+&gt;&gt;&gt;
+</code></pre>
+<p>E se quisermos pegar o endereço de uma variável ja existente? Usa o "&amp;", desse jeito:</p>
+<pre><code class="language-cpp">int x = 10;
+cout &lt;&lt; &amp;x &lt;&lt; &quot; - &quot; &lt;&lt; x &lt;&lt; endl;
+
+Saída:
+&gt;&gt;&gt; ./Ponteiro2.exe
+&gt;&gt;&gt; 01x7652 - 10
+&gt;&gt;&gt;
+</code></pre>
+<p>Mas e agora, e se quisermos ir até a variável tendo o endereço dela? Usaremos também o "*", desse jeito:</p>
+<pre><code class="language-cpp">int x = 10;
+int* y = &amp;x;
+cout &lt;&lt; x &lt;&lt; &quot; - &quot; &lt;&lt; *y &lt;&lt; endl;
+
+Saída:
+&gt;&gt;&gt; ./Ponteiro3.exe
+&gt;&gt;&gt; 10 - 10
+&gt;&gt;&gt;
+</code></pre>
+<p>Certo, sabendo disso podemos agora falar como isso tudo de ponteiros interfere em objetos.
+Um objeto não deixa de ser uma variável, ele só possui um nível de abstração a mais. Logo, podemos criar variáveis para guardar objetos e pegar seus endereços guardando em ponteiros, porém, temos que tomar um certo cuidado, pois ao mesmo tempo que existe coisas para facilitar, de começo pode confundir um pouco.
+Quando vamos criar uma variável para guardar um objeto, fazemos igual em um INT, por exemplo: "Carro celtinha;", desse jeito eu criei uma variável do tipo carro com o nome celtinha. Mas tem uma coisa, objetos funcionam igual variáveis, certo? SIM!, então saindo de algum escopo ele também deixa de existir? SIM!, mas temos como resolver isso, que é atravéz dos ponteiros! Pois se usarmos continuamente o endereço na qual o objeto está ele não vai deixar de existir, e assim podemos trabalhar de uma forma mais ampla com ele, podemos fazer assim: "Carro* celtinha;", e nesse ponteiro celtinha, vamos guardar o ponteiro que aponta para o objeto, MAS PRESTE ATENÇÃO!!!, devemos tomar MUITO cuidado em como vamo chamar os métodos e atributos. Assim, se temos apenas um objeto("Carro celtinha;), chamamos os métodos e atributos usando ".", por exemplo:</p>
+<pre><code class="language-cpp">Carro celtinha = Carro(); //Esse método é um construtor, não se preocupe com ele agora, vamos explicar mais para a frente, apenas saiba que estamos colocando um objeto do tipo Carro na variável
+celtinha.buzinar(); // Esse método retorna no terminal a buzina
+cout &lt;&lt; &quot;Ano do carro: &quot; &lt;&lt; celtinha.ano &lt;&lt; endl; // Aqui ele chama o atributo que guarda o ano do carro
+
+Saída:
+&gt;&gt;&gt; ./PonteiroCeltinha.exe
+&gt;&gt;&gt; Biiii Biiiiiii
+&gt;&gt;&gt; Ano do carro: 2006
+&gt;&gt;&gt;
+</code></pre>
+<p>Mas agora, se vamos guardar um objeto numa variável de ponteiro, teremos que chamar os métodos e atributos desreferenciando o ponteiro, assim: "(*celtinha).buzinar();". Mas em C++ existe uma coisa que facilita muito mais do que ficar desreferenciando o ponteiro toda hora, que é so usar uma setinha("-&gt;"), assim, podemos chamar o método desse jeito: "celtinha-&gt;buzinar();".</p>
+<pre><code class="language-cpp">Carro celtinha = Carro();
+Carro *ponteiroCeltinha = &amp;celtinha;
+
+(*ponteiroCeltinha).buzinar();
+ponteiroCeltinha-&gt;buzinar();
+
+cout &lt;&lt; &quot;Ano do carro: &quot; &lt;&lt; (*ponteiroCeltinha).ano &lt;&lt; endl;
+cout &lt;&lt; &quot;Ano do carro: &quot; &lt;&lt; ponteiroCeltinha-&gt;ano &lt;&lt; endl;
+
+Saída:
+&gt;&gt;&gt; ./PonteiroCeltinha.exe
+&gt;&gt;&gt; Biiii Biiiiiii
+&gt;&gt;&gt; Biiii Biiiiiii
+&gt;&gt;&gt; Ano do carro: 2006
+&gt;&gt;&gt; Ano do carro: 2006
+&gt;&gt;&gt;
+</code></pre>
+<p>E mais uma última coisa! E se quisermos guardar um "nada" dentro de um ponteiro, como fazemos? Usamos "NULL"!!!</p>
+<pre><code class="language-cpp">Carro *ponteiroCeltinha = NULL;
+ponteiroCeltinha-&gt;buzinar();
+Saída:
+&gt;&gt;&gt; ./PonteiroCeltinha.exe
+&gt;&gt;&gt; Runtime Error :C
+&gt;&gt;&gt;
+</code></pre>
 <h2 id="40-encapsulamento">4.0 Encapsulamento</h2>
 <h3 id="41-private">4.1 Private</h3>
+<p>Os atributos e métodos "encapsulados" dentro do "private", só podem ser acessados dentro de métodos da própria classe, nem mesmo de classes filhas, coisas que veremos mais para a frente.</p>
 <h3 id="42-public">4.2 Public</h3>
+<p>Os atributos e métodos "encapsulados" dentro do "public", podem ser acessados em qualquer lugar, seja na main, em métodos de outros objetos, etc...</p>
 <h3 id="43-protected">4.3 Protected</h3>
+<p>Os atributos e métodos "encapsulados" dentro do "protected", é parecido com o "private", mas </p>
 <h3 id="44-headersh-e-hpp-e-sourcescpp">4.4 Headers(.h e .hpp) e Sources(.cpp)</h3>
-<h3 id="45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</h3>
-<h2 id="50-getters-e-setters">5.0 Getters e Setters</h2>
-<pre><code>Os getters métodos usados para retornar valores de atributos específicos, ou até mesmo de atributos privados e os setters para aplicar valores em atributo. Como é bem simples, com o exemplo é entendível sua utilidade:
-```cpp
-    class carro{
-        public:
-            int getCombustivel(){
-                return combustivel;
-            }
-            void setCombustivel(int valor){
-                combustivel = valor;
-            }
-        private:
-            int combustivel;
-    }
+<p>Uma das grandes vantagens da OO é a modularização dos códigos, ou seja, cada parte pode ser compilada individualmente. Na prática isso significa que caso seja feito uma pequena alteração, só precisamos compilar o código modificado. </p>
+<p>Além disso, uma boa prática é criar arquivos diferentes para a definição e implementação de uma classe.</p>
+<p>O arquivo de definição é o Header (.h).</p>
+<p>O arquivo de implementação é o Source (.cpp)</p>
+<p>Ex: Relógio.h</p>
+<pre><code class="language-cpp">class Relogio{
+    private:
+        int hora;
+        int minuto;
+    public:
+        int getHora();
+        int getMinuto();
+}
 
-    int main() {
-        Carro Celtinha = Carro();
-        Celtinha.setCombustivel(30);
-        cout &lt;&lt; "Combustivel: " &lt;&lt; Celtinha.getCombustivel() &lt;&lt; endl;
-    }    
-```
+</code></pre>
+<p>Ex: Relógio.cpp</p>
+<pre><code class="language-cpp">#include &quot;Relogio.h&quot;
+
+int Relogio::getHora(){
+    return hora;
+}
+
+int Relogio::getMinuto(){
+    return minuto;
+}
+
+</code></pre>
+<h3 id="45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</h3>
+<p>Quando programamos é normal incluirmos varios arquivos no inicio do programa, porém no meio desse monte de inclusão é muito fácil acabarmos incluindo duas vezes a mesma coisa, o que pode ocasionar em um erro de definirmos multiplas vezes a mesma coisa. </p>
+<p>Para evitar isso, é recomendado que sempre que criarmos um Header usarmos o modelo:</p>
+<pre><code class="language-cpp">#ifndef CLASSE_H        // Se a classe não estiver definida
+#define CLASSE_H        // Define a classe
+
+class Classe{
+    ...
+};
+
+#endif                  //Fim do ifndef
+```i
+
+## 5.0 Getters e Setter
+Normalmente na programação orientada a objetos, os atributos serão privados por uma questão de segurança, e para outras classes poderem acessa-los usaremos os métodos (normalmente públicos) getters e setters.
+s
+ Os getter sãos métodos usdos para retornar valores de atributos, e os setters para aplicar valores neles. Como é bem simples, com o exemplo é entendível sua utilidade:
+
+```cpp
+class carro{
+    public:
+        int getCombustivel(){
+            return combustivel;
+        }
+        void setCombustivel(int valor){
+            combustivel = valor;
+        }
+    private:
+        int combustivel;
+}
+
+int main() {
+    Carro Celtinha = Carro();
+    Celtinha.setCombustivel(30);
+    cout &lt;&lt; &quot;Combustivel: &quot; &lt;&lt; Celtinha.getCombustivel() &lt;&lt; endl;
+}    
+
 Tem como saída:
 &gt;&gt;&gt; ./Celtinha.exe
 &gt;&gt;&gt; Combustível: 30
 </code></pre>
 <h2 id="60-construtor-e-destrutor">6.0 Construtor e Destrutor</h2>
 <h3 id="61-construtor">6.1 Construtor</h3>
-<pre><code>Quando você cria um objeto, exemplo: "Carro* Celtinha = new Carro()", ele cria um objeto e atribui seu "Ponteiro" ná variável Celtinha, isso é um construtor. Mas e se quisermos fazer construtores com mais coisas? Podemos? SIMMM!
+<p>Quando você cria um objeto, exemplo: "Carro* Celtinha = new Carro()", ele cria um objeto e atribui seu "Ponteiro" ná variável Celtinha, isso é um construtor. Mas e se quisermos fazer construtores com mais coisas? Podemos? SIMMM!
 Quando estamos fazendo a classe podemos escrever um código para o construtor, e nisso podemos setar valores, criar variáveis, dar uns couts, uns cins, e fazer todo o possível para uma função normal, para isso devemos criar um método com o nome da própria classe.
- - Obs: Para setarmos valores para a própria classe, usamos o "this-&gt;", para assim podermos diferenciar variáveis com mesmo nome.
-```cpp
-    class carro{
-        public:
-            Carro(string nome, int ano){
-                this-&gt;nome = nome;
-                this-&gt;ano = ano;
-                cout &lt;&lt; "Carro " &lt;&lt; nome &lt;&lt; " do ano " &lt;&lt; ano &lt;&lt; " construído!!!" &lt;&lt; endl;
-            }
+- Obs: Para setarmos valores para a própria classe, usamos o "this-&gt;", para assim podermos diferenciar variáveis com mesmo nome.</p>
+<pre><code class="language-cpp">class carro{
+    public:
+        Carro(string nome, int ano){
+            this-&gt;nome = nome;
+            this-&gt;ano = ano;
+            cout &lt;&lt; &quot;Carro &quot; &lt;&lt; nome &lt;&lt; &quot; do ano &quot; &lt;&lt; ano &lt;&lt; &quot; construído!!!&quot; &lt;&lt; endl;
+        }
 
-        private:
-            int combustivel;
-    }
+    private:
+        int combustivel;
+}
 
-    int main() {
-        Carro Celtinha = Carro("Celta", 2006);
-    }  
-```
+int main() {
+    Carro Celtinha = Carro(&quot;Celta&quot;, 2006);
+}  
+
 Saída:
 &gt;&gt;&gt; ./ConstrutorDoCeltinha.exe
 &gt;&gt;&gt; Carro Celta do ano 2006 construído!!!
 </code></pre>
 <h3 id="62-destrutor">6.2 Destrutor</h3>
-<pre><code>Se você criou um objeto, ele vai ocupar espaço na memória! Portanto, é bom sabermos que podemos destruí-los, e para isso usamos o comando "delete", e esse comando chama uma função bemmm parecida com o construtor, só que com um tio atrás, "~NomeDaClasse()", ele funciona assim:
-```cpp
-    class Comida{
-        public:
-            Comida(string nome, bool vencida){
-                this-&gt;nome = nome;
-                this-&gt;vencida = vencida;
-            }
-            ~Comida(){
-                if(vencida == true)
-                    cout &lt;&lt; "Parabéns!, você jogou sua(seu) " &lt;&lt; nome &lt;&lt; " vencida(o) fora!" &lt;&lt; endl;
-                else
-                    cout &lt;&lt; "Que feio! você jogou sua(seu) " &lt;&lt; nome &lt;&lt; " nova(o) fora! Não desperdice comida &gt;:"
-            }
-        private:
-            string nome;
-            bool vencida;
-    }
+<p>Se você criou um objeto, ele vai ocupar espaço na memória! Portanto, é bom sabermos que podemos destruí-los, e para isso usamos o comando "delete", e esse comando chama uma função bemmm parecida com o construtor, só que com um tio atrás, "~NomeDaClasse()", ele funciona assim:</p>
+<pre><code class="language-cpp">class Comida{
+    public:
+        Comida(string nome, bool vencida){
+            this-&gt;nome = nome;
+            this-&gt;vencida = vencida;
+        }
+        ~Comida(){
+            if(vencida == true)
+                cout &lt;&lt; &quot;Parabéns!, você jogou sua(seu) &quot; &lt;&lt; nome &lt;&lt; &quot; vencida(o) fora!&quot; &lt;&lt; endl;
+            else
+                cout &lt;&lt; &quot;Que feio! você jogou sua(seu) &quot; &lt;&lt; nome &lt;&lt; &quot; nova(o) fora! Não desperdice comida &gt;:&quot;
+        }
+    private:
+        string nome;
+        bool vencida;
+}
 
-    int main(){
-        Comida* cenoura = new Comida("Cenoura", true);
-        Comida* beringela = new Comida("Beringela", false);
-        delete cenoura;
-        delete beringela;
-    }
+int main(){
+    Comida* cenoura = new Comida(&quot;Cenoura&quot;, true);
+    Comida* beringela = new Comida(&quot;Beringela&quot;, false);
+    delete cenoura;
+    delete beringela;
+}
 
-```
 Saída:
 &gt;&gt;&gt; ./Comida.exe
 &gt;&gt;&gt; Parabéns!, você jogou sua(seu) Cenoura vencida(o) fora!
 &gt;&gt;&gt; Que feio! você jogou sua(seu) Beringela nova(o) fora! Não desperdice comida &gt;:
 </code></pre>
 <h2 id="70-vetor-de-objetos">7.0 Vetor de Objetos</h2>
+<p>Em C++, como podemos criar vetores de variáveis simples, como INTs, FLOATs... e PONTEIROS! Podemos criar um vetor de objetos também, guardando em cada posição do vetor um ponteiro para esse objeto, e podemos fazer isso de duas formas, estáticamente ou dinamicamente:</p>
+<pre><code class="language-cpp">Construcao* predios[tamanho]; //Estática
+predios[2] = PredioAzul;
+if(predios[2] == PredioAzul) cout &lt;&lt; &quot;Primeiro deu certo!&quot; &lt;&lt; endl;
+
+Construção** predios2 = new Construcao*[tamanho];
+predios2[2] = PredioAzul;
+if(predios[2] == PredioAzul) cout &lt;&lt; &quot;Segundo deu certo!&quot; &lt;&lt; endl;
+
+&gt;&gt;&gt; ./Predios.exe
+&gt;&gt;&gt; Primeiro deu certo!
+&gt;&gt;&gt; Segundo deu certo!
+&gt;&gt;&gt; 
+</code></pre>
+<p>Obs: Para destruir vetores dinâmicos, já que ele não deixa de ser um tipo de objeto, você usa o "delete[] nomeDoVetor;".</p>
 <h2 id="80-heranca-e-polimorfismo">8.0 Herança e Polimorfismo</h2>
 <h3 id="81-o-que-e-um-filho">8.1 O que é um filho</h3>
 <h3 id="82-principio-da-substituicao">8.2 Princípio da Substituição</h3>
