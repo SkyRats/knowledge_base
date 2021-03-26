@@ -7,9 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Skyrats">
-  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Hardware/Drones/">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Hardware/ESCs/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Drones - Knowledge Base - Skyrats</title>
+  <title>Guia de Escolha de ESCs - Knowledge Base - Skyrats</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../../css/theme.css" />
@@ -18,9 +18,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Drones";
-    var mkdocs_page_input_path = "Hardware/Drones.md";
-    var mkdocs_page_url = "/knowledge_base/Hardware/Drones/";
+    var mkdocs_page_name = "Guia de Escolha de ESCs";
+    var mkdocs_page_input_path = "Hardware/ESCs.md";
+    var mkdocs_page_url = "/knowledge_base/Hardware/ESCs/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -74,17 +74,21 @@
                 <ul class="current">
                     <li class="toctree-l1"><a class="reference internal" href="../Componentes/">Componentes</a>
                     </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Drones</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#drones">Drones</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#pasta-geral">Pasta geral</a>
-    </li>
-    </ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../Drones/">Drones</a>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="../ControleRC/">Controle</a>
                     </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../ESCs/">Guia de Escolha de ESCs</a>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Guia de Escolha de ESCs</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#individual-ou-4-em-1">Individual ou 4 em 1?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#vantagens-x-desvantagens">Vantagens x Desvantagens:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tensao-e-corrente">Tensão e Corrente</a>
+    </li>
+    </ul>
                     </li>
                 </ul>
                 <p class="caption"><span class="caption-text">Middleware</span></p>
@@ -135,10 +139,10 @@
         
       
     
-    <li>Drones</li>
+    <li>Guia de Escolha de ESCs</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/Drones.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/ESCs.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -149,19 +153,19 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="guia-dos-drones">Guia dos Drones</h1>
-<p>Clique em cada um e você vai ser redirecionado para uma pasta no drive com as informações até agora obtidas para montagem, lista de componentes, uso, erros, cuidados e links... etc...</p>
-<p>Qualquer dúvida e/ou problema pode colocar uma issue! :)</p>
-<h2 id="drones">Drones</h2>
+                <h1 id="como-escolher-um-esc">Como escolher um ESC?</h1>
+<h2 id="individual-ou-4-em-1">Individual ou 4 em 1?</h2>
+<p>São dois tipos, um ESC que controla um motor só, o individual ou os que controlam mais de um motor, os 4 em 1.</p>
+<h3 id="vantagens-x-desvantagens">Vantagens x Desvantagens:</h3>
+<p>O ESC múltiplo é mais caro que 4 ESCs, e se quebrar tem que trocar inteiro, ao invés de trocar só um ESC, porém ele é menor e mais leve.</p>
+<h2 id="tensao-e-corrente">Tensão e Corrente</h2>
+<p>Devemos levar em consideração a corrente máxima do motor, pois é ela que pode danificar o ESC, e a partir dela decidir o valor do ESC que vai comprar.</p>
+<p>Primeiro, ver se a corrente estiver muito próxima de um número redondo(30, 40, 50... etc), para cima, pode usar um ESC arredondado para baixo, pois o próprio vento das hélices faz um grande resfriamento já, mas porém se a corrente estiver mais afastada, como um com máximo de 45, 46, é melhor arredondar para cima, por questões de segurança e vida útil do ESC, por mais que o peso e o tamanho sejam maiores.</p>
+<p>Com relação a tensão, deve-se escolher um ESC de acordo com a tensão da bateria LiPO, seja de 4s, 6s, etc...</p>
+<h1 id="referencias">Referências</h1>
 <ul>
-<li><a href="https://drive.google.com/drive/u/1/folders/1uO9rtx-nAHLd2EB_zo_0djjBrfVlMSWq">Swarm 2020</a></li>
-<li><a href="https://drive.google.com/drive/u/1/folders/1ikHMvFZUDT3TfkGuYMiD-DFG9pxxN__I">SKY3100</a></li>
-<li><a href="https://drive.google.com/drive/u/1/folders/1RyY23m-wRd6uiKQLUCr7c4_qxAbM0yAm">DJI S1000 versão Skyrats</a></li>
-<li><a href="https://drive.google.com/drive/u/1/folders/1OY4lzFDf-VMldYQ1MCvsGLOOwKmgTLkX">Indoor 2020</a></li>
-</ul>
-<h2 id="pasta-geral">Pasta geral</h2>
-<ul>
-<li><a href="https://drive.google.com/drive/u/1/folders/1C3wj831GD5MuVZYWAZaJB8ARV-lwHUHE">Clique aqui para ir até a pasta geral com todos os drones</a></li>
+<li><a href="https://dronenodes.com/drone-esc-electronic-speed-controller/">https://dronenodes.com/drone-esc-electronic-speed-controller/</a></li>
+<li><a href="https://oscarliang.com/choose-esc-racing-drones/#:~:text=The%20first%20thing%20to%20look,with%20your%20ESC%20in%20flames">https://oscarliang.com/choose-esc-racing-drones/#:~:text=The first thing to look,with your ESC in flames</a>!</li>
 </ul>
               
             </div>
@@ -170,10 +174,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ControleRC/" class="btn btn-neutral float-right" title="Controle">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" class="btn btn-neutral float-right" title="Calibração e Firmware">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Componentes/" class="btn btn-neutral" title="Componentes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ControleRC/" class="btn btn-neutral" title="Controle"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -201,10 +205,10 @@
           <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../Componentes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../ControleRC/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ControleRC/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
