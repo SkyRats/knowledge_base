@@ -12,6 +12,7 @@ nav:
     - 'Protocolo de Segurança': 'Introdução/preflightcheck.md'
     - 'Formulário': 'Introdução/formulario.md'
   - 'Hardware':
+    - 'Introdução': 'Hardware/Introdução_Hardware.md'
     - 'Componentes': 'Hardware/Componentes.md'
     - 'Drones': 'Hardware/Drones.md'
     - 'Controle': 'Hardware/ControleRC.md'
