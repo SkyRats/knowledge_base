@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Workshops/workshop_oo/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Programação Orientada a Objetos em C++ - Knowledge Base - Skyrats</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Programa\u00e7\u00e3o Orientada a Objetos em C++";
+    var mkdocs_page_input_path = "Workshops/workshop_oo.md";
+    var mkdocs_page_url = "/knowledge_base/Workshops/workshop_oo/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introdução</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/formulario/">Formulário</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Componentes/">Componentes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/Drones/">Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ControleRC/">Controle</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/ESCs/">Guia de Escolha de ESCs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Middleware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Workshops</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Programação Orientada a Objetos em C++</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#10-paradigmas-de-programacao-felipe">1.0 Paradigmas de Programação (Felipe)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#20-basicos-de-c">2.0 Básicos de C++</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#21-cin-e-cout">2.1 CIN e COUT</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#22-string">2.2 String</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#30-conceitos-basicos-de-oo">3.0 Conceitos Básicos de OO</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#31-classe">3.1 Classe</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#32-objetos">3.2 Objetos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#33-atributos">3.3 Atributos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#34-metodos">3.4 Métodos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#40-encapsulamento">4.0 Encapsulamento</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#41-private">4.1 Private</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#42-public">4.2 Public</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#43-protected">4.3 Protected</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#44-headersh-e-hpp-e-sourcescpp">4.4 Headers(.h e .hpp) e Sources(.cpp)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#50-getters-e-setters">5.0 Getters e Setters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#60-construtor-e-destrutor">6.0 Construtor e Destrutor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#61-construtor">6.1 Construtor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#62-destrutor">6.2 Destrutor</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#70-vetor-de-objetos">7.0 Vetor de Objetos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#80-heranca-e-polimorfismo">8.0 Herança e Polimorfismo</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#81-o-que-e-um-filho">8.1 O que é um filho</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#82-principio-da-substituicao">8.2 Princípio da Substituição</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#83-protected">8.3 Protected</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ultimo0-informacoes-a-mais">Ultimo.0 Informações a mais</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ultimo01-const">Ultimo.0.1 Const</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ultimo02-virtual">Ultimo.0.2 Virtual</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#namespace-e-std">Namespace e STD</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Workshops &raquo;</li>
+        
+      
+    
+    <li>Programação Orientada a Objetos em C++</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Workshops/workshop_oo.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="workshop-de-programacao-orientada-a-objetos-na-linguagem-c">Workshop de Programação Orientada a Objetos na linguagem C++</h1>
+<p>SOMOS O FELIPE E O BENTO E ESTAMOS DE REC NA MATERIA QUE VAMOS DAR PARA VOCES!
+https://github.com/SkyRats/workshops/tree/object_oriented_prog_cpp</p>
+<p>TEMOS QUE FALAR UM POUCO DE COMO CRIAR UMA MAIN EU ACHO.</p>
+<h2 id="10-paradigmas-de-programacao-felipe">1.0 Paradigmas de Programação (Felipe)</h2>
+<p>Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês estão/irão aprender em MAC2166 é o paradigama imperativo, onde você manda um "passo a passo" e "linha a linha", para o programa rodar.
+O que vamos aprender é o paradigma de orientação a objetos, onde vai surgir a ideia de classes e objetos, que vão ser um nível de abstração a mais, por exemplo, ao invés de você criar uma varíavel inteira com o nome "int Valor_Combustível_Carro_1 = 90;", você pode escrever com OO: "carro[1]-&gt;setCombustivel(90);"... Viu? Mais fácil!</p>
+<h2 id="20-basicos-de-c">2.0 Básicos de C++</h2>
+<pre><code>Depois do workshop de introdução a programação vocês já devem estar brabos em C e python hehe então aqui temos umas novidades da linguagem C++ (que é o C com MAIS MAIS coisas).
+</code></pre>
+<h3 id="21-cin-e-cout">2.1 CIN e COUT</h3>
+<pre><code>Essas são as funções de impressão e leitura do C++! 
+Em C para usar os famosos printf e scanf era necessário dar o famoso #include &lt;stdio.h&gt;, agora aqui em C++ para usar o cin (C in) e cout (C out), de #include &lt;iostream&gt;.
+A cin substitui o scanf, com ela podemos pegar dados do nosso teclado e atribui-los a uma variável.
+A cout substitui o printf, com ela podemos imprimir coisas no monitor.
+Mas pera ai, se o C++ é um complemento do C, eu ainda posso usar o printf e scanf?? Sim!! 
+Você pode continuar usando, mas os desenvolvedores criaram essas novas funções para serem mais intuitvas, pois nelas o fluxo que o dado percorre é mostrado com o "&lt;&lt;".
+Obs: o "endl" (end line) pula uma linha, assim como o "\n".
+Exemplo:
+ ```cpp
+    #include &lt;iostream&gt;
+    using namespace std;
+
+    int main(){
+        int minhaIdade;
+        cin &gt;&gt; minhaIdade;
+        cout &lt;&lt; "Minha idade é " &lt;&lt; minhaIdade &lt;&lt; endl;
+
+        cout &lt;&lt; frase &lt;&lt; endl;
+    }
+```
+</code></pre>
+<h3 id="22-string">2.2 String</h3>
+<pre><code>Existe uma biblioteca chamada &lt;string.h&gt;, com ela você para representar palavras, frases e outras coisas, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:
+```cpp
+    #include &lt;string&gt;
+
+    using namespace std;
+
+    int main(){
+        string frase = "A skyrats é a melhor equipe da POLI!"
+        cout &lt;&lt; frase &lt;&lt; endl;
+    }
+```
+Vai ter como saída isso:
+&gt;&gt;&gt; ./SkyratsString.exe
+&gt;&gt;&gt; A skyrats é a melhor equipe da POLI!
+</code></pre>
+<ul>
+<li>Obs: Para usar o "cin e cout" e as "strings" é necessaário além da inclusão das respectivas bibliotecas o uso do namespaece "std" que será explicado mais pra frente do porquê.</li>
+</ul>
+<h2 id="30-conceitos-basicos-de-oo">3.0 Conceitos Básicos de OO</h2>
+<pre><code>A programação orientada a objeto veio para abstrair a realidade! Nela transformamos conceitos da vida real em classes e métodos, visando simplificar a implementação de algumas coisas. 
+Pra você que ta criando o código o trampo ainda é grande, mas quem for usar ele vai te agradecer bastante.
+</code></pre>
+<h3 id="31-classe">3.1 Classe</h3>
+<pre><code>A classe vai ser um molde com diversas caracteristicas. Por exemplo, podemos criar a classe pizza que terá um atributo que indica o seu sabor e outro que indica a quantidade de fatias que ela tem.
+</code></pre>
+<h3 id="32-objetos">3.2 Objetos</h3>
+<pre><code>O objeto é a instância da classe, ou seja, se usarmos o molde(classe) da pizza, podemos criar diversas pizzas(objeto) e todas elas terão um sabor(atributo) e uma quantidade de fatias(atributo).
+</code></pre>
+<h3 id="33-atributos">3.3 Atributos</h3>
+<pre><code>São as propriedades e estados de uma classe.
+</code></pre>
+<h3 id="34-metodos">3.4 Métodos</h3>
+<pre><code>São a implementação dos serviços disponibilizados pelos objetos.
+Podemos criar para a classe pizza o metódo "retirar_fatia()", agora podemos diminuir o numero de fatias que ela tem por meio de um método!
+</code></pre>
+<p>```cpp
+  #include <string>
+  using namespace std;</p>
+<p>class Pizza{//Classe
+    public:
+        void retirar_fatia();//Método</p>
+<pre><code>private:
+    string sabor;//Atributo
+    int fatias;//Atributo
+</code></pre>
+<p>};</p>
+<p>int main(){
+      Pizza *pizza1;//Criação de um objeto Pizza
+  }
+    ```</p>
+<h3 id="34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</h3>
+<p>https://stackoverflow.com/questions/22146094/why-should-i-use-a-pointer-rather-than-the-object-itself</p>
+<h2 id="40-encapsulamento">4.0 Encapsulamento</h2>
+<h3 id="41-private">4.1 Private</h3>
+<h3 id="42-public">4.2 Public</h3>
+<h3 id="43-protected">4.3 Protected</h3>
+<h3 id="44-headersh-e-hpp-e-sourcescpp">4.4 Headers(.h e .hpp) e Sources(.cpp)</h3>
+<h3 id="45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</h3>
+<h2 id="50-getters-e-setters">5.0 Getters e Setters</h2>
+<pre><code>Os getters métodos usados para retornar valores de atributos específicos, ou até mesmo de atributos privados e os setters para aplicar valores em atributo. Como é bem simples, com o exemplo é entendível sua utilidade:
+```cpp
+    class carro{
+        public:
+            int getCombustivel(){
+                return combustivel;
+            }
+            void setCombustivel(int valor){
+                combustivel = valor;
+            }
+        private:
+            int combustivel;
+    }
+
+    int main() {
+        Carro Celtinha = Carro();
+        Celtinha.setCombustivel(30);
+        cout &lt;&lt; "Combustivel: " &lt;&lt; Celtinha.getCombustivel() &lt;&lt; endl;
+    }    
+```
+Tem como saída:
+&gt;&gt;&gt; ./Celtinha.exe
+&gt;&gt;&gt; Combustível: 30
+</code></pre>
+<h2 id="60-construtor-e-destrutor">6.0 Construtor e Destrutor</h2>
+<h3 id="61-construtor">6.1 Construtor</h3>
+<pre><code>Quando você cria um objeto, exemplo: "Carro* Celtinha = new Carro()", ele cria um objeto e atribui seu "Ponteiro" ná variável Celtinha, isso é um construtor. Mas e se quisermos fazer construtores com mais coisas? Podemos? SIMMM!
+Quando estamos fazendo a classe podemos escrever um código para o construtor, e nisso podemos setar valores, criar variáveis, dar uns couts, uns cins, e fazer todo o possível para uma função normal, para isso devemos criar um método com o nome da própria classe.
+ - Obs: Para setarmos valores para a própria classe, usamos o "this-&gt;", para assim podermos diferenciar variáveis com mesmo nome.
+```cpp
+    class carro{
+        public:
+            Carro(string nome, int ano){
+                this-&gt;nome = nome;
+                this-&gt;ano = ano;
+                cout &lt;&lt; "Carro " &lt;&lt; nome &lt;&lt; " do ano " &lt;&lt; ano &lt;&lt; " construído!!!" &lt;&lt; endl;
+            }
+
+        private:
+            int combustivel;
+    }
+
+    int main() {
+        Carro Celtinha = Carro("Celta", 2006);
+    }  
+```
+Saída:
+&gt;&gt;&gt; ./ConstrutorDoCeltinha.exe
+&gt;&gt;&gt; Carro Celta do ano 2006 construído!!!
+</code></pre>
+<h3 id="62-destrutor">6.2 Destrutor</h3>
+<pre><code>Se você criou um objeto, ele vai ocupar espaço na memória! Portanto, é bom sabermos que podemos destruí-los, e para isso usamos o comando "delete", e esse comando chama uma função bemmm parecida com o construtor, só que com um tio atrás, "~NomeDaClasse()", ele funciona assim:
+```cpp
+    class Comida{
+        public:
+            Comida(string nome, bool vencida){
+                this-&gt;nome = nome;
+                this-&gt;vencida = vencida;
+            }
+            ~Comida(){
+                if(vencida == true)
+                    cout &lt;&lt; "Parabéns!, você jogou sua(seu) " &lt;&lt; nome &lt;&lt; " vencida(o) fora!" &lt;&lt; endl;
+                else
+                    cout &lt;&lt; "Que feio! você jogou sua(seu) " &lt;&lt; nome &lt;&lt; " nova(o) fora! Não desperdice comida &gt;:"
+            }
+        private:
+            string nome;
+            bool vencida;
+    }
+
+    int main(){
+        Comida* cenoura = new Comida("Cenoura", true);
+        Comida* beringela = new Comida("Beringela", false);
+        delete cenoura;
+        delete beringela;
+    }
+
+```
+Saída:
+&gt;&gt;&gt; ./Comida.exe
+&gt;&gt;&gt; Parabéns!, você jogou sua(seu) Cenoura vencida(o) fora!
+&gt;&gt;&gt; Que feio! você jogou sua(seu) Beringela nova(o) fora! Não desperdice comida &gt;:
+</code></pre>
+<h2 id="70-vetor-de-objetos">7.0 Vetor de Objetos</h2>
+<h2 id="80-heranca-e-polimorfismo">8.0 Herança e Polimorfismo</h2>
+<h3 id="81-o-que-e-um-filho">8.1 O que é um filho</h3>
+<h3 id="82-principio-da-substituicao">8.2 Princípio da Substituição</h3>
+<h3 id="83-protected">8.3 Protected</h3>
+<h2 id="ultimo0-informacoes-a-mais">Ultimo.0 Informações a mais</h2>
+<h3 id="ultimo01-const">Ultimo.0.1 Const</h3>
+<h3 id="ultimo02-virtual">Ultimo.0.2 Virtual</h3>
+<h3 id="namespace-e-std">Namespace e STD</h3>
+<p>Definição e Paradigma 
+Conceito </p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../../Software/Convencoes-de-Codigo/" class="btn btn-neutral" title="Convenções de Código"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../../Software/Convencoes-de-Codigo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
