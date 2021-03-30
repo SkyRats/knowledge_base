@@ -12,7 +12,7 @@ nav:
     - 'Protocolo de Segurança': 'Introdução/preflightcheck.md'
     - 'Formulário': 'Introdução/formulario.md'
   - 'Hardware':
-    - 'Introdução': 'Hardware/Introdução_Hardware.md'
+    - 'Introdução': 'Hardware/IntroduçãoHardware.md'
     - 'Componentes': 'Hardware/Componentes.md'
     - 'Drones': 'Hardware/Drones.md'
     - 'Controle': 'Hardware/ControleRC.md'
@@ -23,7 +23,6 @@ nav:
   - 'Software':
     - 'Gazebo': 'Software/SIMULACAO_E_GAZEBO.md'
     - 'Convenções de Código': 'Software/Convencoes-de-Codigo.md'
-  - 'Comunicação':
   - 'Workshops':
     - 'Programação Orientada a Objetos em C++': 'Workshops/workshop_oo.md'
   - 'Issue Tracker': 'https://github.com/SkyRats/knowledge_base/issues'

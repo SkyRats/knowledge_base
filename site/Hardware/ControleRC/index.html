@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Hardware/ControleRC/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Controle - Knowledge Base - Skyrats</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Controle";
+    var mkdocs_page_input_path = "Hardware/ControleRC.md";
+    var mkdocs_page_url = "/knowledge_base/Hardware/ControleRC/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Introdução</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Introdu%C3%A7%C3%A3o/formulario/">Formulário</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="" href="../IntroduçãoHardware.md">Introdução</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Componentes/">Componentes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Drones/">Drones</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Controle</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#objetivo">Objetivo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#materiais-necessarios">Materiais necessários</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-a-passo">Passo a passo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#outros-comentarios">Outros comentários</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referencias">Referências</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ESCs/">Guia de Escolha de ESCs</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Middleware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Calibra%C3%A7ao%20e%20Firmaware/">Calibração e Firmware</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Workshops</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Workshops/workshop_oo/">Programação Orientada a Objetos em C++</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Hardware &raquo;</li>
+        
+      
+    
+    <li>Controle</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/ControleRC.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="controle-futaba-t14sg">Controle Futaba T14SG</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Descrever os comandos configurados no Controle RC. Orientar a pilotagem e salvar um padrao de configuracao.</p>
+<h2 id="materiais-necessarios">Materiais necessários</h2>
+<p>Controle: Futaba T14SG.
+Antena: Ground Station (FPV Radio Telemetry Ground Module)
+Software: QgroundControl</p>
+<h2 id="passo-a-passo">Passo a passo</h2>
+<p>Apos ligar o receptor RC na pixhawk, no radio controle Futaba:
+Use o botao touch rotativo no canto inferior direito. Role ate mudar para "yes". </p>
+<p>Bind Control: (Conectar pela primeira vez o controle no drone)</p>
+<ul>
+<li>lnk -&gt; system -&gt; link (clique no RTN) 
+Se tiver dado certo o led do receptor do radio ficara verde</li>
+</ul>
+<h2 id="outros-comentarios">Outros comentários</h2>
+<p>Provavelmente o buzzer vai fazer algum barulinho e voce vai querer descobrir o que deve fazer para enfim seu dorne voar.
+Para entender os barulinhos do seu drone confira: <a href="https://docs.px4.io/master/en/getting_started/tunes.html">Link dos sons do Buzzer</a></p>
+<h2 id="referencias">Referências</h2>
+<p>Links que tenham te ajudado a escrever o guia, ou que sejam úteis aos outros pra a compreensão de algo.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ESCs/" class="btn btn-neutral float-right" title="Guia de Escolha de ESCs">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Drones/" class="btn btn-neutral" title="Drones"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../Drones/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ESCs/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
