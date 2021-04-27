@@ -9,8 +9,9 @@ nav:
   - About: about.md
   - 'Geral':
     - 'Instalações': 'Geral/Instalacao.md'
-    - 'Protocolo de Segurança': 'Geral/preflightcheck.md'
     - 'Formulário': 'Geral/formulario.md'
+    - 'Protocolo de Segurança': 'Geral/preflightcheck.md'
+    - 'Análise de logs de voo': 'Geral/FlightReview.md'
   - 'Hardware':
     - 'Introdução': 'Hardware/IntroduçãoHardware.md'
     - 'Componentes': 'Hardware/Componentes.md'
