@@ -7,10 +7,10 @@ edit_uri: edit/main/docs/
 nav:
   - Home: index.md
   - About: about.md
-  - 'Introdução':
-    - 'Instalações': 'Introdução/Instalacao.md'
-    - 'Protocolo de Segurança': 'Introdução/preflightcheck.md'
-    - 'Formulário': 'Introdução/formulario.md'
+  - 'Geral':
+    - 'Instalações': 'Geral/Instalacao.md'
+    - 'Protocolo de Segurança': 'Geral/preflightcheck.md'
+    - 'Formulário': 'Geral/formulario.md'
   - 'Hardware':
     - 'Introdução': 'Hardware/IntroduçãoHardware.md'
     - 'Componentes': 'Hardware/Componentes.md'
