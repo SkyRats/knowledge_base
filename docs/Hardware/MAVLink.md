@@ -10,9 +10,30 @@ Por meio da MAVLink, é possível mandar comandos para tirar foto, pedir para o 
 
 A MAVLink também é uma parte fundamental da QGroundControl. A QGC funciona como uma interface gráfica que recebe, exibe e envia as informações do drone por meio do protocólo MAVLink
 
+## Mensagens
+
 ## Bibliotecas
 
-# Projetos ja feitos:
+O projeto MAVLink possui algumas bibliotecas que podem ser utilizadas para transmitir e receber mensagens utilizando o protocolo.
+
+A primeira e de mais baixo nível é a [MAVLink](https://mavlink.io/en/). Ela é a oficial da equipe que desenvolve o protocolo, porém usá-la é bastante trabalhoso. Só vale a pena para escrever mensagens personalizadas, o que é um caso raro já que as mensagens já disponíveis por padrão na PX4 costumam ser suficientes. Por isso utilizamos outras ferramentas:
+
+### MAVSDK
+
+É uma API criada pela equipe que mantem a MAVLink para facilitar o envio e recebimento de mensagens. Com ela, é possível programar em [C++](https://mavsdk.mavlink.io/main/en/cpp/api_reference/) e [Python](http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/).
+
+Para instalar a versão para Python é simples, basta digitar no terminal:
+
+```bash
+pip3 install mavsdk
+pip3 install aioconsole
+```
+
+### Pymavlink
+
+Outra alternativa, disponível apenas com Python, é a [Pymavlink](https://pypi.org/project/pymavlink/). Ela é a mais simples de todas e é a que utilizamos para fazer a transmissão de dados do TFMini na Odroid para a PX4.
+
+## Projetos ja feitos:
 
 ## Distance sensor externo a FCU (TFMini)
 
