@@ -1,67 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/about/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Geral/Instalacao/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Geral/formulario/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Geral/preflightcheck/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Geral/FlightReview/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/Componentes/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/Drones/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/ControleRC/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://skyrats.github.io/knowledge_base/Hardware/Radio%20Controle/</loc>
-     <lastmod>2021-04-27</lastmod>
+    </url>
+    <url>
+     <loc>https://skyrats.github.io/knowledge_base/Hardware/Radio Controle/</loc>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Hardware/ESCs/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://skyrats.github.io/knowledge_base/Middleware/Calibra%C3%A7ao%20e%20Firmaware/</loc>
-     <lastmod>2021-04-27</lastmod>
+    </url>
+    <url>
+     <loc>https://skyrats.github.io/knowledge_base/Middleware/Calibraçao e Firmaware/</loc>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Middleware/Ardupilot/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Software/SIMULACAO_E_GAZEBO/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Software/Convencoes-de-Codigo/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
      <changefreq>daily</changefreq>
-    </url><url>
+    </url>
+    <url>
      <loc>https://skyrats.github.io/knowledge_base/Workshops/workshop_oo/</loc>
-     <lastmod>2021-04-27</lastmod>
+     <lastmod>2021-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc></loc>
+     
      <changefreq>daily</changefreq>
     </url>
 </urlset>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>MAVLINK - Knowledge Base - Skyrats</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "MAVLINK";
+    var mkdocs_page_input_path = "Hardware/MAVLink.md";
+    var mkdocs_page_url = "/knowledge_base/Hardware/MAVLink/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Geral</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Geral/Instalacao/">Instalações</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Geral/formulario/">Formulário</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Geral/preflightcheck/">Protocolo de Segurança</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Geral/FlightReview/">Análise de logs de voo</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Hardware</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../IntroduçãoHardware.md">Introdução</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Componentes/">Componentes</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Drones/">Drones</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ControleRC/">Controle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Radio Controle/">Radio Controle</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Middleware</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Middleware/Calibraçao e Firmaware/">Calibração e Firmware</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Middleware/Ardupilot/">Ardupilot</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Software</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Workshops</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Workshops/workshop_oo/">Programação Orientada a Objetos em C++</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>MAVLINK</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/MAVLink.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="mavlink">MAVLINK</h1>
+<h2 id="introducao">Introdução</h2>
+<p>MAVLink é um protocolo utilizado para a comunicação de veículos aereos não tripulados entre si e com o computador de bordo e a estação de controle.</p>
+<p>Existem duas versões. Na MAVLink v1.0, cada mensagem possui entre 8 e 263 bytes, sendo 255 de carga útil máxima. Na versão 2.0, as mensagens variam entre 11 e 279 bytes, tendo a mesma carga útil.</p>
+<p>Por meio da MAVLink, é possível mandar comandos para tirar foto, pedir para o drone ir até um ponto, realizar download do log de voo e requisitar informações como altitude, velocidade, posição etc.</p>
+<p>A MAVLink também é uma parte fundamental da QGroundControl. A QGC funciona como uma interface gráfica que recebe, exibe e envia as informações do drone por meio do protocólo MAVLink</p>
+<h2 id="mensagens">Mensagens</h2>
+<p>As mensagens já prontas da MAVLink se dividem por alguns serviços.</p>
+<h3 id="heartbeatconnection-protocol">Heartbeat/Connection Protocol</h3>
+<p>Esse serviço é responsável por conectar o Drone à Ground Station. Por meio dele, o Drone envia regularmente uma mensagem chamada Heartbeat que serve para avisar que o drone está conectado e disponível</p>
+<h3 id="mission-protocol">Mission Protocol</h3>
+<p>Serve para realizar download, upload e modificar planos de voo.</p>
+<h3 id="parameter-protocols">Parameter Protocols</h3>
+<p>Esse serviço serve para exibir os parâmetros utilizados pelo drone e seus componentes. Ele é bastante útil porque permite que a gente visualize todos os parâmetros por meio da QGroundControl e da Mission Planner.</p>
+<h3 id="command-protocol">Command Protocol</h3>
+<p>Permite mandar comandos para o drone. Por exemplo, vá para o ponto x.</p>
+<h2 id="bibliotecas">Bibliotecas</h2>
+<p>O projeto MAVLink possui algumas bibliotecas que podem ser utilizadas para transmitir e receber mensagens utilizando o protocolo.</p>
+<p>A primeira e de mais baixo nível é a <a href="https://mavlink.io/en/">MAVLink</a>. Ela é a oficial da equipe que desenvolve o protocolo, porém usá-la é bastante trabalhoso. Só vale a pena para escrever mensagens personalizadas, o que é um caso raro já que as mensagens já disponíveis por padrão na PX4 costumam ser suficientes. Por isso utilizamos outras ferramentas:</p>
+<h3 id="mavsdk">MAVSDK</h3>
+<p>É uma API criada pela equipe que mantem a MAVLink para facilitar o envio e recebimento de mensagens. Com ela, é possível programar em <a href="https://mavsdk.mavlink.io/main/en/cpp/api_reference/">C++</a> e <a href="http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/">Python</a>.</p>
+<p>Para instalar a versão para Python é simples, basta digitar no terminal:</p>
+<pre><code class="bash">pip3 install mavsdk
+pip3 install aioconsole
+</code></pre>
+
+<h3 id="pymavlink">Pymavlink</h3>
+<p>Outra alternativa, disponível apenas com Python, é a <a href="https://pypi.org/project/pymavlink/">Pymavlink</a>. Ela é a mais simples de todas e é a que utilizamos para fazer a transmissão de dados do TFMini na Odroid para a PX4.</p>
+<h2 id="projetos-ja-feitos">Projetos ja feitos:</h2>
+<h2 id="distance-sensor-externo-a-fcu-tfmini">Distance sensor externo a FCU (TFMini)</h2>
+<h3 id="driver-tfmini">Driver TFMini</h3>
+<p>O TFMini por ser serial foi conectado ao GPIO da Odroid xu4, mais precisamente nos pinos 4 e 6, respectivamente RX e TX da Odroid.
+Para fazer a leitura dos dados do GPIO foi utilizada a biblioteca Odroid Wiring Pi.</p>
+<pre><code class="Python">#!/usr/bin/env python
+import odroid_wiringpi as wpi
+import time
+</code></pre>
+
+<p>No código então foi criado uma classe "TFMini", p/ que ela possa ser utilizada facilmente em outros códigos, precisando apenas ser incluida e inicializada.</p>
+<p>A conexão com o TFMini fica dentro do construtor, onde ele abre a porta serial em que está conectado fisicamente o TFMini e declara a Baudrate; e é encerrada a conexão em seu destrutor.</p>
+<pre><code class="Python">class tfmini:
+
+    def __init__(self):
+        self.serial = wpi.serialOpen('/dev/ttySAC0', 115200)
+
+    def __del__(self):              
+        wpi.serialClose(self.serial)    
+</code></pre>
+
+<p>O método medir fica responsável por pegar as informações recebidas pela serial, onde ele transforma os respectivos bits recebidos em cada pacote em sua informação, cujos valores e significados estão no datasheet do sensor.</p>
+<p>Também existe uma main, porém ela roda apenas quando o script é rodado direto.</p>
+<p>```python=
+    def medir(self):
+        cont = 0
+        cont2 = 0
+        cont3 = 0
+        distancia = -1
+        strenght = -1
+        bit3 = 0
+        bit4 = 0
+        bit5 = 0
+        bit6 = 0
+        wpi.serialFlush(self.serial)
+        while cont &lt; 9:
+            output = wpi.serialGetchar(self.serial)
+            cont += 1
+            if cont == 3 or cont == 4:
+                #print(output)
+                cont2 += 1</p>
+<pre><code>            #Leitura de bits ( 3 e 4 distance, 5 e 6 strenght )
+            if cont == 3:
+                bit3 = output
+            if cont == 4:
+                bit4 = output
+
+            # Calcular distance
+            if cont2 == 2:
+                cont2 = 0
+                distancia = bit3 + ( bit4 * 256 )
+
+        if cont == 5 or cont == 6:
+            #print(output)
+            cont2 += 1
+
+            #Leitura de bits ( 5 e 6 strenght )
+            if cont == 5:
+                bit5 = output
+            if cont == 6:
+                bit6 = output
+            # Calcular distance e strenght
+            if cont2 == 2:
+                cont2 = 0
+                strenght = bit5 + ( bit6 * 256 )
+
+    #print('Distance = ' + str(distancia) + ' || Strenght = ' + str(strenght))
+    return [distancia, strenght]
+</code></pre>
+<p>if <strong>name</strong> == '<strong>main</strong>':
+    tfmini = tfmini()
+    medidas = tfmini.medir()
+    print('Distance = ' + str(medidas[0]) + ' || Strenght = ' + str(medidas[1]))
+    #print(medidas)</p>
+<pre><code>
+Agora, a conexão com a FCU foi feita atravez de MAVLink, com a biblioteca mavutil, que envia a msg de &quot;distance_sensor&quot;, onde estabelecemos a conexão com a FCU usando o comando &quot;mavlink_connection&quot; da biblioteca mavutil, usando no caso de USB a respectiva porta conectada, a ACM0. Mas caso ele não conecte com as portas citadas abaixo, seja qual for a forma de conexão, ela pode ser detectada utilizando o comando ```bash dmesg ```.
+
+```python=
+#!/usr/bin/env python3
+
+from pymavlink import mavutil
+import time
+import tfmini as lidar
+
+if __name__ == &quot;__main__&quot;:
+    #Telemetria:
+    mav = mavutil.mavlink_connection(&quot;/dev/ttyUSB0&quot;, autoreconnect=True, baud=57600)
+
+    #USB:
+    #mav = mavutil.mavlink_connection(&quot;/dev/ttyACM0&quot;, autoreconnect=True, baud=57600)
+
+    #Gazebo:
+    #mav = mavutil.mavlink_connection('udpin:localhost:1450')
+
+    print(&quot;Conectou&quot;)
+
+    for i in range(3):
+        print(&quot;Testando:&quot;)
+        print(mav.wait_heartbeat())
+        time.sleep(1)
+
+    tfmini = lidar()
+
+    while(True):
+        distance = tfmini.medir()
+        #'time_boot_ms', 'min_distance', 'max_distance', 'current_distance', 'type', 'id', 'orientation', and 'covariance'
+        mav.mav.distance_sensor_send(10, 20, 1200, distance, 0, 0, 25, 255)
+        print(&quot;SENT&quot;)
+        #print(dir(mav.mav.distance_sensor_send()))
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
