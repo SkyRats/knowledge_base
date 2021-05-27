@@ -12,6 +12,24 @@ A MAVLink também é uma parte fundamental da QGroundControl. A QGC funciona com
 
 ## Mensagens
 
+As mensagens já prontas da MAVLink se dividem por alguns serviços.
+
+### Heartbeat/Connection Protocol
+
+Esse serviço é responsável por conectar o Drone à Ground Station. Por meio dele, o Drone envia regularmente uma mensagem chamada Heartbeat que serve para avisar que o drone está conectado e disponível
+
+### Mission Protocol
+
+Serve para realizar download, upload e modificar planos de voo.
+
+### Parameter Protocols
+
+Esse serviço serve para exibir os parâmetros utilizados pelo drone e seus componentes. Ele é bastante útil porque permite que a gente visualize todos os parâmetros por meio da QGroundControl e da Mission Planner.
+
+### Command Protocol
+
+Permite mandar comandos para o drone. Por exemplo, vá para o ponto x.
+
 ## Bibliotecas
 
 O projeto MAVLink possui algumas bibliotecas que podem ser utilizadas para transmitir e receber mensagens utilizando o protocolo.
@@ -119,16 +137,15 @@ if __name__ == '__main__':
 	#print(medidas)
 ```
 
-Agora, a conexão com a FCU foi feita atravez de MAVLink, com a biblioteca mavutil, que envia a msg de "distance_sensor", onde estabelecemos a conexão com a FCU *****TERMINAR*****
+Agora, a conexão com a FCU foi feita atravez de MAVLink, com a biblioteca mavutil, que envia a msg de "distance_sensor", onde estabelecemos a conexão com a FCU usando o comando "mavlink_connection" da biblioteca mavutil, usando no caso de USB a respectiva porta conectada, a ACM0. Mas caso ele não conecte com as portas citadas abaixo, seja qual for a forma de conexão, ela pode ser detectada utilizando o comando ```bash dmesg ```.
 
 ```python=
 #!/usr/bin/env python3
 
 from pymavlink import mavutil
 import time
-
-
-
+import tfmini as lidar
+ 
 if __name__ == "__main__":
 	#Telemetria:
 	mav = mavutil.mavlink_connection("/dev/ttyUSB0", autoreconnect=True, baud=57600)
@@ -138,19 +155,21 @@ if __name__ == "__main__":
 
 	#Gazebo:
 	#mav = mavutil.mavlink_connection('udpin:localhost:1450')
+
 	print("Conectou")
-	for i in range(10):
+
+	for i in range(3):
 		print("Testando:")
 		print(mav.wait_heartbeat())
 		time.sleep(1)
-	distance = 10
+	
+	tfmini = lidar()
+	
 	while(True):
-		if distance == 10:
-			distance = 1000
-		elif distance == 1000:
-			distance = 10
+		distance = tfmini.medir()
 		#'time_boot_ms', 'min_distance', 'max_distance', 'current_distance', 'type', 'id', 'orientation', and 'covariance'
 		mav.mav.distance_sensor_send(10, 20, 1200, distance, 0, 0, 25, 255)
 		print("SENT")
 		#print(dir(mav.mav.distance_sensor_send()))
+	
 ```
