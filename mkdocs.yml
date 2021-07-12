@@ -8,20 +8,20 @@ nav:
   - Home: index.md
   - About: about.md
   - 'Geral':
-    - 'Instalações': 'Geral/Instalacao.md'
-    - 'Formulário(Linux, ROS, Gazebo)': 'Geral/formulario.md'
-    - 'Protocolo de Segurança': 'Geral/preflightcheck.md'
+    - 'Instalações' : 'Geral/Instalacao.md'
+    - 'Formulário(Linux, ROS, Gazebo)' : 'Geral/formulario.md'
+    - 'Protocolo de Segurança' : 'Geral/preflightcheck.md'
   - 'Hardware':
-    - 'Introdução ao Hardware para Drones':'Hardware/Introdução_Hardware.md'
+    - 'Introdução ao Hardware para Drones' : 'Hardware/introHW.md'
     - 'Componentes':
       - 'Rádio Controles':
-        -'Taranis QX7':'Hardware/Componentes/RCs/TaranisQX7.md'
-      - 'Guia de Escolha de ESCs':'ESCs.md'
+        -'Taranis QX7' : 'Hardware/Componentes/RCs/TaranisQX7.md'
+      - 'Guia de Escolha de ESCs' : 'ESCs.md'
     - 'Firmware':
-      -'Introdução ao MAVLink':'Hardware/Firmware/Introdução ao MAVLink.md'
-      -'Introdução ao PX4':'Hardware/Firmware/IntroPX4.md'
+      -'Introdução ao MAVLink' : 'Hardware/Firmware/Introdução ao MAVLink.md'
+      -'Introdução ao PX4' : 'Hardware/Firmware/IntroPX4.md'
     - '4G':
-      -'Transferência de Arquivos':'Hardware/4G/TransArqv.md'
+      -'Transferência de Arquivos' : 'Hardware/4G/TransArqv.md'
   - 'Software':
     - 'Convenções de Código' : 'Software/Convencoes-de-Codigo.md'
     - 'Programação Orientada a Objetos':
