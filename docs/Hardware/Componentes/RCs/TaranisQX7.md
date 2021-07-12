@@ -1,4 +1,4 @@
-# Configuração dos Rádio Controles
+# Configuração dos Rádio Controles (Taranis Q X7)
 
 ## Como Bindar o Controle no receptor
 
