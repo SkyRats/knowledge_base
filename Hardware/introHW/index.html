@@ -8,7 +8,7 @@
   
   <meta name="author" content="Skyrats">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Introdução ao Hardware - Knowledge Base - Skyrats</title>
+  <title>Introdução ao Hardware para Drones - Knowledge Base - Skyrats</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introdu\u00e7\u00e3o ao Hardware";
-    var mkdocs_page_input_path = "Hardware/Introdu\u00e7\u00e3o_Hardware.md";
-    var mkdocs_page_url = "/knowledge_base/Hardware/Introdu\u00e7\u00e3o_Hardware/";
+    var mkdocs_page_name = "Introdu\u00e7\u00e3o ao Hardware para Drones";
+    var mkdocs_page_input_path = "Hardware/introHW.md";
+    var mkdocs_page_url = "/knowledge_base/Hardware/introHW/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -74,15 +74,11 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../Geral/formulario/">Formulário</a>
+    <a class="" href="../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
                 </li>
                 <li class="">
                     
     <a class="" href="../../Geral/preflightcheck/">Protocolo de Segurança</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Geral/FlightReview/">Análise de logs de voo</a>
                 </li>
     </ul>
 	    </li>
@@ -91,44 +87,71 @@
 		
     <span class="caption-text">Hardware</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../IntroduçãoHardware.md">Introdução</a>
+    <a class="current" href="./">Introdução ao Hardware para Drones</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#introducao-ao-hardware">Introdução ao Hardware</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#componentes-e-montagem">Componentes e Montagem</a></li>
+        
+            <li><a class="toctree-l4" href="#o-drone-1p">O Drone (1p)</a></li>
+        
+            <li><a class="toctree-l4" href="#boas-praticas-de-hardware-1p">Boas práticas de Hardware (1p)</a></li>
+        
+            <li><a class="toctree-l4" href="#boas-praticas-de-voo-1p">Boas práticas de vôo (1p)</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../Componentes/">Componentes</a>
-                </li>
-                <li class="">
+    <span class="caption-text">Componentes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
                     
-    <a class="" href="../Drones/">Drones</a>
-                </li>
-                <li class="">
+    <span class="caption-text">Rádio Controles</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
                     
-    <a class="" href="../ControleRC/">Controle</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Radio Controle/">Radio Controle</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../ESCs/">Guia de Escolha de ESCs</a>
+    <a class="" href="../Componentes/RCs/TaranisQX7/">Taranis QX7</a>
                 </li>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Middleware</span>
-    <ul class="subnav">
-                <li class="">
+                </li>
+                <li class="toctree-l3">
                     
-    <a class="" href="../../Middleware/Calibraçao e Firmaware/">Calibração e Firmware</a>
+    <a class="" href="../Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../Middleware/Ardupilot/">Ardupilot</a>
+    <span class="caption-text">Firmware</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Firmware/Introdução ao MAVLink/">Introdução ao MAVLink</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Firmware/IntroPX4/">Introdução ao PX4</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">4G</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../4G/TransArqv/">Transferência de Arquivos</a>
+                </li>
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -139,22 +162,43 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../Software/SIMULACAO_E_GAZEBO/">Gazebo</a>
+    <a class="" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+    <span class="caption-text">Programação Orientada a Objetos</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Software/POO/oo_c++/">Em C++</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Software/Gazebo/">Gazebo</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Workshops</span>
+    <span class="caption-text">Mecânica</span>
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../Workshops/workshop_oo/">Programação Orientada a Objetos em C++</a>
+    <a class="" href="../..">Nada ainda aqui :c</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Comunicação</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../..">Nada ainda aqui :c</a>
                 </li>
     </ul>
 	    </li>
@@ -185,11 +229,15 @@
     <li><a href="../..">Docs</a> &raquo;</li>
     
       
+        
+          <li>Hardware &raquo;</li>
+        
+      
     
-    <li>Introdução ao Hardware</li>
+    <li>Introdução ao Hardware para Drones</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/Introdução_Hardware.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Hardware/introHW.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
@@ -346,6 +394,15 @@
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Componentes/RCs/TaranisQX7/" class="btn btn-neutral float-right" title="Taranis QX7">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../Geral/preflightcheck/" class="btn btn-neutral" title="Protocolo de Segurança"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
@@ -370,6 +427,10 @@
           <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
+        <span><a href="../../Geral/preflightcheck/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Componentes/RCs/TaranisQX7/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
