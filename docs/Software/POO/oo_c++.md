@@ -1,7 +1,4 @@
 # Workshop de Programação Orientada a Objetos
-SOMOS O FELIPE E O BENTO E ESTAMOS DE REC NA MATERIA QUE VAMOS DAR PARA VOCES!
-
-TEMOS QUE FALAR UM POUCO DE COMO CRIAR UMA MAIN EU ACHO.
 
 ## 1 Paradigmas de Programação 
 Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês viram no workshop de introdução era o paradigama imperativo, onde você manda um "passo a passo" para o programa rodar.
@@ -556,3 +553,145 @@ int main(){
 }
 ```
 Por isso que temos que usar o "using namespace std;" pois assim não precisamos escrever em cada COUT ou String o "std::" antes, apenas para facilitar.
+
+# Programação Orientada a Objeto em Python
+Agora vamos falar um pouco sobre como fazer tudo isso que vocês acabaram em python. Mas antes acho bom falar que tem algumas coisas que são consideravelmente diferente (e talvez até mais fácil heheh)
+
+## 1 Conceitos Básicos de OO
+As classes, objetos, atributos e métodos continuam tendo o mesmo conceito que em C++, mas a forma como escrevemos é diferente já que estamos em outra linguagem heheh
+
+## 2 Criando a Classe
+Vamos usar o primeiro exemplo usado em C++ e fazer alguma análises:
+```python
+#!/usr/bin/env python
+
+class Pizza():
+    def __init__(self, sabor = 'sabor', fatias = 0):
+        self._sabor = sabor
+        self._fatias = fatias
+
+    def retirar_fatia(self):
+        self._fatias -= 1
+```
+Primeiro, conseguimos perceber a criação do construtor dessa classe, obedecemos o padrão de ```__init__(self, a, b)```. Para criar um objeto com essa classe devemos chamar da seguinte forma:
+
+```python
+pizza1 = Pizza(queijo, 8)
+```
+Dessa forma, temos um objeto Pizza que possui como sabor queijo e 8 fatias, que são seus atributos. Para acessá-los, devemos usar a seguinte notação:
+```python
+sabor1 = pizza1._sabor
+fatias1 = pizza1._fatias
+```
+Uma boa prática ao definir atributos que são "privados" é colocar _ antes do nome desse atributo. Assim, você consegue identificar lugares no código que não é aconselhado alterar o nome rs.
+
+Agora, falando dos métodos dessa classe , temos o ```retirar_fatia(self)```. Para usá-lo, fazemos de maneira análoga aos atributos:
+```python
+pizza1.retirar_fatias()
+```
+
+## 3 Herança
+Vamos ver o mesmo exemplo que fizemos em C++ em python
+
+```python
+class Pessoa():
+    def __init__(self, nome = 'pessoa', idade = 0):
+        self._nome = nome
+        self._idade - idade
+
+class Bento(Pessoa):
+    def __init__(self, nome = 'pessoa', idade = 0, politreco = False):
+        super().__init__(self, nome, idade)
+        self._politreco = politreco
+
+    def bentoPolitreco():
+        if self._politreco:
+            print("Bento eh politreco")
+        else:
+            print("Bento nao eh politreco")
+```
+
+No código podemos dizer que ```super()``` está se referindo a classe superior, ou seja, a classe Pessoa. Outra forma de escrever essa linha de código seria:
+```python
+Pessoa.__init__(self, nome, idade)
+```
+Basicamente, essa é a notação de Orientado a Objeto para python, mas gostaria de introduzir algumas coisas a mais sem comparar com os exemplos acima e que possa fazer vocês entenderem um pouco melhor as diferenças até agora
+
+## 4 Organização dos Arquivos
+Não é uma regra, mas normalmente organizamos os arquivos que possuem classe separadamente do código de fato que a utiliza. Colocamos a classe e criamos também uma main, a qual só é chamada se só existir aquela main.
+```python
+#!/usr/bin/env python
+
+class Carro():
+    def __init__(self, nome, ano):
+        self._nome = nome
+        self._ano = ano
+        print("Carro" + nome + "do ano" + str(ano) + "construído!!!")
+
+if __name__ == '__main__':
+    celtinha = Carro("Celta", 2006)  
+```
+
+Se apenas rodarmos esse código e implementarmos mais o que está dentro de ```if __name__ == '__main__'```, isso vai ser considerado a main do código. Caso importarmos essa classe para outro código, ele não rodará o que está dentro dessa suposta main.
+## 5 Saiba Mais hihih
+### 5.1 Objetos em python
+Uma coisa que eu não contei pra vocês é que python cria objetos todas as vezes que você atribui um "valor" para uma variável. Mas como assim?
+```python
+>>> a = [1, 2, 3]
+>>> b = a
+>>> a[0] = 0
+>>> b[0]
+[0, 2, 3]
+```
+Por que o valor de b também mudou? Isso aconteceu porque, na verdade, a é uma referência para um objeto que é o mesmo que b está se referenciando.
+
+Esse foi um exemplo de um objeto mutável em python. Existe objetos imutáveis em python, onde ele não altera o valor do objeto que está apontando, mas altera para onde ele está apontando:
+```python
+>>> a = 10
+>>> b = a
+>>> a = a + 1
+>>> b
+10
+>>> a is b #olhar id(a) e id(b)
+False 
+>>> s = "skyrats"
+>>> t = s
+>>> s += "_s2"
+>>> s
+skyrats_s2
+>>> t
+skyrats
+```
+Podemos ver os métodos de objetos que criamos ao atribuir variáveis com ```dir(a)```
+### 5.2 Métodos especiais
+Não sei se de fato posso chamar de métodos especiais, mas você deve ter percebido que a notação do iniciador possui uma notação especial, como também ao chamar ```dir(a)```, aparecem métodos com essa notação:
+
+```python
+class Coordenadas():
+  def __init__(self, x, y): #construtor do objeto a
+    self._x = x
+    self._y = y
+
+  def __str__(self): #usado quando chamamos print(a)
+    return "(" + str(self._x) + "," + str(self._y) + ")"
+
+  def __add__(self, outro): #usado quando somamos os objetos
+    return Coordenadas(self._x + outro._x, self._y + outro._y)
+
+  def __getitem__(self, indice): #podemos pegar itens com a[0]...
+    if indice == 0:
+      return self._x
+    elif indice == 1:
+      return self._y
+    else:
+      raise IndexError ("A coordenada não tem este componente")
+
+  def __len__(self): #usado quando chamamos len(a)
+    return 2
+```
+Existem mais métodos especiais, esses são apenas exemplos
+
+### 5.3 Encapsulamento
+De fato em python, o código não obedece o encapsulamento. Por isso, a boa prática que foi comentado anteriormente de colocar o ```_``` antes de atributos e métodos que não devem ser alterados, apesar de qualquer um poder alterá-los.
+
+Esse é um dos motivos que há divergência quando se fala que python não é uma linguagem orientada a objetos.
