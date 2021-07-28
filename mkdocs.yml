@@ -27,7 +27,6 @@ nav:
     - 'Programação Orientada a Objetos':
       - 'Em C++' : 'Software/POO/oo_c++.md'
     - 'Gazebo' : 'Software/Gazebo.md'
-  - 'Comunicação'
   - 'Issue Tracker': 'https://github.com/SkyRats/knowledge_base/issues'
 
 
