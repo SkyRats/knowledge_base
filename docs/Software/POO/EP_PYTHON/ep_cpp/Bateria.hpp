@@ -15,6 +15,7 @@ public:
     void usar(int tempo);
     int getCarga();
     int getTempoDeVoo();
+    void status();
 };
 
 #endif

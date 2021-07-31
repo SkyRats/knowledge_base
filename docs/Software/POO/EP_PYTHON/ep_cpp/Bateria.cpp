@@ -36,4 +36,15 @@ void Bateria::usar(int tempo){
 
 }
 
-int main(){}
+int Bateria::getCarga(){
+    return carga;
+}
+
+int Bateria::getTempoDeVoo(){
+    return (tempoDeCarregamento * carga)/mah;
+}
+
+void Bateria::status(){
+    cout << "mAh: " << mah << " e tempo de carregamento: " << tempoDeCarregamento << endl;
+    cout << "Com carga: " << carga << " e tempo de voo restante: " << this->getTempoDeVoo() << endl;
+}

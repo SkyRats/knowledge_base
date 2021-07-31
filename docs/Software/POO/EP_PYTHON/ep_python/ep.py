@@ -29,6 +29,7 @@ class Bateria():
 
     def status(self):
         print("mAh: " + str(self._mah) + " e Tempo de Carregamento: " + str(self._tempoDeCarregamento))
+        print("Com carga: " + str(self._carga) + " e tempo de voo restante: " + str(self.getTempoDeVoo()))
 
 class Drone():
     def __init__(self, nome, bateria, posicao):

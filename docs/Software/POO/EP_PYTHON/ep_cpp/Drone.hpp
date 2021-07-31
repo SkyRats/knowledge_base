@@ -13,12 +13,13 @@ protected:
     bool decolado;
 
 public:
-    Drone(string nome, Bateria bateria, double posicao);
+    Drone(string nome, Bateria* bateria, double posicao);
     ~Drone();
     
     void takeoff(int altura);
     void land();
     void set_position(int x, int y);
+    void mapear();
     void status();
 };
 
