@@ -498,7 +498,7 @@ const Lampada *L1 = new Lampada("Branca");
 Dessa forma, caso mudem o valor de PI ou a cor da lampada, um erro de compilação será gerado.
 
 ### 9.2 Virtual
-Quando declaramos um método como virtual, o código, no momento da execução, decide se o método chamado vai ser da classe pai, filho, etc...
+Quando declaramos um método como virtual, no momento da execução, chama o método da própria classe.
 
 O programa executa o método com base no tipo
 específico do objeto!
