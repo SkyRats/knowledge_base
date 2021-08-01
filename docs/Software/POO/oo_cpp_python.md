@@ -505,7 +505,31 @@ específico do objeto!
 
  - Obs: É sempre bom declarar todos os métodos como virtuais, e como obrigação declarar todos os destrutores como virtuais, por que tem casos em que certos destrutores não são chamados.
  
-Exemplo:
+
+Exemplo (sem virtual):
+```cpp
+    class Passaro {
+        public: void canta() { cout << "Piuu Piuuu" << endl;}
+    };
+    class Arara : public Passaro {
+        public: void canta() { cout << "Araraaa Araraa" << endl;}
+    };
+    int main(){
+        Passaro* passaro = new Passaro();
+        Passaro* arara = new Arara();
+        passaro->canta();
+        arara->canta();
+        return 0;
+    }
+
+Saída:
+>>> ./Passaros.exe
+>>> Piuu Piuuu
+>>> Piuu Piuuu
+>>> 
+```
+
+Exemplo (com virtual):
 ```cpp
     class Passaro {
         public: virtual void canta() { cout << "Piuu Piuuu" << endl;}
@@ -515,11 +539,12 @@ Exemplo:
     };
     int main(){
         Passaro* passaro = new Passaro();
-        Arara* arara = new Arara();
+        Passaro* arara = new Arara();
         passaro->canta();
         arara->canta();
         return 0;
     }
+
 Saída:
 >>> ./Passaros.exe
 >>> Piuu Piuuu
