@@ -67,7 +67,7 @@ if __name__ == '__main__':
                     H = float(input("Altura: "))
                     drones[escolhaDrone].takeoff(H)
                 elif droneFazer == 2:
-                    print("O drone está na posição (" + str(drone[escolhaDrone]._posicao) + "," + str(drone[escolhaDrone]._altura) + ")")
+                    print("O drone está na posição (" + str(drones[escolhaDrone]._posicao) + "," + str(drones[escolhaDrone]._altura) + ")")
                     print("Para qual posição você quer ir?")
                     X = float(input("Posicao X: "))
                     Y = float(input("Altura Y: "))
