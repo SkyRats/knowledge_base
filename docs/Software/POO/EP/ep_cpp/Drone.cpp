@@ -1,6 +1,7 @@
 #include "Drone.hpp"
 #include <iostream>
 #include <string>
+#include <math.h>
 using namespace std;
 
 Drone::Drone(string nome, Bateria* bateria, double posicao){
@@ -20,30 +21,43 @@ void Drone::takeoff(int altura){
         cout << "Sem bateria!" << endl;
     else {
         decolado = true;
-        set_position(posicao, altura);
-        cout << "Takeoff concluído!";
+        setPosition(posicao, altura);
+        cout << "Takeoff concluido!";
     }
 
 }
 
 void Drone::land(){
-        set_position(posicao, 0);
+        setPosition(posicao, 0);
         decolado = false;
         cout << "Drone pousado!" << endl;
 }
 
-void Drone::set_position(int x, int y){
+void Drone::setPosition(double x, double y){
+    int tempo;
     if (decolado){
+        tempo = (sqrt(pow((posicao - x),2) + pow((altura - y),2)))/60;
+        cout << "tempo usado " << tempo << endl;
+        bateria->usar(tempo);
         posicao = x;
-        posicao = y;
+        altura = y;
         cout << "Drone indo para a posicao (" << x << "," << y << ")" << endl;
     }
     else
         cout << "Drone nao esta decolado" << endl;
 }
 
-void Drone::mapear(){
-    cout << "Não consigo mapear!" << endl;
+double Drone::getPosicao(){
+    return posicao;
+}
+
+double Drone::getAltura(){
+    return altura;
+}
+
+int Drone::mapear(){
+    cout << "Nao consigo mapear!" << endl;
+    return 1;
 }
 
 void Drone::status(){

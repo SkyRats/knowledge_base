@@ -10,7 +10,7 @@ Bateria::Bateria(int mah, int tempoDeCarregamento){
 }
 
 Bateria::~Bateria(){
-    cout << "Bateria explodida com sucesso" << endl;
+    cout << "Bateria destruida com sucesso" << endl;
 }
 
 void Bateria::carregar(int tempo){
@@ -20,7 +20,7 @@ void Bateria::carregar(int tempo){
         carga = carga + (mah * tempo) / tempoDeCarregamento;
         if(carga > mah)
             carga = mah;
-        cout << "Depois de carregar por " << tempo << "tempos, a bateria ficom com " << carga << "mah" << endl;
+        cout << "Depois de carregar por " << tempo << "tempos, a bateria ficou com " << carga << "mah" << endl;
 
     }
 }
@@ -32,7 +32,7 @@ void Bateria::usar(int tempo){
         carga = carga - (mah * tempo) / tempoDeCarregamento;
         if (carga < 0)
             carga = 0;
-    } 
+    }
 
 }
 
@@ -40,11 +40,16 @@ int Bateria::getCarga(){
     return carga;
 }
 
+int Bateria::getTempoDeCarregamento(){
+    return tempoDeCarregamento;
+}
+
 int Bateria::getTempoDeVoo(){
     return (tempoDeCarregamento * carga)/mah;
 }
 
 void Bateria::status(){
-    cout << "mAh: " << mah << " e tempo de carregamento: " << tempoDeCarregamento << endl;
-    cout << "Com carga: " << carga << " e tempo de voo restante: " << this->getTempoDeVoo() << endl;
+    cout << "Especificacoes: " << endl << "\tmAh: " << mah << endl;
+    cout << "\tTempo de carregamento: " << tempoDeCarregamento << endl;
+    cout << "\tAtualmente com carga: " << carga << " e tempo de voo restante: " << this->getTempoDeVoo() << endl;
 }

@@ -2,7 +2,7 @@
 #define BATERIA_H
 
 class Bateria{
-    
+
 private:
     int mah;
     int tempoDeCarregamento;
@@ -15,6 +15,7 @@ public:
     void usar(int tempo);
     int getCarga();
     int getTempoDeVoo();
+    int getTempoDeCarregamento();
     void status();
 };
 
