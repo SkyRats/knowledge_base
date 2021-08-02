@@ -57,7 +57,7 @@ class Drone():
     def set_position(self, x, y):
         if self._bateria.getCarga() > 10:
             if self._decolado:
-                tempo = sqrt((self._posicao - x)**2 + (self._altura - y)**2)/60
+                tempo = (((self._posicao - x)**2 + (self._altura - y)**2)**0.5)/60
                 self._bateria.usar(tempo)
                 self._posicao = x
                 self._altura = y
