@@ -120,14 +120,16 @@ int main(){
                 }
                 }break;
             case 5:{
-                int tempo;
+                int tempo; bool flag;
                 cout << "Carregar por quanto tempo?" << endl;
                 cin >> tempo;
                 for(int c = 0; c < vetorBaterias->size(); c++){
-                    vetorBaterias->at(c)->carregar(tempo);
+                    if(vetorBaterias->at(c)->getCarregavel() && vetorBaterias->at(c)->getUso())
+                        vetorBaterias->at(c)->carregar(tempo);
+                    else
+                        cout << "Não é possivel carregar a bateria " << c << endl;
+                    }
                 }
-                /*for(int c = 0; c < vetorDrones->size(); c++){
-                }*/
             }break;
 
 

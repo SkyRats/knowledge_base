@@ -6,7 +6,8 @@ Bateria::Bateria(int mah, int tempoDeCarregamento){
     this->mah = mah;
     this->tempoDeCarregamento = tempoDeCarregamento;
     this->carga = 0;
-
+    this->carregavel = true;
+    this->uso = false;
 }
 
 Bateria::~Bateria(){
@@ -16,7 +17,7 @@ Bateria::~Bateria(){
 void Bateria::carregar(int tempo){
     if (carga == mah)
         cout << "Bateria ja esta carregada!" << endl;
-    else{
+    else {
         carga = carga + (mah * tempo) / tempoDeCarregamento;
         if(carga > mah)
             carga = mah;
@@ -25,13 +26,18 @@ void Bateria::carregar(int tempo){
     }
 }
 
-void Bateria::usar(int tempo){
+bool Bateria::usar(int tempo){
+
     if(carga == 0)
         cout << "bateria descarregada :c" << endl;
     else{
-        carga = carga - (mah * tempo) / tempoDeCarregamento;
+        int cargaTemp = carga = carga - (mah * tempo) / tempoDeCarregamento;
         if (carga < 0)
-            carga = 0;
+            return true;
+        else{
+            carga = cargaTemp;
+            return false;
+        }
     }
 
 }
@@ -52,4 +58,22 @@ void Bateria::status(){
     cout << "Especificacoes: " << endl << "\tmAh: " << mah << endl;
     cout << "\tTempo de carregamento: " << tempoDeCarregamento << endl;
     cout << "\tAtualmente com carga: " << carga << " e tempo de voo restante: " << this->getTempoDeVoo() << endl;
+    cout << "\tÉ carregavel: " << carregavel << endl;
+    cout << "\tÉ uso: " << uso << endl;
+}
+
+bool Bateria::getUso(){
+    return uso;
+}
+
+bool Bateria::getCarregavel(){
+    return carregavel;
+}
+
+void Bateria::setUso(bool uso){
+    this->uso = uso;
+}
+
+void Bateria::setCarregavel(bool carregavel){
+    this->carregavel = carregavel;
 }
