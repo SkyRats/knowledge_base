@@ -27,19 +27,19 @@ void Bateria::carregar(int tempo){
 }
 
 bool Bateria::usar(int tempo){
-
-    if(carga == 0)
+    if(carga == 0){
         cout << "bateria descarregada :c" << endl;
+        return false;
+    }
     else{
         int cargaTemp = carga = carga - (mah * tempo) / tempoDeCarregamento;
-        if (carga < 0)
-            return true;
+        if (cargaTemp < 0)
+            return false;
         else{
             carga = cargaTemp;
-            return false;
+            return true;
         }
     }
-
 }
 
 int Bateria::getCarga(){
@@ -50,14 +50,14 @@ int Bateria::getTempoDeCarregamento(){
     return tempoDeCarregamento;
 }
 
-int Bateria::getTempoDeVoo(){
+int Bateria::calculaTempoDeVoo(){
     return (tempoDeCarregamento * carga)/mah;
 }
 
 void Bateria::status(){
     cout << "Especificacoes: " << endl << "\tmAh: " << mah << endl;
     cout << "\tTempo de carregamento: " << tempoDeCarregamento << endl;
-    cout << "\tAtualmente com carga: " << carga << " e tempo de voo restante: " << this->getTempoDeVoo() << endl;
+    cout << "\tAtualmente com carga: " << carga << " e tempo de voo restante: " << this->calculaTempoDeVoo() << endl;
     cout << "\tÉ carregavel: " << carregavel << endl;
     cout << "\tÉ uso: " << uso << endl;
 }

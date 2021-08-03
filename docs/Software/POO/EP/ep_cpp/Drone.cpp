@@ -42,8 +42,8 @@ void Drone::setPosition(double x, double y){
             posicao = x;
             altura = y;
             cout << "Drone indo para a posicao (" << x << "," << y << ")" << endl;
+            cout << "tempo usado " << tempo << endl;
         }
-        cout << "tempo usado " << tempo << endl;
         else{
             cout << "Drone nao pode decolar" << endl;
         }
@@ -67,6 +67,6 @@ int Drone::mapear(){
 
 void Drone::status(){
     cout << "Drone: " << nome << endl;
-    cout << "Bateria em " << bateria->getCarga() << " mAh e com tempo de voo de " << bateria->getTempoDeVoo() << " minutos" << endl;
+    cout << "Bateria em " << bateria->getCarga() << " mAh e com tempo de voo de " << bateria->calculaTempoDeVoo() << " minutos" << endl;
     cout << "Drone esta na posicao (" << posicao << "," << altura << ")" << endl;
 }

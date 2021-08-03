@@ -9,7 +9,7 @@ int main(){
     vector<Bateria*> *vetorBaterias = new vector<Bateria*>();
     vector<Drone*> *vetorDrones = new vector<Drone*>();
 
-    while(escolha != 6){
+    while(escolha != 8){
         cout << endl;
         cout << "-----------Drone OO Simulator V1-----------" << endl << endl;
         cout << "O que quer fazer?"           << endl;
@@ -18,7 +18,9 @@ int main(){
         cout << "\t3. Montar um drone generico" << endl;
         cout << "\t4. Usar os drones existentes"<< endl;
         cout << "\t5. Carregar baterias"        << endl;
-        cout << "\t6. Sair"                     << endl;
+        cout << "\t6. Listar drones"                     << endl;
+        cout << "\t7. Listar baterias"                     << endl;
+        cout << "\t8. Sair"                     << endl;
         cin >> escolha;
         switch(escolha){
             case 1:{
@@ -128,15 +130,25 @@ int main(){
                         vetorBaterias->at(c)->carregar(tempo);
                     else
                         cout << "Não é possivel carregar a bateria " << c << endl;
-                    }
                 }
             }break;
 
+            case 6:{
+                cout << "  Listndo drones:" << endl; 
+                for(int i = 0; i < vetorDrones->size(); i++){
+                    cout << "Drone: " << i << endl;
+                    vetorDrones->at(i)->status();
+                }
+            }break;
 
-
+            case 7:{
+                cout << "  Listndo baterias:" << endl; 
+                for(int i = 0; i < vetorBaterias->size(); i++){
+                    cout << "Bateria: " << i << endl;
+                    vetorBaterias->at(i)->status();
+                }
+            };
             }
-
-
         }
         for(int c = 0; c < vetorBaterias->size(); c++){
                     delete vetorBaterias->at(c);

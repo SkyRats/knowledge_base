@@ -15,9 +15,9 @@ public:
     ~Bateria();
     void carregar(int tempo);
     bool usar(int tempo);
+    int calculaTempoDeVoo();
 
     int getCarga();
-    int getTempoDeVoo();
     int getTempoDeCarregamento();
     bool getUso();
     bool getCarregavel();
