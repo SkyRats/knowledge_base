@@ -32,8 +32,8 @@ bool Bateria::usar(int tempo){
         return false;
     }
     else{
-        int cargaTemp = carga = carga - (mah * tempo) / tempoDeCarregamento;
-        if (carga < 0)
+        int cargaTemp  = carga - (mah * tempo) / tempoDeCarregamento;
+        if (cargaTemp < 0)
             return false;
         else{
             carga = cargaTemp;
@@ -59,7 +59,7 @@ void Bateria::status(){
     cout << "\tTempo de carregamento: " << tempoDeCarregamento << endl;
     cout << "\tAtualmente com carga: " << carga << " e tempo de voo restante: " << this->calculaTempoDeVoo() << endl;
     cout << "\tÉ carregavel: " << carregavel << endl;
-    cout << "\tÉ uso: " << uso << endl;
+    cout << "\tEstá sendo usada: " << uso << endl;
 }
 
 bool Bateria::getUso(){
