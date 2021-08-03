@@ -3,7 +3,7 @@ CC = g++
 CFLAGS = -Wall -g
 
 main: main.o Bateria.o Drone.o S1000.o
-	$(CC) $(CFLAGS) -o main.exe main.o Bateria.o Drone.o S1000.o
+	$(CC) $(CFLAGS) -o main main.o Bateria.o Drone.o S1000.o
 	rm -rf *.o
 
 Bateria: Bateria.o

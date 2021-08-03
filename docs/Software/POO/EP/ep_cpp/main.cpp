@@ -126,7 +126,7 @@ int main(){
                 cout << "Carregar por quanto tempo?" << endl;
                 cin >> tempo;
                 for(int c = 0; c < vetorBaterias->size(); c++){
-                    if(vetorBaterias->at(c)->getCarregavel() && vetorBaterias->at(c)->getUso())
+                    if(vetorBaterias->at(c)->getCarregavel() && !vetorBaterias->at(c)->getUso())
                         vetorBaterias->at(c)->carregar(tempo);
                     else
                         cout << "Não é possivel carregar a bateria " << c << endl;

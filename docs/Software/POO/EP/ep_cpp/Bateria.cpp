@@ -33,7 +33,7 @@ bool Bateria::usar(int tempo){
     }
     else{
         int cargaTemp = carga = carga - (mah * tempo) / tempoDeCarregamento;
-        if (cargaTemp < 0)
+        if (carga < 0)
             return false;
         else{
             carga = cargaTemp;
