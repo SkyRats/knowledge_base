@@ -18,7 +18,7 @@ public:
 
     void takeoff(int altura);
     void land();
-    void setPosition(double x, double y);
+    bool setPosition(double x, double y);
     double getPosicao();
     double getAltura();
     virtual int mapear();

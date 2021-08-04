@@ -4,9 +4,9 @@
 class Bateria{
 
 private:
-    int mah;
-    int tempoDeCarregamento;
-    int carga;
+    long int mah;
+    long int tempoDeCarregamento;
+    long int carga;
     bool uso;
     bool carregavel;
 

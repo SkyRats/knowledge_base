@@ -28,8 +28,14 @@ int main(){
                 int mAh, t;
                 cout << "mAh: ";
                 cin >> mAh;
+                if(mAh < 0){
+                    cout << "Não existe carga negativa" << endl;
+                }
                 cout << "Tempo de Carregamento: ";
                 cin >> t;
+                if(t < 0){
+                    cout << "Não existe tempo negativo" << endl;
+                }
                 Bateria *bat = new Bateria(mAh, t);
                 vetorBaterias->push_back(bat);
                 }break;
@@ -57,14 +63,18 @@ int main(){
                 else{
                     cout << "Escolha uma bateria: " << endl;
                     for(int c = 0; c < vetorBaterias->size(); c++){
-                        cout <<"Bateria " << c + 1 << endl;
+                        cout <<"Bateria " << c << endl;
                         vetorBaterias->at(c)->status();
                         cout << endl;
                     }
                 cin >> id;
+                if(vetorBaterias->at(id)->getUso()){
+                    cout << "Bateria em uso!!!" << endl;
+                    break;
+                }
                 cout << "Posicao inicial: ";
                 cin >> posicao;
-                Drone *drone = new Drone(nomeDrone, vetorBaterias->at(id-1), posicao);
+                Drone *drone = new Drone(nomeDrone, vetorBaterias->at(id), posicao);
                 vetorDrones->push_back(drone);
                 cout << "Drone " << vetorDrones->size() << " pronto" << endl;
                 }
@@ -122,15 +132,18 @@ int main(){
                 }
                 }break;
             case 5:{
-                int tempo; bool flag;
-                cout << "Carregar por quanto tempo?" << endl;
-                cin >> tempo;
-                for(int c = 0; c < vetorBaterias->size(); c++){
-                    if(vetorBaterias->at(c)->getCarregavel() && !vetorBaterias->at(c)->getUso())
-                        vetorBaterias->at(c)->carregar(tempo);
-                    else
-                        cout << "Não é possivel carregar a bateria " << c << endl;
+                if(vetorBaterias->size() > 0){
+                    int tempo; bool flag;
+                    cout << "Carregar por quanto tempo?" << endl;
+                    cin >> tempo;
+                    for(int c = 0; c < vetorBaterias->size(); c++){
+                        if(vetorBaterias->at(c)->getCarregavel())
+                            vetorBaterias->at(c)->carregar(tempo);
+                        else
+                            cout << "Não é possivel carregar a bateria " << c << endl;
+                    }
                 }
+                else cout << "Não vai carregar baterias que não existem ):<" << endl;
             }break;
 
             case 6:{

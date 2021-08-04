@@ -8,7 +8,7 @@ using namespace std;
 Drone::Drone(string nome, Bateria* bateria, double posicao){
     this->nome = nome;
     this->bateria = bateria;
-    bateria->setUso(false);
+    bateria->setUso(true);
     this->posicao = posicao;
     this->altura = 0;
     this->decolado = false;
@@ -19,37 +19,45 @@ Drone::~Drone(){
 }
 
 void Drone::takeoff(int altura){
-        setPosition(posicao, altura);
-        decolado = true;
+    decolado = true;
+    if(setPosition(posicao, altura)){
         bateria->setCarregavel(false);
         cout << "Takeoff concluido!";
+    }
+    else
+        decolado = false;
 }
 
 void Drone::land(){
         altura = 0;
         decolado = false;
+        bateria->setCarregavel(true);
         cout << "Drone pousado!" << endl;
 }
 
-void Drone::setPosition(double x, double y){
+bool Drone::setPosition(double x, double y){
     if(y <= 0){
         cout << "Drone não pode ir para alturas menores ou iguais a 0" << endl;
+        return false;
     }
     int tempo;
+    tempo = (sqrt(pow((posicao - x),2) + pow((altura - y),2)))/60;
     if (decolado){
-        tempo = (sqrt(pow((posicao - x),2) + pow((altura - y),2)))/60;
         if(bateria->usar(tempo)){
             posicao = x;
             altura = y;
             cout << "Drone indo para a posicao (" << x << "," << y << ")" << endl;
             cout << "tempo usado " << tempo << endl;
+            return true;
         }
         else{
-            cout << "Drone nao pode decolar" << endl;
+            cout << "Drone nao pode ir ate la" << endl;
+            return false;
         }
     }
     else
         cout << "Drone nao esta decolado" << endl;
+        return false;
 }
 
 double Drone::getPosicao(){

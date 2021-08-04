@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-S1000::S1000(string nome, Bateria* bateria, double posicao):Drone(nome, bateria, posicao){
+S1000::S1000(string nome, Bateria* bateria, double posicao) : Drone(nome, bateria, posicao){
 }
 
 S1000::~S1000(){

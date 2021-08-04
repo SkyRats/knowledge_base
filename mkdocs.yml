@@ -17,6 +17,7 @@ nav:
       - 'Rádio Controles':
         -'Taranis QX7' : 'Hardware/Componentes/RCs/TaranisQX7.md'
       - 'Guia de Escolha de ESCs' : 'ESCs.md'
+      - 'RPLidar S1 360' : 'RPLIDARS1360.md'
     - 'Firmware':
       -'Introdução ao MAVLink' : 'Hardware/Firmware/Introdução ao MAVLink.md'
       -'Introdução ao PX4' : 'Hardware/Firmware/IntroPX4.md'
