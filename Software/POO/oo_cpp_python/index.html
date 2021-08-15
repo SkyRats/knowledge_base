@@ -7,32 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Software/POO/oo_cpp_python/">
   <link rel="shortcut icon" href="../../../img/favicon.ico">
   <title>Em C++ - Knowledge Base - Skyrats</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
     var mkdocs_page_name = "Em C++";
-    var mkdocs_page_input_path = "Software/POO/oo_c++.md";
-    var mkdocs_page_url = "/knowledge_base/Software/POO/oo_c++/";
+    var mkdocs_page_input_path = "Software/POO/oo_cpp_python.md";
+    var mkdocs_page_url = "/knowledge_base/Software/POO/oo_cpp_python/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,186 +41,158 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../../about/">About</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Geral</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../Geral/Instalacao/">Instalações</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Hardware</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Componentes</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <span class="caption-text">Rádio Controles</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Geral</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Componentes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Rádio Controles</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a>
                 </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Firmware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a>
                 </li>
-                <li class="">
-                    
-    <span class="caption-text">Firmware</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../../Hardware/Firmware/Introdução ao MAVLink/">Introdução ao MAVLink</a>
-                </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
                 </li>
     </ul>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">4G</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">4G</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
                 </li>
     </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Software</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Convencoes-de-Codigo/">Convenções de Código</a>
-                </li>
-                <li class=" current">
-                    
-    <span class="caption-text">Programação Orientada a Objetos</span>
-    <ul class="subnav">
-                <li class="toctree-l3 current">
-                    
-    <a class="current" href="./">Em C++</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l4"><a href="#workshop-de-programacao-orientada-a-objetos">Workshop de Programação Orientada a Objetos</a></li>
-    
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../../Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Programação Orientada a Objetos</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Em C++</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#1-paradigmas-de-programacao">1 Paradigmas de Programação</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-basicos-de-c">2 Básicos de C++</a>
         <ul>
-        
-            <li><a class="toctree-l5" href="#1-paradigmas-de-programacao">1 Paradigmas de Programação</a></li>
-        
-            <li><a class="toctree-l5" href="#2-basicos-de-c">2 Básicos de C++</a></li>
-        
-            <li><a class="toctree-l5" href="#3-conceitos-basicos-de-oo">3 Conceitos Básicos de OO</a></li>
-        
-            <li><a class="toctree-l5" href="#4-encapsulamento">4 Encapsulamento</a></li>
-        
-            <li><a class="toctree-l5" href="#5-getters-e-setter">5 Getters e Setter</a></li>
-        
-            <li><a class="toctree-l5" href="#6-construtor-e-destrutor">6 Construtor e Destrutor</a></li>
-        
-            <li><a class="toctree-l5" href="#7-vetor-de-objetos">7 Vetor de Objetos</a></li>
-        
-            <li><a class="toctree-l5" href="#8-heranca-e-polimorfismo">8 Herança e Polimorfismo</a></li>
-        
-            <li><a class="toctree-l5" href="#9-informacoes-a-mais">9 Informações a mais</a></li>
-        
+    <li class="toctree-l4"><a class="reference internal" href="#21-cin-e-cout">2.1 CIN e COUT</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#22-string">2.2 String</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Gazebo/">Gazebo</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Mecânica</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Comunicação</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
-	    </li>
-          
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-conceitos-basicos-de-oo">3 Conceitos Básicos de OO</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#31-classe">3.1 Classe</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#32-objetos">3.2 Objetos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#33-atributos">3.3 Atributos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-metodos">3.4 Métodos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-encapsulamento">4 Encapsulamento</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#41-private">4.1 Private</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#42-public">4.2 Public</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#43-protected">4.3 Protected</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#44-headersh-e-hpp-e-sourcescpp">4.4 Headers(.h e .hpp) e Sources(.cpp)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-getters-e-setter">5 Getters e Setter</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#6-construtor-e-destrutor">6 Construtor e Destrutor</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#61-construtor">6.1 Construtor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#62-destrutor">6.2 Destrutor</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#7-vetor-de-objetos">7 Vetor de Objetos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#8-heranca-e-polimorfismo">8 Herança e Polimorfismo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#81-o-que-e-um-filho">8.1 O que é um filho</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#82-principio-da-substituicao">8.2 Princípio da Substituição</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#83-protected">8.3 Protected</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#9-informacoes-a-mais">9 Informações a mais</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#91-const">9.1 Const</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#92-virtual">9.2 Virtual</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#93-namespace-e-std">9.3 Namespace e STD</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Gazebo/">Gazebo</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -240,30 +212,30 @@
     
       
         
-          <li>Programação Orientada a Objetos &raquo;</li>
+          <li>Software &raquo;</li>
         
       
         
-          <li>Software &raquo;</li>
+          <li>Programação Orientada a Objetos &raquo;</li>
         
       
     
     <li>Em C++</li>
     <li class="wy-breadcrumbs-aside">
       
-        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Software/POO/oo_c++.md"
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Software/POO/oo_cpp_python.md"
           class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
+  
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
                 <h1 id="workshop-de-programacao-orientada-a-objetos">Workshop de Programação Orientada a Objetos</h1>
-<p>SOMOS O FELIPE E O BENTO E ESTAMOS DE REC NA MATERIA QUE VAMOS DAR PARA VOCES!</p>
-<p>TEMOS QUE FALAR UM POUCO DE COMO CRIAR UMA MAIN EU ACHO.</p>
 <h2 id="1-paradigmas-de-programacao">1 Paradigmas de Programação</h2>
 <p>Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês viram no workshop de introdução era o paradigama imperativo, onde você manda um "passo a passo" para o programa rodar.</p>
 <p>Agora, o que vamos aprender é o paradigma de orientação a objetos, em que vai surgir a ideia de classes e objetos, que vão ser um nível de abstração a mais!</p>
@@ -280,7 +252,7 @@
 <li>Obs: o "endl" (end line) pula uma linha, assim como o "\n".</li>
 </ul>
 <p>Exemplo:</p>
-<pre><code class="cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 using namespace std;
 
 int main(){
@@ -294,10 +266,9 @@ int main(){
 &gt;&gt;&gt; Tenho 19 anos!
 &gt;&gt;&gt; 
 </code></pre>
-
 <h3 id="22-string">2.2 String</h3>
 <p>Existe uma biblioteca chamada <string.h>, com ela você pode representar palavras, frases ou textos, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:</p>
-<pre><code class="cpp">#include &lt;iostream&gt;
+<pre><code class="language-cpp">#include &lt;iostream&gt;
 #include &lt;string&gt;
 
 using namespace std;
@@ -312,7 +283,6 @@ Vai ter como saída isso:
 &gt;&gt;&gt; A skyrats é a melhor equipe da POLI!
 &gt;&gt;&gt;
 </code></pre>
-
 <ul>
 <li>Obs: Para usar o "cin e cout" e as "strings" é necessaário além da inclusão das respectivas bibliotecas o uso do namespaece "std" que será explicado mais pra frente do porquê.</li>
 </ul>
@@ -329,7 +299,7 @@ Por exemplo, podemos criar a classe pizza que terá um atributo que indica o seu
 <h3 id="34-metodos">3.4 Métodos</h3>
 <p>São a implementação dos serviços disponibilizados pelos objetos.
 Podemos criar para a classe pizza o metódo "retirar_fatia()", agora podemos diminuir o numero de fatias que ela tem por meio de um método! </p>
-<pre><code class="cpp">#include &lt;string&gt;
+<pre><code class="language-cpp">#include &lt;string&gt;
 using namespace std;
 
 class Pizza{//Classe
@@ -347,11 +317,10 @@ private:
       Pizza *pizza1;//Criação de um objeto Pizza
   }
 </code></pre>
-
 <h3 id="34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</h3>
 <p>O ponteiro é uma variável que guarda um endereço de memória. Por exemplo, um ponteiro para o "int valor", será algo parecido com 0x6453.
 Para declarar um ponteiro, é so colocar um "*", desse jeito:</p>
-<pre><code class="cpp">int *x;
+<pre><code class="language-cpp">int *x;
 cout &lt;&lt; x &lt;&lt; endl;
 
 Saída:
@@ -359,9 +328,8 @@ Saída:
 &gt;&gt;&gt; 0x32a57c
 &gt;&gt;&gt;
 </code></pre>
-
 <p>E se quisermos pegar o endereço de uma variável ja existente? Usa o "&amp;", desse jeito:</p>
-<pre><code class="cpp">int x = 10;
+<pre><code class="language-cpp">int x = 10;
 cout &lt;&lt; &amp;x &lt;&lt; &quot; - &quot; &lt;&lt; x &lt;&lt; endl;
 
 Saída:
@@ -369,9 +337,8 @@ Saída:
 &gt;&gt;&gt; 0x7b65d2 - 10
 &gt;&gt;&gt;
 </code></pre>
-
 <p>Mas e agora, e se quisermos ir até a variável tendo o endereço dela? Usaremos também o "*", desse jeito:</p>
-<pre><code class="cpp">int x = 10;
+<pre><code class="language-cpp">int x = 10;
 int* y = &amp;x;
 cout &lt;&lt; x &lt;&lt; &quot; - &quot; &lt;&lt; *y &lt;&lt; endl;
 
@@ -380,7 +347,6 @@ Saída:
 &gt;&gt;&gt; 10 - 10
 &gt;&gt;&gt;
 </code></pre>
-
 <p>Certo, sabendo disso podemos agora falar como isso tudo de ponteiros interfere em objetos.</p>
 <p>Um objeto não deixa de ser uma variável, ele só possui um nível de abstração a mais. Logo, podemos criar variáveis para guardar objetos e pegar seus endereços guardando em ponteiros.</p>
 <p>Tome cuidado, pois ao mesmo tempo que existe coisas para facilitar, de começo pode confundir um pouco.</p>
@@ -394,7 +360,7 @@ Saída:
   <code>cpp
   Carro* celtinha;</code>
   E nesse ponteiro celtinha, vamos guardar o ponteiro que aponta para o objeto, MAS PRESTE ATENÇÃO!!! Devemos tomar MUITO cuidado em como vamo chamar os métodos e atributos. Assim, se temos apenas um objeto("Carro celtinha;), chamamos os métodos e atributos usando ".", por exemplo:</p>
-<pre><code class="cpp">Carro celtinha = Carro(); //Esse método é um construtor, não se preocupe com ele agora, vamos explicar mais para a frente, apenas saiba que estamos colocando um objeto do tipo Carro na variável
+<pre><code class="language-cpp">Carro celtinha = Carro(); //Esse método é um construtor, não se preocupe com ele agora, vamos explicar mais para a frente, apenas saiba que estamos colocando um objeto do tipo Carro na variável
 celtinha.buzinar(); // Esse método retorna no terminal a buzina
 cout &lt;&lt; &quot;Ano do carro: &quot; &lt;&lt; celtinha.ano &lt;&lt; endl; // Aqui ele chama o atributo que guarda o ano do carro
 
@@ -404,17 +370,14 @@ Saída:
 &gt;&gt;&gt; Ano do carro: 2006
 &gt;&gt;&gt;
 </code></pre>
-
 <p>Mas agora, se vamos guardar um objeto numa variável de ponteiro, teremos que chamar os métodos e atributos desreferenciando o ponteiro, assim: </p>
-<pre><code class="cpp">(*celtinha).buzinar(); 
+<pre><code class="language-cpp">(*celtinha).buzinar(); 
 </code></pre>
-
 <p>Mas em C++ existe uma coisa que facilita muito mais do que ficar desreferenciando o ponteiro toda hora, que é so usar uma setinha("-&gt;"), assim, podemos chamar o método desse jeito:</p>
-<pre><code class="cpp">celtinha-&gt;buzinar();
+<pre><code class="language-cpp">celtinha-&gt;buzinar();
 </code></pre>
-
 <p>Exemplo completo:</p>
-<pre><code class="cpp">Carro celtinha = Carro();
+<pre><code class="language-cpp">Carro celtinha = Carro();
 Carro *ponteiroCeltinha = &amp;celtinha;
 
 (*ponteiroCeltinha).buzinar();
@@ -431,16 +394,14 @@ Saída:
 &gt;&gt;&gt; Ano do carro: 2006
 &gt;&gt;&gt;
 </code></pre>
-
 <p>E mais uma última coisa! E se quisermos guardar um "nada" dentro de um ponteiro, como fazemos?</p>
 <p>Usamos "NULL", assim o ponteiro não estará apontando para nenhum lugar.</p>
-<pre><code class="cpp">Carro *ponteiroCeltinha = NULL;
+<pre><code class="language-cpp">Carro *ponteiroCeltinha = NULL;
 ponteiroCeltinha-&gt;buzinar();
 Saída:
 &gt;&gt;&gt; ./PonteiroCeltinha.exe
 &gt;&gt;&gt;
 </code></pre>
-
 <h2 id="4-encapsulamento">4 Encapsulamento</h2>
 <p>Encapsulamento é indicar quem tem acesso a um método ou atributo.</p>
 <h3 id="41-private">4.1 Private</h3>
@@ -455,7 +416,7 @@ Saída:
 <p>O arquivo de definição é o Header (.h) e (.hpp).</p>
 <p>O arquivo de implementação é o Source (.cpp)</p>
 <p>Ex: Relógio.h</p>
-<pre><code class="cpp">class Relogio{
+<pre><code class="language-cpp">class Relogio{
     private:
         int hora;
         int minuto;
@@ -465,9 +426,8 @@ Saída:
 };
 
 </code></pre>
-
 <p>Ex: Relógio.cpp</p>
-<pre><code class="cpp">#include &quot;Relogio.h&quot;
+<pre><code class="language-cpp">#include &quot;Relogio.h&quot;
 
 int Relogio::getHora(){
     return hora;
@@ -478,11 +438,10 @@ int Relogio::getMinuto(){
 }
 
 </code></pre>
-
 <h3 id="45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</h3>
 <p>Quando programamos é normal incluirmos varios arquivos no inicio do programa, porém no meio desse monte de inclusão é muito fácil acabarmos incluindo o mesmo Header mais de uma vez, pois dentro de classes incluimos outras classes, o que pode ocasionar em um erro de definirmos multiplas vezes a mesma coisa. </p>
 <p>Para evitar isso, é recomendado que sempre que criarmos um Header usarmos o modelo:</p>
-<pre><code class="cpp">#ifndef CLASSE_H        // Se a classe não estiver definida
+<pre><code class="language-cpp">#ifndef CLASSE_H        // Se a classe não estiver definida
 #define CLASSE_H        // Define a classe
 
 class Classe{
@@ -491,11 +450,10 @@ class Classe{
 
 #endif                  //Fim do ifndef
 </code></pre>
-
 <h2 id="5-getters-e-setter">5 Getters e Setter</h2>
 <p>Normalmente na programação orientada a objetos, os atributos serão privados por uma questão de segurança, e para outras classes poderem acessa-los usaremos os métodos (normalmente públicos) getters e setters.</p>
 <p>Os getter sãos métodos usados para retornar valores de atributos, e os setters para aplicar valores neles. Como é bem simples, com o exemplo é entendível sua utilidade:</p>
-<pre><code class="cpp">class Carro{
+<pre><code class="language-cpp">class Carro{
     public:
         int getCombustivel(){
             return combustivel;
@@ -517,26 +475,23 @@ Tem como saída:
 &gt;&gt;&gt; ./Celtinha.exe
 &gt;&gt;&gt; Combustível: 30
 </code></pre>
-
 <h2 id="6-construtor-e-destrutor">6 Construtor e Destrutor</h2>
 <h3 id="61-construtor">6.1 Construtor</h3>
 <p>O construtor é a primeira função que é executada quando instanciamos um objeto, nela serão iniciadas alguns atributos.
 Existem duas principais formas de fazer esse processo:</p>
 <p>Alocação Dinâmica: </p>
-<pre><code class="cpp">Carro* Celtinha = new Carro();
+<pre><code class="language-cpp">Carro* Celtinha = new Carro();
 </code></pre>
-
 <p>Ele cria um objeto e atribui seu "Ponteiro" dinamicamente, ou seja, a variável será mantida mesmo depois do fechamento de escopo, assim, precisa ser desalocada manualmente. </p>
 <p>Alocação Estática:</p>
-<pre><code class="cpp">Carro* Celtinha = &amp;(Carro());
+<pre><code class="language-cpp">Carro* Celtinha = &amp;(Carro());
 </code></pre>
-
 <p>Aqui a o ponteiro do objeto construído é atribuído à variável Celtinha, e por ser alocação estática, ele não precisa ser destruído manualmente, embora seja possível.</p>
 <p>Quando estamos fazendo a classe podemos escrever um código para o construtor, e nisso podemos setar valores, criar variáveis, dar uns couts, uns cins, e fazer todo o possível para uma função normal, para isso devemos criar um método com o nome da própria classe.</p>
 <ul>
 <li>Obs: Usamos o "this-&gt;" para nos referirmos a um atributo ou método do objeto que o chamou. Podemos assim diferenciar coisas com o mesmo nome.</li>
 </ul>
-<pre><code class="cpp">class carro{
+<pre><code class="language-cpp">class carro{
     public:
         carro(string nome, int ano){
             this-&gt;nome = nome; //O &quot;this-&gt;nome&quot; se refere ao atributo da classe.
@@ -557,10 +512,9 @@ Saída:
 &gt;&gt;&gt; ./ConstrutorDoCeltinha.exe
 &gt;&gt;&gt; Carro Celta do ano 2006 construído!!!
 </code></pre>
-
 <h3 id="62-destrutor">6.2 Destrutor</h3>
 <p>Se você criou um objeto, ele vai ocupar espaço na memória! Portanto, é bom sabermos que podemos destruí-los, e para isso usamos o comando "delete", e esse comando chama o destrutor, uma função bemmm parecida com o construtor, só que com um til atrás, "~NomeDaClasse()", ele funciona assim:</p>
-<pre><code class="cpp">class Comida{
+<pre><code class="language-cpp">class Comida{
     public:
         Comida(string nome, bool vencida){
             this-&gt;nome = nome;
@@ -589,10 +543,9 @@ Saída:
 &gt;&gt;&gt; Parabéns!, você jogou sua(seu) Cenoura vencida(o) fora!
 &gt;&gt;&gt; Que feio! você jogou sua(seu) Beringela nova(o) fora! Não desperdice comida &gt;:
 </code></pre>
-
 <h2 id="7-vetor-de-objetos">7 Vetor de Objetos</h2>
 <p>Em C++, podemos criar vetores de variáveis simples, como: INTs, FLOATs... e PONTEIROS! Mas também podemos criar um vetor de objetos, guardando em cada posição do vetor um ponteiro para esse objeto, e podemos fazer isso de duas formas, estáticamente ou dinamicamente:</p>
-<pre><code class="cpp">Construcao* predios[tamanho]; //Estática
+<pre><code class="language-cpp">Construcao* predios[tamanho]; //Estática
 predios[2] = PredioAzul;
 if(predios[2] == PredioAzul) cout &lt;&lt; &quot;Deu certo!&quot; &lt;&lt; endl;
 
@@ -605,14 +558,13 @@ if(predios2[2] == PredioAzul) cout &lt;&lt; &quot;Deu certo!&quot; &lt;&lt; endl
 &gt;&gt;&gt; Deu certo!
 &gt;&gt;&gt; 
 </code></pre>
-
 <p>Obs: Para destruir vetores dinâmicos, já que ele não deixa de ser um tipo de objeto, você usa o "delete[] nomeDoVetor;".</p>
 <h2 id="8-heranca-e-polimorfismo">8 Herança e Polimorfismo</h2>
 <h3 id="81-o-que-e-um-filho">8.1 O que é um filho</h3>
 <p>Ter filhos... É quando você cria uma classe a partir de outra, lógico...</p>
 <p>Lembrem-se: USEM PROTEÇÃO!!! Coloquem os atributos em private...</p>
 <p>Quando você cria uma classe filha de uma outra, essa classe filha vai herdar todas as características da classe pai, métodos, atributos, etc... E além disso você pode colocar mais coisas ainda. É mais fácil de entender com exemplo:</p>
-<pre><code class="cpp">#include &lt;string&gt;
+<pre><code class="language-cpp">#include &lt;string&gt;
 #include &lt;iostream&gt;
 
 using namespace std;
@@ -653,14 +605,13 @@ Saída:
 &gt;&gt;&gt; Bento eh politreco
 &gt;&gt;&gt;
 </code></pre>
-
 <h3 id="82-principio-da-substituicao">8.2 Princípio da Substituição</h3>
 <p>Se F é filha de P, os objetos  do tipo F devem se comportar com P caso sejam tratados como P.</p>
 <p>Ou seja, o filho tem tudo que o pai tem, então se usarmos o filho tratando ele como pai, deve se comportar como pai.</p>
 <p>Pensa assim, se você usar o C++ pensando que ta programando em C, ele vai se comportar igualzinho como C!</p>
 <h3 id="83-protected">8.3 Protected</h3>
 <p>Agora que sabemos o que são filhos e pais no meio do OO, podemos entender o encapsulamento Protected, que como explicado antes, funciona igual o "Private", mas a diferença é que ele pode ser acessado pelos filhos, por exemplo, se eu tenho uma classe Pai, com um atributo Private Nome e um Protected Idade, e uma classe Filha de Pai, se nela chamarmos o atributo Nome, daria erro de compilação, ja se chamassemos o atributo Idade não, por outro lado, se estivessemos em uma outra classe, sem relação com as duas, daria erro de compilação se chamassemos os dois atributos.</p>
-<pre><code class="cpp">class Pai{               //01
+<pre><code class="language-cpp">class Pai{               //01
     private:             //02
         string Nome;     //03
     protected:           //04
@@ -686,28 +637,47 @@ Saída:
 &gt;&gt;&gt; Erro nas linhas 10, 18 e 19
 &gt;&gt;&gt;
 </code></pre>
-
 <h2 id="9-informacoes-a-mais">9 Informações a mais</h2>
 <h3 id="91-const">9.1 Const</h3>
 <p>É possivel criar constantes em C++! Isso pode evitar que durante a implementação de um programa alguem mude algo indevidamente.
 Ex:</p>
-<pre><code class="cpp">const float pi = 3.14
+<pre><code class="language-cpp">const float pi = 3.14
 
 ou
 
 const Lampada *L1 = new Lampada(&quot;Branca&quot;);
 </code></pre>
-
 <p>Dessa forma, caso mudem o valor de PI ou a cor da lampada, um erro de compilação será gerado.</p>
 <h3 id="92-virtual">9.2 Virtual</h3>
-<p>Quando declaramos um método como virtual, o código, no momento da execução, decide se o método chamado vai ser da classe pai, filho, etc...</p>
+<p>Quando declaramos um método como virtual, no momento da execução, chama o método da própria classe.</p>
 <p>O programa executa o método com base no tipo
 específico do objeto!</p>
 <ul>
 <li>Obs: É sempre bom declarar todos os métodos como virtuais, e como obrigação declarar todos os destrutores como virtuais, por que tem casos em que certos destrutores não são chamados.</li>
 </ul>
-<p>Exemplo:</p>
-<pre><code class="cpp">    class Passaro {
+<p>Exemplo (sem virtual):</p>
+<pre><code class="language-cpp">    class Passaro {
+        public: void canta() { cout &lt;&lt; &quot;Piuu Piuuu&quot; &lt;&lt; endl;}
+    };
+    class Arara : public Passaro {
+        public: void canta() { cout &lt;&lt; &quot;Araraaa Araraa&quot; &lt;&lt; endl;}
+    };
+    int main(){
+        Passaro* passaro = new Passaro();
+        Passaro* arara = new Arara();
+        passaro-&gt;canta();
+        arara-&gt;canta();
+        return 0;
+    }
+
+Saída:
+&gt;&gt;&gt; ./Passaros.exe
+&gt;&gt;&gt; Piuu Piuuu
+&gt;&gt;&gt; Piuu Piuuu
+&gt;&gt;&gt; 
+</code></pre>
+<p>Exemplo (com virtual):</p>
+<pre><code class="language-cpp">    class Passaro {
         public: virtual void canta() { cout &lt;&lt; &quot;Piuu Piuuu&quot; &lt;&lt; endl;}
     };
     class Arara : public Passaro {
@@ -715,21 +685,21 @@ específico do objeto!</p>
     };
     int main(){
         Passaro* passaro = new Passaro();
-        Arara* arara = new Arara();
+        Passaro* arara = new Arara();
         passaro-&gt;canta();
         arara-&gt;canta();
         return 0;
     }
+
 Saída:
 &gt;&gt;&gt; ./Passaros.exe
 &gt;&gt;&gt; Piuu Piuuu
 &gt;&gt;&gt; Araraaa Araraa
 &gt;&gt;&gt; 
 </code></pre>
-
 <h3 id="93-namespace-e-std">9.3 Namespace e STD</h3>
 <p>Namespaces são jeitos de não se repetirem nomes ao usar variáveis, por exemplo, se você cria um namespace para uma class X, toda vez que você for usar alguma coisa dessa classe, você terá que indicar o namespace, por exemplo:</p>
-<pre><code class="cpp">namespace UM {
+<pre><code class="language-cpp">namespace UM {
     class UM {
         void metodoUm(){}
     }
@@ -751,8 +721,125 @@ int main(){
     return 0;
 }
 </code></pre>
-
 <p>Por isso que temos que usar o "using namespace std;" pois assim não precisamos escrever em cada COUT ou String o "std::" antes, apenas para facilitar.</p>
+<h1 id="programacao-orientada-a-objeto-em-python">Programação Orientada a Objeto em Python</h1>
+<p>Agora vamos falar um pouco sobre como fazer tudo isso que vocês acabaram em python. Mas antes acho bom falar que tem algumas coisas que são consideravelmente diferente (e talvez até mais fácil heheh)</p>
+<h2 id="1-conceitos-basicos-de-oo">1 Conceitos Básicos de OO</h2>
+<p>As classes, objetos, atributos e métodos continuam tendo o mesmo conceito que em C++, mas a forma como escrevemos é diferente já que estamos em outra linguagem heheh</p>
+<h2 id="2-criando-a-classe">2 Criando a Classe</h2>
+<p>Vamos usar o primeiro exemplo usado em C++ e fazer alguma análises:</p>
+<pre><code class="language-python">#!/usr/bin/env python
+
+class Pizza():
+    def __init__(self, sabor = 'sabor', fatias = 0):
+        self._sabor = sabor
+        self._fatias = fatias
+
+    def retirar_fatia(self):
+        self._fatias -= 1
+</code></pre>
+<p>Primeiro, conseguimos perceber a criação do construtor dessa classe, obedecemos o padrão de <code>__init__(self, a, b)</code>. Para criar um objeto com essa classe devemos chamar da seguinte forma:</p>
+<pre><code class="language-python">pizza1 = Pizza(queijo, 8)
+</code></pre>
+<p>Dessa forma, temos um objeto Pizza que possui como sabor queijo e 8 fatias, que são seus atributos. Para acessá-los, devemos usar a seguinte notação:</p>
+<pre><code class="language-python">sabor1 = pizza1._sabor
+fatias1 = pizza1._fatias
+</code></pre>
+<p>Uma boa prática ao definir atributos que são "privados" é colocar _ antes do nome desse atributo. Assim, você consegue identificar lugares no código que não é aconselhado alterar o nome rs.</p>
+<p>Agora, falando dos métodos dessa classe , temos o <code>retirar_fatia(self)</code>. Para usá-lo, fazemos de maneira análoga aos atributos:</p>
+<pre><code class="language-python">pizza1.retirar_fatias()
+</code></pre>
+<h2 id="3-heranca">3 Herança</h2>
+<p>Vamos ver o mesmo exemplo que fizemos em C++ em python</p>
+<pre><code class="language-python">class Pessoa():
+    def __init__(self, nome = 'pessoa', idade = 0):
+        self._nome = nome
+        self._idade - idade
+
+class Bento(Pessoa):
+    def __init__(self, nome = 'pessoa', idade = 0, politreco = False):
+        super().__init__(self, nome, idade)
+        self._politreco = politreco
+
+    def bentoPolitreco():
+        if self._politreco:
+            print(&quot;Bento eh politreco&quot;)
+        else:
+            print(&quot;Bento nao eh politreco&quot;)
+</code></pre>
+<p>No código podemos dizer que <code>super()</code> está se referindo a classe superior, ou seja, a classe Pessoa. Outra forma de escrever essa linha de código seria:</p>
+<pre><code class="language-python">Pessoa.__init__(self, nome, idade)
+</code></pre>
+<p>Basicamente, essa é a notação de Orientado a Objeto para python, mas gostaria de introduzir algumas coisas a mais sem comparar com os exemplos acima e que possa fazer vocês entenderem um pouco melhor as diferenças até agora</p>
+<h2 id="4-organizacao-dos-arquivos">4 Organização dos Arquivos</h2>
+<p>Não é uma regra, mas normalmente organizamos os arquivos que possuem classe separadamente do código de fato que a utiliza. Colocamos a classe e criamos também uma main, a qual só é chamada se só existir aquela main.</p>
+<pre><code class="language-python">#!/usr/bin/env python
+
+class Carro():
+    def __init__(self, nome, ano):
+        self._nome = nome
+        self._ano = ano
+        print(&quot;Carro&quot; + nome + &quot;do ano&quot; + str(ano) + &quot;construído!!!&quot;)
+
+if __name__ == '__main__':
+    celtinha = Carro(&quot;Celta&quot;, 2006)  
+</code></pre>
+<p>Se apenas rodarmos esse código e implementarmos mais o que está dentro de <code>if __name__ == '__main__'</code>, isso vai ser considerado a main do código. Caso importarmos essa classe para outro código, ele não rodará o que está dentro dessa suposta main.</p>
+<h2 id="5-saiba-mais-hihih">5 Saiba Mais hihih</h2>
+<h3 id="51-objetos-em-python">5.1 Objetos em python</h3>
+<p>Uma coisa que eu não contei pra vocês é que python cria objetos todas as vezes que você atribui um "valor" para uma variável. Mas como assim?</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = [1, 2, 3]
+&gt;&gt;&gt; b = a
+&gt;&gt;&gt; a[0] = 0
+&gt;&gt;&gt; b[0]
+[0, 2, 3]
+</code></pre>
+<p>Por que o valor de b também mudou? Isso aconteceu porque, na verdade, a é uma referência para um objeto que é o mesmo que b está se referenciando.</p>
+<p>Esse foi um exemplo de um objeto mutável em python. Existe objetos imutáveis em python, onde ele não altera o valor do objeto que está apontando, mas altera para onde ele está apontando:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 10
+&gt;&gt;&gt; b = a
+&gt;&gt;&gt; a = a + 1
+&gt;&gt;&gt; b
+10
+&gt;&gt;&gt; a is b #olhar id(a) e id(b)
+False 
+&gt;&gt;&gt; s = &quot;skyrats&quot;
+&gt;&gt;&gt; t = s
+&gt;&gt;&gt; s += &quot;_s2&quot;
+&gt;&gt;&gt; s
+skyrats_s2
+&gt;&gt;&gt; t
+skyrats
+</code></pre>
+<p>Podemos ver os métodos de objetos que criamos ao atribuir variáveis com <code>dir(a)</code></p>
+<h3 id="52-metodos-especiais">5.2 Métodos especiais</h3>
+<p>Não sei se de fato posso chamar de métodos especiais, mas você deve ter percebido que a notação do iniciador possui uma notação especial, como também ao chamar <code>dir(a)</code>, aparecem métodos com essa notação:</p>
+<pre><code class="language-python">class Coordenadas():
+  def __init__(self, x, y): #construtor do objeto a
+    self._x = x
+    self._y = y
+
+  def __str__(self): #usado quando chamamos print(a)
+    return &quot;(&quot; + str(self._x) + &quot;,&quot; + str(self._y) + &quot;)&quot;
+
+  def __add__(self, outro): #usado quando somamos os objetos
+    return Coordenadas(self._x + outro._x, self._y + outro._y)
+
+  def __getitem__(self, indice): #podemos pegar itens com a[0]...
+    if indice == 0:
+      return self._x
+    elif indice == 1:
+      return self._y
+    else:
+      raise IndexError (&quot;A coordenada não tem este componente&quot;)
+
+  def __len__(self): #usado quando chamamos len(a)
+    return 2
+</code></pre>
+<p>Existem mais métodos especiais, esses são apenas exemplos</p>
+<h3 id="53-encapsulamento">5.3 Encapsulamento</h3>
+<p>De fato em python, o código não obedece o encapsulamento. Por isso, a boa prática que foi comentado anteriormente de colocar o <code>_</code> antes de atributos e métodos que não devem ser alterados, apesar de qualquer um poder alterá-los.</p>
+<p>Esse é um dos motivos que há divergência quando se fala que python não é uma linguagem orientada a objetos.</p>
               
             </div>
           </div>
@@ -775,7 +862,7 @@ int main(){
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -785,22 +872,30 @@ int main(){
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../../Convencoes-de-Codigo/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../../Gazebo/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../Convencoes-de-Codigo/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../Gazebo/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
     <script src="../../../js/theme.js" defer></script>
       <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

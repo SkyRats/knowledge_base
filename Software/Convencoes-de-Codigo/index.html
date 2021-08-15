@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Software/Convencoes-de-Codigo/">
   <link rel="shortcut icon" href="../../img/favicon.ico">
   <title>Convenções de Código - Knowledge Base - Skyrats</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,15 +25,14 @@
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,178 +41,240 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../about/">About</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Geral</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Geral/Instalacao/">Instalações</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../Geral/preflightcheck/">Protocolo de Segurança</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Hardware</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Componentes</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <span class="caption-text">Rádio Controles</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Geral</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Geral/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Geral/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Componentes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Rádio Controles</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a>
                 </li>
     </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Firmware</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a>
                 </li>
-                <li class="">
-                    
-    <span class="caption-text">Firmware</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../Hardware/Firmware/Introdução ao MAVLink/">Introdução ao MAVLink</a>
-                </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
                 </li>
     </ul>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">4G</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">4G</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
                 </li>
     </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Software</span>
-    <ul class="subnav">
-                <li class=" current">
-                    
-    <a class="current" href="./">Convenções de Código</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#convencoes-de-codigo">Convenções de Código</a></li>
-    
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Convenções de Código</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#principios-gerais">Princípios gerais</a>
         <ul>
-        
-            <li><a class="toctree-l4" href="#principios-gerais">Princípios gerais</a></li>
-        
-            <li><a class="toctree-l4" href="#python">Python</a></li>
-        
-            <li><a class="toctree-l4" href="#c">C++</a></li>
-        
-            <li><a class="toctree-l4" href="#ros">ROS</a></li>
-        
-            <li><a class="toctree-l4" href="#referencias">Referências</a></li>
-        
+    <li class="toctree-l3"><a class="reference internal" href="#layout">Layout</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classes">Classes</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Programação Orientada a Objetos</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../POO/oo_c++/">Em C++</a>
-                </li>
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../Gazebo/">Gazebo</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Mecânica</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Comunicação</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
-	    </li>
-          
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios">Comentários</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura">Nomenclatura</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#inclusividade">Inclusividade</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#python">Python</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout_1">Layout</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#geral">Geral</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#quebra-de-linhas">Quebra de linhas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#espaco-em-branco">Espaço em branco</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#import">import</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios_1">Comentários</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_1">Nomenclatura</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pacotes-e-modulos">Pacotes e Módulos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classes_1">Classes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tipos-de-variaveis-personalizados">Tipos de variáveis personalizados</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#excecoes">Exceções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes-e-variaveis">Funções e Variáveis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constantes">Constantes</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#especificidades-da-linguagem">Especificidades da Linguagem</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#trailing-commas">Trailing Commas</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#underscore">Underscore</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#name-mangling">Name mangling</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#docstrings">docstrings</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#misc">Misc</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#c">C++</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#layout_2">Layout</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#geral_1">Geral</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes_1">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#condicionais">Condicionais</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#loops">Loops</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ponteiros">Ponteiros</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classes_2">Classes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#espaco-em-branco_1">Espaço em branco</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comentarios_2">Comentários</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#classes_3">Classes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes_2">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variaveis">Variáveis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#implementacao">Implementação</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_2">Nomenclatura</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arquivos">Arquivos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#classes-e-tipos-de-variaveis-personalizados">Classes e Tipos de variáveis personalizados</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#variaveis_1">Variáveis</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#constantes_1">Constantes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#funcoes_3">Funções</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#namespaces">namespaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#macros-define">Macros (#define)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#especificidades-da-linguagem_1">Especificidades da Linguagem</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#headers-arquivos-h">Headers (arquivos .h)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#namespaces_1">namespaces</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#misc_1">Misc</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ros">ROS</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#nomenclatura_3">Nomenclatura</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#pacotes-topicos-e-servicos">Pacotes, Tópicos e Serviços</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#arquivos_1">Arquivos</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#_1"></a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#misc_2">Misc</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#saida-do-terminal">Saída do terminal</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#codigo-nao-mais-mantido">Código não mais mantido</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referencias">Referências</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Programação Orientada a Objetos</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../POO/oo_cpp_python/">Em C++</a>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../Gazebo/">Gazebo</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -244,8 +306,10 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -341,7 +405,7 @@ Use names that describe the purpose or intent of the object. Do not worry about 
 <ul>
 <li>Quebras de linha devem ser indentadas no mesmo nível do conteúdo original, ou usar "hanging indent" - adicionar uma indentação para distiguir argumentos de código, por exemplo</li>
 </ul>
-<pre><code class="python"># Alinhado com o delimitador
+<pre><code class="language-python"># Alinhado com o delimitador
 foo = long_function_name(var_one, var_two,
                          var_three, var_four)
 
@@ -356,7 +420,6 @@ foo = long_function_name(
     var_one, var_two,
     var_three, var_four)
 </code></pre>
-
 <ul>
 <li>
 <p>Quebras de linhas em <code>if</code>-statements com mais de uma linha podem ou não ser indentados</p>
@@ -365,7 +428,7 @@ foo = long_function_name(
 <p>Fechamento de parênteses/chaves/colchetes em estruturas de mais de uma linha podem se alinhar com o conteúdo ou com o primeiro caractere da linha da estrutura</p>
 </li>
 </ul>
-<pre><code class="python"># Alinhamento com o conteúdo
+<pre><code class="language-python"># Alinhamento com o conteúdo
 my_list = [
     1, 2, 3,
     4, 5, 6,
@@ -377,7 +440,6 @@ my_list = [
     4, 5, 6,
 ]
 </code></pre>
-
 <ul>
 <li>
 <p>É preferível encapsular estruturas de várias linhas entre parênteses</p>
@@ -386,7 +448,7 @@ my_list = [
 <p>Linhas devem ser quebradas antes de operadores binários</p>
 </li>
 </ul>
-<pre><code class="python"># Errado
+<pre><code class="language-python"># Errado
 income = (gross_wages +
             taxable_interest)
 
@@ -394,7 +456,6 @@ income = (gross_wages +
 income = (gross_wages
             + taxable_interest)
 </code></pre>
-
 <h4 id="espaco-em-branco">Espaço em branco</h4>
 <ul>
 <li>
@@ -420,12 +481,11 @@ income = (gross_wages
 <p>Entre uma vírgula final e o fechamento de parênteses</p>
 </li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 foo = (0,) 
         foo = (0,) 
 foo = (0,) 
 </code></pre>
-
 <ul>
 <li>
 <p>Imediatamente antes de um sinal de pontuação</p>
@@ -434,10 +494,9 @@ foo = (0,)
 <p>Imediatamente antes de abrir parênteses ao chamar uma função</p>
 </li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 spam(1)
 </code></pre>
-
 <ul>
 <li>
 <p>Mais de dois espaços ao redor de um operador de atribuição para alinhá-lo com outros</p>
@@ -449,7 +508,7 @@ spam(1)
 <p>Colocar espaço entre o <code>=</code> e o argumento de uma função</p>
 </li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 def complex(real, imag=0.0):
     return magic(r=real, i=imag)
 
@@ -457,7 +516,6 @@ def complex(real, imag=0.0):
 def complex(real, imag = 0.0):
     return magic(r = real, i = imag)
 </code></pre>
-
 <ul>
 <li>Deixe um espaço entre variáveis e operadores binários</li>
 </ul>
@@ -470,11 +528,10 @@ def complex(real, imag = 0.0):
 <p>Mas se forem vários importados do mesmo local, podem ficar na mesma linha</p>
 </li>
 </ul>
-<pre><code class="python">import os
+<pre><code class="language-python">import os
 import sys
 from subprocess import Popen, PIPE
 </code></pre>
-
 <ul>
 <li>
 <p>Sempre vem no topo do arquivo</p>
@@ -494,11 +551,10 @@ from subprocess import Popen, PIPE
 </ul>
 </li>
 </ul>
-<pre><code class="python">import mypkg.sibling
+<pre><code class="language-python">import mypkg.sibling
 from mypkg import sibling
 from mypkg.sibling import example
 </code></pre>
-
 <ul>
 <li>"Wildcard" <code>import</code>s (como <code>from mavbase.MAV import *</code>) devem ser evitados</li>
 </ul>
@@ -572,7 +628,7 @@ from mypkg.sibling import example
 <p>Não devem estar junto ao fechamento de parênteses/chaves/colchetes</p>
 </li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 FILES = ('setup.cfg',)
 # Errado
 FILES = 'setup.cfg',
@@ -586,12 +642,11 @@ initialize(FILES,
             error=True,
             )
 </code></pre>
-
 <h4 id="underscore">Underscore</h4>
 <ul>
 <li>Existem quatro jeitos de usar underscore em nomes de Python:</li>
 </ul>
-<pre><code class="python">um_no_final_  # Usado para nao conflitar com nomes reservados 
+<pre><code class="language-python">um_no_final_  # Usado para nao conflitar com nomes reservados 
     um_no_final_  # Usado para nao conflitar com nomes reservados 
 um_no_final_  # Usado para nao conflitar com nomes reservados 
 _um_no_inicio  # Indica que a variavel e de uso interno, mas ela ainda pode ser acessada por outros arquivos facilmente 
@@ -600,7 +655,6 @@ _um_no_inicio  # Indica que a variavel e de uso interno, mas ela ainda pode ser 
 __dois_no_inicio  # Quando for atributo de classe, invoca &quot;name mangling&quot; (ver Especificades da Linguagem)
 __dois_no_inicio_e_fim__  # &quot;Nomes magicos; NAO invente novos, so use os ja existentes&quot;
 </code></pre>
-
 <h4 id="name-mangling">Name mangling</h4>
 <ul>
 <li>Python "funde" o nome da classe com o da variável para dificultar o acesso indevido a ela</li>
@@ -618,14 +672,13 @@ __dois_no_inicio_e_fim__  # &quot;Nomes magicos; NAO invente novos, so use os ja
 <li>Devem ser posicionadas no inicio do objeto para se tornarem o atributo <code>__doc__</code> desse objeto</li>
 <li>Sempre use <code>"""aspas triplas"""</code> ao fazer uma <code>docstring</code></li>
 </ul>
-<pre><code class="python">def function(a, b):
+<pre><code class="language-python">def function(a, b):
     &quot;&quot;&quot;Utilize essa funcao para fazer X coisa.&quot;&quot;&quot;
 </code></pre>
-
 <ul>
 <li><code>docstrings</code> com mais de uma linha devem ter um resumo de uma linha, seguido de um espaço em branco e de uma descrição mais completa dos elementos e comportamento do objeto</li>
 </ul>
-<pre><code class="python">def complex_function(a=0.0, b=0.0):
+<pre><code class="language-python">def complex_function(a=0.0, b=0.0):
     &quot;&quot;&quot;Essa funcao faz X coisas.
 
     Keyword arguments:
@@ -633,7 +686,6 @@ __dois_no_inicio_e_fim__  # &quot;Nomes magicos; NAO invente novos, so use os ja
     b -- pequena descrição sobre b (default 0.0)
     &quot;&quot;&quot;
 </code></pre>
-
 <h4 id="misc">Misc</h4>
 <ul>
 <li>
@@ -649,7 +701,7 @@ __dois_no_inicio_e_fim__  # &quot;Nomes magicos; NAO invente novos, so use os ja
 <p>Seja consistente com <code>return</code>: ou todos os <code>return</code>s devolvem expressões, ou nenhum devolve</p>
 </li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 def foo(x):
     if x &gt;= 0:
         return math.sqrt(x)
@@ -661,17 +713,15 @@ def foo(x):
     if x &gt;= 0:
         return math.sqrt(x)
 </code></pre>
-
 <ul>
 <li>Para sequências (<code>strings</code>, <code>lists</code>, <code>tuples</code>), use o fato de que sequências vazias são <code>False</code></li>
 </ul>
-<pre><code class="python"># Correto
+<pre><code class="language-python"># Correto
 if not seq
 
 # Errado
 if len(seq)
 </code></pre>
-
 <p><br></p>
 <h2 id="c">C++</h2>
 <h3 id="layout_2">Layout</h3>
@@ -691,17 +741,16 @@ if len(seq)
 <p>Definição de funções
 - Tente definir em uma única linha
     - Se lista de argumentos passar de 80 caracteres, quebre a linha desta forma:</p>
-<pre><code class="c++">ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
+<pre><code class="language-c++">ReturnType ClassName::ReallyLongFunctionName(Type par_name1, Type par_name2,
                                                 Type par_name3) {
     DoSomething();
     ...
 }
 </code></pre>
-
 <ul>
 <li>Se nem mesmo o primeiro argumento couber na definição, faça:</li>
 </ul>
-<pre><code class="c++">ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
+<pre><code class="language-c++">ReturnType LongClassName::ReallyReallyReallyLongFunctionName(
     Type par_name1,  // 2 indentações
     Type par_name2,
     Type par_name3) {
@@ -709,7 +758,6 @@ if len(seq)
     ...
 }
 </code></pre>
-
 <ul>
 <li>Não há espaço entre parênteses e o nome da função</li>
 <li>A abertura de chaves é na mesma linha da declaração da função</li>
@@ -727,7 +775,7 @@ if len(seq)
 <p>Essas regras podem ser quebradas se o posicionamento espacial dos argumentos auxiliar na legibilidade (e.g quando trabalhando com matrizes)</p>
 </li>
 </ul>
-<pre><code class="c++">// Dando um nome ao argumento
+<pre><code class="language-c++">// Dando um nome ao argumento
 int my_heuristic = scores[x] * y + bases[x];
 bool result = DoSomething(my_heuristic, x, y, z);
 
@@ -735,7 +783,6 @@ bool result = DoSomething(my_heuristic, x, y, z);
 bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
                             x, y, z);
 </code></pre>
-
 <h4 id="condicionais">Condicionais</h4>
 <ul>
 <li>Coloque um espaço entre o <code>if</code> e os parênteses</li>
@@ -747,7 +794,7 @@ bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
 <li>Chaves são opcionais caso o loop tenha só uma declaração</li>
 <li>Loops vazios devem abrir e fechar chaves vazias ou ter uma declaração <code>continue</code> dentro deles para mostrar que estão vazios</li>
 </ul>
-<pre><code class="c++">    while (condition) {
+<pre><code class="language-c++">    while (condition) {
       // Repete o teste ate que retorne falso.
     }
     for (int i = 0; i &lt; kSomeNumber; ++i) {}  // Bom
@@ -755,21 +802,19 @@ bool result = DoSomething(scores[x] * y + bases[x],  // Score heuristic.
 
     while (condition);  // Ruim - parece parte de um do/while
 </code></pre>
-
 <h4 id="ponteiros">Ponteiros</h4>
 <ul>
 <li>Referências a ponteiros devem seguir o padrão:</li>
 </ul>
-<pre><code class="c++">x = *p;
+<pre><code class="language-c++">x = *p;
 p = &amp;x;
 x = r.y;
 x = r-&gt;y;
 </code></pre>
-
 <ul>
 <li>Quando juntos de definições de tipo, pode haver espaço antes, depois ou ele pode ser emitido; deve-se ser consistente dentro do mesmo arquivo</li>
 </ul>
-<pre><code class="c++">// Espaco antes
+<pre><code class="language-c++">// Espaco antes
 char *c;
 const std::string &amp;str;
 int *GetPointer();
@@ -783,14 +828,13 @@ int* GetPointer();
 // Espaco omitido
 std::vector&lt;char*&gt;
 </code></pre>
-
 <h4 id="classes_2">Classes</h4>
 <ul>
 <li>Seções de <code>public</code>, <code>protected</code> e <code>private</code> são indentadas com relação à definição da classe e devem ser precedidas por uma linha em branco (exceto a primeira instância)</li>
 <li>Construtores devem ter lista de parâmetros seguindo as regras de quebra de linha de funções descritas acima</li>
 </ul>
 <p>Exemplo:</p>
-<pre><code class="c++">class MyClass : public OtherClass {
+<pre><code class="language-c++">class MyClass : public OtherClass {
  public:      
   MyClass();
   explicit MyClass(int var);
@@ -830,7 +874,6 @@ MyClass::MyClass(int var)
   DoSomething();
 }
 </code></pre>
-
 <h4 id="espaco-em-branco_1">Espaço em branco</h4>
 <ul>
 <li>Horizontal → depende da localização, mas <strong>NUNCA</strong> no final de uma linha<ul>
@@ -878,22 +921,20 @@ MyClass::MyClass(int var)
 </ul>
 </li>
 </ul>
-<pre><code class="c++">private:
+<pre><code class="language-c++">private:
     // Usado para conferir acesso a tabela. -1 significa
     // que não sabemos ainda quantas entradas a tabela tem.
     int num_total_entries_;
 </code></pre>
-
 <ul>
 <li>Variáveis globais<ul>
 <li>Todas precisam de um comentário explicando o que são, como são usadas e, caso não esteja claro, porque precisam ser globais</li>
 </ul>
 </li>
 </ul>
-<pre><code class="c++">// O numero de vezes que passamos por essse teste.
+<pre><code class="language-c++">// O numero de vezes que passamos por essse teste.
 const int kNumTestCases = 6;
 </code></pre>
-
 <h4 id="implementacao">Implementação</h4>
 <ul>
 <li>Blocos de código complicados devem ter comentários explicatórios antes do código em si</li>
@@ -909,13 +950,12 @@ const int kNumTestCases = 6;
 </ul>
 </li>
 </ul>
-<pre><code class="c++">ProductOptions options;
+<pre><code class="language-c++">ProductOptions options;
 options.set_precision_decimals(7);
 options.set_use_cache(ProductOptions::kDontUseCache);
 const DecimalNumber product =
     CalculateProduct(values, options, /*completion_callback=*/nullptr);
 </code></pre>
-
 <ul>
 <li>Em último caso, explique os argumentos com comentários</li>
 </ul>
@@ -925,24 +965,22 @@ const DecimalNumber product =
 <li>Letras todas minúsculas, com <code>_</code> (preferencialmente) ou <code>-</code> separando palavras</li>
 <li>Arquivos em C++ deveriam terminar com <code>.cc</code> e headers com <code>.h</code></li>
 </ul>
-<pre><code class="bash">my_useful_class.cc # Preferível
+<pre><code class="language-bash">my_useful_class.cc # Preferível
 my-useful-class.cc
 </code></pre>
-
 <h4 id="classes-e-tipos-de-variaveis-personalizados">Classes e Tipos de variáveis personalizados</h4>
 <ul>
 <li>Todas as palavras começam com letra maiúscula, sem separação entre elas</li>
 </ul>
-<pre><code class="c++">class UrlTable { ... }
+<pre><code class="language-c++">class UrlTable { ... }
 struct UrlTableProperties { ... }
 </code></pre>
-
 <h4 id="variaveis_1">Variáveis</h4>
 <ul>
 <li>Geral: Todas minúsculas, com <code>_</code> entre palavras</li>
 <li>Atributos de classe: mesmo que Geral, mas com <code>_</code> a mais no final</li>
 </ul>
-<pre><code class="c++">// Nome de uma variável qualquer
+<pre><code class="language-c++">// Nome de uma variável qualquer
 std::string table_name;
 
 class TableInfo {
@@ -952,26 +990,23 @@ class TableInfo {
   static Pool&lt;TableInfo&gt;* pool_;  // OK.
 };
 </code></pre>
-
 <h4 id="constantes_1">Constantes</h4>
 <ul>
 <li>Começam com <code>k</code>; palavras subsequentes começam com letra maiúscula</li>
 </ul>
-<pre><code class="c++">const int kDaysInAWeek = 7;
+<pre><code class="language-c++">const int kDaysInAWeek = 7;
 </code></pre>
-
 <h4 id="funcoes_3">Funções</h4>
 <ul>
 <li>Todas as palavras começam com maiúscula</li>
 <li>Se for função de acesso ou modificador (i.e. getter ou setter), é nomeado como uma variável</li>
 </ul>
-<pre><code class="c++">OpenFile()
+<pre><code class="language-c++">OpenFile()
 
 // Getter e setter
 int count()
 void set_count(int count)
 </code></pre>
-
 <h4 id="namespaces"><code>namespaces</code></h4>
 <ul>
 <li>Tudo minúsculo, com <code>_</code> separando palavras</li>
@@ -987,7 +1022,7 @@ void set_count(int count)
 <li>Todo código que não seja extremamente curto ou um teste unitário deve ter um <code>.h</code></li>
 <li>Todo <code>.h</code> deve ter um "header guard" para impedir inclusão múltipla:</li>
 </ul>
-<pre><code class="c++">// No arquivo foo/src/bar/baz.h
+<pre><code class="language-c++">// No arquivo foo/src/bar/baz.h
 #ifndef FOO_BAR_BAZ_H_
 #define FOO_BAR_BAZ_H_
 
@@ -995,7 +1030,6 @@ void set_count(int count)
 
 #endif  // FOO_BAR_BAZ_H_
 </code></pre>
-
 <ul>
 <li>Não declare funções antes de defini-las - use o <code>.h</code></li>
 <li>
@@ -1070,7 +1104,7 @@ void set_count(int count)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../POO/oo_c++/" class="btn btn-neutral float-right" title="Em C++">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../POO/oo_cpp_python/" class="btn btn-neutral float-right" title="Em C++">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../../Hardware/4G/TransArqv/" class="btn btn-neutral" title="Transferência de Arquivos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -1085,7 +1119,7 @@ void set_count(int count)
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -1095,22 +1129,30 @@ void set_count(int count)
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../../Hardware/4G/TransArqv/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../POO/oo_c++/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../Hardware/4G/TransArqv/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../POO/oo_cpp_python/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
     <script src="../../js/theme.js" defer></script>
       <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

@@ -7,32 +7,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="Skyrats">
+  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">
   <link rel="shortcut icon" href="../../../img/favicon.ico">
   <title>Introdução ao MAVLink - Knowledge Base - Skyrats</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../../../css/theme.css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
   
   <script>
     // Current page data
     var mkdocs_page_name = "Introdu\u00e7\u00e3o ao MAVLink";
     var mkdocs_page_input_path = "Hardware/Firmware/Introdu\u00e7\u00e3o ao MAVLink.md";
-    var mkdocs_page_url = "/knowledge_base/Hardware/Firmware/Introdu\u00e7\u00e3o ao MAVLink/";
+    var mkdocs_page_url = "/knowledge_base/Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js" defer></script>
   <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/xml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/matlab.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
-  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -41,178 +41,118 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="../../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../../about/">About</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Geral</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../Geral/Instalacao/">Instalações</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Hardware</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../introHW/">Introdução ao Hardware para Drones</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Componentes</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <span class="caption-text">Rádio Controles</span>
-    <ul class="subnav">
-                <li class="toctree-l4">
-                    
-    <a class="" href="../../Componentes/RCs/TaranisQX7/">Taranis QX7</a>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Geral</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/Instalacao/">Instalações</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Hardware</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../../introHW/">Introdução ao Hardware para Drones</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Componentes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Rádio Controles</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../Componentes/RCs/TaranisQX7/">Taranis QX7</a>
                 </li>
     </ul>
                 </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Componentes/RPLIDARS1360/">RPLidar S1 360</a>
                 </li>
     </ul>
-                </li>
-                <li class=" current">
-                    
-    <span class="caption-text">Firmware</span>
-    <ul class="subnav">
-                <li class="toctree-l3 current">
-                    
-    <a class="current" href="./">Introdução ao MAVLink</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l4"><a href="#mavlink">MAVLINK</a></li>
-    
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Firmware</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Introdução ao MAVLink</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#introducao">Introdução</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mensagens">Mensagens</a>
         <ul>
-        
-            <li><a class="toctree-l5" href="#introducao">Introdução</a></li>
-        
-            <li><a class="toctree-l5" href="#mensagens">Mensagens</a></li>
-        
-            <li><a class="toctree-l5" href="#bibliotecas">Bibliotecas</a></li>
-        
-            <li><a class="toctree-l5" href="#projetos-ja-feitos">Projetos ja feitos:</a></li>
-        
-            <li><a class="toctree-l5" href="#distance-sensor-externo-a-fcu-tfmini">Distance sensor externo a FCU (TFMini)</a></li>
-        
+    <li class="toctree-l4"><a class="reference internal" href="#heartbeatconnection-protocol">Heartbeat/Connection Protocol</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#mission-protocol">Mission Protocol</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#parameter-protocols">Parameter Protocols</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#command-protocol">Command Protocol</a>
+    </li>
         </ul>
-    
-
-    </ul>
-                </li>
-                <li class="toctree-l3">
-                    
-    <a class="" href="../IntroPX4/">Introdução ao PX4</a>
-                </li>
-    </ul>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">4G</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../4G/TransArqv/">Transferência de Arquivos</a>
-                </li>
-    </ul>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Software</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
-                </li>
-                <li class="">
-                    
-    <span class="caption-text">Programação Orientada a Objetos</span>
-    <ul class="subnav">
-                <li class="toctree-l3">
-                    
-    <a class="" href="../../../Software/POO/oo_c++/">Em C++</a>
-                </li>
-    </ul>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../../Software/Gazebo/">Gazebo</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Mecânica</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Comunicação</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../..">Nada ainda aqui :c</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
-	    </li>
-          
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#bibliotecas">Bibliotecas</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#mavsdk">MAVSDK</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#pymavlink">Pymavlink</a>
+    </li>
         </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#projetos-ja-feitos">Projetos ja feitos:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#distance-sensor-externo-a-fcu-tfmini">Distance sensor externo a FCU (TFMini)</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#driver-tfmini">Driver TFMini</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IntroPX4/">Introdução ao PX4</a>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">4G</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../4G/TransArqv/">Transferência de Arquivos</a>
+                </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Software</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="#">Programação Orientada a Objetos</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../../Software/POO/oo_cpp_python/">Em C++</a>
+                </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../../Software/Gazebo/">Gazebo</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -232,11 +172,11 @@
     
       
         
-          <li>Firmware &raquo;</li>
+          <li>Hardware &raquo;</li>
         
       
         
-          <li>Hardware &raquo;</li>
+          <li>Firmware &raquo;</li>
         
       
     
@@ -248,8 +188,10 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
+
           <div role="main">
             <div class="section">
               
@@ -275,10 +217,9 @@
 <h3 id="mavsdk">MAVSDK</h3>
 <p>É uma API criada pela equipe que mantem a MAVLink para facilitar o envio e recebimento de mensagens. Com ela, é possível programar em <a href="https://mavsdk.mavlink.io/main/en/cpp/api_reference/">C++</a> e <a href="http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/">Python</a>.</p>
 <p>Para instalar a versão para Python é simples, basta digitar no terminal:</p>
-<pre><code class="bash">pip3 install mavsdk
+<pre><code class="language-bash">pip3 install mavsdk
 pip3 install aioconsole
 </code></pre>
-
 <h3 id="pymavlink">Pymavlink</h3>
 <p>Outra alternativa, disponível apenas com Python, é a <a href="https://pypi.org/project/pymavlink/">Pymavlink</a>. Ela é a mais simples de todas e é a que utilizamos para fazer a transmissão de dados do TFMini na Odroid para a PX4.</p>
 <h2 id="projetos-ja-feitos">Projetos ja feitos:</h2>
@@ -286,14 +227,13 @@ pip3 install aioconsole
 <h3 id="driver-tfmini">Driver TFMini</h3>
 <p>O TFMini por ser serial foi conectado ao GPIO da Odroid xu4, mais precisamente nos pinos 4 e 6, respectivamente RX e TX da Odroid.
 Para fazer a leitura dos dados do GPIO foi utilizada a biblioteca Odroid Wiring Pi.</p>
-<pre><code class="Python">#!/usr/bin/env python
+<pre><code class="language-Python">#!/usr/bin/env python
 import odroid_wiringpi as wpi
 import time
 </code></pre>
-
 <p>No código então foi criado uma classe "TFMini", p/ que ela possa ser utilizada facilmente em outros códigos, precisando apenas ser incluida e inicializada.</p>
 <p>A conexão com o TFMini fica dentro do construtor, onde ele abre a porta serial em que está conectado fisicamente o TFMini e declara a Baudrate; e é encerrada a conexão em seu destrutor.</p>
-<pre><code class="Python">class tfmini:
+<pre><code class="language-Python">class tfmini:
 
     def __init__(self):
         self.serial = wpi.serialOpen('/dev/ttySAC0', 115200)
@@ -301,7 +241,6 @@ import time
     def __del__(self):              
         wpi.serialClose(self.serial)    
 </code></pre>
-
 <p>O método medir fica responsável por pegar as informações recebidas pela serial, onde ele transforma os respectivos bits recebidos em cada pacote em sua informação, cujos valores e significados estão no datasheet do sensor.</p>
 <p>Também existe uma main, porém ela roda apenas quando o script é rodado direto.</p>
 <p>```python=
@@ -402,7 +341,7 @@ if __name__ == &quot;__main__&quot;:
         <a href="../IntroPX4/" class="btn btn-neutral float-right" title="Introdução ao PX4">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../Componentes/ESCs/" class="btn btn-neutral" title="Guia de Escolha de ESCs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Componentes/RPLIDARS1360/" class="btn btn-neutral" title="RPLidar S1 360"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -414,7 +353,7 @@ if __name__ == &quot;__main__&quot;:
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -424,22 +363,30 @@ if __name__ == &quot;__main__&quot;:
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="../../Componentes/ESCs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../IntroPX4/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../../Componentes/RPLIDARS1360/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../IntroPX4/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
     <script src="../../../js/theme.js" defer></script>
       <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
