@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Controle Futaba T14SG &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    
+</ul>
+</nav>
+                <div id="content"><h1 id="controle-futaba-t14sg">Controle Futaba T14SG</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Descrever os comandos configurados no Controle RC. Orientar a pilotagem e salvar um padrao de configuracao.</p>
+<h2 id="materiais-necessarios">Materiais necessários</h2>
+<p>Controle: Futaba T14SG.
+Antena: Ground Station (FPV Radio Telemetry Ground Module)
+Software: QgroundControl</p>
+<h2 id="passo-a-passo">Passo a passo</h2>
+<p>Apos ligar o receptor RC na pixhawk, no radio controle Futaba:
+Use o botao touch rotativo no canto inferior direito. Role ate mudar para "yes". </p>
+<p>Bind Control: (Conectar pela primeira vez o controle no drone)</p>
+<ul>
+<li>lnk -&gt; system -&gt; link (clique no RTN) 
+Se tiver dado certo o led do receptor do radio ficara verde</li>
+</ul>
+<h2 id="outros-comentarios">Outros comentários</h2>
+<p>Provavelmente o buzzer vai fazer algum barulinho e voce vai querer descobrir o que deve fazer para enfim seu dorne voar.
+Para entender os barulinhos do seu drone confira: <a href="https://docs.px4.io/master/en/getting_started/tunes.html">Link dos sons do Buzzer</a></p>
+<h2 id="referencias">Referências</h2>
+<p>Links que tenham te ajudado a escrever o guia, ou que sejam úteis aos outros pra a compreensão de algo.</p></div>
+                <footer>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

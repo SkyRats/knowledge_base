@@ -11,28 +11,32 @@ nav:
     - 'Instalações' : 'Geral/Instalacao.md'
     - 'Formulário(Linux, ROS, Gazebo)' : 'Geral/formulario.md'
     - 'Protocolo de Segurança' : 'Geral/preflightcheck.md'
+    - 'Issue Tracker': 'https://github.com/SkyRats/knowledge_base/issues'
   - 'Hardware':
     - 'Introdução ao Hardware para Drones' : 'Hardware/introHW.md'
     - 'Componentes':
       - 'Rádio Controles':
-        -'Taranis QX7' : 'Hardware/Componentes/RCs/TaranisQX7.md'
-      - 'Guia de Escolha de ESCs' : 'ESCs.md'
-      - 'RPLidar S1 360' : 'RPLIDARS1360.md'
+        - 'Taranis QX7' : 'Hardware/Componentes/RCs/TaranisQX7.md'
+      - 'Guia de Escolha de ESCs' : 'Hardware/Componentes/ESCs.md'
+      - 'RPLidar S1 360' : 'Hardware/Componentes/RPLIDARS1360.md'
     - 'Firmware':
-      -'Introdução ao MAVLink' : 'Hardware/Firmware/Introdução ao MAVLink.md'
-      -'Introdução ao PX4' : 'Hardware/Firmware/IntroPX4.md'
+      - 'Introdução ao MAVLink' : 'Hardware/Firmware/Introdução ao MAVLink.md'
+      - 'Introdução ao PX4' : 'Hardware/Firmware/IntroPX4.md'
     - '4G':
-      -'Transferência de Arquivos' : 'Hardware/4G/TransArqv.md'
+      - 'Transferência de Arquivos' : 'Hardware/4G/TransArqv.md'
+    - 'Análise de Logs de Voo': 'empty'
   - 'Software':
     - 'Convenções de Código' : 'Software/Convencoes-de-Codigo.md'
-    - 'Programação Orientada a Objetos':
-      - 'Em C++' : 'Software/POO/oo_c++.md'
+    - 'Programação Orientada a Objetos': 'Software/POO/oo_cpp_python.md'
     - 'Gazebo' : 'Software/Gazebo.md'
-  - 'Issue Tracker': 'https://github.com/SkyRats/knowledge_base/issues'
+  
 
 
 theme:
-  name: readthedocs
+  name: ivory
+  features:
+    - navigation.expand
+    - toc.integrate
   highlightjs: true
   hljs_languages:
     - bash

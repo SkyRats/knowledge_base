@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>RPLidar S1 360 &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2 current"><button class="section nav-item">Componentes</button>
+<ul class="subnav">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">RPLidar S1 360</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#1-conexao-em-hardwre">1. Conexão em Hardwre</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#2-driverfirmwresdk">2. Driver/Firmwre/SDK</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#3-conexao-com-ros">3. Conexão com ROS</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#aplicacoes-externas">Aplicações externas</a></li>
+</ul></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../ESCs/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Hardware &raquo; </li><li>Componentes</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="rplidar-360-s1">RPLidar 360 S1</h1>
+<p><img alt="Lidar360" src="/imgs/LIDAR.jpg" />
+É um Lidar rotativo, mede as distâncias entre o ambiente em 360 graus e o próprio lidar, permitindo mapeamento e localização indoor, além de desvio de obstáculos</p>
+<h2 id="1-conexao-em-hardwre">1. Conexão em Hardwre</h2>
+<p>É praticamente um "plug 'n play", ele vem com três cabos e um adaptador. O adaptador você consegue regular a baudrate de comunicação, e a entrada dele é conectada no USB do computador, e a outra seria um cabo de alimentação, que no caso não precisa ser conectado. Já a outra ponta do adaptador é só conectar no Lidar.
+Obs: A alimentação do Lidar é de 5V e com consumo máximo de 3A (Para nós nunca uma usb de 1A deixou de ser suficiente)</p>
+<h2 id="2-driverfirmwresdk">2. Driver/Firmwre/SDK</h2>
+<p>O driver que utilizamos para conectarmos diretamente o Lidar com o ROS é o feito pela Slamtec, em que a Skyrats tem um Fork específico dele com a versão mais recente do SDK(https://github.com/SkyRats/rplidar_ros). O que no repositório principal ainda está desatualizado.</p>
+<p>Além disso, algumas vezes, testando conexões diferentes acabamos tendo problemas com a versão do Firmware interno do Lidar que veio de fábrica, e p/ isso a Slamtec ja fornece no site deles um instalador que faz o trabalho de compilar e dar upload do firmware(https://www.slamtec.com/en/Support), precisando apenas informar a porta e baudrate.</p>
+<p>Dentro desse mesmo site a Slamtec fornece o SDK p/ todos os sistemas, e caso você queira fazer algo que não esteja implementado no driver p/ ROS, todo o resto está implementado em mais baixo nível la.</p>
+<h2 id="3-conexao-com-ros">3. Conexão com ROS</h2>
+<p>O package rplidar_ros já vem pronto para ser clonado em um catkin workspace e utilizado através do comando roslaunch, como o nosso lidar é o S1, o arquivo que deve ser utilizado para nossas aplicações é o rplidar_s1.launch </p>
+<p>Para testes a respeito da leitura do sensor, também pode ser usado o view_rplidar_s1.launch, que consiste na mesma coisa que o comando anterior com adição de uma janela do rviz já configurada para obter a leitura do laser</p>
+<p><img alt="RViz" src="/imgs/LIDAR360RVIZ.gif" />
+Caso alguém tenha interesse no funcionamento do node ROS com mais detalhes, o código fonte pode ser encontrado em src/node.cpp e é o unico presente neste package</p>
+<p>Em termos de tópicos publicados, o funcionamento desse node é simples, contendo apenas um publisher. O tópico criado tem o nome de "scan" e recebe constantemente a leitura do sensor em formato sensor_msgs/LaserScan, que pode ser encontrado em http://docs.ros.org/en/api/sensor_msgs/html/msg/LaserScan.html</p>
+<p>Já em serviços ROS, temos apenas dois: stop_motor e start_motor, ambos os quais recebem std_srvs/Empty e funcionam para ligar e desligar o motor do lidar</p>
+<p>Finalmente, quanto aos parametros, podem ser encontrados serial_port (string, default: /dev/ttyUSB0), serial_baudrate (int, default: 115200), frame_id (string, default: laser_frame), inverted (bool, default: false), angle_compensate (bool, default: false), scan_mode (string, default: std::string()). Exemplos de configuração desses parametros podem ser encontrados em diversos arquivos na pasta /launch e podem ser alterados para usos especificos.
+Um destaque especial deve ser feito ao scan_mode, visto que o valor default não está disponível para o RPLidar 360 S1, e deve ser trocado para Standard ou Boost quanto iniciado através de um .launch fora desse package.</p>
+<h2 id="aplicacoes-externas">Aplicações externas</h2>
+<p>Aplicações externas comumente vão depender do tópico publicado, uma coisa importante para se lembrar é que muitas delas utilizam como padrão um tópico /laser/scan (é o que aparece para os casos de lidar simulado!), que deve ser trocado para apenas scan. Outro detalhe que complica o uso de softwares externos é o uso do ROS package tf2, que funciona para gerar diversos sistemas de coordenadas no robô controlado, o que, por exemplo, é muito util para aplicações de localização e mapeamento (SLAM). Para esses casos, recomenda-se um estudo dos links do robô em questão e do laser para configurar corretamente o node que se deseja utilizar, a documentação pode ser encontrada em http://wiki.ros.org/tf2
+Uma solução para uso em cima de nosso drone já foi implementada e pode ser encontrada no reposítorio motion_planning em nosso github (note que a configuração está tanto em mapping_default.launch quanto em mapping.launch)</p>
+<p><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+Tags: RPLidar 360 S1, Lidar 360 ROS, Drone, PX4, PX4 Lidar 360</p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../ESCs/" title="Guia de Escolha de ESCs"><span>Previous</span></a></div>
+        <div class="next"><a href="../../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/" title="Introdução ao MAVLink"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

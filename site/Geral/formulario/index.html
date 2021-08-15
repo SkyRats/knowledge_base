@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Formulário(Linux, ROS, Gazebo) &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../Instalacao/">Instalações</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Formulário(Linux, ROS, Gazebo)</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#linux">Linux</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#firmware">Firmware</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#simulacaogazebo">Simulação/Gazebo</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#ros">ROS</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../Instalacao/">&laquo; Previous</a></div>
+    <div class="next"><a href="../preflightcheck/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Geral</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="formulario">Fórmulário</h1>
+<h2 id="linux">Linux</h2>
+<h3 id="basico">Básico</h3>
+<ul>
+<li>Mostrar o caminho atual</li>
+</ul>
+<pre><code class="language-bash">pwd
+</code></pre>
+<ul>
+<li>Listar os arquivos no diretório atual</li>
+</ul>
+<pre><code class="language-bash">ls
+</code></pre>
+<ul>
+<li>Mudar de diretório</li>
+</ul>
+<pre><code class="language-bash">cd &lt;caminho do diretório&gt;
+</code></pre>
+<ul>
+<li>Mostar o conteúdo de um arquivo</li>
+</ul>
+<pre><code class="language-bash">cat &lt;arquivo&gt;
+</code></pre>
+<ul>
+<li>Abrir um arquivo em um editor de texto</li>
+</ul>
+<pre><code class="language-bash">nano &lt;nome do arquivo&gt;
+</code></pre>
+<h3 id="manipulando-arquivos-e-diretorios">Manipulando arquivos e diretórios</h3>
+<ul>
+<li>Criar arquivo em branco</li>
+</ul>
+<pre><code class="language-bash">touch &lt;arquivo&gt;
+</code></pre>
+<ul>
+<li>Copiar arquivos</li>
+</ul>
+<pre><code class="language-bash">cp &lt;arquivo opiado&gt; &lt;diretório de destino&gt;
+</code></pre>
+<ul>
+<li>Mover arquivos</li>
+</ul>
+<pre><code class="language-bash">mv &lt;arquivo&gt; &lt;destino&gt;
+</code></pre>
+<ul>
+<li>Renomear arquivos</li>
+</ul>
+<pre><code class="language-bash">mv &lt;nome atual do arquivo&gt; &lt;novo nome&gt;
+</code></pre>
+<ul>
+<li>Deletar arquivos</li>
+</ul>
+<pre><code class="language-bash">rm &lt;arquivo&gt;
+</code></pre>
+<ul>
+<li>Criar diretório</li>
+</ul>
+<pre><code class="language-bash">mkdir &lt;nome do diretório&gt;
+</code></pre>
+<ul>
+<li>Deletar diretórios vazios</li>
+</ul>
+<pre><code class="language-bash">rmdir &lt;diretório&gt;
+</code></pre>
+<ul>
+<li>Deletar diretórios com arquivos</li>
+</ul>
+<pre><code class="language-bash">rm -r &lt;diretório&gt;
+</code></pre>
+<ul>
+<li>Modificar as permissões de um arquivo</li>
+</ul>
+<p>Todo arquivo pode possuir 8 tipos de permissões diferentes:
+0 - Sem permissão
+1 - Permissão para executar
+2 - Permissão para escrever
+3 - Permissão para escrever e executar
+4 - Permissão para ler
+5 - Permissão para ler e executar
+6 - Permissão para ler e escrever
+7 - Permissão para ler, escrever e executar</p>
+<p>Essa permissão pode ser dada para interagir com 3 tipos de usuários:
+O dono - representa o usuário dono do arquivo no computador.
+Grupos - Grupos de mais de um usuário.
+Todos - Todos os usuários naquele computador.</p>
+<p>Para alterar as permissões de um arquivo, é necessário utilizar o comando chmod seguido de um número de 3 algarimso, onde o primeiro representa as permissões para o usuário dono do arquivo, o segundo, do grupo de usuários e o terceiro, de todos os usuários e, por último, o nome do arquivo que queremos alterar as permissões. Por exemplo, se quisermos dar permissão para o arquivo 'EP 1' ler, escrever e executar arquivos do usuário dono do arquivo, ler e escrever arquivos do grupo de usuários e de todos os usuários, nós devemos fazer o seguinte:</p>
+<pre><code class="language-bash">chmod 766 'EP 1'
+</code></pre>
+<h3 id="manipulando-o-sistema">Manipulando o sistema</h3>
+<ul>
+<li>Executar como Super Usuário</li>
+</ul>
+<pre><code class="language-bash">sudo &lt;comando a ser executado&gt;
+</code></pre>
+<ul>
+<li>Procurar o caminho para um arquivo</li>
+</ul>
+<pre><code class="language-bash">locate &lt;nome do arquivo&gt;
+</code></pre>
+<ul>
+<li>Exibir os processos em execução</li>
+</ul>
+<pre><code class="language-bash">ps
+</code></pre>
+<ul>
+<li>Parar um processo</li>
+</ul>
+<pre><code class="language-bash">kill &lt;ID do processo&gt;
+</code></pre>
+<h3 id="manipulando-pacotes-apenas-para-distribuicoes-baseadas-no-debian">Manipulando pacotes (Apenas para distribuições baseadas no Debian)</h3>
+<ul>
+<li>Instalando pacotes</li>
+</ul>
+<pre><code class="language-bash">apt-get install &lt;nome do pacote.
+</code></pre>
+<ul>
+<li>Removendo pacotes</li>
+</ul>
+<pre><code class="language-bash">apt-get remove &lt;nome do pacote&gt;
+</code></pre>
+<ul>
+<li>Removendo pacote e seus arquivos de configuração</li>
+</ul>
+<pre><code class="language-bash">apt-get purge &lt;nome do pacote&gt;
+</code></pre>
+<ul>
+<li>Atualizando pacotes</li>
+</ul>
+<pre><code class="language-bash">apt-get -u upgrade
+</code></pre>
+<ul>
+<li>Removendo pacotes que não serão mais utilizados</li>
+</ul>
+<pre><code class="language-bash">apt-get clean
+apt-get autoclean
+</code></pre>
+<ul>
+<li>Adicionando novos repositórios de pacotes
+Utilize o comando</li>
+</ul>
+<pre><code class="language-bash">sudo nano /etc/apt/sources.list
+</code></pre>
+<p>Com o editor de texto Nano escreva, no final do arquivo, o nome do repositório que deseja adicionar.</p>
+<ul>
+<li>Atualizando o índice de respositórios</li>
+</ul>
+<pre><code class="language-bash">apt-get update
+</code></pre>
+<h3 id="comandos-uteis-e-legais">Comandos úteis (e legais)</h3>
+<ul>
+<li>Comparar a diferença entre dois códigos linha por linha</li>
+</ul>
+<pre><code class="language-bash">diff &lt;código 1&gt; &lt;código 2&gt;
+</code></pre>
+<ul>
+<li>Procurar expressões dentro de arquivos</li>
+</ul>
+<pre><code class="language-bash">grep &lt;expressão&gt; &lt;arquivo&gt;
+</code></pre>
+<ul>
+<li>Mostrar o manual de um comando</li>
+</ul>
+<pre><code class="language-bash">man &lt;comando&gt;
+</code></pre>
+<ul>
+<li>YES</li>
+</ul>
+<pre><code class="language-bash">yes
+</code></pre>
+<hr />
+<h2 id="firmware">Firmware</h2>
+<hr />
+<h2 id="simulacaogazebo">Simulação/Gazebo</h2>
+<h3 id="iniciar-gazebo">Iniciar gazebo</h3>
+<p>O comando abaixo abre o gazebo</p>
+<pre><code class="language-bash">gazebo &lt;opções de inicialização&gt; 
+</code></pre>
+<p>Mas também da para abrí-lo com mais condições.
+Pode abrir diretamente um mundo usando o mesmo comando colocando o caminho para o <code>.world</code>, ou colocando o nome do arquivo estando na pasta world.
+Por exemplo: <code>gazebo exemplo.world</code> 
+Mais uma explicação ou informaçes de uso sobre o comando ou codigo</p>
+<p>Também pode iniciar o gazebo fazendo a simulação da PX4.
+Estando na raiz do Firmware dê o comando:</p>
+<pre><code class="language-bash">make px4_sitl gazebo
+</code></pre>
+<p>E também pode inciar o Gazebo junto com o ROS usando o roslaunch, e é bom por que da para abrir rosnodes, packages e outras funções do ros junto.</p>
+<pre><code class="language-bash">roslaunch gazebo_ros &lt;exemplo.launch&gt;
+</code></pre>
+<p>No roslaunch pode colocar vários argumentos de incialização, <a href="http://gazebosim.org/tutorials/?tut=ros_roslaunch">clique aqui para ver</a></p>
+<p><a href="http://gazebosim.org/tutorials?tut=quick_start">Tutorial de inicialização do gazebo</a></p>
+<hr />
+<h2 id="ros">ROS</h2>
+<h3 id="terminal">Terminal</h3>
+<p>Esses são os mais comuns. Se você digitar só o início do comando (tipo <code>rostopic</code>) ele deve te dar a lista de todos. Colocar <code>-h</code> no final pede ajuda sobre a sintaxe.</p>
+<p><strong>Topics</strong></p>
+<pre><code class="language-bash">* Lista todos os tópicos ativos
+rostopic list
+
+* Informações sobre um tópico
+rostopic info [tópico]
+
+* Vê o que tá sendo publicado no tópico
+rostopic echo [tópico]
+
+* Vê a frequência com que estão publicando no tópico
+rostopic hz [tópico]
+
+* Publica no tópico
+rostopic pub [tópico] [tipo de mensagem] [args...]
+</code></pre>
+<h3 id="messages">Messages</h3>
+<pre><code class="language-bash">* Lista todas os tipos de mensagem (são muitos kkk)
+rosmsg list
+
+* Informações sobre um tipo de mensagem
+rosmsg show [mensagem]
+</code></pre>
+<h3 id="services">Services</h3>
+<pre><code class="language-bash">* Lista todos os serviços
+rosservice list
+
+* Informações sobre um serviço
+rosservice info [serviço]
+
+* Chama um serviço
+rosservice call [serviço] [args...]
+</code></pre>
+<h3 id="nodes">Nodes</h3>
+<pre><code class="language-bash">* Lista todos os nodes
+rosnode list
+
+* Informações sobre um node
+rosnode info [node]
+</code></pre>
+<h3 id="params">Params</h3>
+<pre><code class="language-bash">* Lista todos os parâmetros
+rosparam list
+
+* Lê um parâmetro
+rosparam get [param]
+
+* Escreve em um parâmetro
+rosparam set [param] [valor]
+</code></pre>
+<h3 id="execucao">Execução</h3>
+<pre><code class="language-bash">* Inicia o ROS
+roscore
+
+* Executa um node
+rosrun [package] [node]
+
+* Executa um launchfile (não requer roscore)
+roslaunch [package] [arquivo .launch] [argumento:=valor ...]
+</code></pre>
+<h3 id="ros-bags">ROS Bags</h3>
+<pre><code class="language-bash">* Grava os tópicos 1, 2 e 3
+rosbag record [topico1] [topico2] [topico3] e 3
+
+* Grava todos os tópicos
+rosbag record -a
+
+* Executa um rosbag
+rosbag play [nome_da_rosbag].bag
+</code></pre>
+<h3 id="outros">Outros</h3>
+<pre><code class="language-bash">* Acha um package e dá cd pra ele
+roscd [package]
+
+* Grafo dos tópicos
+rqt_graph
+
+* RViz (visualização de mensagens)
+rviz
+</code></pre>
+<h3 id="catkin">Catkin</h3>
+<pre><code class="language-bash">* Cria o workspace (deve ser executado DENTRO DA PASTA SRC DO WORKSPACE)
+catkin_init_workspace
+
+* Compila o workspace
+catkin build
+
+* Limpa o workspace (não apaga os packages)
+catkin clean
+
+* Deinicializa o workspace
+catkin clean --deinit
+
+* Cria um package (execute dentro da src)
+catkin_create_pkg [nome no package] [dependencias...]
+</code></pre>
+<h3 id="python">Python</h3>
+<p>Os comandos não estão em ordem pra serem executados em um programa, apenas listados.</p>
+<pre><code class="language-python"># Essa linha precisa ser a primeira de todo código
+#!/usr/bin/env python
+
+# Tudo que vc faz passa por aqui, precisa importar
+import rospy
+
+# Declara que o programa é um node (NECESSÁRIO)
+rospy.init_node(&quot;nome_do_node&quot;)
+
+# Cria um Publisher
+pub = rospy.Publisher(&quot;nome_do_topico&quot;, TipoDeMsg, queue_size=10)
+
+# Publica uma mensagem
+pub.publish(ObjetoMensagem)
+
+# Cria um Subscriber
+rospy.Subscriber(&quot;nome_do_topico&quot;, TipoDeMsg, funcao_de_callback)
+
+# Deixa o programa executando (sem fazer nada)
+rospy.spin()
+
+# Cria um Rate
+rate = rospy.Rate(frequencia_Hz)
+
+# Espera completar o ciclo do rate
+rate.sleep()
+
+# Verifica se o ROS fechou (geralmente usado como condição em um while)
+rospy.is_shutdown()
+</code></pre></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../Instalacao/" title="Instalações"><span>Previous</span></a></div>
+        <div class="next"><a href="../preflightcheck/" title="Protocolo de Segurança"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>

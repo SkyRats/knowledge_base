@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>Guia de Escolha de ESCs &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2 current"><button class="section nav-item">Componentes</button>
+<ul class="subnav">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">Guia de Escolha de ESCs</a><a class="nav-item current" href="./">Guia de Escolha de ESCs</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#individual-ou-4-em-1">Individual ou 4 em 1?</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#tensao-e-corrente">Tensão e Corrente</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../RCs/TaranisQX7/">&laquo; Previous</a></div>
+    <div class="next"><a href="../RPLIDARS1360/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Hardware &raquo; </li><li>Componentes</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="como-escolher-um-esc">Como escolher um ESC?</h1>
+<h2 id="individual-ou-4-em-1">Individual ou 4 em 1?</h2>
+<p>São dois tipos, um ESC que controla um motor só, o individual ou os que controlam mais de um motor, os 4 em 1.</p>
+<h3 id="vantagens-x-desvantagens">Vantagens x Desvantagens:</h3>
+<p>O ESC múltiplo é mais caro que 4 ESCs, e se quebrar tem que trocar inteiro, ao invés de trocar só um ESC, porém ele é menor e mais leve.</p>
+<h2 id="tensao-e-corrente">Tensão e Corrente</h2>
+<p>Devemos levar em consideração a corrente máxima do motor, pois é ela que pode danificar o ESC, e a partir dela decidir o valor do ESC que vai comprar.</p>
+<p>Primeiro, ver se a corrente estiver muito próxima de um número redondo(30, 40, 50... etc), para cima, pode usar um ESC arredondado para baixo, pois o próprio vento das hélices faz um grande resfriamento já, mas porém se a corrente estiver mais afastada, como um com máximo de 45, 46, é melhor arredondar para cima, por questões de segurança e vida útil do ESC, por mais que o peso e o tamanho sejam maiores.</p>
+<p>Com relação a tensão, deve-se escolher um ESC de acordo com a tensão da bateria LiPO, seja de 4s, 6s, etc...</p>
+<h1 id="referencias">Referências</h1>
+<ul>
+<li><a href="https://dronenodes.com/drone-esc-electronic-speed-controller/">https://dronenodes.com/drone-esc-electronic-speed-controller/</a></li>
+<li><a href="https://oscarliang.com/choose-esc-racing-drones/#:~:text=The%20first%20thing%20to%20look,with%20your%20ESC%20in%20flames">https://oscarliang.com/choose-esc-racing-drones/#:~:text=The first thing to look,with your ESC in flames</a>!</li>
+</ul></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../RCs/TaranisQX7/" title="Taranis QX7"><span>Previous</span></a></div>
+        <div class="next"><a href="../RPLIDARS1360/" title="RPLidar S1 360"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

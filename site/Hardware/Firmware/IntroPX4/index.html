@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>Introdução ao PX4 &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../../Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2 current"><button class="section nav-item">Firmware</button>
+<ul class="subnav">
+    <li class="toctree-l3"><a class="nav-item" href="../Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">Introdução ao PX4</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#compilando-firmware">Compilando Firmware</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#calibracao">Calibração</a></li>
+</ul></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../4G/TransArqv/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Hardware &raquo; </li><li>Firmware</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="compilamento-do-firmware-e-calibracao-do-drone">Compilamento do Firmware e Calibração do Drone</h1>
+<h2 id="compilando-firmware">Compilando Firmware</h2>
+<p>O primeiro passo antes de começar a compilar o Firmware é conectar o drone ao seu computador, portanto conecte-os utilizando-se de um cabo USB. </p>
+<p><strong>OBS</strong>: Utilize o cabo pra conectar o drone ao computador! Não faça pela telemetria pois compilar o firmware é uma tarefa pesada para se fazer por telemetria.</p>
+<p>Depois de conectados, abra seu navegador de arquivos e vá até sua pasta de drivers: <code>/Firmware/src/drivers</code>. Lá se encontram todos os seus drivers. Caso não encontre o driver que procuras, baixe-o e salve nesta pasta. 
+Depois de encontrar a pasta do Driver desejado, abra-o e procure pelo arquivo dos parâmetros, como por exemplo <code>parameters.c</code> e altere o parâmetro de acordo com sua necessidade, desabilitando-o, habilitando-o e fazendo isso de acordo com seu tipo de entrada. </p>
+<p>Com os parâmetros do Firmware alterados, vá para <code>/Firmware/boards</code>. Cada pasta encontrada aqui é um Firmware diferente, escolha portanto o Firmware o qual você utiliza. Escolhido um Firmware, selecione a versão que você possui. No nosso caso o nosso caminho foi <code>/Firmware/boards/px4/fmu-v2/</code>.
+Nessa paste procure pelo arquivo o qual apresenta todos os drives habilitados ou não habilitados, no nosso caso ele se chama <code>multicopter.cmake</code>, mas ele pode apresentar outro nome no seu computador, isso também  de acordo com o Firmware que você utiliza. Faça uma copia dele e o renomeie da forma que for mais prática para você, pois você irá utiliza-lo.</p>
+<p>A pixhawk, controladora o qual usamos, apresenta uma memória limitada, uma característica de sistemas embarcados, e portanto geralmente habilita-se apenas os Drivers necessários para compilar. 
+Habilite então os drivers que você precisar, isso dentro do arquivo copiado e renomeado, pois não queremos alterar o arquivo original. </p>
+<p>Feito isso, abra seu terminal e dê <code>/Firmware</code>. Dado o comando, compile o Firmware utilizando-se do arquivo que você editou, no nosso caso o comando foi <code>make px4_fmu-v2_multicoptereditado</code>. 
+Ele pode demorar um pouco, mas isso ocorre porque é um comando pesado.
+Mas uma vez compilado, não é necessário compila-lo novamente a não ser que haja mudanças nos Drivers ou no Firmware utilizado. </p>
+<p>Enquanto ele compila, é recomendável que se salve os parâmetros de sua controladora antes de dar o upload do Firmware novo. Ele é um arquivo <code>.params</code> e pode ser salvado pelo QGroundControl.
+Com o QGroundControl abra o <code>Vehicle Setup</code> (três engrenagens na parte superios esquerda), desça até os <code>Parameters</code>, clique em <code>Tools</code> (na parte superior direita), e selecione <code>Save to file .params</code></p>
+<p>Depois de compilado, basta dar o upload. No nosso caso o comando foi <code>make px4_fmu-v2_multicoptereditado upload</code>. 
+Concluído o upload, seu Firmware está compilado e instalado na sua controladora de voo.</p>
+<p>Caso precise de ajuda com o compilamento acesse: <a href="https://dev.px4.io/master/en/setup/building_px4.html">Building the code - PX4</a>.  </p>
+<hr />
+<h2 id="calibracao">Calibração</h2>
+<p>Para calibração, iremos primeiro carregar o arquivo <code>.params</code> que foi salvo anteriormente, ou que possuímos salvado no computador. Iremos então rebootar para que o processo se complete. 
+Uma forma bacana de fazer isso é abrindo o <code>Analyze</code> (desenho de um papel com uma lupinha ao lado), indo em <code>MavLink Console</code> e digitando na barra de comando inferior <code>reboot</code>. </p>
+<p>Carregado os parâmetros e rebootado, precisamos selecionar o tipo de veiculo utilizado, portanto vá em <code>Vehicle Setup</code>, abra o <code>Airframe</code> e selecione o que condiz com o seu. </p>
+<p>Feito isso, é necessário calibrar os sensores, então vá em <code>Sensors</code>. Note que alguns deles apresentarão bolinhas vermelhas ao seu lado, este serão os sensores que você precisará calibrar. </p>
+<p>Para calibrar, será necessário movimentar o drone, portanto é recomendável que utilize-se da Telemetria pra estabelecer a comunicação entre o drone e o QGroundControl. Desconecte o cabo USB entre o drone e o computador, e também o USB que liga a Jetson à Pixhawk, conecte a Ground station no seu computador e ligue o seu drone. Concluído isso eles deveriam se conectar.</p>
+<p>Uma vez conectados, note que no <code>Summary</code> aparecem os mais variados itens, no qual se a bolinha apresenta-se vermelha, é necessário uma correção antes de executar um voo.</p>
+<p>Novamente, em <code>Sensors</code>, cheque os sensores que se apresentam em vermelho e os calibre. Clique no Sensor, aparecerá uma barra sua lateral direita, lá clique em <code>OK</code> e ele te redirecionará para a página de calibração do sensor. Cada sensor possui tarefas específicas para que a calibração seja feita, execute-as de acordo com as instruções e pronto, este sensor estará calibrado. </p>
+<p>Um problema o que você pode se deparar é que sua controla de voo possui direções pré definidas como Yaw, Pitch e Roll, mas que não condizem com a orientação o qual você está usando. Para corrigir, a aba que aparece a sua direita possui a opção de rotacionar essas orientações girando determinada quantidade de graus entorno de tal eixo. Após selecionada a opção adequada é necessário rebootar, depois de rebootar veja se o problema foi corrigido.</p>
+<p>Caso precise de ajuda com as orientações acesse: <a href="https://docs.px4.io/master/en/config/flight_controller_orientation.html">Roll, Pitch and Yaw - PX4</a>.</p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../Introdu%C3%A7%C3%A3o%20ao%20MAVLink/" title="Introdução ao MAVLink"><span>Previous</span></a></div>
+        <div class="next"><a href="../../4G/TransArqv/" title="Transferência de Arquivos"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

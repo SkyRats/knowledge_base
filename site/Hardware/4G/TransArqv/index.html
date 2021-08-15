@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>Transferência de Arquivos &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../../Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2 current"><button class="section nav-item">4G</button>
+<ul class="subnav">
+    <li class="toctree-l3 current"><a class="nav-item current" href="./">Transferência de Arquivos</a>
+<ul class="subnav">
+<li class="toctree-l4"><a class="nav-item toc" href="#1-introducao">1. Introdução</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#2-como-foi-feito">2. Como foi feito?</a></li>
+<li class="toctree-l4"><a class="nav-item toc" href="#3-codigo-completo">3. Código completo</a></li>
+</ul></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../../Firmware/IntroPX4/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../../Software/Convencoes-de-Codigo/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Hardware &raquo; </li><li>4G</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="transferencia-de-arquivos">Transferência de Arquivos</h1>
+<hr />
+<h2 id="1-introducao">1. Introdução</h2>
+<p>Para automatizar a transferência de arquivos através de uma rede, por exemplo, 4G, faremos uso de uma rede SSH, caso não saiba como criar e configurar uma, temos a explicação aqui <em>LINK</em> , além disso, faremos uso da biblioteca python Time, e OS(<em>LINK</em>)</p>
+<h2 id="2-como-foi-feito">2. Como foi feito?</h2>
+<p>Primeiro, precisa-se adquirir 4 strings, sendo elas, o ip do computador onde serão buscados os arquivos(no caso do exemplo, fotos). A primeira seria o ip, que deve possuir o formato “USUARIO@IPGLOBAL” para redes diferentes, ou “USUARIO@IPV4” para mesma rede. O segundo deve ser a senha desse usuário, e o terceiro e quarto são pastas, dados em links de arquivos, sem a última barra “~/exemplohome/exemplopasta”.</p>
+<p>Assim, utilizando o comando system, da biblioteca os, podemos com o python enviar comandos para o terminal bash. Então, antes de tudo é necessário instalar o sshpass, da seguinte forma:</p>
+<pre><code class="language-bash">sudo apt install sshpass
+</code></pre>
+<p>Após isso, já podemos continuar nosso código. O primeiro comando que utilizamos é o básico “ls”, para retornar os arquivos que tem na pasta do drone, porém, utilizamos ele de uma forma em que retornamos apenas o primeiro arquivo colocado naquela pasta, dessa forma:</p>
+<pre><code class="language-bash">ls -t &lt;pasta&gt; | tail -1
+</code></pre>
+<p>E para conseguirmos mandar ele para a pasta do drone, por ssh, fazemos a conexão ao ssh, porém, ao final do comando abrimos e fechamos aspas únicas com o comando dentro, assim ele não irá conectar ao bash por ssh, e sim apenas enviar aquele comando. Isso é feito da seguinte forma:</p>
+<pre><code class="language-bash">ssh &lt;usuario&gt;@&lt;ip&gt; ‘&lt;comando&gt;’
+</code></pre>
+<p>No caso, como queremos que isso seja 100% automatizado, faremos uso da biblioteca sshpass, e assim ela irá automaticamente autenticar a todo comando, apenas com a string de senha recebida anteriormente, a sintaxe é assim:</p>
+<pre><code class="language-bash">sshpass -p &lt;senha&gt; ssh &lt;usuario&gt;@&lt;ip&gt; ‘&lt;comando&gt;’
+</code></pre>
+<p>Então, combinando os dois comandos, para buscarmos o primeiro arquivo colocado em uma certa pasta do computador de bordo do drone, fica:</p>
+<pre><code class="language-bash">sshpass -p &lt;senha&gt; ssh &lt;usuario&gt;@&lt;ip&gt; ‘ls -t &lt;pasta&gt; | tail -1’
+</code></pre>
+<p>Obs: É importante sempre remover o último caracter recebido, pois ele é um endline</p>
+<p>Assim, colocamos o retorno desse comando em uma string, que dá o nome do arquivo que iremos pegar, o que deve ser concatenada ao endereço da pasta, desse jeito, podemos copiá-lo para a ground station, e para isso usamos o comando “scp” que copia através do ssh, e juntamente utilizamos o sshpass para autenticação automática, e tudo isso fica dessa forma:</p>
+<pre><code class="language-bash">sshpass -p &lt;senha&gt; scp -r &lt;usuario&gt;&lt;ip&gt;:&lt;arquivo&gt;
+</code></pre>
+<p>E após termos puxado o arquivo, podemos apagá-lo de quem enviou, e assim, utilizando a mesma ideia no comando ls, faremos a mesma coisa com o comando “rm” por ssh, juntamente autenticado pelo sshpass, que fica da seguinte forma:</p>
+<pre><code class="language-bash">sshpass -p &lt;senha&gt; ssh &lt;usuario&gt;@&lt;ip&gt;:&lt;arquivo&gt; ‘rm &lt;arquivo&gt;’
+</code></pre>
+<p>Com isso, já estamos pegando os arquivos através da internet, mas, podemos automatizar mais ainda, e para isso, deixamos dentro de um “while True:”, assim, ele vai enviar todos os arquivos daquela pasta, e ainda esperar os próximos que forem colocados e enviá-los também, além disso, para evitar que arquivos sejam sobrescritos por conta de terem o mesmo nome podemos fazer um contador para cada arquivo enviado, sendo assim, cada um tendo um número, e renomeamos o arquivo após ser enviado com o comando “mv”, desse jeito:</p>
+<pre><code class="language-python">mv &lt;path&gt;/&lt;arquivorecebido&gt; &lt;path&gt;/&lt;nomenovo&gt;+&lt;contador&gt;
+</code></pre>
+<h2 id="3-codigo-completo">3. Código completo</h2>
+<p>Ele, e outros códigos, podem ser acessados em nosso github</p>
+<p>Mas o código utilizado para tal, está também aqui:</p>
+<pre><code class="language-python">  print(&quot;Qual o endereço de ip do drone? (USUARIO@IP&quot;)
+  ip = str(input())
+  print(&quot;Qual a senha do drone?&quot;)
+  senha = str(input())
+  print(&quot;Qual a pasta das fotos no drone?&quot;)
+  pastaDrone = str(input())
+  print(&quot;Qual a pasta das fotos no seu computador?&quot;)
+  pastaGs = str(input())
+
+  numeroFoto = 0
+  while True:
+
+    ultimoArqv = os.popen(&quot;sshpass -p &quot; + senha + &quot; ssh &quot; + ip + &quot; '&quot; + &quot;ls -t &quot; + pastaDrone + &quot; | tail -1&quot; + &quot;'&quot;).read() #Pegar o último arquivo colocado
+
+    print(&quot;Copiando o &quot; + ultimoArqv)
+
+    os.system(&quot;sshpass -p &quot; + senha + &quot; scp -r &quot; + ip + &quot;:&quot; + pastaDrone + &quot;/&quot; + ultimoArqv[:-1] + &quot; &quot; + pastaGs) #Copiar esse arquivo
+
+    os.system(&quot;sshpass -p &quot; + senha + &quot; ssh &quot; + ip +&quot; 'rm &quot; + pastaDrone + &quot;/&quot; + ultimoArqv[:-1] + &quot;'&quot;)
+
+    numeroFoto = numeroFoto + 1
+
+    os.system(&quot;mv &quot; + pastaGs + &quot;/&quot; + ultimoArqv[:-1] + &quot; &quot; + pastaGs + &quot;/&quot; + &quot;FOTO&quot; + str(numeroFoto) + &quot;.png&quot;)
+</code></pre></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../../Firmware/IntroPX4/" title="Introdução ao PX4"><span>Previous</span></a></div>
+        <div class="next"><a href="../../../Software/Convencoes-de-Codigo/" title="Convenções de Código"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../search/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <title>Introdução ao Hardware para Drones &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
+</head>
+
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
+</div>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Introdução ao Hardware para Drones</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#componentes-e-montagem">Componentes e Montagem</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#o-drone-1p">O Drone (1p)</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#boas-praticas-de-hardware-1p">Boas práticas de Hardware (1p)</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#boas-praticas-de-voo-1p">Boas práticas de vôo (1p)</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Software/Gazebo/">Gazebo</a></li>
+</ul></li>
+                </ul>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
+    </div>
+    <div class="previous"><a href="../../Geral/preflightcheck/">&laquo; Previous</a></div>
+    <div class="next"><a href="../Componentes/RCs/TaranisQX7/">Next &raquo;</a></div>
+</div>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Hardware</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="introducao-ao-hardware">Introdução ao Hardware</h1>
+<h2 id="componentes-e-montagem">Componentes e Montagem</h2>
+<h3 id="motores-escs-e-helices">Motores, ESCs e Hélices</h3>
+<ol>
+<li>Motores:</li>
+</ol>
+<p>Boa parte dos motores p/ drones são brushless, eles são conectados aos ESCs. Em um drone, metade dos motores precisam girar em um sentido, e a outra metade em outro, assim evita que o drone tenha um torque desigual, fazendo ele girar no próprio eixo. (Mesma função da pazinha pequena no rabo do helicóptero).</p>
+<ol>
+<li>ESCs:</li>
+</ol>
+<p>Tem a função de transformar o sinal de PWM (Controle de velocidade por pulsos), de baixa potência, que vem da controladora de voo, em um sinal de alta potência, usando a energia da bateria.</p>
+<ol>
+<li>Hélices:</li>
+</ol>
+<p>Elas existem de dois tipos, para motores que vão rodar em sentido horário e antihorário.</p>
+<h3 id="controladora-de-voo-e-pmb">Controladora de vôo e PMB</h3>
+<ol>
+<li>Controladora de voo:</li>
+</ol>
+<p>É um dos principais componentes do drone. É responsável por receber e processar sinais de entrada dos sensores e as saídas para os motores e eventuais outros atuadores. Normalmente possuem sensores importantes embarcados nativamente, como giroscópio, acelerômetro, bússola entre outros. Sua principal função é mapear os comandos recebidos para controlar os movimentos de ROLL, PITCH e YAW do drone, além de estabilizar o voo.</p>
+<ol>
+<li>PMB:</li>
+</ol>
+<p>_Power Management Board _é a placa responsável por distribuir a potência pelo drone, alimentando todos os componentes necessários, e no caso da Pixhawk 4 esta placa também é responsável por medir o consumo de corrente e a tensão da bateria bem como distribuir os sinais para os ESCs e outros componentes que usem entradas de FMU.</p>
+<h3 id="baterias">Baterias:</h3>
+<p>As baterias têm uma função super importante na criação de drones, elas são as responsáveis pela quantidade de tempo que o drone permanecerá no céu! Quanto mais carga a bateria possui, mais tempo de voo (desconsiderando o peso é claro).</p>
+<h3 id="telemetria">Telemetria:</h3>
+<p>Responsável por transmitir informações e comandos do Drone para o solo e vice-versa. Pode ser utilizada para transmitir o status da bateria, posição atual, imagens e vídeos capturados e comandar o drone caso o computador de bordo não esteja funcionando como deveria.</p>
+<h3 id="gps">GPS:</h3>
+<p>Permite descobrir a latitude, longitude, velocidade e direção do drone baseado em uma constelação de satélites.</p>
+<h3 id="controle-e-receptor">Controle e Receptor</h3>
+<ol>
+<li>Rádio Controle:</li>
+</ol>
+<p>Componente que transmite pilotar o drone manualmente, através da transmissão de informações que alteram sua posição, permitindo que ele execute tarefas como Roll, Pitch e Yaw, assim como trocar modos de voo e tomar medidas de segurança.</p>
+<ol>
+<li>Receptor:</li>
+</ol>
+<p>Componente que recebe as informações dadas pelo Rádio Controle, e as transmite para a Controladora de voo.</p>
+<h3 id="computador-de-bordo">Computador de bordo</h3>
+<ol>
+<li>Ele vai rodar um sistema operacional próprio e alguns scripts, e assim, conectado à controladora de voo, podendo deixar o drone autônomo.</li>
+</ol>
+<h3 id="sensores-e-outros-componentes">Sensores e outros componentes</h3>
+<ol>
+<li>Lidar:</li>
+</ol>
+<p>É um método de sensoriamento que utiliza pulsos de laser para medir distâncias dando assim uma visão  tridimensional para nosso drone com altíssima precisão.</p>
+<ol>
+<li>Câmera térmica:</li>
+</ol>
+<p>Cria imagens baseado na quantidade de radiação emitida pelos corpos, o que nos permite estimar a sua temperatura. Nós utilizamos para identificar pessoas (ou dummies) em lugares com baixa visibilidade.</p>
+<ol>
+<li>Optical Flow:</li>
+</ol>
+<p>É uma câmera que mede o movimento do drone baseado na movimentação dos pontos presentes na imagem.</p>
+<h2 id="o-drone-1p"><strong>O Drone (1p)</strong></h2>
+<ol>
+<li>
+<p>Ground Station</p>
+</li>
+<li>
+<p>Q Ground Control:</p>
+</li>
+</ol>
+<p>É a interface gráfica utilizada em um computador/notebook/celular para obter uma comunicação drone-piloto que vai além do que apenas um rádio controle. Ela permite calibrar o drone, configurar parâmetros, monitorar, fazer voo simples e criar planejamentos de voos.</p>
+<ol>
+<li>Firmware</li>
+</ol>
+<p>Firmware é o software embarcado na controladora de voo, e tem a função de fazer o controle mais básico e de baixo nível do drone.</p>
+<p>Exemplos:</p>
+<ol>
+<li>
+<p>PX4 </p>
+</li>
+<li>
+<p>Ardupilot</p>
+</li>
+</ol>
+<h2 id="boas-praticas-de-hardware-1p">Boas práticas de Hardware (1p)</h2>
+<ol>
+<li>
+<p>Não queimar o amiguinho com ferro de solda? goxto rs </p>
+</li>
+<li>
+<p>Muito cuidado ao manusear as baterias LiPo pois são muito voláteis, sempre respeitando os procedimentos para carregamento e os níveis de descarga recomendados (descarga máxima 20%)</p>
+</li>
+<li>
+<p>Verificar as ligações de acordo com os devidos circuitos esquemáticos antes de energizar qualquer circuito a fim de evitar a queima de componentes ou riscos ao operador</p>
+</li>
+<li>
+<p>Sempre se atentar para a qualidade e segurança das ligações ao testar componentes isolados em bancada, evitando curtos e danos aos equipamentos.</p>
+</li>
+</ol>
+<h2 id="boas-praticas-de-voo-1p">Boas práticas de vôo (1p)</h2>
+<h3 id="protocolo-de-voo">Protocolo de vôo</h3>
+<p>Sempre usar o nosso protocolo de vôo antes de pilotar algum drone feito pela equipe(https://skyrats.github.io/knowledge_base/Introdução/preflightcheck/), caso seja um drone comercial, usar o próprio protocolo de vôo.</p>
+<h3 id="modos-de-voo-basicos-da-px4-httpsdocspx4iov190enflight_modes">Modos de vôo básicos da PX4 (https://docs.px4.io/v1.9.0/en/flight_modes/)</h3>
+<ol>
+<li>
+<p>Position</p>
+</li>
+<li>
+<p>O throttle fica no meio do canal</p>
+</li>
+<li>
+<p>Usa o GPS para controlar e ajustar sua posição</p>
+</li>
+<li>
+<p>Mais fácil de controlar</p>
+</li>
+<li>
+<p>Stabilized</p>
+</li>
+<li>
+<p>O throttle fica na parte inferior do canal</p>
+</li>
+<li>
+<p>Não usa GPS para ajustar posição</p>
+</li>
+<li>
+<p>Meio difícil de controlar</p>
+</li>
+<li>
+<p>Altitude</p>
+</li>
+<li>
+<p>Igual o stabilized, porém mantém a altitude do drone controlada</p>
+</li>
+<li>
+<p>Manual</p>
+</li>
+<li>
+<p>Controle 100% manual do drone, sem estabilizações.</p>
+</li>
+<li>
+<p>Muito difícil de controlar</p>
+</li>
+<li>
+<p>Todos esses modos existem no ardupilot, só que com alguns outros nomes: <a href="https://ardupilot.org/plane/docs/flight-modes.html">https://ardupilot.org/plane/docs/flight-modes.html</a></p>
+</li>
+</ol></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../../Geral/preflightcheck/" title="Protocolo de Segurança"><span>Previous</span></a></div>
+        <div class="next"><a href="../Componentes/RCs/TaranisQX7/" title="Taranis QX7"><span>Next</span></a></div>
+    </div>
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
+</footer>
+            </div>
+        </main>
+    </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+    <script src="../../search/main.js"></script>
+</body>
+
+</html>
