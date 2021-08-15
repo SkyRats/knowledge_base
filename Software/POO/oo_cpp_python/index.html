@@ -1,241 +1,131 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <meta name="author" content="Skyrats">
-  <link rel="canonical" href="https://skyrats.github.io/knowledge_base/Software/POO/oo_cpp_python/">
-  <link rel="shortcut icon" href="../../../img/favicon.ico">
-  <title>Em C++ - Knowledge Base - Skyrats</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+<html>
 
-  <link rel="stylesheet" href="../../../css/theme.css" />
-  <link rel="stylesheet" href="../../../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Em C++";
-    var mkdocs_page_input_path = "Software/POO/oo_cpp_python.md";
-    var mkdocs_page_url = "/knowledge_base/Software/POO/oo_cpp_python/";
-  </script>
-  
-  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/c.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/cpp.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/xml.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/matlab.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Skyrats">
+    <link rel="shortcut icon" href="../../../img/favicon.ico">
+    <title>Programação Orientada a Objetos &mdash; Knowledge Base - Skyrats</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    <link rel="stylesheet" href="../../../css/theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script> 
 </head>
 
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<body ontouchstart="">
+    <div id="container">
+        <aside>
+            <div class="home">
+                <div class="title">
+                    <button class="hamburger"></button>
+                    <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+                </div>
+                <div class="search">
+                    <div role="search">
+    <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    </form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
-                    </li>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="root">
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../..">Home</a></li>
+                    <li class="toctree-l1">
+<a class="nav-item" href="../../../about/">About</a></li>
+                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/Instalacao/">Instalações</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../../Hardware/introHW/">Introdução ao Hardware para Drones</a></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
+<ul class="subnav hide">
+    <li class="toctree-l4"><a class="nav-item" href="../../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
+</ul></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
+    <li class="toctree-l3"><a class="nav-item" href="../../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a></li>
+</ul></li>
+    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
+<ul class="subnav hide">
+    <li class="toctree-l3"><a class="nav-item" href="../../../Hardware/4G/TransArqv/">Transferência de Arquivos</a></li>
+</ul></li>
+    <li class="toctree-l2">
+<a class="nav-item" href="../../../empty">Análise de Logs de Voo</a></li>
+</ul></li>
+                    <li class="toctree-l1"><button class="section nav-item">Software</button>
+<ul class="subnav">
+    <li class="toctree-l2"><a class="nav-item" href="../../Convencoes-de-Codigo/">Convenções de Código</a></li>
+    <li class="toctree-l2 current"><a class="nav-item current" href="./">Programação Orientada a Objetos</a><a class="nav-item current" href="./">Programação Orientada a Objetos</a>
+<ul class="subnav">
+<li class="toctree-l3"><a class="nav-item toc" href="#1-paradigmas-de-programacao">1 Paradigmas de Programação</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#2-basicos-de-c">2 Básicos de C++</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#3-conceitos-basicos-de-oo">3 Conceitos Básicos de OO</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#4-encapsulamento">4 Encapsulamento</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#5-getters-e-setter">5 Getters e Setter</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#6-construtor-e-destrutor">6 Construtor e Destrutor</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#7-vetor-de-objetos">7 Vetor de Objetos</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#8-heranca-e-polimorfismo">8 Herança e Polimorfismo</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#9-informacoes-a-mais">9 Informações a mais</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#1-conceitos-basicos-de-oo">1 Conceitos Básicos de OO</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#2-criando-a-classe">2 Criando a Classe</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#3-heranca">3 Herança</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#4-organizacao-dos-arquivos">4 Organização dos Arquivos</a></li>
+<li class="toctree-l3"><a class="nav-item toc" href="#5-saiba-mais-hihih">5 Saiba Mais hihih</a></li>
+</ul></li>
+    <li class="toctree-l2"><a class="nav-item" href="../../Gazebo/">Gazebo</a></li>
+</ul></li>
                 </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../../about/">About</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Geral</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/Instalacao/">Instalações</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/formulario/">Formulário(Linux, ROS, Gazebo)</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../../Geral/preflightcheck/">Protocolo de Segurança</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Hardware</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="#">Componentes</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="#">Rádio Controles</a>
-    <ul>
-                <li class="toctree-l3"><a class="reference internal" href="../../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
-                </li>
-    </ul>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a>
-                </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="#">Firmware</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a>
-                </li>
-                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
-                </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="#">4G</a>
-    <ul>
-                <li class="toctree-l2"><a class="reference internal" href="../../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
-                </li>
-    </ul>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Software</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="../../Convencoes-de-Codigo/">Convenções de Código</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="#">Programação Orientada a Objetos</a>
-    <ul class="current">
-                <li class="toctree-l2 current"><a class="reference internal current" href="./">Em C++</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#1-paradigmas-de-programacao">1 Paradigmas de Programação</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#2-basicos-de-c">2 Básicos de C++</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#21-cin-e-cout">2.1 CIN e COUT</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#22-string">2.2 String</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#3-conceitos-basicos-de-oo">3 Conceitos Básicos de OO</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#31-classe">3.1 Classe</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#32-objetos">3.2 Objetos</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#33-atributos">3.3 Atributos</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#34-metodos">3.4 Métodos</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#34-revisao-de-ponteiros-ou-e-null">3.4 Revisão de Ponteiros ("-&gt;" ou "."?, e NULL)</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-encapsulamento">4 Encapsulamento</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#41-private">4.1 Private</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#42-public">4.2 Public</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#43-protected">4.3 Protected</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#44-headersh-e-hpp-e-sourcescpp">4.4 Headers(.h e .hpp) e Sources(.cpp)</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#45-ifndef-endif-e-define">4.5 "#ifndef - #endif" e "#define"</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#5-getters-e-setter">5 Getters e Setter</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#6-construtor-e-destrutor">6 Construtor e Destrutor</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#61-construtor">6.1 Construtor</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#62-destrutor">6.2 Destrutor</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#7-vetor-de-objetos">7 Vetor de Objetos</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#8-heranca-e-polimorfismo">8 Herança e Polimorfismo</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#81-o-que-e-um-filho">8.1 O que é um filho</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#82-principio-da-substituicao">8.2 Princípio da Substituição</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#83-protected">8.3 Protected</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#9-informacoes-a-mais">9 Informações a mais</a>
-        <ul>
-    <li class="toctree-l4"><a class="reference internal" href="#91-const">9.1 Const</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#92-virtual">9.2 Virtual</a>
-    </li>
-    <li class="toctree-l4"><a class="reference internal" href="#93-namespace-e-std">9.3 Namespace e STD</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="../../Gazebo/">Gazebo</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
-                    </li>
-                </ul>
-      </div>
+            </nav>
+            <div class="repo">
+    <div class="link">
+        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">Knowledge Base - Skyrats</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../../..">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Software &raquo;</li>
-        
-      
-        
-          <li>Programação Orientada a Objetos &raquo;</li>
-        
-      
-    
-    <li>Em C++</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Software/POO/oo_cpp_python.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
+    <div class="previous"><a href="../../Convencoes-de-Codigo/">&laquo; Previous</a></div>
+    <div class="next"><a href="../../Gazebo/">Next &raquo;</a></div>
 </div>
-
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="workshop-de-programacao-orientada-a-objetos">Workshop de Programação Orientada a Objetos</h1>
+        </aside>
+        <div id="spacer"><button class="arrow"></button></div>
+        <main>
+            <div class="home-top">
+                <button class="hamburger"></button>
+                <a href="../../.." class="site-name"> Knowledge Base - Skyrats</a>
+            </div>
+            <div id="main">
+                <nav class="breadcrumbs">
+<ul>
+    <li>Software</li>
+</ul>
+</nav>
+                <div id="content"><h1 id="workshop-de-programacao-orientada-a-objetos">Workshop de Programação Orientada a Objetos</h1>
 <h2 id="1-paradigmas-de-programacao">1 Paradigmas de Programação</h2>
 <p>Paradigma é o jeito que a linguagem de programação é programada, por exemplo, o que vocês viram no workshop de introdução era o paradigama imperativo, onde você manda um "passo a passo" para o programa rodar.</p>
 <p>Agora, o que vamos aprender é o paradigma de orientação a objetos, em que vai surgir a ideia de classes e objetos, que vão ser um nível de abstração a mais!</p>
@@ -839,63 +729,25 @@ skyrats
 <p>Existem mais métodos especiais, esses são apenas exemplos</p>
 <h3 id="53-encapsulamento">5.3 Encapsulamento</h3>
 <p>De fato em python, o código não obedece o encapsulamento. Por isso, a boa prática que foi comentado anteriormente de colocar o <code>_</code> antes de atributos e métodos que não devem ser alterados, apesar de qualquer um poder alterá-los.</p>
-<p>Esse é um dos motivos que há divergência quando se fala que python não é uma linguagem orientada a objetos.</p>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../Gazebo/" class="btn btn-neutral float-right" title="Gazebo">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../../Convencoes-de-Codigo/" class="btn btn-neutral" title="Convenções de Código"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+<p>Esse é um dos motivos que há divergência quando se fala que python não é uma linguagem orientada a objetos.</p></div>
+                <footer>
+    <div class="footer-buttons">
+        <div class="previous"><a href="../../Convencoes-de-Codigo/" title="Convenções de Código"><span>Previous</span></a></div>
+        <div class="next"><a href="../../Gazebo/" title="Gazebo"><span>Next</span></a></div>
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <div class="footer-note">
+        <p>
+            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
+            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
+        </p>
+    </div>
 </footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-        <span>
-          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
-        </span>
-    
-    
-      <span><a href="../../Convencoes-de-Codigo/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../../Gazebo/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
+            </div>
+        </main>
+    </div>
     <script>var base_url = '../../..';</script>
-    <script src="../../../js/theme_extra.js" defer></script>
-    <script src="../../../js/theme.js" defer></script>
-      <script src="../../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
+    <script src="../../../js/theme.js"></script>
+    <script src="../../../search/main.js"></script>
 </body>
+
 </html>
