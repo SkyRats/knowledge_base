@@ -19,6 +19,7 @@ nav:
         - 'Taranis QX7' : 'Hardware/Componentes/RCs/TaranisQX7.md'
       - 'Guia de Escolha de ESCs' : 'Hardware/Componentes/ESCs.md'
       - 'RPLidar S1 360' : 'Hardware/Componentes/RPLIDARS1360.md'
+      - 'Instalar TL-WN823N driver no Ubuntu Mate' : 'Hardware/Componentes/tlwn823n.md'
     - 'Firmware':
       - 'Introdução ao MAVLink' : 'Hardware/Firmware/Introdução ao MAVLink.md'
       - 'Introdução ao PX4' : 'Hardware/Firmware/IntroPX4.md'
@@ -33,7 +34,7 @@ nav:
 
 
 theme:
-  name: ivory
+  name: readthedocs
   features:
     - navigation.expand
     - toc.integrate

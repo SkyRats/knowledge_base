@@ -1,118 +1,226 @@
 <!DOCTYPE html>
-<html>
-
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Skyrats">
-    <link rel="shortcut icon" href="../../img/favicon.ico">
-    <title>Protocolo de Segurança &mdash; Knowledge Base - Skyrats</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
-    <link rel="stylesheet" href="../../css/theme.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Skyrats">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Protocolo de Segurança - Knowledge Base - Skyrats</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Protocolo de Seguran\u00e7a";
+    var mkdocs_page_input_path = "Geral/preflightcheck.md";
+    var mkdocs_page_url = "/knowledge_base/Geral/preflightcheck/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/bash.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/c.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/cpp.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/xml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/matlab.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
 </head>
 
-<body ontouchstart="">
-    <div id="container">
-        <aside>
-            <div class="home">
-                <div class="title">
-                    <button class="hamburger"></button>
-                    <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
-                </div>
-                <div class="search">
-                    <div role="search">
-    <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-        <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-    </form>
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Knowledge Base - Skyrats</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
 </div>
-                </div>
-            </div>
-            <nav class="nav">
-                <ul class="root">
-                    <li class="toctree-l1">
-<a class="nav-item" href="../..">Home</a></li>
-                    <li class="toctree-l1">
-<a class="nav-item" href="../../about/">About</a></li>
-                    <li class="toctree-l1"><button class="section nav-item">Geral</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../Instalacao/">Instalações</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../formulario/">Formulário(Linux, ROS, Gazebo)</a></li>
-    <li class="toctree-l2 current"><a class="nav-item current" href="./">Protocolo de Segurança</a>
-<ul class="subnav">
-<li class="toctree-l3"><a class="nav-item toc" href="#instrucoes">Instruções:</a></li>
-</ul></li>
-    <li class="toctree-l2">
-<a class="nav-item" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a></li>
-</ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">Hardware</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a></li>
-    <li class="toctree-l2"><button class="section nav-item hide">Componentes</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><button class="section nav-item hide">Rádio Controles</button>
-<ul class="subnav hide">
-    <li class="toctree-l4"><a class="nav-item" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a></li>
-</ul></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a><a class="nav-item" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a></li>
-</ul></li>
-    <li class="toctree-l2"><button class="section nav-item hide">Firmware</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/Introdu%C3%A7%C3%A3o%20ao%20MAVLink/">Introdução ao MAVLink</a></li>
-    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a></li>
-</ul></li>
-    <li class="toctree-l2"><button class="section nav-item hide">4G</button>
-<ul class="subnav hide">
-    <li class="toctree-l3"><a class="nav-item" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a></li>
-</ul></li>
-    <li class="toctree-l2">
-<a class="nav-item" href="../../empty">Análise de Logs de Voo</a></li>
-</ul></li>
-                    <li class="toctree-l1"><button class="section nav-item">Software</button>
-<ul class="subnav">
-    <li class="toctree-l2"><a class="nav-item" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a><a class="nav-item" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a></li>
-    <li class="toctree-l2"><a class="nav-item" href="../../Software/Gazebo/">Gazebo</a></li>
-</ul></li>
-                </ul>
-            </nav>
-            <div class="repo">
-    <div class="link">
-        <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github"> GitHub</a>
-    </div>
-    <div class="previous"><a href="../formulario/">&laquo; Previous</a></div>
-    <div class="next"><a href="../../Hardware/introHW/">Next &raquo;</a></div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Geral</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Instalacao/">Instalações</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../formulario/">Formulário(Linux, ROS, Gazebo)</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Protocolo de Segurança</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#protocolo-de-seguranca">Protocolo de Segurança</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#instrucoes">Instruções:</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="https://github.com/SkyRats/knowledge_base/issues">Issue Tracker</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Hardware</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Hardware/introHW/">Introdução ao Hardware para Drones</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Componentes</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <span class="caption-text">Rádio Controles</span>
+    <ul class="subnav">
+                <li class="toctree-l4">
+                    
+    <a class="" href="../../Hardware/Componentes/RCs/TaranisQX7/">Taranis QX7</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Hardware/Componentes/ESCs/">Guia de Escolha de ESCs</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Hardware/Componentes/RPLIDARS1360/">RPLidar S1 360</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Firmware</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Hardware/Firmware/Introdução ao MAVLink/">Introdução ao MAVLink</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Hardware/Firmware/IntroPX4/">Introdução ao PX4</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">4G</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Hardware/4G/TransArqv/">Transferência de Arquivos</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../empty">Análise de Logs de Voo</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Software</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Software/Convencoes-de-Codigo/">Convenções de Código</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Software/POO/oo_cpp_python/">Programação Orientada a Objetos</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Software/Gazebo/">Gazebo</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Knowledge Base - Skyrats</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Geral &raquo;</li>
+        
+      
+    
+    <li>Protocolo de Segurança</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/SkyRats/knowledge_base/edit/main/docs/Geral/preflightcheck.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
 </div>
-        </aside>
-        <div id="spacer"><button class="arrow"></button></div>
-        <main>
-            <div class="home-top">
-                <button class="hamburger"></button>
-                <a href="../.." class="site-name"> Knowledge Base - Skyrats</a>
-            </div>
-            <div id="main">
-                <nav class="breadcrumbs">
-<ul>
-    <li>Geral</li>
-</ul>
-</nav>
-                <div id="content"><h1 id="protocolo-de-seguranca">Protocolo de Segurança</h1>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="protocolo-de-seguranca">Protocolo de Segurança</h1>
 <p>Essas são as instruções para se realizar obrigatoriamente antes de cada vôo, para garantir segurança do operador, das pessoas pŕoximas, e garantir a integridade do drone.</p>
 <hr />
 <h2 id="instrucoes">Instruções:</h2>
@@ -151,25 +259,55 @@
 <li>Verificar o parâmetro do RTL</li>
 <li>Testar o RTL (Dar kill após)</li>
 <li>Então vôo permitido!!!</li>
-</ol></div>
-                <footer>
-    <div class="footer-buttons">
-        <div class="previous"><a href="../formulario/" title="Formulário(Linux, ROS, Gazebo)"><span>Previous</span></a></div>
-        <div class="next"><a href="../../Hardware/introHW/" title="Introdução ao Hardware para Drones"><span>Next</span></a></div>
-    </div>
-    <div class="footer-note">
-        <p>
-            Built with <a href="http://www.mkdocs.org">MkDocs</a> using
-            <a href="https://github.com/daizutabi/mkdocs-ivory">Ivory theme</a>.
-        </p>
-    </div>
-</footer>
+</ol>
+              
             </div>
-        </main>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../Hardware/introHW/" class="btn btn-neutral float-right" title="Introdução ao Hardware para Drones">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../formulario/" class="btn btn-neutral" title="Formulário(Linux, ROS, Gazebo)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
     </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-    <script src="../../search/main.js"></script>
-</body>
+  
 
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/SkyRats/knowledge_base/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../formulario/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../Hardware/introHW/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
 </html>
