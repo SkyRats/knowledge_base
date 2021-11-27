@@ -23,11 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Falta algo aqui',
+    title: 'Documentação e posts',
     Svg: require('../../static/img/logoBrancoTransparente.svg').default,
     description: (
       <>
-        versão beta
+        Aqui você poderá ler a documentação produzida pela equipe além de alguns posts no nosso blog.
       </>
     ),
   },

@@ -1,35 +1,17 @@
 ---
 sidebar_position: 1
+id: intro
+title: Introdução
 ---
 
-# Tutorial Intro
+# Skyrats Knowledge Base
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Repositório para a organização e disponibilização de conhecimentos da equipe Skyrats.
 
-## Getting Started
+Neste repositório, temos os seguintes tipos de conteúdos:
 
-Get started by **creating a new site**.
+- **Guias**: tutoriais passo a passo, como uma instalação ou a realização de algum tipo específico de tarefa;
+- **Documentações**: explicações sobre o que é/como funciona uma determinada plataforma/conceito/atividade (equivalentes a "mini workshops");
+- **Solução de erros**: descrição de um erro obtido, junto a uma possível solução. Fica presente na aba de **issues**.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npm init docusaurus@latest my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and displays your changes.
+Caso deseje incluir novas páginas e posts a esse site, por favor consulte a página do [projeto no GitHub](https://github.com/SkyRats/knowledge_base).

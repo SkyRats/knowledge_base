@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Protocolo de Segurança
 
 Essas são as instruções para se realizar obrigatoriamente antes de cada vôo, para garantir segurança do operador, das pessoas pŕoximas, e garantir a integridade do drone.

@@ -1,17 +1,12 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+murilo-fab:
+  name: Murilo Ferreira
+  title: Membro do Hardware
+  url: https://github.com/Murilo-fab
+  image_url: https://github.com/Murilo-fab.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+fecln:
+  name: Felipe Cardenas
+  title: Membro do Hardware
+  url: https://github.com/FeCLN
+  image_url: https://github.com/FeCLN.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png

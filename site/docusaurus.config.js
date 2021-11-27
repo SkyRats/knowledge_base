@@ -111,8 +111,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Skyrats Knowledge Base. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme, //Mudar
-        darkTheme: darkCodeTheme, //Mudar
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
       tableOfContents: {
         minHeadingLevel: 2,
