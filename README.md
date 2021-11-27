@@ -65,7 +65,7 @@ tags: [tag1, tag2, tag3]
 ---
 ```
 
-Em caso de dúvida, um bom arquivo para tomar de base é o, já citado, 2021-11-27-first-blog-post.
+Em caso de dúvida, um bom arquivo para tomar de base é o 2021-11-27-first-blog-post, que foi citado acima.
 
 ## Deploy
 
