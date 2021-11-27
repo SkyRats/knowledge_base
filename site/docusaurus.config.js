@@ -9,7 +9,7 @@ const config = {
   title: 'Knowledge Base',
   tagline: 'A documentação da Skyrats',
   url: 'https://skyrats.github.io',
-  baseUrl: '/', //ajeitar dps
+  baseUrl: '/knowledge_base/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logoPretoTransparente.svg',
