@@ -4,16 +4,16 @@
         <title>Knowledge Base Blog</title>
         <link>https://skyrats.github.io/knowledge_base/blog</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 27 Nov 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[First Blog Post]]></title>
-            <link>https://skyrats.github.io/knowledge_base/blog/first-blog-post</link>
-            <guid>first-blog-post</guid>
-            <pubDate>Tue, 28 May 2019 00:00:00 GMT</pubDate>
-            <description><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></description>
-            <content:encoded><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content:encoded>
+            <title><![CDATA[Primeiro post]]></title>
+            <link>https://skyrats.github.io/knowledge_base/blog/primeiro-post</link>
+            <guid>primeiro-post</guid>
+            <pubDate>Sat, 27 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no repositório do projeto.]]></description>
+            <content:encoded><![CDATA[<p>Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no <a href="https://github.com/SkyRats/knowledge_base">repositório do projeto</a>.</p>]]></content:encoded>
         </item>
     </channel>
 </rss>

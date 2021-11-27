@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://skyrats.github.io/knowledge_base/blog</id>
     <title>Knowledge Base Blog</title>
-    <updated>2019-05-28T00:00:00.000Z</updated>
+    <updated>2021-11-27T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://skyrats.github.io/knowledge_base/blog"/>
     <subtitle>Knowledge Base Blog</subtitle>
     <icon>https://skyrats.github.io/knowledge_base/img/logoPretoTransparente.svg</icon>
     <entry>
-        <title type="html"><![CDATA[First Blog Post]]></title>
-        <id>first-blog-post</id>
-        <link href="https://skyrats.github.io/knowledge_base/blog/first-blog-post"/>
-        <updated>2019-05-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
-        <content type="html"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet</p>]]></content>
+        <title type="html"><![CDATA[Primeiro post]]></title>
+        <id>primeiro-post</id>
+        <link href="https://skyrats.github.io/knowledge_base/blog/primeiro-post"/>
+        <updated>2021-11-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no repositório do projeto.]]></summary>
+        <content type="html"><![CDATA[<p>Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no <a href="https://github.com/SkyRats/knowledge_base">repositório do projeto</a>.</p>]]></content>
         <author>
-            <name>Gao Wei</name>
-            <uri>https://github.com/wgao19</uri>
+            <name>Murilo Ferreira</name>
+            <uri>https://github.com/Murilo-fab</uri>
         </author>
     </entry>
 </feed>
