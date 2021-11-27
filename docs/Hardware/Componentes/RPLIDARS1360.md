@@ -1,5 +1,5 @@
 # RPLidar 360 S1
-![Lidar360](/imgs/LIDAR.jpg)
+![Lidar360](./assets/LIDAR.jpg)
 É um Lidar rotativo, mede as distâncias entre o ambiente em 360 graus e o próprio lidar, permitindo mapeamento e localização indoor, além de desvio de obstáculos
 
 ## 1. Conexão em Hardwre
@@ -18,7 +18,7 @@ O package rplidar_ros já vem pronto para ser clonado em um catkin workspace e u
 
 Para testes a respeito da leitura do sensor, também pode ser usado o view_rplidar_s1.launch, que consiste na mesma coisa que o comando anterior com adição de uma janela do rviz já configurada para obter a leitura do laser
 
-![RViz](/imgs/LIDAR360RVIZ.gif)
+![RViz](./assets/LIDAR360RVIZ.gif)
 Caso alguém tenha interesse no funcionamento do node ROS com mais detalhes, o código fonte pode ser encontrado em src/node.cpp e é o unico presente neste package
 
 Em termos de tópicos publicados, o funcionamento desse node é simples, contendo apenas um publisher. O tópico criado tem o nome de "scan" e recebe constantemente a leitura do sensor em formato sensor_msgs/LaserScan, que pode ser encontrado em http://docs.ros.org/en/api/sensor_msgs/html/msg/LaserScan.html

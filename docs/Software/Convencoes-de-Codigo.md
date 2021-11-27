@@ -4,7 +4,6 @@ Em geral, times de desenvolvedores passam mais tempo lendo e mantendo código j�
 
 Nesse contexto, convenções de programação servem como uma fundação para que todos consigam entender e escrever com facilidade código que outras pessoas entendam. Elas economizam tempo de revisão, permitindo que o programador entenda mais rapidamente a estrutura de um programa pouco familiar. Além disso, facilitam que outros grupos integrem código de diversos times e adaptem-no com facilidade.
 
-<br>
 
 ## Princípios gerais
 
@@ -94,7 +93,7 @@ Do Google C++ Style Guide:
 
 > In all code, including naming and comments, use inclusive language and avoid terms that other programmers might find disrespectful or offensive (such as "master" and "slave", "blacklist" and "whitelist", or "redline"), even if the terms also have an ostensibly neutral meaning. Similarly, use gender-neutral language unless you're referring to a specific person (and using their pronouns). For example, use "they"/"them"/"their" for people of unspecified gender (even when singular), and "it"/"its" for software, computers, and other things that aren't people.
 
-<br>
+
 
 ## Python
 
@@ -406,7 +405,7 @@ if not seq
 if len(seq)
 ```
 
-<br>
+
 
 ## C++
 
@@ -759,7 +758,7 @@ void set_count(int count)
 	-  Só faça uma subclasse de uma superclasse se o objeto da subclasse for "um tipo de" objeto da superclasse (e.g. Skyrats é "um tipo de" Grupo de Extensão)
 -  Para representar o valor `NULL`, use `nullptr` para ponteiros e `'\0'` para char
 
-<br>
+
 
 ## ROS
 
@@ -787,7 +786,6 @@ void set_count(int count)
 - Para funções, use `ROS_DEPRECATED`
 - Para classes, use `ROS_DEPRECATED` no construtor da classe
 
-<br>
 
 ## Referências
 

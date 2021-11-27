@@ -1,3 +1,8 @@
+--
+id: index
+title: index
+--
+
 **Skyrats Knowledge Base**
 
 Repositório para a organização e disponibilização de conhecimentos da equipe Skyrats.

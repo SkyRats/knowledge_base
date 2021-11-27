@@ -11,7 +11,7 @@ Depois do workshop de introdução a programação vocês já devem estar brabos
 ### 2.1 CIN e COUT
 Essas são as funções de impressão e leitura do C++! 
 
-Em C para usar os famosos printf e scanf era necessário dar o #include <stdio.h>, agora aqui em C++ para usar o cin (C in) e cout (C out), de #include <iostream>.
+Em C para usar os famosos printf e scanf era necessário dar o `#include <stdio.h>`, agora aqui em C++ para usar o cin (C in) e cout (C out), de `#include <iostream>`.
 
 A função cin substitui o scanf, com ela podemos pegar dados do nosso teclado e atribui-los a uma variável.
 
@@ -43,7 +43,7 @@ int main(){
     
 ### 2.2 String
 
-Existe uma biblioteca chamada <string.h>, com ela você pode representar palavras, frases ou textos, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:
+Existe uma biblioteca chamada string.h, com ela você pode representar palavras, frases ou textos, sem ter que usar o tal do Char. A string é como se fosse um vetor de caracteres, mas muito mais simples, por exemplo, o programa a seguir:
 
 ```cpp
 #include <iostream>

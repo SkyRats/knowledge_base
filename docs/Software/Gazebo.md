@@ -34,13 +34,13 @@ Dentro do gazebo, nós temos dois jeitos para criar models e um para edição, s
 
 Na barra cima do painel de simulação:
 
-![imgs/Untitled.png](imgs/Untitled.png)
+![imgs/Untitled.png](./assets/Untitled.png)
 
 Esses 3 botões podem criar um cubo, uma bola e um cilindro, todos com propriedades de inércia e colisão.
 
 Indo em Edit→Building Editor
 
-![imgs/Untitled%201.png](imgs/Untitled%201.png)
+![imgs/Untitled%201.png](./assets/Untitled 1.png)
 
 Nessa parte você criar casas e outras construções urbanas ou relacionadas, pois facilita bastante.
 
@@ -60,7 +60,7 @@ No painel a esquerda, na aba insert, você pode fazer algumas coisas, como coloc
 
 ### Joints:
 
-![imgs/Untitled%202.png](imgs/Untitled%202.png)
+![imgs/Untitled%202.png](./assets/Untitled 2.png)
 
 No model editor, na barra superior, assim como na imagem acima, você pode criar "joints", elas são ligações entre models, ou entre links de algum model, (links são "models de models", ou melhor, partes de um model que teem representação própria, no drone por exemplo, tem o link do frame, dos rotores e pás, do LiDar, etc..). Essas ligações podem ser de vários tipos, cada um com sua característica, por exemplo, a joint ball é uma ligação com rotação livre em 6 eixos (x, y, z, roll, pitch, yaw), tem a revolute joint, que permite rotação em um eixo, o qual você seleciona o eixo no qual vai ser o livre, entre outros...
 
@@ -315,7 +315,7 @@ Por mais que os plugins tem os métodos Load ou OnUpdate, que permitem que ele r
 
 Esses plugins permitem que nós possamos criar uma nova interface para o gazebo, não só com botões, mas com displays, barras de inserções, e infinitas possiblidades.
 
-![imgs/Untitled%203.png](imgs/Untitled%203.png)
+![imgs/Untitled%203.png](./assets/Untitled 3.png)
 
 Como exemplo nós temos do plugin feito em 2020 para facilitar e controlar as simulações, vou explicar resumidamente o código:
 
@@ -556,7 +556,7 @@ transport::PublisherPtr smoke_pub; // Define o publisher do botão de toggle da 
 
 Agora, dentro do método "Load", que é o que roda no início da simulação, ou para plugins de GUI, no construtor dele:
 
-```cpp
+``` cpp
 this->node = transport::NodePtr(new transport::Node()); // Coloca um node dentro da varíavel node criada
 this->node->Init(); // O método "Init" inicia o node
 
@@ -716,4 +716,4 @@ Continua...
 ## Dicas para programar pro gazebo:
 
 - Improvisa mesmo, coloca umas caixas no mundo p/ dar getPose, colocar umas joint nada a vê, enche de botão, coloca os plugins p conversar, etc.. .etc...
-- Sempre que for fazer algum código pro gazebo, todas as informações são bem abertas e bem legíveis de cada classe de cada método e variável do gazebo. A dica é olhar no gazebo API, lá tem TUDO, TUDO MESMO, e tudo bem explicadinho de cada método... Então sempre que precisar ver as coisas de uma classe procure: "<nome da classe> class reference gazebo, primeiro link e só vai... Ou pode entrar no site do Gazebo API: [https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html](https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html)
+- Sempre que for fazer algum código pro gazebo, todas as informações são bem abertas e bem legíveis de cada classe de cada método e variável do gazebo. A dica é olhar no gazebo API, lá tem TUDO, TUDO MESMO, e tudo bem explicadinho de cada método... Então sempre que precisar ver as coisas de uma classe procure: `<nome da classe>` class reference gazebo, primeiro link e só vai... Ou pode entrar no site do Gazebo API: [https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html](https://osrf-distributions.s3.amazonaws.com/gazebo/api/dev/index.html)
