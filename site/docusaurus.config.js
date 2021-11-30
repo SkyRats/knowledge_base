@@ -44,7 +44,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Skyrats',
+        title: '',
         logo: {
           alt: 'Skyrats Logo',
           src: 'img/logoPretoTransparente.svg',

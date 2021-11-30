@@ -27,7 +27,7 @@ const FeatureList = [
     Svg: require('../../static/img/logoBrancoTransparente.svg').default,
     description: (
       <>
-        Aqui você poderá ler a documentação produzida pela equipe além de alguns posts no nosso blog.
+        Caso deseje contribuir para este site, leia o README do projeto no GitHub ou a introdução da documentação.
       </>
     ),
   },
