@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Knowledge Base Blog</title>
+        <link>https://skyrats.github.io/knowledge_base/blog</link>
+        <description>Knowledge Base Blog</description>
+        <lastBuildDate>Sat, 27 Nov 2021 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Primeiro post]]></title>
+            <link>https://skyrats.github.io/knowledge_base/blog/primeiro-post</link>
+            <guid>primeiro-post</guid>
+            <pubDate>Sat, 27 Nov 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no repositório do projeto.]]></description>
+            <content:encoded><![CDATA[<p>Este é o primeiro post da nova Knowledge Base da Skyrats. Recentemente, decidimos utilizar a biblioteca Docusaurus para gerar a documentação. Mais detalhes podem ser vistos no <a href="https://github.com/SkyRats/knowledge_base">repositório do projeto</a>.</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>
