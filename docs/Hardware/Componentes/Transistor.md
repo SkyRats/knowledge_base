@@ -1,4 +1,4 @@
-#Como funciona um transistor
+# Como funciona um transistor
 
 um tranbsistor é feito de três terminais. A tensão aplicada para 2 terminais 
 de um transistor define se no terceiro terminal passará corrente ou não
@@ -6,7 +6,7 @@ de um transistor define se no terceiro terminal passará corrente ou não
 Uma forma muito útil de utilizar um transistor é utiliza-lo como chave de 
 um sistema. 
 
-#Transistor como Chave 
+# Transistor como Chave 
 
 Podemos utilizar um transistor npn (como um BC337) para servir como chave 
 para o sistema. O seu transistor pode estar naturalmente em curto ou estar 
@@ -20,7 +20,7 @@ para provocar o efeito liga e desliga que buscamos, mas isso pode não necessari
 ser verdade, e, nesse caso, será necessário aumentar a tensão sobre a base para 
 provocar algum efeito no seu transistor.
 
-#Exemplo: Controle de um buzzer com a Odroid xu4
+# Exemplo: Controle de um buzzer com a Odroid xu4
 
 as portas GPIO da Odroid só conseguem mandar uma tensão de 1.8V. No entanto,
 para  que um buzzer apite com intensidade adequada, é necessário mandar uma 
