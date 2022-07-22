@@ -18,7 +18,18 @@ Para controlar o "liga e desliga" do transistor basta ligar a Base em uma
 tensão. Geralmente, a tensão da GPIO de microcontroladores são o suficiente 
 para provocar o efeito liga e desliga que buscamos, mas isso pode não necessariamente
 ser verdade, e, nesse caso, será necessário aumentar a tensão sobre a base para 
-provocar algum efeito no seu transistor.
+provocar algum efeito no seu transistor. Na verdade, o transitor serve para ligar e 
+desligar com potências bem baixas. 
+
+Basicamente, o transistor liga ou desliga quando existe uma tensão considerável entre a 
+base e o emissor. Portanto, se eu conectar minha base em uma porta que tem tensão de 1.8V, e 
+o emissor no ground, teremos uma tensão de 1.8V no transitor, o que será o suficiente para ligá-lo ou desligá-lo.
+No entanto, se eu coloco um potencial muito grande no emissor e muito baixa na base, meu transitor não funcionará. 
+
+![Transistor](./assets/Transistor.png)
+
+Aqui está uma imagem representando um circuito com transitor sendo utilizado como chave. À esquerda está o circuito eléttrico
+e a direita está o que ele representa (Chave fechada ou aberta). 
 
 # Exemplo: Controle de um buzzer com a Odroid xu4
 
