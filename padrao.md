@@ -50,6 +50,6 @@ Onde pode mudar o "python" para a linguagem utilizada
 ![Exemplo](/docs/assets/Padrao.png)
 *Um exemplo de imagem com legenda*
 
-## 5. Referências
+## Referências
 
 [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html#Naming)
