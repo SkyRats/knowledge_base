@@ -47,8 +47,6 @@ Onde pode mudar o "python" para a linguagem utilizada
 
 ## Imagens
 
-Para adicionar imagens, faça o upload para a pasta de assets correspondente ao tópico e então utilize a seguinte sintaxe:
-
 ![Exemplo](/docs/assets/Padrao.png)
 *Um exemplo de imagem com legenda*
 
