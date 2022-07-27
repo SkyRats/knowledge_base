@@ -23,6 +23,6 @@ Para instalar o VIO execute o seguinte código dentro do workspace:
  ``` bash
 git clone https://github.com/Auterion/VIO.git
 catkin build px4_realsense_bridge
-
+```
 
 ## Referências
