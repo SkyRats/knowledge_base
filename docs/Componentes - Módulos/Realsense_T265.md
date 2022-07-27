@@ -26,5 +26,5 @@ catkin build px4_realsense_bridge
 ```
 
 ## Referências
-https://github.com/Auterion/VIO.git  
+https://github.com/Auterion/VIO
 https://github.com/IntelRealSense/realsense-ros
