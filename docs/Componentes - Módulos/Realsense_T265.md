@@ -1,6 +1,6 @@
 # Realsense T265
 
-> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 27/07/2022* 
+> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 01/08/2022* 
 
 >Essa documentação ainda está em progresso
 
