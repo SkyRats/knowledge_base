@@ -53,6 +53,5 @@ EKF2_EV_POS_X, EKF2_EV_POS_Y, EKF2_EV_POS_Z (Coloque a distância em metros da R
 
 ## Referências
 https://github.com/Auterion/VIO   
-https://github.com/IntelRealSense/realsense-ros
-
+https://github.com/IntelRealSense/realsense-ros   
 https://docs.px4.io/v1.12/en/computer_vision/visual_inertial_odometry.html
