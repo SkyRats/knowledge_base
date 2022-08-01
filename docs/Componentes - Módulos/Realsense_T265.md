@@ -25,6 +25,33 @@ git clone https://github.com/Auterion/VIO.git
 catkin build px4_realsense_bridge
 ```
 
+# Como configurar a Realsense
+## Configure a rotação
+É necessário configurar a rotação da câmera no arquivo bridge.launch dentro dos launches do VIO, para mais informações entre [nesse link](https://docs.px4.io/v1.12/en/computer_vision/visual_inertial_odometry.html)
+
+>Por experiência própria a Realsense T265 não parece funcionar bem se não for virada para baixo
+
+## Configure os parâmetors na px4
+
+Os parâmetros que devem ser mudados são: 
+
+EKF2_AID_MASK (Ative position fusion, vision velocity fusion, vision yaw fusion e external vision)
+
+EKF2_HGT_MODE(Coloque em Vision)
+
+EKF2_EV_DELAY(Deixe no default)
+
+EKF2_EV_POS_X, EKF2_EV_POS_Y, EKF2_EV_POS_Z (Coloque a distância em metros da Realsense ao centro de massa do drone)
+
+# Troubleshooting
+
+### A Realsense não é detectada
+
+-Tente desativar a opção do EKF2_AID_MASK Rotate external vision
+-Verifique se o mavros está conectando com rostopic echo, caso não esteja aparecendo os parâmetros que começam com camera verifique o arquivo bridge.launch e o bridge_mavros.launch
+-Tente mexer no cabo da realsense, as vezes ele fica meio solto e não é detectado.
+
 ## Referências
 https://github.com/Auterion/VIO   
 https://github.com/IntelRealSense/realsense-ros
+https://docs.px4.io/v1.12/en/computer_vision/visual_inertial_odometry.html
