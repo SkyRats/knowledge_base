@@ -47,8 +47,8 @@ EKF2_EV_POS_X, EKF2_EV_POS_Y, EKF2_EV_POS_Z (Coloque a distância em metros da R
 
 ### A Realsense não é detectada
 
--Tente desativar a opção do EKF2_AID_MASK Rotate external vision
--Verifique se o mavros está conectando com rostopic echo, caso não esteja aparecendo os parâmetros que começam com camera verifique o arquivo bridge.launch e o bridge_mavros.launch
+-Tente desativar a opção do EKF2_AID_MASK Rotate external vision  
+-Verifique se o mavros está conectando com rostopic echo, caso não esteja aparecendo os parâmetros que começam com camera verifique o arquivo bridge.launch e o bridge_mavros.launch  
 -Tente mexer no cabo da realsense, as vezes ele fica meio solto e não é detectado.
 
 ## Referências
