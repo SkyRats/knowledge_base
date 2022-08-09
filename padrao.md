@@ -4,7 +4,8 @@
 
 **⚠** **VEJA ESSE ARQUIVO COMO RAW** **⚠**
 
-Aqui vai uma introdução, tente manter simples e direto ao ponto para não cansar os leitores.\
+Aqui vai uma introdução, tente manter simples e direto ao ponto para não cansar os leitores.
+
 Se precisar pular linha, não esqueça que no md pula-se duas linhas... Sempre que possível siga [Basic Markdown Syntax](https://www.markdownguide.org/basic-syntax/)
 
 ## Sessão
@@ -48,8 +49,8 @@ Onde pode mudar o "python" para a linguagem utilizada
 ## Imagens
 
 ![Exemplo](/docs/assets/Padrao.png)
-*Um exemplo de imagem com legenda*
+> *Um exemplo de imagem com legenda*
 
 ## Referências
 
-[Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html#Naming)
+- [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html#Naming)
