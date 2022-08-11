@@ -31,7 +31,7 @@ catkin build px4_realsense_bridge
 
 >Por experiência própria a Realsense T265 não parece funcionar bem se não for virada para baixo
 
-## Configure os parâmetors na px4
+## Configure os parâmetros na px4
 
 Os parâmetros que devem ser mudados são: 
 
