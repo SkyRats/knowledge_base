@@ -49,7 +49,7 @@ Além disso será necessária uma telemetria conectada no computador do usuário
 Agora iremos fazer com que um dos canais do controle controlem o giro do servo. Para isso vamos acessar
 a **QGroundControl**. Acesse QGroundControl > Vehicle Setup > Parameters
 
-![conector+servo](./assets/conector+servo.jpeg)
+![conector+servo](./assets/QGround.jpeg)
 
 Quando acessado a página de parâmetros, Busque por **RC_MAP_AUX**. aparecerão 6 parâmetros variando de  RC_MAP_AUX1 ate RC_MAP_AUX6.
 Esse parâmetro refere-se aos canais auxiliares onde seu servo pode estar conectado. Escolha um desses parâmetros para ser utilizado para controlar o PWM de seu servo. Selecione algum canal do controle por onde será enviado o sinal de controle do servo. 
