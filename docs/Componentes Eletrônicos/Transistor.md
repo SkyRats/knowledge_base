@@ -59,3 +59,6 @@ liga o ground do buzzer ao ground da placa.
 
 Mandando um sinal para a base do transistor, o sistema fecha e o buzzer apita. Quando retiramos esse sinal, o circuito abre 
 e o buzzer para de apitar. 
+
+OBS: Importante lembrar que o bjt não é ideal para fazer chaveamento. Isso porque esse componente consome muita corrente. O ideal é 
+clocar um resitor na base para garantir que o transistor não está puxando muita corrente. Para fazer o chaveamento ideal, veja a documentação sobre Mosfet. 
