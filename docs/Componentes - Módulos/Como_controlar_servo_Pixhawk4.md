@@ -1,6 +1,6 @@
-# Como controlar um servo a partir da controladora de vôo PixHawk 4
+# Como controlar um servo com PixHawk 4?
 
-> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 20/08/2022*
+> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 10/09/2022*
 
 # Introdução
 
