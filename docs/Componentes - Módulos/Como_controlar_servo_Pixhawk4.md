@@ -1,6 +1,6 @@
 # Como controlar um servo com PixHawk 4?
 
-> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 10/09/2022*
+> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 11/09/2022*
 
 # Introdução
 
@@ -34,7 +34,7 @@ a trilha vcc é representada pelo sinal "+". Ao conectarmos nosso Ubec nessa tri
 Agora podemos conectar nosso servo em um dos canais auxiliares de modo que seu vcc se encontre com o vcc no conetor e seu gnd se
 encontre com o gnd do conector. 
 
-![conector+servo](./assets/conector+servo.jpeg)
+![conector+servo](./assets/conectorservo.jpeg)
 
 Agora será necessária conectar alguns componentes no drone para nós podemos controlar o servo pela controladora de vôo. Esses componentes são:
 
