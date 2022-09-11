@@ -34,7 +34,7 @@ a trilha vcc é representada pelo sinal "+". Ao conectarmos nosso Ubec nessa tri
 Agora podemos conectar nosso servo em um dos canais auxiliares de modo que seu vcc se encontre com o vcc no conetor e seu gnd se
 encontre com o gnd do conector. 
 
-![conector+servo](./assets/conectorservo.jpeg)
+![conectorservo](./assets/conectorservo.jpeg)
 
 Agora será necessária conectar alguns componentes no drone para nós podemos controlar o servo pela controladora de vôo. Esses componentes são:
 
@@ -49,7 +49,7 @@ Além disso será necessária uma telemetria conectada no computador do usuário
 Agora iremos fazer com que um dos canais do controle controlem o giro do servo. Para isso vamos acessar
 a **QGroundControl**. Acesse QGroundControl > Vehicle Setup > Parameters
 
-![conector+servo](./assets/QGround.jpeg)
+![QGround](./assets/QGround.jpeg)
 
 Quando acessado a página de parâmetros, Busque por **RC_MAP_AUX**. aparecerão 6 parâmetros variando de  RC_MAP_AUX1 ate RC_MAP_AUX6.
 Esse parâmetro refere-se aos canais auxiliares onde seu servo pode estar conectado. Escolha um desses parâmetros para ser utilizado para controlar o PWM de seu servo. Selecione algum canal do controle por onde será enviado o sinal de controle do servo. 
