@@ -4,9 +4,15 @@
         <title>Knowledge Base Blog</title>
         <link>https://skyrats.github.io/knowledge_base/blog</link>
         <description>Knowledge Base Blog</description>
-        <lastBuildDate>Sat, 27 Nov 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Sep 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[IMAV22]]></title>
+            <link>https://skyrats.github.io/knowledge_base/blog/2</link>
+            <guid>2</guid>
+            <pubDate>Thu, 22 Sep 2022 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Primeiro post]]></title>
             <link>https://skyrats.github.io/knowledge_base/blog/primeiro-post</link>
