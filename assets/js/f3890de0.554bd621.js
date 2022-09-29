@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksite=self.webpackChunksite||[]).push([[2868],{576:function(e){e.exports=JSON.parse('{"allTagsPath":"/knowledge_base/blog/tags","slug":"/knowledge_base/blog/tags/tag-1","name":"tag1","count":1,"permalink":"/knowledge_base/blog/tags/tag-1"}')}}]);
