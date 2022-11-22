@@ -1,5 +1,5 @@
 ﻿# Computadores de Bordo (Odroid XU4 vs Raspberry 4)
-
+> *Escrito por [Artur Paparounis](https://github.com/artur-papas). Última atualização: 22/11/2022*
 O computador de bordo, ou Single Board Computer (SBC), é utilizado nos drones para realizar algumas funções computacionais que não podem ser feitas dentro da controladora de voo e que seriam menos eficientes e independentes se realizadas offboard. 
 
 ## Funções principais do computador de bordo
