@@ -34,15 +34,15 @@ O computador de bordo mais potente usado pela equipe foi a **Jetson Nano**, que 
 
 Outro computador de bordo ja utilizado para testes em drones foi a **Labrador 64bits**, que é desenvolvida pela Caninos Loucos e de facil acesso para a equipe. Contudo, por ser um SBC recente e relativamente desconhecido ainda não apresenta muito engajamento da comunidade e quase nenhum software portado. Dessa forma, muitos problemas básicos e desconhecidos foram encontrados durante alguns testes em 2022, mas um voo autônomo foi realizado como prova de conceito.
 
-![Labrador](./assets/Labrador.jpg)
+![Labrador](./assets/Labrador.jpeg)
 
 Durante um longo período de tempo foi utilizado o **Odroid XU4** como computador de bordo, devido a seu preço relativamente baixo de 700 reais e seu peso reduzido de apenas cerca de 50g. Ademais, para seu preço a Odroid possui um processador potente, sendo um Exynos-5422, que é um octa-core com 4 cores de 2,1GHz e 4 cores de 1,4GHz. Um dos principais problemas com a Odroid é sua memória RAM de apenas 2Gb, que é pequena, especialmente se comparada com o processador do próprio SBC.
 
-![Odroid](./assets/Odroid.jpg)
+![Odroid](./assets/Odroid.jpeg)
 
 Em 2022 foi feita a transição da Ordoid XU4 para a **Raspberry Pi 4** na SkyRats, antecedendo a IMAV 2022. O Raspberry Pi é computador de bordo é o mais utilizado por outras equipes de competição de drones e desenvolvedores independentes. Além disso, há uma comunidade enorme de embarcados em volta desse produto, possibilitando encontrar muita documentação, bibliotecas e firmwares na internet. Ademais, a RPi4 é potente, possuindo versões com 4Gb de RAM e um processador quad-core de 1,5GHz. Seu preço é um pouco superior a Odroid, sendo encontrada por 1200 reais.
 
-![Raspberry](./assets/Raspberry.jpg)
+![Raspberry](./assets/Raspberry.jpeg)
 
 ## Odroid XU4 vs Raspberry Pi 4
 
