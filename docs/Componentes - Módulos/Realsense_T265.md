@@ -47,6 +47,6 @@ Desabilite o magnetometro
 -Esse erro ocorre por conta de alimentação da Raspberry Pi, reinicia o serviço. Estamos buscando uma solução definitiva para esse problema.
 
 ## Referências
-https://github.com/Auterion/VIO   
+https://ardupilot.org/dev/docs/ros-vio-tracking-camera.html
 https://github.com/IntelRealSense/realsense-ros   
-https://docs.px4.io/v1.12/en/computer_vision/visual_inertial_odometry.html
+https://dev.intelrealsense.com/docs/open-source-ethernet-networking-for-intel-realsense-depth-cameras
