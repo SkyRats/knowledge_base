@@ -1,10 +1,10 @@
 # Realsense T265
 
-> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 01/08/2022* 
+> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 22/11/2022* 
 
-Esse texto tem como intúito ensinar a instalar os drivers para a tracking camera Realsense T265 e utilizá-la em conjunto com ROS e a VIO para gerar um sistema de posicionamento inercial para um drone.
+Esse texto tem como intúito ensinar a instalar os drivers para a tracking camera Realsense T265 e utilizá-la em conjunto com ROS e a VisionToMavros para gerar um sistema de posicionamento inercial para um drone.
 
->A instalação foi feita em uma Odroid, note que os processos aqui listados podem variar caso seja utilziado outro SBC. Para informações mais genéricas de instalação leia o tutorial de [como buildar a biblioteca da source](https://github.com/i2o3dlimited/librealsense2/blob/master/doc/installation.md)
+>A instalação foi feita em uma Raspberry , note que os processos aqui listados podem variar caso seja utilziado outro SBC. Para informações mais genéricas de instalação leia o tutorial de [como buildar a biblioteca da source](https://github.com/i2o3dlimited/librealsense2/blob/master/doc/installation.md)
 
 ## Requisitos
 
@@ -27,6 +27,7 @@ echo "source ~/catkin_ws/devel/setup.bash"
 ```
 
 # Como configurar a Realsense
+Desabilite o magnetometro
 ## Configure a rotação
 
 
