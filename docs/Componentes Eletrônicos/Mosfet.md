@@ -10,7 +10,7 @@ Eu escrevi uma documentação sobre [como fazer um switch com transitor](https:/
 
 Um mosfet em um circuito parece com isso: 
 
-![Mosfet_circuito](./assets/mosfetcanaln_normal.png)
+![Mosfet_circuito](./assets/mosfetcanalN_normal.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
@@ -56,7 +56,7 @@ Um mosfet de **canal p** exige que a (Vg - Vs) < 0. Nesse caso, **a corrente pas
 
 Podemos ver que o componente é canal p ou canal n pela seta destacada com a bolinha vermelha. 
 
-![Mosfet_circuito](./assets/mosfetcanaln.png)
+![Mosfet_circuito](./assets/mosfetcanalN.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
