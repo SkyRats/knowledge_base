@@ -16,6 +16,17 @@ Primeiro, ver se a corrente estiver muito próxima de um número redondo(30, 40,
 
 Com relação a tensão, deve-se escolher um ESC de acordo com a tensão da bateria LiPO, seja de 4s, 6s, etc...
 
+## Calibragem de ESCs
+
+Durante a CBR 2022 um problemão foi detectado no drone. Um dos motores estava se comportando completamente diferente dos outros, às vezes, mudar configs da controladora como o min. PWM e max. PWM ajuda, mas o que realmente solucionou o problema foi calibrar os ESCs.
+
+É um processo super simples e rápido, feito com auxílio do controle remoto, deve ser feito **SEMPRE** na construção de drones, pois define o minímo e máximo throttle para a o ESC funcionar de maneira efetiva.
+
+Para calibrar:
+
+- [no Ardupilot](https://ardupilot.org/copter/docs/esc-calibration.html)
+- [na PX4](https://docs.px4.io/main/en/advanced_config/esc_calibration.html)
+
 # Referências
 
 - [https://dronenodes.com/drone-esc-electronic-speed-controller/](https://dronenodes.com/drone-esc-electronic-speed-controller/)
