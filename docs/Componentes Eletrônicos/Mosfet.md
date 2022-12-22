@@ -32,7 +32,7 @@ Vamos começar explicando o tópico **1-**. Um mosfet de enriquecimento é aquel
 
 Isso pode ser visto apartir das barrinhas desticadas abaixo.
 
-![Mosfet_circuito](./assets/mosfetcanaln_normal_destacado.png)
+![Mosfet_circuito](./assets/mosfetcanalN_normal_destacado.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
