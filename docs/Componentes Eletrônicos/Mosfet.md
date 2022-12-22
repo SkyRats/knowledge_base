@@ -10,7 +10,7 @@ Eu escrevi uma documentação sobre [como fazer um switch com transitor](https:/
 
 Um mosfet em um circuito parece com isso: 
 
-![Mosfet_circuito](./assets/mosfetcanalN_normal.png)
+![Mosfet_circuito](./assets/mosfetcanaln_normal.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
@@ -32,7 +32,7 @@ Vamos começar explicando o tópico **1-**. Um mosfet de enriquecimento é aquel
 
 Isso pode ser visto apartir das barrinhas desticadas abaixo.
 
-![Mosfet_circuito](./assets/mosfetcanalN_normal_destacado.png)
+![Mosfet_circuito](./assets/mosfetcanaln_normal_destacado.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
@@ -56,13 +56,13 @@ Um mosfet de **canal p** exige que a (Vg - Vs) < 0. Nesse caso, **a corrente pas
 
 Podemos ver que o componente é canal p ou canal n pela seta destacada com a bolinha vermelha. 
 
-![Mosfet_circuito](./assets/mosfetcanalN.png)
+![Mosfet_circuito](./assets/mosfetcanaln.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
 Quando a setinha está entrando no gate, o mosfet é de **canal n**. 
 
-![Mosfet_circuito](./assets/mosfetcanalP.png)
+![Mosfet_circuito](./assets/mosfetcanalp.png)
 
 Fonte: https://br.mouser.com/datasheet/2/427/si2367ds-1764782.pdf
 
@@ -117,9 +117,9 @@ Atente-se, no entanto, que não pode chegar nem perto das indicações máximas 
 As duas imagens abaixo mostram a versão final de um aplaca de circuitos que utilizou a saturação de mosfets para ligar buzzers e Leds.
 Os mosfets utilizado nessa plaquinha tem [esse](https://br.mouser.com/datasheet/2/427/si2312bds-1766095.pdf) datasheet
 
-![plaquinha_1](./assets/CBR_1.jpeg)
+![plaquinha_1](./assets/cbr_1.jpeg)
 
-![plaquinha_2](./assets/CBR_2.jpeg)
+![plaquinha_2](./assets/cbr_2.jpeg)
 
 Os pontinhos pretos na placa são os mosfets. O gate e o drain eram conectados em pads, em que foram soldades fios que conectavam o drain no gnd do load e o gate em um vcc que gerasse tensão suficiente para saturar o mosfet. quando saturado o mosfet conectava o gnd do load com o gnd de uma fonte de tensão para alimentar o load conectado. 
 
