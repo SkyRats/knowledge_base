@@ -22,7 +22,7 @@ Esse tipo de imagem está presente em quase todos os datasheets de mosfets. Apar
 
 Um mosfet é composto por 3 canais, eles são o **gate**, o **source** e o **drain**. A corrente passa pelo canal do mosfet no sentido drain e source, e passa pelo diodo no sentido source drain. O diodo é representado no mosfet pela bolinha vermelha, e o sentido que a corrente passa está indicado pela seta vermelha. 
 
-![Mosfet_circuito](./assets/mosfet_diodo.png)
+![Mosfet_circuito_](./assets/mosfet_diodo.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
@@ -32,7 +32,7 @@ Vamos começar explicando o tópico **1-**. Um mosfet de enriquecimento é aquel
 
 Isso pode ser visto apartir das barrinhas desticadas abaixo.
 
-![Mosfet_circuito](./assets/mosfetcanalN_normal_destacado.png)
+![Mosfet_circuito__](./assets/mosfetcanalN_normal_destacado.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
@@ -40,7 +40,7 @@ Quandos elas são separadas, o mosfet é de enriquecimento.
 
 Quando as barrinhas são juntas,  mosfet é de deplexão.
 
-![Mosfet_circuito](./assets/mosfet_deplexão.png)
+![Mosfet_circuito____](./assets/mosfet_deplexão.png)
 
 Fonte: https://br.mouser.com/datasheet/2/196/Infineon-BSS159N-DS-v02_02-en-520782.pdf
 
@@ -56,13 +56,13 @@ Um mosfet de **canal p** exige que a (Vg - Vs) < 0. Nesse caso, **a corrente pas
 
 Podemos ver que o componente é canal p ou canal n pela seta destacada com a bolinha vermelha. 
 
-![Mosfet_circuito](./assets/mosfetcanalN.png)
+![Mosfet_circuito________](./assets/mosfetcanalN.png)
 
 Fonte: https://br.mouser.com/datasheet/2/240/Littelfuse-2900658.pdf
 
 Quando a setinha está entrando no gate, o mosfet é de **canal n**. 
 
-![Mosfet_circuito](./assets/mosfetcanalP.png)
+![Mosfet_circuito__________](./assets/mosfetcanalP.png)
 
 Fonte: https://br.mouser.com/datasheet/2/427/si2367ds-1764782.pdf
 
@@ -104,7 +104,7 @@ Para finalizar os detalhes de mosfet e entrarmos nas especificidades da placa de
 
 Esse tipo de informação você consegue lozalizar no datasheet do seu componente, como é evidenciado nas imagens abaixo
 
-![Exemplo_datasheet_info_critica](./assets/mosfet_info_critica.png)
+![Exemplo_datasheet_info_critica_1_](./assets/mosfet_info_critica.png)
 Fonte: https://br.mouser.com/datasheet/2/427/si2312bds-1766095.pdf
 
 ![Exemplo_datasheet_info_critica](./assets/mosfet_critico_2.png)
