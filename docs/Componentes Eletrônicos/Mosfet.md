@@ -1,6 +1,6 @@
 # Como Fazer um switch com Mosfet?
 
-> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 21/12/2022*
+> *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 26/12/2022*
 
 ## Introdução
 
@@ -144,3 +144,10 @@ POr fim, veja que a placa que foi construida não foi feita em alguma empresa es
 
 > Caso você seja um skyrater e tenha acesso ao drive da skyrats, deixo [aqui](https://drive.google.com/drive/u/0/folders/1RS7TDS-AVJJmPpEt52vSXyxWkwj2kHbU) um vídeo do drone da CBR funcionando com a plaquinha controlando os leds e buzzers. O nome do arquivo é drone.mp4
 
+## Um pouco sobre o controle da placa
+
+Para ativas os mosfets, utilizamos a GPIO da Raspberry Pi 4 model b. Escrevemos um código em python que controlava a GPIO do computador, e conectamos os pinos no gate do mosfet. Um dos códigos utilizados para o controle da plaquinha pode ser acessado [aqui](https://github.com/SkyRats/skyrats_cbr_2022/blob/main/scripts/fase2/buzzer.py)
+
+## Conclusão: Uma possível nova ideia de projeto
+
+Com pesquisas futuras, descobri que uma forma mais fácil de fazer o controle da placa, ao invés de serem usados mosfets, seria utilizar um multiplexador. 
