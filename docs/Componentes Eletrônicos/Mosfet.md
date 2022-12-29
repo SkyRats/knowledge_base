@@ -151,3 +151,7 @@ Para ativas os mosfets, utilizamos a GPIO da Raspberry Pi 4 model b. Escrevemos 
 ## Conclusão: Uma possível nova ideia de projeto
 
 Com pesquisas futuras, descobri que uma forma mais fácil de fazer o controle da placa, ao invés de serem usados mosfets, seria utilizar um multiplexador. 
+
+## Workshop plaquinha
+
+Deixo [aqui](https://drive.google.com/drive/u/0/folders/1RGkhDRfrlY_tNHbUMCItNTJTjHJG10Ia) o link para acesso ao vídeo gravado do workshop de plaquinha dado por mim. Junto a isso deixo [aqui](https://www.samacsys.com/library-loader-help/) o link do tutorial de como utilizar o library loader da mouser (Assiste o vídeo que se vai entender para o que serve).
