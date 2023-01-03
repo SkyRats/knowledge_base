@@ -80,7 +80,7 @@ A função sleep para a execução do código pelo número de **segundos** dados
 
 O time de software também definiu métodos que iriam controlar o servo durante sua execução. Esses métodos podem ser vistos no código abaixo
 
-```Python
+```python
 from gpiozero import AngularServo
 from gpiozero.pins.pigpio import PiGPIOFactory
 from time import sleep
