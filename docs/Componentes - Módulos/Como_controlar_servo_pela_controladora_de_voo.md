@@ -3,8 +3,7 @@
 > *Escrito por [Rafael Gil](https://github.com/printRafaelprog). Última atualização: 11/09/2022*
 # Introdução
 
-Nesse texto vou discutir como controlar um servo pela controladora de vôo Pixhawk 4, possíveis problemas que você pode ter fazendo isso e como concerta-los.
-
+Nesse texto vou discutir como controlar um servo pela controladora de vôo Pixhawk 4, possíveis problemas que você pode ter fazendo isso e como concerta-los. Observe que esse não é um método autônomo de controle do servo, ele apenas ensinará como controlar o servo com o auxílio de um controle. Se deseja realizar um controle mais autônomo do servo, veja a documentação de como controlá-lo com a Raspberry pi 4 [aqui](https://skyrats.github.io/knowledge_base/docs/Componentes%20-%20M%C3%B3dulos/Como%20_controlar_servo_raspberry)
 >Nesse texto estou utilizando o servo SG90, o qual tem esse datasheet
 >http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
 ## Cuidados 
