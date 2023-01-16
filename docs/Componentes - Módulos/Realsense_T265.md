@@ -1,6 +1,6 @@
 # Realsense T265
 
-> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 22/11/2022* 
+> *Escrito por [João Pedro S.](https://github.com/J0t4py). Última atualização: 16/01/2023* 
 
 Esse texto tem como intúito ensinar a instalar os drivers para a tracking camera Realsense T265 e utilizá-la em conjunto com ROS e a VisionToMavros para gerar um sistema de posicionamento inercial para um drone.
 
@@ -27,19 +27,36 @@ source ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash"
 ```
 
-# Como configurar a Realsense
-Desabilite o magnetometro
-## Configure a rotação
+# Observações
+Desabilite o magnetometro no ros launch também  
+O heading do drone está configurado voltado para a câmera
 
 
 ## Configure os parâmetros
+SERIAL2_PROTOCOL=2  
+SERIAL2_BAUD=921  
+AHRS_EKF_TYPE=3  
+EK2_ENABLE-0  
+EK3_ENABLE=1  
+EK3_SCR1_POSXY=6  
+EK3_SCR1_VELXY=6  
+EK3_SCR1_POSZ=1  
+EK3_SCR1_VELZ=6  
+GPS_TYPE=0  
+VISO_TYPE=2  
+COMPASS_USE=0  
+COMPASS_USE2=0  
+COMPASS_USE3=0  
+EK3_SRC1_YAW=6  
+
+### Para ligar todos os nodes utilize: ``roslaunch vision_to_mavros t265_all_nodes.launch``
 
 
 # Troubleshooting
 
 ### A Realsense não é detectada
 
--Verifique se o mavros está conectando com rostopic echo, caso não esteja aparecendo os parâmetros que começam com camera verifique o arquivo bridge.launch e o bridge_mavros.launch  
+-Verifique se o mavros está conectando com rostopic echo. Caso estejam faltando apenas os parâmetros do /camera o problema está no publish do tópico, tente ver o log do comando usado para ligar todos nodes.  
 -Tente mexer no cabo da realsense, as vezes ele fica meio solto e não é detectado.
 
 ### A realsense para de postar no tópico
@@ -47,6 +64,7 @@ Desabilite o magnetometro
 -Esse erro ocorre por conta de alimentação da Raspberry Pi, reinicia o serviço. Estamos buscando uma solução definitiva para esse problema.
 
 ## Referências
-https://ardupilot.org/dev/docs/ros-vio-tracking-camera.html
+https://ardupilot.org/dev/docs/ros-vio-tracking-camera.html  
 https://github.com/IntelRealSense/realsense-ros   
-https://dev.intelrealsense.com/docs/open-source-ethernet-networking-for-intel-realsense-depth-cameras
+https://dev.intelrealsense.com/docs/open-source-ethernet-networking-for-intel-realsense-depth-cameras  
+https://ardupilot.org/copter/docs/common-vio-tracking-camera.html  
