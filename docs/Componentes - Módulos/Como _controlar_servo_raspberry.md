@@ -1,6 +1,6 @@
 # Como controlar um servo a partir das portas GPIO da uma Raspberry Pi
 
-> *Escrito por [Rafael Gil](https://github.com/printRafaelprog) e [Sophia Celine](https://github.com/sophi011). Última atualização: 03/01/2023*
+> *Escrito por [Rafael Gil](https://github.com/printRafaelprog) e [Sophia Celine](https://github.com/sophi011). Última atualização: 18/01/2023*
 
 ## Introdução 
 
