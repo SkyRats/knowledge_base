@@ -18,15 +18,34 @@ Será necessário uma fonte de tensão para alimentar o servo. Essa fonte de ten
 
 Posteriormente, conecte o cabo de sinal na porta PWM da Rasp. 
 
-## Baixando e instalando a biblioteca na Raspberry Pi 
+## Instalando a biblioteca na Raspberry Pi 
+
+Para começar, devemos atualizar as bibliotecas da Raspberry. Para isso, em um terminal, podemos rodar o comando:
+
+```bash
+sudo apt update
+```
+
+Em seguida, podemos instalar a biblioteca com o ```pip```.
+```bash
+sudo pip3 install gpiozero
+```
+
+Outra alternativa:
+
+```bash
+sudo apt install python3-gpiozero
+```
+
+Com isso, se não houver nenhum erro de instalação, podemos importar a biblioteca no código e começar a usá-la. 
 
 ## Utilizando classe AngularServo
 
 Para entender o código de controle do servo, é necessário entender o funcionamento da classe AngularServo da biblioteca gpiozero. 
 
-Essa classe cria um objeto que represneta o servo conectado na Rasp. A partir dela, é possível setar um movimento máximo e mínimo que o servo consegue se mexer. 
+Essa classe cria um objeto que representa o servo conectado na Rasp. A partir dela, é possível setar um movimento máximo e mínimo que o servo consegue se mexer. 
 
-para setar isso, é necessário ter noção de qual é o range máximo de moviento que seu servo consegue realizar. Para isso, você pode utilizar o método max() e min() relacionado a essa classe. 
+Para setar isso, é necessário ter noção de qual é o range máximo de moviento que seu servo consegue realizar. Para isso, você pode utilizar o método max() e min() relacionado a essa classe. 
 
 Como no exemplo
 
