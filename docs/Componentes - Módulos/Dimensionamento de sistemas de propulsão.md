@@ -58,14 +58,22 @@ Para analisar esses resultados usamos o Ecalc Xcopter, um programa online e pago
  - Potência máxima e utilizada do motor
 
 Ao usar o ecalc, 2 métricas nunca devem ser excedidas, a temperatura crítica e a potência máxima do motor. Mesmo que a configuração testada apresente ótimo desempenho, se ela exceder esses parâmetros ela não será viável ou gerará danos aos componentes do drone.
+
 ![Input](./assets/Input.jpg)
+
 No geral, só é preciso modificar os seguintes campos: peso; quais componentes são considerados no peso colocado; célula da bateria; número de células; tipo de ESC; fabricante do motor; modelo do motor; tipo de hélice; diâmetro da hélice; pitch da hélice; número de pás.
 O campo de procurar motores abre uma janela onde é possível pesquisar motores por peso, tamanho, kv, marca e potência máxima.
+
 ![Resumo](./assets/Resumo.jpg)
+
 Aqui estão dispostos os principais resultados de desempenho do drone. Os dados de tempo de voo pairando e empuxo-peso são as principais métricas de desempenho a serem avaliadas no drone. Já os valores de potência elétrica e temperatura mostram se a configuração é viável ou se danificará os componentes.
+
 ![Detalhado](./assets/Detalhado.jpg)
+
 Aqui estão todos os dados gerados pelo Ecalc, como consumo, eficiência, corrente, empuxo e peso do drone em diferentes condições de voo.
+
 ![Alcance](./assets/Alcance.jpg)
+
 Esse gráfico mostra o alcance e o tempo de voo do drone em diferentes velocidades constantes diferentes.
 
  ### Etapas do dimensionamento
