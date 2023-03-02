@@ -58,3 +58,10 @@ Outro erro comum ao rodar script de python com o Tello é que ele não analisava
 Além de erros de manobras com 'flip', cuidado ao mandar o Tello se movimentar para lugares impossíveis, por exemplo, ir para baixo 2 metros, sendo que ele está voando a um metro do chão. Ou ainda, mandar ele se movimentar em alguma direção abaixo de 20 cm (o mínimo é 20 cm). Quando mandamos algum desses comandos descritos, pode dar o seguinte erro:
 
 ![Out Of Range](./assets/error_ofr.png)
+
+Para evitar esse erro, verifique sempre se a movimentação é possível dentro das limitações do Tello. Por exemplo, em parte do código, verificamos se a altura a descer é possível dada a altura atual do drone:
+
+ ```
+  if getHeight - distance > minHeight:
+                    print("Descendo", distance, "cm")
+ ```
