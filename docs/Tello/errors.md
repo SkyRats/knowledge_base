@@ -1,7 +1,7 @@
+---
+sidebar_position: 4
+---
 
----
-sidebar_position: 1
----
 # Solucionando erros 
 Essa página tem o intuito de mostrar as soluções encontradas para lidar com erros que ocorrem naturalmente com o uso do Tello com scripts em Python, ou fora do aplicativo.
 
@@ -32,7 +32,8 @@ pousar automaticamente após 15 segundos. Veja abaixo a função:
 
 ```
 def keep_tello_alive(self):
-        # Manda sinal para o tello não pousar. Criamos uma função, pois chamaremos em outra classe
+        bash
+        #Manda sinal para o tello não pousar. Criamos uma função, pois chamaremos em outra classe
         if not SIMULATION:
             self.tello.send_control_command("command")
 ```
