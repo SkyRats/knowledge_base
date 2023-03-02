@@ -10,7 +10,7 @@ Essa página tem o intuito de mostrar as soluções encontradas para lidar com e
 Um dos problemas comuns que ocorriam era o Tello pousar inesperadamente, sem motivos aparentes. Isso pode acontecer por algumas razões:
 - **Pouca bateria**: O Tello começa a piscar vermelho (como descrito na tabela do manual) e pousa. Vale a pena sempre mandar printar a bateria para monitorar isso.
 
- ```
+ ```bash
   self.battery = self.tello.get_battery()
   print(self.battery) 
   ```
@@ -42,7 +42,7 @@ quando falta delay são: **error Not joystick** ou **Exception: Command 'xxxx' w
 ## Flip errors
 Outro erro comum ao rodar script de python com o Tello é que ele não analisava o nível de bateria antes de mandar um comando de 'flip'. O problema é que abaixo de 50% de bateria, o drone não dá flips. Ao receber um comando de 'flip' sem ter bateria suficiente, o drone retorna **flip error** e isso pode causar erros maiores no código como **Exception: Command 'xxxx' was unsuccessful for 4 tries.** que pode levar ao pouso automático. Logo, foi incluído no código uma função que sempre verifica o nível de bateria e retorna se é possível dar 'flip' ou não (tudo armazenado na variável *self.tricks* do tipo *bool*):
 
-```
+```bash
  def get_tello_battery(self):
         if not SIMULATION:
             self.battery = self.tello.get_battery()
@@ -61,7 +61,7 @@ Além de erros de manobras com 'flip', cuidado ao mandar o Tello se movimentar p
 
 Para evitar esse erro, verifique sempre se a movimentação é possível dentro das limitações do Tello. Por exemplo, em parte do código, verificamos se a altura a descer é possível dada a altura atual do drone:
 
- ```
+ ```bash
   if getHeight - distance > minHeight:
                     print("Descendo", distance, "cm")
  ```
