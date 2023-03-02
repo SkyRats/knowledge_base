@@ -56,4 +56,4 @@ Outro erro comum ao rodar script de python com o Tello é que ele não analisava
 ```
 ## Out of range
 Além de erros de manobras com 'flip', cuidado ao mandar o Tello se movimentar para lugares impossíveis, por exemplo, ir para baixo 2 metros, sendo que ele está voando a um metro do chão. Ou ainda, mandar ele se movimentar em alguma direção abaixo de 20 cm (o mínimo é 20 cm). Quando mandamos algum desses comandos descritos, pode dar o seguinte erro:
-![Out Of Range](./assets/error_outofrange.png)
+![Out Of Range](./assets/error_ofr.png)
