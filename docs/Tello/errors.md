@@ -30,9 +30,8 @@ resolveu o problema do Tello pousar automaticamente e não prejudica
 a segurança, pois, se de fato perdermos a conexão com o Tello, ele irá
 pousar automaticamente após 15 segundos. Veja abaixo a função:
 
-```
+```bash
 def keep_tello_alive(self):
-        bash
         #Manda sinal para o tello não pousar. Criamos uma função, pois chamaremos em outra classe
         if not SIMULATION:
             self.tello.send_control_command("command")
