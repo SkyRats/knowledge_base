@@ -39,3 +39,18 @@ def keep_tello_alive(self):
 - **Falta de tempo de espera**: O contrário também pode acontecer. uando o Tello recebe comando sem ter terminado o  último,  ás vezes
 pode dar erro e ele acabar pousando. Isso ocorre principalmente logo após *takeoff*. Mensagens de erro que ocorrem
 quando falta delay são: **error Not joystick** ou **Exception: Command 'xxxx' was unsuccessful for 4 tries.**, por exemplo. Nessa situação, o Tello também pisca vermelho e pousa. Tente colocar algum *time.sleep* e veja se melhora. Ou, ainda, espere um pouco antes de rodar o programa logo após conectar com o Tello.
+## Flip errors
+Outro erro comum ao rodar script de python com o Tello é que ele não analisava o nível de bateria antes de mandar um comando de 'flip'. O problema é que abaixo de 50% de bateria, o drone não dá flips. Ao receber um comando de 'flip' sem ter bateria suficiente, o drone retorna **flip error** e isso pode causar erros maiores no código como **Exception: Command 'xxxx' was unsuccessful for 4 tries.** que pode levar ao pouso automático. Logo, foi incluído no código uma função que sempre verifica o nível de bateria e retorna se é possível dar 'flip' ou não (tudo armazenado na variável *self.tricks*):
+
+```
+ def get_tello_battery(self):
+        if not SIMULATION:
+            self.battery = self.tello.get_battery()
+        else:
+            self.battery = BATTERY
+
+        if self.battery <= 50:
+            self.tricks = False
+        else:
+            self.tricks = True
+```
