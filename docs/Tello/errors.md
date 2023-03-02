@@ -36,3 +36,6 @@ def keep_tello_alive(self):
         if not SIMULATION:
             self.tello.send_control_command("command")
 ```
+- **Falta de tempo de espera**: O contrário também pode acontecer. uando o Tello recebe comando sem ter terminado o  último,  ás vezes
+pode dar erro e ele acabar pousando. Mensagens de erro que ocorrem
+quando falta delay  é: ’error Not joystick’, por exemplo. Nessa situação, o Tello também pisca vermelho e pousa.
