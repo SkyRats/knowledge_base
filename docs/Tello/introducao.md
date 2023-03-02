@@ -11,5 +11,6 @@ Um dos problemas comuns que ocorriam era o Tello pousar inesperadamente, sem mot
 - Pouca bateria: O Tello começa a piscar vermelho (como descrito na tabela do manual) e pousa. Vale a pena sempre mandar printar a bateria para monitorar isso.
 
 	`	self.battery = self.tello.get_battery()
+	
 		print(self.battery)`
 
