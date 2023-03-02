@@ -8,14 +8,13 @@ Essa página tem o intuito de mostrar as soluções encontradas para lidar com e
 ## Auto-landing
 
 Um dos problemas comuns que ocorriam era o Tello pousar inesperadamente, sem motivos aparentes. Isso pode acontecer por algumas razões:
-- Pouca bateria: O Tello começa a piscar vermelho (como descrito na tabela do manual) e pousa. Vale a pena sempre mandar printar a bateria para monitorar isso.
+- **Pouca bateria**: O Tello começa a piscar vermelho (como descrito na tabela do manual) e pousa. Vale a pena sempre mandar printar a bateria para monitorar isso.
 
  ```
   self.battery = self.tello.get_battery()
-  print(self.battery)
-  
+  print(self.battery) 
   ```
-- Muito tempo sem comandos: Quando o drone não recebe um comando dentro de um determi-
+- **Muito tempo sem comandos**: Quando o drone não recebe um comando dentro de um determi-
 nado período de tempo, ele pousa por motivos de segurança (por exem-
 plo, quando seu programa caiu ou a conexão foi interrompida). Nesse
 caso, o Tello pousa geralmente depois de 15 segundos sem receber co-
@@ -33,8 +32,7 @@ pousar automaticamente após 15 segundos. Veja abaixo a função:
 
 ```
 def keep_tello_alive(self):
-        # Manda sinal para o tello nao pousar. Criamos uma funcao, pois chamaremos em outra classe
+        # Manda sinal para o tello não pousar. Criamos uma função, pois chamaremos em outra classe
         if not SIMULATION:
             self.tello.send_control_command("command")
 ```
-
