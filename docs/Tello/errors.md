@@ -14,13 +14,10 @@ Um dos problemas comuns que ocorriam era o Tello pousar inesperadamente, sem mot
   self.battery = self.tello.get_battery()
   print(self.battery) 
   ```
-- **Muito tempo sem comandos**: Quando o drone não recebe um comando dentro de um determi-
-nado período de tempo, ele pousa por motivos de segurança (por exem-
-plo, quando seu programa caiu ou a conexão foi interrompida). Nesse
-caso, o Tello pousa geralmente depois de 15 segundos sem receber co-
-mandos, piscando vermelho tamb ́em (mas ”solid”). Cuidado, portanto,
-se o seu c ́odigo tem time.sleep muito longo. Isso pode fazer o Tello pousar
-ou perder conex ̃ao. A própria biblioteca DJITelloPy tem seus próprios
+- **Muito tempo sem comandos**: Quando o drone não recebe um comando dentro de um determinado período de tempo, ele pousa por motivos de segurança (por exemplo, quando seu programa caiu ou a conexão foi interrompida). Nesse
+caso, o Tello pousa geralmente depois de 15 segundos sem receber comandos, piscando vermelho tamb ́em (mas ”solid”). Cuidado, portanto,
+se o seu código tem time.sleep muito longo. Isso pode fazer o Tello pousar
+ou perder conexão. A própria biblioteca DJITelloPy tem seus próprios
 time.sleep embutidos, apesar de parecerem,  ás vezes, insuficientes mesmo.
 A solução encontrada para isso foi mandar um sinal de "command" para
 o drone a cada 10 segundos (em segmentos do código que dependem de
