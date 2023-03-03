@@ -65,3 +65,4 @@ Para evitar esse erro, verifique sempre se a movimentação é possível dentro 
   if getHeight - distance > minHeight:
                     print("Descendo", distance, "cm")
  ```
+
