@@ -65,9 +65,11 @@ Para evitar esse erro, verifique sempre se a movimentação é possível dentro 
 ## Rotation error
 Também foi enfrentado já um erro de rotação. Quando pedíamos para o Tello rotacionar "x" graus no script e "x" era um número inteiro não múltiplo de 10, como 82, 271, etc, o Tello mandava um erro:
 
+![Rotation error](./assets/rotation.jpeg)
+
 A solução encontrada foi definir que o Tello só poderia rotacionar em múltiplos de 10 e menores que 100. Veja um exemplo:
 
-```
+```bash
 deg_choices = [30, 40, 50, 60]
 ...
 degrees = deg_choices[random.randint(0, 3)]
