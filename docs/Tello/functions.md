@@ -81,23 +81,15 @@ Função que faz o Tello rotacionar como se estivesse dizendo "Não". É chamada
 ### __return_to_pos()__
 Função que faz o Tello retornar para posição inicial (estimada) após dar um flip. O Tello pode ser instável ao fazer truques, principalmente se estiver em espaço aberto com vento. A intenção é fazer ele se mover para um sentido dependendo da orientação do flip dado. 
 ```bash
-# Voltar para a posicao que estava antes do flip
+# Voltar para a posicao que estava antes do flip dependendo da orientação que é passada como parâmetro
     def return_to_pos(self, orientation):
             
         if orientation == 'back':
             print("moving foward...")
             if not SIMULATION:
                 self.tello.move_forward(40)
+        elif ...
 
-        elif orientation == 'right':
-            print("moving left...")
-            if not SIMULATION:
-                self.tello.move_left(40)
-
-        elif orientation == 'left':
-            print("moving right...")
-            if not SIMULATION:
-                self.tello.move_right(40)
 ```
 
 ### __keep_tello_alive()__
