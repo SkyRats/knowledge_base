@@ -2,7 +2,7 @@
 
 > *Escrito por [João P. Soares](https://github.com/J0t4py). Última atualização: 03/02/2023*
 
-Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse texto busca explicitar a diferença entre os dois e ensinar a usàlos.
+Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse texto busca explicitar a diferença entre os dois e ensinar a usá-los.
 
 ## US100
 
@@ -13,5 +13,7 @@ O US100 é um sensor de distância que trabalha com 2 protocolos de comunicaçã
  Esse é o modo mais analógico de utilizar, através de um cálculo com a velocidade do som. Segue abaixo o diagrama de como funciona:
  
  ![Esquema TRIG ECHO](./assets/Work-principle-of-the-HC-SR04-sensor-39.jpg)
+ 
+ Segue abaixo um código para usar o sensor desse modo
  
  
