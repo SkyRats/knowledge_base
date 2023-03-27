@@ -12,6 +12,6 @@ O US100 é um sensor de distância que trabalha com 2 protocolos de comunicaçã
  
  Esse é o modo mais analógico de utilizar, através de um cálculo com a velocidade do som. Segue abaixo o diagrama de como funciona:
  
- ![Esquema TRIG ECHO](Work-principle-of-the-HC-SR04-sensor-39.jpg)
+ ![Esquema TRIG ECHO](./assets/Work-principle-of-the-HC-SR04-sensor-39.jpg)
  
  
