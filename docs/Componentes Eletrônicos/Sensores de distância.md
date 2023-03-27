@@ -6,15 +6,16 @@ Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse
 
 ## US100
 
-O US100 é um sensor de distância que trabalha com 2 protocolos de comunicação, serial(ECHO,TRIG) e UART.
+O US100 é um sensor de distância que trabalha com 2 protocolos de comunicação, serial(ECHO,TRIG) e UART. O modo pode ser selecionado curtando 2 pinos na placa do sensor, quando eles estão curtados o modo usado sera o UART (por padrão ele vem curtado)
 
 ### Requisitos
 
 É necessário instalar algumas bibliotecas, que podem ser instaladas com pip. Segue abaixo como instalar e quais instalar
 
 ```bash
+sudo apt update
 pip3 install Adafruit-Blinka
-pip3 install adafruit-circuitpython-us100
+pip3 install adafruit-circuitpython-us100 #Essa segunda biblioteca só é usada para o modo UART
 ```
 
 ### Analógico (TRIG ECHO)
