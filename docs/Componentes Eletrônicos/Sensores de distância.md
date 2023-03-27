@@ -14,6 +14,7 @@ O US100 é um sensor de distância que trabalha com 2 protocolos de comunicaçã
 
 ```bash
 sudo apt update
+pip3 install RPi.GPIO
 pip3 install Adafruit-Blinka
 pip3 install adafruit-circuitpython-us100 #Essa segunda biblioteca só é usada para o modo UART
 ```
