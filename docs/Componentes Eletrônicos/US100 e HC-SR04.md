@@ -2,7 +2,7 @@
 
 > *Escrito por [João P. Soares](https://github.com/J0t4py). Última atualização: 27/03/2023*
 
-Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse texto busca explicitar a diferença entre os dois e ensinar a usá-los.
+Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Como o US100 tem um modo que tem comportamento identico ao HC-SR04, esse texto foca no US100 pois esse conteúdo já cobre o outro sensor.
 
 ## US100
 
