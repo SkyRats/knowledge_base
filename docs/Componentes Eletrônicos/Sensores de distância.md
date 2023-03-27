@@ -47,5 +47,46 @@ distance = round(distance, 2)
 print("Distance:", distance, "cm")
 GPIO.cleanup()
 ```
+
+### UART
+
+ Esse método é mais recomendado de ser usado pois os cálculos são feitos dentro do sensor e utilizam a temperatura como parâmetro para determinar a velocidade do ar. Através desse método também é possível obter a temperatura.
+ 
+ ```
+ import time
+import board
+import adafruit_us100
+
+class DistanceSensor:
+    def __init__(self, uart):
+        self._us100 = adafruit_us100.US100(uart)
+
+    def get_distance(self):
+        return self._us100.distance
+
+    def get_temperature(self):
+        return self._us100.temperature
+
+# create UART connection
+uart = board.UART
+
+# create DistanceSensor object
+distance_sensor = DistanceSensor(uart)
+
+# loop to continuously measure distance and temperature and print results
+try:
+    while True:
+        # read distance and temperature values
+        distance = distance_sensor.get_distance()
+        temperature = distance_sensor.get_temperature()
+
+        # print distance and temperature values
+        print("Distance:", round(distance, 2), "cm")
+        print("Temperature:", round(temperature, 2), "°C")
+        time.sleep(1)
+
+except KeyboardInterrupt:
+    pass
+```
  
  
