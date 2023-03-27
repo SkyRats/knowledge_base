@@ -16,7 +16,7 @@ O US100 é um sensor de distância que trabalha com 2 protocolos de comunicaçã
  
  Segue abaixo um código para usar o sensor desse modo:
  
- ´´import RPi.GPIO as GPIO
+ ´´´import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BOARD)
@@ -57,6 +57,6 @@ distance = round(distance, 2)
 print("Distance:", distance, "cm")
 
 GPIO.cleanup()
-´´
+´´´
  
  
