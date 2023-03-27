@@ -1,6 +1,6 @@
 # Sensores de distância
 
-> *Escrito por [João P. Soares](https://github.com/J0t4py). Última atualização: 03/02/2023*
+> *Escrito por [João P. Soares](https://github.com/J0t4py). Última atualização: 27/03/2023*
 
 Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse texto busca explicitar a diferença entre os dois e ensinar a usá-los.
 
@@ -8,13 +8,24 @@ Atualmente utilizamos 2 tipos de sensores de distância, o US100 e HC-SR04. Esse
 
 O US100 é um sensor de distância que trabalha com 2 protocolos de comunicação, serial(ECHO,TRIG) e UART.
 
-### TRIG ECHO
+### Requisitos
+
+É necessário instalar algumas bibliotecas, que podem ser instaladas com pip. Segue abaixo como instalar e quais instalar
+
+```bash
+pip3 install Adafruit-Blinka
+pip3 install adafruit-circuitpython-us100
+```
+
+### Analógico (TRIG ECHO)
  
- Esse é o modo mais analógico de utilizar, através de um cálculo com a velocidade do som. Segue abaixo o diagrama de como funciona:
+ Esse é o modo mais analógico de utilizar, através de um cálculo com a velocidade do som. O HC-SR04 funciona exatamente dessa forma e o código presente aqui deve funcionar nele.
+ 
+ Segue abaixo o diagrama de como funciona:
  
  ![Esquema TRIG ECHO](./assets/Work-principle-of-the-HC-SR04-sensor-39.jpg)
  
- Segue abaixo um código para usar o sensor desse modo:
+ Segue abaixo um código para usar o sensor desse modo (utiliza o circuitpython blinka):
  
  ```python3
 import RPi.GPIO as GPIO
@@ -50,10 +61,10 @@ GPIO.cleanup()
 
 ### UART
 
- Esse método é mais recomendado de ser usado pois os cálculos são feitos dentro do sensor e utilizam a temperatura como parâmetro para determinar a velocidade do ar. Através desse método também é possível obter a temperatura.
+ Esse método é mais recomendado de ser usado pois os cálculos são feitos dentro do sensor e utilizam a temperatura como parâmetro para determinar a velocidade do som no ar. Através desse método também é possível obter a temperatura. No código a seguir usamos uma biblioteca própria para o sensor, o adafruit_us100 e o circuitpython (blinka). essas 2 bibliotecas podem ser instaladas por pip
  
- ```
- import time
+ ```python3
+import time
 import board
 import adafruit_us100
 
@@ -67,13 +78,9 @@ class DistanceSensor:
     def get_temperature(self):
         return self._us100.temperature
 
-# create UART connection
 uart = board.UART
-
-# create DistanceSensor object
 distance_sensor = DistanceSensor(uart)
 
-# loop to continuously measure distance and temperature and print results
 try:
     while True:
         # read distance and temperature values
