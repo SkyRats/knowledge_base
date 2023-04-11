@@ -1,5 +1,5 @@
-# tello_integration.py
-A seguinte página tem a intenção de descrever as funções principais do código de controle tello_integration.py.
+# integration_
+A seguinte página tem a intenção de descrever as funções principais do código de controle do Tello.
 ## Variáveis importantes
 ```bash
 SIMULATION = False # False se estivermos rodando o script no Tello.

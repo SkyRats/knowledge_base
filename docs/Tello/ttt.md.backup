@@ -322,7 +322,7 @@ def print_board(self, board):
 ## play_ttt()
 Processo que realiza por completo o jogo com o drone. Depois de se conectar com o Tello e fazê-lo realizar um takeoff, pergunta por meio do terminal quem vai jogar primeiro. Depois disso, inicia um loop até que o jogo termine ou que o usuário escreva q.
 
-Nesse loop, a função detect_board() é chamada e retorna o estado do tabuleiro, que é fornecido para a IA, que joga pelo drone. A jogada do drone é representada fisicamente pelo movimento do drone e o loop continua.
+Nesse loop, a função detect_board() é chamada e retorna o estado do tabuleiro, que é fornecido para a IA, que joga pelo drone. 
 
 ```
 def play_ttt(self):
