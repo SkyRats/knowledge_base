@@ -117,7 +117,7 @@ def get_common(self, boards):
     return board_common
 ```
 ## get_mask()
-Cria uma máscara, usando um parâmetro maior e um parâmetro menor e retorna a máscara.
+Cria uma máscara, selecionando os pixels presentes no range HSV entre os parametros lower e upper especificados.
 
 ```
 def get_mask(self, hsv , lower_color , upper_color):
@@ -203,7 +203,8 @@ def show_drone_play(self,drone_play):
 ```
 
 ## get_squares()
-Função que recebe uma imagem, aplica uma máscara azul (para detectar a borda do tabuleiro) e, dos contornos da imagem, verifica se um deles é um quadrado com uma área suficiente para ser o tabuleiro.
+Função que recebe uma imagem, aplica uma máscara azul (para detectar a borda do tabuleiro) e, dos contornos da imagem, verifica se um deles é um quadrado com uma área suficiente para ser o tabuleiro, retornando suas dimensões e coodernadas.
+
 
 ```
 def get_squares (self, image):
@@ -322,7 +323,7 @@ def print_board(self, board):
 ## play_ttt()
 Processo que realiza por completo o jogo com o drone. Depois de se conectar com o Tello e fazê-lo realizar um takeoff, pergunta por meio do terminal quem vai jogar primeiro. Depois disso, inicia um loop até que o jogo termine ou que o usuário escreva q.
 
-Nesse loop, a função detect_board() é chamada e retorna o estado do tabuleiro, que é fornecido para a IA, que joga pelo drone. A jogada do drone é representada fisicamente pelo movimento do drone e o loop continua.
+Nesse loop, a função detect_board() é chamada e retorna o estado do tabuleiro após a jogada do humano. Esse estado é fornecido para a IA, que escolhe a jogada do drone, em seguida representada fisicamente pelo movimento do tello e o loop continua.
 
 ```
 def play_ttt(self):
