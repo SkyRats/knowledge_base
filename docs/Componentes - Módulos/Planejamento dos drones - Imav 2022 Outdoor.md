@@ -61,6 +61,7 @@ O drone genérico foi projetado para ser a base para os testes e o desenvolvimen
 ### Propulsão
 - **Motores** (T-Motor F80 Pro - 1900KV) - Os motores F80 Pro foram escolhidos pela equipe já possuir muitos dele em estoque, já que foram adquiridos para o projeto do swarm. Ademais, esses motores eram os únicos que possuíamos capazes de gerar o empuxo necessário para carregar a caixa de 1kg, apesar de serem muito ineficientes e permitirem apenas 5 minutos de autonomia no resultado final.
 - ![F80Pro](./assets/F80Pro.jpeg)
+- <img src="./assets/F80Pro.jpeg" alt=F80Pro height="300">
 - **Hélices** (GemFan 5055) - As hélices mais utilizadas para os testes e no projeto final eram as hélices 5055 da GemFan, já que tinhamos elas em abundância e o uso delas com os motores F80 Pro permitiam carregar 1kg de caixa. Após um pouco mais de estudo percebemos que hélices de 6 polegadas como as 6040 seriam mais eficientes, mas não conseguimos comprá-las a tempo da competição.
 ![5055](./assets/5055.jpeg)
 - **Baterias** (LiPo 4000mAh ou 6000mAh) - As baterias que a equipe possuia e permitiam a melhor autonomia e o menor peso aos drones eram as  de 4000 e 6000mAh. Assim, escolhemos o uso de bateria para permitir usar todas as baterias que possuíamos de forma distribuida nas missões. A ideia era utilizar a bateria de 6000 na missão 2 e a bateria de 4000 na missõa 5.
