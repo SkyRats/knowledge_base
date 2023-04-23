@@ -1,6 +1,6 @@
 ﻿# Planejamento dos drones - Imav 2022 Outdoor
 
-> *Escrito por [Artur Paparounis](https://github.com/artur-papas). Última atualização: 19/04/2023*
+> *Escrito por [Artur Paparounis](https://github.com/artur-papas). Última atualização: 23/04/2023*
 
 A competição outdoor da IMAV 2022 possuia 6 desafios a serem compridos em 30 minutos. Dessa forma, tivemos que escolher a melhor forma de balancear a complexidade e tempo de desenvolvimento dos drones, a otimização dos drones para as provas específicas, e a complexidade da operação durante os 30 minutos de prova. A otimização proposta aqui é uma mistura entre a análise feita durante a preparação e após a realização da competição, visto que as estratégias foram mudando muito conforme os desafios foram sendo mais compreendidos pela equipe e conforme fomos conseguindo ou não ter sucesso em fazer os drones funcionar.
 ## Otimização necessária para cada prova
