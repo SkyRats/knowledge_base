@@ -53,8 +53,9 @@ Muitas vezes erros aleatórios podem ocorrer e simplesmente desligar e ligar o d
 2. High Magnetic Interference: Tentar levar o drone para algum lugar com menos metais em volta
 3. Logging Unavailable: Sem cartão SD para guardar logs de voo ou o cartão está corrompido. Resolver o problema ou desabilitar o check
 4. No GPS Lock for Vehicle: O GPS não está conseguindo definir a posição do drone, provavelmente por interferência ou falta de sinal. Se não for utilizar o GPS para estimar a posição, desabilitar o check.
-5. Throttle Below Failsafe: Diminuir o valor do parâmetro FS_THR_VALUE até que o problema se resolva, as vezes precisa diminuir até o mínimo
+5. Throttle Below Failsafe: Diminuir o valor do parâmetro FS_THR_VALUE até que o problema se resolva, as vezes precisa diminuir até o mínimo. O controle RC deve estar conectado ao drone também.
 6. Battery Level below Failsafe: Verificar voltagem da bateria, se estiver muito baixo, trocar ou carregar a bateria. Se estiver em um valor correto, recalibrar bateria na Ground Station.
+7. AHRS waiting for home: Problema que dá ao tentar armar em um modo que usa GPS com o sinal de GPS estando ruim. Para resolver levar o drone para um local com melhor cobertura de GPS (local mais aberto e longe de partes metálicas). Geralmente quando o valor de HDOP for abaixo de 1.0 esse erro deve sumir.
 
 ### Drone tremendo muito
 1. Diminuir a constante derivativa e proporcional do PID do roll e pitch do drone
