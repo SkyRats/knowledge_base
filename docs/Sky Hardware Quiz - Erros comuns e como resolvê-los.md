@@ -1,5 +1,5 @@
 ﻿# Sky Hardware Quiz - Erros comuns e como resolvê-los
-> *Escrito por [Artur Paparounis](https://github.com/artur-papas). Última atualização: 29/05/2023*
+> *Escrito por [Artur Paparounis](https://github.com/artur-papas). Última atualização: 05/07/2023*
 
 Esse documento tem por objetivo mostrar os principais erros observados ao testar, calibrar, montar e voar um drone, juntamente com possíveis soluções ou jeitos já encontrados de entender e solucionar o erro. 
 Muitas vezes erros aleatórios podem ocorrer e simplesmente desligar e ligar o drone pode resolvê-los, mas grande parte deles têm um motivo que pode ser identificado e resolvido.
