@@ -14,6 +14,11 @@ Muitas vezes erros aleatórios podem ocorrer e simplesmente desligar e ligar o d
  1. Checar cabo que liga PMB a controladora
  2. Checar PMB em si
  3. Checar controladora de voo
+
+**Computador de bordo não liga ou indica problemas de alimentação**
+
+1. Testar se puxar uma fonte própria da tomada resolve o problema, isso indica que o problema não está na controladora
+2. Fazer uma boa fonte de alimentação ligada no UBEC, qualquer ligação mal feita ou fio indevido gerará problemas de inconsistÊncia e perda na alimentação. Isso inclui conexões de jumper, fios finos ou soldas mal feitas. Também é recomendado isolar bem as soldas feitas para efitar curtos e manter os fios organizados e impedir quebras de fios.
  
  **Algum outro componente não liga**
   1. Checar cabos de alimentação: Ver se não desconectaram, testar continuidade das pontas pra ver se não se rompeu no meio e por fim tentar trocar o cabo
@@ -61,6 +66,7 @@ Muitas vezes erros aleatórios podem ocorrer e simplesmente desligar e ligar o d
 1. Diminuir a constante derivativa e proporcional do PID do roll e pitch do drone
 2. Diminuir a potência do drone (hélices menores ou motores de menor kv)
 3. Utilizar um frame menos flexivel e mais interligado, minimizando vibrações
+
 
  
  
